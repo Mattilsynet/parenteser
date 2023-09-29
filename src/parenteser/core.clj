@@ -19,8 +19,7 @@
                      :paths [#"/images/*.*"]}]
    :optimus/bundles {"styles.css"
                      {:public-dir "public"
-                      :paths ["/css/parenteser.css"
-                              "/css/pygments.css"]}}
+                      :paths ["/css/parenteser.css"]}}
 
    :powerpack.server/port 5052
 

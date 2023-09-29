@@ -28,10 +28,11 @@
   (html/render-hiccup
    req
    blog-post
-   [:div
-    [:h1 (:page/title blog-post)]
-    (md/to-html (:blog-post/body blog-post))
-    [:img {:src "/vcard-small/images/christian.jpg"}]]))
+   [:div.section
+    [:div.content.text-content
+     [:h1.h1 (:page/title blog-post)]
+     (md/to-html (:blog-post/body blog-post))
+     [:img {:src "/vcard-small/images/christian.jpg"}]]]))
 
 (defn render-404 [req page]
   (html/render-hiccup
