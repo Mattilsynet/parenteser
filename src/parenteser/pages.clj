@@ -16,13 +16,14 @@
   (html/render-hiccup
    req
    page
-   [:div
-    [:h1 "Parenteser"]
-    [:p "Beretninger fra Mat-teamets grønne enger"]
-    [:ul
-     (for [blog-post (get-blog-posts (d/entity-db page))]
-       [:li [:a {:href (:page/uri blog-post)}
-             (:page/title blog-post)]])]]))
+   [:div.section
+    [:div.content.text-content
+     [:h1 "Parenteser"]
+     [:p "Beretninger fra Mat-teamets grønne enger"]
+     [:ul
+      (for [blog-post (get-blog-posts (d/entity-db page))]
+        [:li [:a {:href (:page/uri blog-post)}
+              (:page/title blog-post)]])]]]))
 
 (defn render-blog-post [req blog-post]
   (html/render-hiccup
