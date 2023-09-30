@@ -235,6 +235,21 @@ a:hover, .clickable:hover {
 
 .teaser .byline {border: none; padding-bottom: 0px;}
 
+/* Teaser section */
+.teasers .teaser {
+  margin-bottom: 1rem;
+}
+
+.teasers .h2 {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--teaser-border);
+}
+
+.teasers .section-content > p {
+  margin: 0.5rem 0 1.5rem;
+}
+
 /* Split */
 .split .front {
   margin-bottom: 2rem;

@@ -1,6 +1,7 @@
 :page/title Byggeklosser for søk
-:blog-post/description
 :blog-post/author :person/christian
+:blog-post/published #inst "2023-09-30"
+:blog-post/description
 
 Hvordan fungerer egentlig fulltekstsøk? I dette innlegget ser vi på noen vanlige
 byggeklosser og implementerer en veldig enkel søkemotor for å lære litt om

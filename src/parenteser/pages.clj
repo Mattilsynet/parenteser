@@ -1,7 +1,11 @@
 (ns parenteser.pages
   (:require [datomic-type-extensions.api :as d]
+            [parenteser.elements :as e]
             [powerpack.html :as html]
-            [powerpack.markdown :as md]))
+            [powerpack.markdown :as md])
+  (:import (java.time LocalDateTime ZoneId)
+           (java.time.format DateTimeFormatter)
+           (java.util Locale)))
 
 (defn get-blog-posts [db]
   (->> (d/q '[:find [?e ...]
@@ -9,20 +13,42 @@
               [?e :page/uri]
               [?e :page/kind :page.kind/blog-post]]
             db)
-       (map #(d/entity db %))))
+       (map #(d/entity db %))
+       (sort-by :blog-post/published)
+       reverse))
+
+(def no (Locale/forLanguageTag "no"))
+
+(defn ->ldt [inst]
+  (when inst
+    (LocalDateTime/ofInstant (.toInstant inst) (ZoneId/of "Europe/Oslo"))))
+
+(defn ymd [^LocalDateTime ldt]
+  (.format ldt (DateTimeFormatter/ofPattern "d. MMMM yyy" no)))
+
+(defn ymd [^LocalDateTime ldt]
+  (.format ldt (DateTimeFormatter/ofPattern "d. MMMM y" no)))
+
+(defn md [^LocalDateTime ldt]
+  (.format ldt (DateTimeFormatter/ofPattern "d. MMMM")))
+
+(defn prepare-blog-post-teaser [{:blog-post/keys [description published]
+                                 :page/keys [title uri] :as bp}]
+  {:title title
+   :published (ymd (->ldt published))
+   :url uri
+   :description (md/to-html description)
+   :kind :teaser-article})
 
 (defn render-frontpage [req page]
   (html/render-hiccup
    req
    page
-   [:div.section
-    [:div.content.text-content
-     [:h1 "Parenteser"]
-     [:p "Beretninger fra Mat-teamets grønne enger"]
-     [:ul
-      (for [blog-post (get-blog-posts (d/entity-db page))]
-        [:li [:a {:href (:page/uri blog-post)}
-              (:page/title blog-post)]])]]]))
+   (e/teaser-section
+    {:title "Parenteser"
+     :description "Beretninger fra Mat-teamets grønne enger"
+     :teasers (->> (get-blog-posts (d/entity-db page))
+                   (map prepare-blog-post-teaser))})))
 
 (defn render-blog-post [req blog-post]
   (html/render-hiccup
@@ -53,9 +79,11 @@
 
   (def system integrant.repl.state/system)
 
-  (->> [:page/uri "/blog/byggeklosser-for-sok/"]
-       (d/entity (d/db (:datomic/conn system)))
-       :blog-post/author
-       :person/photo)
+  (into {}
+        (->> [:page/uri "/blog/byggeklosser-for-sok/"]
+             (d/entity (d/db (:datomic/conn system)))
 
-)
+             #_:blog-post/author
+             #_:person/photo))
+
+  )
