@@ -1,0 +1,3 @@
+{:person/id :person/magnar
+ :person/given-name "Magnar"
+ :person/family-name "Sveen"}

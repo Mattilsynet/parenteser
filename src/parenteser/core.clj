@@ -74,6 +74,28 @@
 
                     {:db/ident :blog-post/body
                      :db/valueType :db.type/string
+                     :db/cardinality :db.cardinality/one}
+
+                    {:db/ident :blog-post/author
+                     :db/valueType :db.type/ref
+                     :db/cardinality :db.cardinality/one}
+
+                    {:db/ident :person/id
+                     :db/valueType :db.type/keyword
+                     :db/cardinality :db.cardinality/one
+                     :db/unique :db.unique/identity}
+
+                    {:db/ident :person/given-name
+                     :db/valueType :db.type/string
+                     :db/cardinality :db.cardinality/one}
+
+                    {:db/ident :person/family-name
+                     :db/valueType :db.type/string
+                     :db/cardinality :db.cardinality/one}
+
+                    ;; Bytt ut med rullerende bilder etterhvert
+                    {:db/ident :person/photo
+                     :db/valueType :db.type/string
                      :db/cardinality :db.cardinality/one}]})
 
 (defn create-app []
