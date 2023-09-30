@@ -19,10 +19,6 @@
 
 (def no (Locale/forLanguageTag "no"))
 
-(defn ->ldt [inst]
-  (when inst
-    (LocalDateTime/ofInstant (.toInstant inst) (ZoneId/of "Europe/Oslo"))))
-
 (defn ymd [^LocalDateTime ldt]
   (.format ldt (DateTimeFormatter/ofPattern "d. MMMM yyy" no)))
 
@@ -34,11 +30,11 @@
 
 (defn prepare-blog-post-teaser [{:blog-post/keys [description published]
                                  :page/keys [title uri] :as bp}]
-  {:title title
-   :published (ymd (->ldt published))
-   :url uri
-   :description (md/to-html description)
-   :kind :teaser-article})
+  (cond-> {:title title
+           :url uri
+           :description (md/to-html description)
+           :kind :teaser-article}
+    published (assoc :published (ymd published))))
 
 (defn render-frontpage [req page]
   (html/render-hiccup
@@ -78,6 +74,10 @@
 (comment
 
   (def system integrant.repl.state/system)
+
+  (->> (d/db (:datomic/conn system))
+       get-blog-posts
+       (map #(into {:db/id (:db/id %)} %)))
 
   (into {}
         (->> [:page/uri "/blog/byggeklosser-for-sok/"]
