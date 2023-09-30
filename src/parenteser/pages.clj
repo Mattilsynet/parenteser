@@ -1,8 +1,7 @@
 (ns parenteser.pages
-  (:require [powerpack.html :as html]
-            [powerpack.markdown :as md]
-            [imagine.core :as imagine]
-            [datomic-type-extensions.api :as d]))
+  (:require [datomic-type-extensions.api :as d]
+            [powerpack.html :as html]
+            [powerpack.markdown :as md]))
 
 (defn get-blog-posts [db]
   (->> (d/q '[:find [?e ...]
@@ -33,7 +32,8 @@
     [:div.content.text-content
      [:h1.h1 (:page/title blog-post)]
      (md/to-html (:blog-post/body blog-post))
-     [:img {:src "/vcard-small/images/christian.jpg"}]]]))
+     (when-let [photo (-> blog-post :blog-post/author :person/photo)]
+       [:img {:src (str "/vcard-small" photo)}])]]))
 
 (defn render-404 [req page]
   (html/render-hiccup
@@ -48,3 +48,14 @@
                nil)]
     (f req page)
     (render-404 req page)))
+
+(comment
+
+  (def system integrant.repl.state/system)
+
+  (->> [:page/uri "/blog/byggeklosser-for-sok/"]
+       (d/entity (d/db (:datomic/conn system)))
+       :blog-post/author
+       :person/photo)
+
+)
