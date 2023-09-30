@@ -260,7 +260,7 @@ eksakt som de opptrer i kildematrialet. En måte å løse dette på er ved å br
 symbolene ned i mindre deler enn hele ord. Det er mange måter å gjøre dette på,
 og teknikken vi nå skal se på kalles "ngrams".
 
-Den enkleste måten å forstå ngrams på er å se dem. Ordet "humor" består av disse
+Den enkleste måten å forstå ngrams er å se dem. Ordet "humor" består av disse
 ngrammene når `n = 2`:
 
 ```
