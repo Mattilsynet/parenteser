@@ -36,12 +36,7 @@
                            :retina-quality 0.4
                            :width 184}}}
 
-        :datomic/schema [{:db/ident :page/kind
-                          :db/valueType :db.type/keyword
-                          :db/unique :db.unique/identity
-                          :db/cardinality :db.cardinality/one}
-
-                         {:db/ident :tag/id
+        :datomic/schema [{:db/ident :tag/id
                           :db/valueType :db.type/keyword
                           :db/unique :db.unique/identity
                           :db/cardinality :db.cardinality/one}
@@ -59,11 +54,11 @@
                           :db/cardinality :db.cardinality/one}
 
                          {:db/ident :blog-post/published
-                          :db/valueType :db.type/instant
+                          :dte/valueType :java.time/local-date-time
                           :db/cardinality :db.cardinality/one}
 
                          {:db/ident :blog-post/updated
-                          :db/valueType :db.type/instant
+                          :dte/valueType :java.time/local-date-time
                           :db/cardinality :db.cardinality/one}
 
                          {:db/ident :blog-post/tags

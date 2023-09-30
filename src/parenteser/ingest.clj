@@ -1,17 +1,10 @@
 (ns parenteser.ingest
-  (:require [datomic-type-extensions.api :as d]
-            [parenteser.parens :refer [update-in-existing]]))
-
-(defn mkref [s]
-  {:person/id (read-string s)})
+  (:require [datomic-type-extensions.api :as d]))
 
 (defn ingest-blog-post [blog-post]
-  (-> blog-post
-      (assoc :page/kind :page.kind/blog-post)
-      (update-in-existing [:blog-post/author] mkref)
-      (update-in-existing [:blog-post/published] read-string)))
+  (assoc blog-post :page/kind :page.kind/blog-post))
 
-(defn create-tx [db file-name datas]
+(defn create-tx [_db file-name datas]
   (cond->> datas
     (re-find #"^blog\/" file-name)
     (map ingest-blog-post)))
