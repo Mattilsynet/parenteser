@@ -1,0 +1,4 @@
+{:person/id :person/christian
+ :person/given-name "Christian"
+ :person/family-name "Johansen"
+ :person/photo "/images/christian.jpg"}
