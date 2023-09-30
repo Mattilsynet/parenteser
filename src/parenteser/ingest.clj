@@ -8,7 +8,8 @@
 (defn ingest-blog-post [blog-post]
   (-> blog-post
       (assoc :page/kind :page.kind/blog-post)
-      (update-in-existing [:blog-post/author] mkref)))
+      (update-in-existing [:blog-post/author] mkref)
+      (update-in-existing [:blog-post/published] read-string)))
 
 (defn create-tx [db file-name datas]
   (cond->> datas
