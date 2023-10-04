@@ -9,8 +9,7 @@
   (app/start (assoc-in app [:config :site/base-url] ""))
   (app/stop)
   (app/reset)
-  (export/export app)
 
-  (def system integrant.repl.state/system)
+  integrant.repl.state/system
 
   )
