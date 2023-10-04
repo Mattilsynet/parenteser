@@ -390,6 +390,8 @@ body .text-content :last-child {
   div.hide-mobile {display: block;}
   span.hide-mobile {display: inline;}
 
+  .header.section .desc { margin-top: 1rem; }
+
   .header-content {
     display: flex;
     margin-top: 0;
