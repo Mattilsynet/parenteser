@@ -3,7 +3,7 @@
             [parenteser.elements :as e]
             [powerpack.html :as html]
             [powerpack.markdown :as md])
-  (:import (java.time LocalDateTime ZoneId)
+  (:import (java.time LocalDateTime)
            (java.time.format DateTimeFormatter)
            (java.util Locale)))
 
@@ -20,16 +20,10 @@
 (def no (Locale/forLanguageTag "no"))
 
 (defn ymd [^LocalDateTime ldt]
-  (.format ldt (DateTimeFormatter/ofPattern "d. MMMM yyy" no)))
-
-(defn ymd [^LocalDateTime ldt]
   (.format ldt (DateTimeFormatter/ofPattern "d. MMMM y" no)))
 
-(defn md [^LocalDateTime ldt]
-  (.format ldt (DateTimeFormatter/ofPattern "d. MMMM")))
-
 (defn prepare-blog-post-teaser [{:blog-post/keys [description published]
-                                 :page/keys [title uri] :as bp}]
+                                 :page/keys [title uri]}]
   (cond-> {:title title
            :url uri
            :description (md/to-html description)

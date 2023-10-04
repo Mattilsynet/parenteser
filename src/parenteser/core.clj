@@ -2,7 +2,6 @@
   (:require [parenteser.ingest :as ingest]
             [parenteser.pages :as pages]
             [powerpack.app :as app]
-            [powerpack.export :as export]
             [powerpack.highlight :as highlight]))
 
 (defn create-app []
