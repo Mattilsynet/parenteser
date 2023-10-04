@@ -1,15 +1,18 @@
 (ns parenteser.dev
-  (:require [parenteser.core :as parenteser]
+  (:require [integrant.core :as ig]
+            [parenteser.core :as parenteser]
             [powerpack.app :as app]))
+
+(defmethod ig/init-key :powerpack/app [_ _]
+  (-> (parenteser/create-app)
+      (assoc-in [:config :site/base-url] nil)))
 
 (comment
 
-  (def app (parenteser/create-app))
-
-  (app/start (assoc-in app [:config :site/base-url] ""))
+  (app/start)
   (app/stop)
   (app/reset)
 
-  integrant.repl.state/system
+  (def system integrant.repl.state/system)
 
   )
