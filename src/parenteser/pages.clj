@@ -34,22 +34,27 @@
   (html/render-hiccup
    req
    page
-   (e/teaser-section
-    {:title "Parenteser"
-     :description "Beretninger fra Mat-teamets grønne enger"
-     :teasers (->> (get-blog-posts (d/entity-db page))
-                   (map prepare-blog-post-teaser))})))
+   (list
+    (e/header-section
+     {:title "Parenteser"
+      :description "Beretninger fra Mat-teamets grønne enger"})
+    (e/teaser-section
+     {:teasers (->> (get-blog-posts (d/entity-db page))
+                    (map prepare-blog-post-teaser))}))))
 
 (defn render-blog-post [req blog-post]
   (html/render-hiccup
    req
    blog-post
-   [:div.section
-    [:div.content.text-content
-     [:h1.h1 (:page/title blog-post)]
-     (md/to-html (:blog-post/body blog-post))
-     (when-let [photo (-> blog-post :blog-post/author :person/photo)]
-       [:img {:src (str "/vcard-small" photo)}])]]))
+   (list
+    (e/header-section {:title (:page/title blog-post)
+                       :description (md/to-html
+                                     (:blog-post/introduction blog-post))})
+    [:div.section
+     [:div.content.text-content
+      (md/to-html (:blog-post/body blog-post))
+      (when-let [photo (-> blog-post :blog-post/author :person/photo)]
+        [:img {:src (str "/vcard-small" photo)}])]])))
 
 (defn render-404 [req page]
   (html/render-hiccup

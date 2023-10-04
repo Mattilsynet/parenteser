@@ -19,10 +19,15 @@
     description
     (byline props)]])
 
-(defn teaser-section [{:keys [title description teasers]}]
+(defn teaser-section [{:keys [teasers]}]
   [:div.section.teasers
    [:div.content
     [:div.section-content
-     (when title [:h1.h1 title])
-     (when description [:p description])
      [:div.teaser-list (map teaser teasers)]]]])
+
+(defn header-section [{:keys [title description]}]
+  [:div.section.header
+   [:div.content
+    [:div.section-content
+     (when title [:h1.h1 title])
+     (when description [:p.desc  description])]]])
