@@ -6,7 +6,7 @@
 
 (defn create-tx [_db file-name datas]
   (cond->> datas
-    (re-find #"^blog\/" file-name)
+    (re-find #"^blog-posts\/" file-name)
     (map ingest-blog-post)))
 
 (comment

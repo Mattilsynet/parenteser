@@ -358,6 +358,14 @@ body .text-content :last-child {
   margin-top: 2.4rem;
 }
 
+.header.section {
+    background: var(--header-bg);
+}
+
+.header.section .h1 {
+    color: var(--header-fg);
+}
+
 @media only screen and (orientation : landscape) {
   .codehilite {
     font-size: 0.6rem;

@@ -11,7 +11,7 @@
         :site/title "Parenteser"
 
         :stasis/build-dir "build"
-        :powerpack/content-dir "resources"
+        :powerpack/content-dir "resources/content"
         :powerpack/source-dirs ["src" "dev"]
         :powerpack/db "datomic:mem://parenteser"
 
