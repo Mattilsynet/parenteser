@@ -1,7 +1,6 @@
 (ns parenteser.core
   (:require [parenteser.ingest :as ingest]
             [parenteser.pages :as pages]
-            [powerpack.app :as app]
             [powerpack.highlight :as highlight]))
 
 (defn create-app []
@@ -13,6 +12,7 @@
         :stasis/build-dir "build"
         :powerpack/content-dir "resources/content"
         :powerpack/source-dirs ["src" "dev"]
+        :powerpack/resource-dirs ["resources"]
         :powerpack/db "datomic:mem://parenteser"
 
         :optimus/assets [{:public-dir "public"
@@ -35,8 +35,8 @@
                            :retina-quality 0.4
                            :width 184}}}
 
-        :datomic/schema-resource "schema.edn"}
+        :datomic/schema-file "resources/schema.edn"}
        :create-ingest-tx #'ingest/create-tx
        :render-page #'pages/render-page}
-      app/create-app
       highlight/install))
+
