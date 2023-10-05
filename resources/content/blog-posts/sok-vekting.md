@@ -3,7 +3,7 @@
 :blog-post/author {:person/id :person/christian}
 :blog-post/description
 
-I neste installasjon i "hvordan fungerer egentlig søk?" skal vi se litt på
+I andre installasjon i "hvordan fungerer egentlig søk?" skal vi se litt på
 hvordan vi kan implementere vekting for å bedre tune resultatene våre.
 
 :open-graph/description
@@ -12,8 +12,8 @@ En introduksjon til vekting av søkeresultater i en søkemotor.
 
 :blog-post/introduction
 
-Andre del i serien "Hvordan fungerer egentlig søk?" (
-[del 1](/blog-posts/byggeklosser-for-sok/))
+Andre del i serien "Hvordan fungerer egentlig søk?"
+[(del 1)](/blog-posts/byggeklosser-for-sok/)
 
 :blog-post/body
 
