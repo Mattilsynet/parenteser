@@ -11,6 +11,11 @@ akkurat det.
 
 Lær om fulltekstsøk ved å implementere noen byggeklosser.
 
+:blog-post/introduction
+
+Første del i serien "Hvordan fungerer egentlig søk?"
+[(del 2)](/blog-posts/sok-vekting/)
+
 :blog-post/body
 
 Fulltekstsøk kan virke magisk. Hva er det egentlig som foregår når jeg får treff
