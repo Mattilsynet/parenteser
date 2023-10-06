@@ -74,29 +74,16 @@ Det er så lite stress at man kan begynne å le. Det er dette som er serverless.
 
 ## Til slutt
 
-Jeg tror vi kommer til å skrive mer om statiske sider på denne bloggen fremover.
-Dette er en måte å bygge nettsider vi har hatt stor glede av opp gjennom årene.
-Denne bloggen er naturligvis laget slik, men også den nye
-[matvaretabellen.no](https://matvaretabellen.no) tror vi nå skal lages på samme
-måte.
+Dette er en måte å bygge nettsider vi har hatt
+[stor](https://www.kodemaker.no)
+[glede](https://techdocs.spid.no)
+[av](https://emacsrocks.com)
+[opp](https://strom.fortum.no)
+[gjennom](https://cjohansen.no)
+[årene](https://www.parens-of-the-dead.com).
+Her i Mattilsynet har vi enn så lenge to nettsteder som lages på denne måten:
+Denne bloggen, og den nye [matvaretabellen.no](https://matvaretabellen.no) som
+vi driver og jobber med.
 
-Hvis du skal ta med deg noe nyttig fra denne bloggposten, så er det dette:
-
-Vi trenger ikke alltid en server kjørende, men kan heller trykke ut sider med
-HTML i et byggesteg. Da får vi:
-
-- lynraske sider
-- færre kjørende prosesser å overvåke og betale for
-- lavere karbonfotavtrykk
-
-Når vi også bygger dette opp som krysslenka innholdssider på egen URL, så er vi i tillegg:
-
-- lettere å lenke til
-- lettere å bokmerke
-- optimalisert for søkemotorer
-
-Alt i alt et par Kinderegg* av godsaker der, altså.
-
-\* forøvrig en merkevare som ikke er å finne i matvaretabellen i dag
-
-
+Så ja, jeg tror vi kommer til å skrive mer om statiske sider på denne bloggen fremover.
+Stay tuned!
