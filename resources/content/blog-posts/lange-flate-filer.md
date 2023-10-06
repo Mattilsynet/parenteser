@@ -29,8 +29,8 @@ millisekunder på sånt.
 
 Jeg brukte juleferien til å lage [Stasis](https://github.com/magnars/stasis), en
 verktøykasse for å bygge statiske nettsider, slik at arbeidet i januar kunne
-starte på full sprint. Det var et par ille moro uker, som vi sier i Fredrikstad.
-I prod lå all HTML og CSS på disk, servert av NGINX, med Varnish foran.
+starte på full sprint. Januar ble ille moro, som vi sier i Fredrikstad. I prod
+lå all HTML og CSS ferdig trykket opp på disk, servert av NGINX, med Varnish foran.
 
 Takket være Varnish ble filene endatil servert *rett fra minnet.*
 
@@ -56,14 +56,14 @@ Okay, så er det ofte nødvendig ... et nødvendig ræl. Men hva med de gangene 
 ikke *må* ha denne kjørende prosessen? Mange nettsider skal bare presentere
 informasjon. Da kan løsningen være noe dramatisk enklere.
 
-Sånn var det den gangen for ti år siden. Uten en server kjørende, var det
-overraskende mange hensyn jeg kunne dumpe av ryggen, som en bør jeg ikke lenger
-trengte bære. Min jobb ble mye enklere. Jeg kvernet noe data og spyttet litt
-HTML ut på en disk. Som et byggesteg. Ferdig.
+Det var det som overrasket meg den gangen for ti år siden. Uten en server
+kjørende, var det mange hensyn jeg kunne dumpe av ryggen, som en bør jeg ikke
+lenger trengte bære. Min jobb ble mye enklere. Jeg kvernet noe data og spyttet
+litt HTML ut på en disk. Som et byggesteg. Ferdig.
 
 Ikke rart det gikk fort å lage.
 
-## Serverniks
+### Serverniks
 
 Eller var det servernada?
 
