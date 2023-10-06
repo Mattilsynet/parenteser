@@ -29,8 +29,9 @@ millisekunder på sånt.
 
 Jeg brukte juleferien til å lage [Stasis](https://github.com/magnars/stasis), en
 verktøykasse for å bygge statiske nettsider, slik at arbeidet i januar kunne
-starte på full sprint. Januar ble ille moro, som vi sier i Fredrikstad. I prod
-lå all HTML og CSS ferdig trykket opp på disk, servert av NGINX, med Varnish foran.
+starte på full sprint. Januar ble ille moro, som vi sier i Fredrikstad. Det ble
+så bra som jeg hadde drømt. På prodserveren lå all HTML og CSS ferdig trykket
+opp på disk, servert av NGINX, med Varnish foran.
 
 Takket være Varnish ble filene endatil servert *rett fra minnet.*
 
@@ -46,30 +47,30 @@ Ikke jeg heller.
 
 I hvert fall ikke før dette prosjektet.
 
-Ikke bare skal det driftes og vedlikeholdes, men i tillegg til kompilering og
-byggesteg, så har selve prosessen sin egen runtime, med sine egne avhengigheter.
-Det er asynkrone kall, fra frontend, til frontend-for-backend, til backend, til
-database. Det må monitoreres og logges. Exceptions og nedetid. Model, View,
-Controller. Det er et ræl.
+I tillegg til kompilering og byggesteg, så har den kjørende prosessen sin egen
+runtime, med sine egne avhengigheter, sin egen state, sine egne bugs. Det er
+asynkrone kall, fra frontend, til frontend-for-backend, til backend, til
+database. Det må driftes og vedlikeholdes, monitoreres og logges. Exceptions og
+nedetid. Model, View, Controller. Det er et ræl.
 
 Okay, så er det ofte nødvendig ... et nødvendig ræl. Men hva med de gangene vi
 ikke *må* ha denne kjørende prosessen? Mange nettsider skal bare presentere
-informasjon. Da kan løsningen være noe dramatisk enklere.
+informasjon. Med ett kan løsningen være noe dramatisk enklere.
 
 Det var det som overrasket meg den gangen for ti år siden. Uten en server
-kjørende, var det mange hensyn jeg kunne dumpe av ryggen, som en bør jeg ikke
-lenger trengte bære. Min jobb ble mye enklere. Jeg kvernet noe data og spyttet
-litt HTML ut på en disk. Som et byggesteg. Ferdig.
+kjørende var det mange hensyn jeg kunne dumpe, som en bør jeg ikke lenger
+trengte bære. Min jobb ble mye enklere. Jeg kvernet noe data og spyttet litt
+HTML ut på en disk. Som et byggesteg. Ferdig.
 
 Ikke rart det gikk fort å lage.
 
-### Serverniks
+## Serverniks
 
 Eller var det servernada?
 
-Uansett, modellen for servering er såre enkel. Den gangen brukte jeg nginx og et
-filsystem. I nyere tid, enda bedre: Vi lagrer alle filene i en bøtte på S3 / Google
-Cloud Storage og peker lastbalansereren rett på den.
+Uansett, modellen for å få dette på nett ble såre enkel. Den gangen brukte jeg
+nginx og et filsystem. I nyere tid, enda bedre: Vi lagrer alle filene i en bøtte
+på S3 / Google Cloud Storage og peker lastbalansereren rett på den.
 
 Det er så lite stress at man kan begynne å le. Det er dette som er serverless.
 
