@@ -29,11 +29,10 @@ millisekunder på sånt.
 
 Jeg brukte juleferien til å lage [Stasis](https://github.com/magnars/stasis), en
 verktøykasse for å bygge statiske nettsider, slik at arbeidet i januar kunne
-starte på full sprint. Og fort gikk det. Allerede første uka hadde jeg nye sider
-ute. All HTML og CSS lå på disk, servert av NGINX, med Varnish foran.
+starte på full sprint. Det var et par ille moro uker, som vi sier i Fredrikstad.
+I prod lå all HTML og CSS på disk, servert av NGINX, med Varnish foran.
 
-Med Varnish ble filene ikke engang servert fra spinnende disker, men *rett fra
-minnet!*
+Takket være Varnish ble filene endatil servert *rett fra minnet.*
 
 Så ja, nettsidene ble lynraske, men det var noe annet som gikk fort også. Mye fortere,
 faktisk, enn jeg hadde trodd.
@@ -49,16 +48,18 @@ I hvert fall ikke før dette prosjektet.
 
 Ikke bare skal det driftes og vedlikeholdes, men i tillegg til kompilering og
 byggesteg, så har selve prosessen sin egen runtime, med sine egne avhengigheter.
-Det er asynkrone kall, fra frontend, til frontend-for-backend, til backend,
-til database. Det må monitoreres og logges. Exceptions og nedetid. Det er et
-ræl.
+Det er asynkrone kall, fra frontend, til frontend-for-backend, til backend, til
+database. Det må monitoreres og logges. Exceptions og nedetid. Model, View,
+Controller. Det er et ræl.
 
-Okay, så er det ofte nødvendig ... et nødvendig ræl. Men hva med når vi ikke *må* ha
-denne kjørende prosessen? Hva om man bare bygger et nettsted fullt av innhold?
+Okay, så er det ofte nødvendig ... et nødvendig ræl. Men hva med de gangene vi
+ikke *må* ha denne kjørende prosessen? Mange nettsider skal bare presentere
+informasjon. Da kan løsningen være noe dramatisk enklere.
 
-Det var det som skjedde den gangen for ti år siden. Det var så mange hensyn jeg
-ikke trengte ta. Min jobb var ganske enkelt å kverne noe data og spytte ut litt
-HTML på en disk.
+Sånn var det den gangen for ti år siden. Uten en server kjørende, var det
+overraskende mange hensyn jeg kunne dumpe av ryggen, som en bør jeg ikke lenger
+trengte bære. Min jobb ble mye enklere. Jeg kvernet noe data og spyttet litt
+HTML ut på en disk. Som et byggesteg. Ferdig.
 
 Ikke rart det gikk fort å lage.
 
@@ -81,9 +82,10 @@ Dette er en måte å bygge nettsider vi har hatt
 [opp](https://strom.fortum.no)
 [gjennom](https://cjohansen.no)
 [årene](https://www.parens-of-the-dead.com).
-Her i Mattilsynet har vi enn så lenge to nettsteder som lages på denne måten:
+Her i Team Mat hos Mattilsynet har vi enn så lenge to nettsteder som lages på denne måten:
 Denne bloggen, og den nye [matvaretabellen.no](https://matvaretabellen.no) som
 vi driver og jobber med.
 
-Så ja, jeg tror vi kommer til å skrive mer om statiske sider på denne bloggen fremover.
-Stay tuned!
+Så ja, jeg tror vi kommer til å skrive mer om statiske sider på denne bloggen
+fremover. Mistenker at Christian har et og annet å fortelle om [Stasis
+Powerpack](https://github.com/cjohansen/powerpack), for eksempel.
