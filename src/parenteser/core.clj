@@ -37,6 +37,7 @@
 
         :datomic/schema-file "resources/schema.edn"}
        :create-ingest-tx #'ingest/create-tx
-       :render-page #'pages/render-page}
+       :render-page #'pages/render-page
+       :on-ingested #'ingest/on-ingested}
       highlight/install))
 
