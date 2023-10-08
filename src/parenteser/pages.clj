@@ -30,15 +30,19 @@
 (defn prepare-tags [tags]
   (seq (map :tag/name tags)))
 
-(defn prepare-blog-post-teaser [{:blog-post/keys [description published tags author]
-                                 :page/keys [title uri]}]
+(defn get-blog-post-vcard [{:blog-post/keys [author tags]}]
+  {:image (:person/photo author)
+   :title (:person/given-name author)
+   :body (when-let [tags (prepare-tags tags)]
+           [:span "Om " (comma-separated tags)])})
+
+(defn prepare-blog-post-teaser [{:blog-post/keys [description published]
+                                 :page/keys [title uri]
+                                 :as blog-post}]
   (cond-> {:title title
            :url uri
            :description (md/to-html description)
-           :aside {:image (:person/photo author)
-                   :title (:person/given-name author)
-                   :body (when-let [tags (prepare-tags tags)]
-                           [:span "Om " (comma-separated tags)])}
+           :aside (get-blog-post-vcard blog-post)
            :kind :teaser-article}
     published (assoc :published (ymd published))))
 
@@ -65,8 +69,7 @@
     [:div.section
      [:div.content.text-content
       (md/to-html (:blog-post/body blog-post))
-      (when-let [photo (-> blog-post :blog-post/author :person/photo)]
-        [:img {:src (str "/vcard-small" photo)}])]])))
+      (e/vcard (get-blog-post-vcard blog-post))]])))
 
 (defn render-404 [req page]
   (html/render-hiccup
