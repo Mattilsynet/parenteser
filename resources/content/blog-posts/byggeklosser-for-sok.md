@@ -1,6 +1,7 @@
 :page/title Byggeklosser for søk
 :blog-post/author {:person/id :person/christian}
 :blog-post/published #time/ldt "2023-09-30T09:00:00"
+:blog-post/tags [:sok :javascript]
 :blog-post/description
 
 Hvordan fungerer egentlig fulltekstsøk? I dette innlegget ser vi på noen vanlige

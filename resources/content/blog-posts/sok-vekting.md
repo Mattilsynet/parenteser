@@ -1,6 +1,7 @@
 :page/title Vektet søk
 :blog-post/published #time/ldt "2023-10-07T09:00:00"
 :blog-post/author {:person/id :person/christian}
+:blog-post/tags [:sok :javascript]
 :blog-post/description
 
 I andre installasjon i "hvordan fungerer egentlig søk?" skal vi se litt på
