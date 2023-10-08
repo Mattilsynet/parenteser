@@ -22,11 +22,23 @@
 (defn ymd [^LocalDateTime ldt]
   (.format ldt (DateTimeFormatter/ofPattern "d. MMMM y" no)))
 
-(defn prepare-blog-post-teaser [{:blog-post/keys [description published]
+(defn comma-separated [coll]
+  (drop 1 (interleave (into (list " og " "")
+                            (repeat (dec (count coll)) ", "))
+                      coll)))
+
+(defn prepare-tags [tags]
+  (seq (map :tag/name tags)))
+
+(defn prepare-blog-post-teaser [{:blog-post/keys [description published tags author]
                                  :page/keys [title uri]}]
   (cond-> {:title title
            :url uri
            :description (md/to-html description)
+           :aside {:image (:person/photo author)
+                   :title (:person/given-name author)
+                   :body (when-let [tags (prepare-tags tags)]
+                           [:span "Om " (comma-separated tags)])}
            :kind :teaser-article}
     published (assoc :published (ymd published))))
 

@@ -12,12 +12,25 @@
                           [:a {:href url} title])
                         (interpose ", "))])])
 
-(defn teaser [{:keys [url title description kind] :as props}]
+(defn teaser [{:keys [url title description kind published aside]}]
   [:div.teaser {:class kind}
-   [:div.teaser-content
+   [:article.teaser-content
     [:h4.h4 {} [:a {:href url} title]]
-    description
-    (byline props)]])
+    [:div.teaser-body
+     description]
+    [:p [:span.byline.text-s published]]]
+   [:aside.teaser-aside.vcard
+    (when-let [image (:image aside)]
+      (let [img [:img.img {:src image :width 92}]]
+        (if-let [url (:url aside)]
+          [:a {:href url} img]
+          img)))
+    [:div
+     [:h5.h5.vcard-title
+      (if-let [url (:url aside)]
+        [:a {:href url} (:title aside)]
+        (:title aside))]
+     [:p (:body aside)]]]])
 
 (defn teaser-section [{:keys [teasers]}]
   [:div.section.teasers

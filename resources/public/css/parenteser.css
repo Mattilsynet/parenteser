@@ -155,6 +155,7 @@ a:hover, .clickable:hover {
 .h5,
 .text-content h5 {
   font-size: 1.2rem;
+  font-weight: normal;
 }
 
 .text-content kbd,
@@ -200,54 +201,48 @@ a:hover, .clickable:hover {
 }
 
 /* Byline */
-.byline .date {
-  margin-right: 10px;
-}
-
 .byline {
-  border-bottom: 1px solid var(--byline-border);
   color: var(--byline-color);
-  padding: 10px 0 20px;
 }
 
-/* Teasers */
-.teaser {
-  border-bottom: 1px solid var(--teaser-border);
-  padding-bottom: 1rem;
+/* Teasers, v2 */
+@media only screen and (min-width: 768px) {
+  .teaser {
+    display: flex;
+  }
+
+  .teaser-content {
+    flex: 55%;
+  }
+
+  .teaser-aside {
+    flex: 45%;
+    padding-left: 40px;
+  }
 }
 
-.teaser-content {
+.teaser-body {
+  margin: 1rem 0;
+}
+
+.vcard {
   display: flex;
-  flex-direction: column-reverse;
+  align-items: center;
 }
 
-.teaser-article .teaser-content {
-  flex-direction: column;
+.vcard .img {
+  border-radius: 50%;
+  margin-right: 1rem;
 }
 
-.teaser .media {
-  margin-bottom: 1rem;
+.vcard-title a {
+  text-decoration: none;
 }
 
-.teaser .h5 {
-  display: none;
-}
-
-.teaser .byline {border: none; padding-bottom: 0px;}
-
-/* Teaser section */
-.teasers .teaser {
-  margin-bottom: 1rem;
-}
-
-.teasers .h2 {
-  margin-bottom: 1rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid var(--teaser-border);
-}
-
-.teasers .section-content > p {
-  margin: 0.5rem 0 1.5rem;
+.teaser + .teaser {
+  margin-top: 2rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--dawn-pink);
 }
 
 /* Split */
@@ -262,7 +257,7 @@ a:hover, .clickable:hover {
 }
 
 .section .content {
-  max-width: 940px;
+  max-width: 1120px;
   margin: 0 auto;
   padding: 20px;
 }
