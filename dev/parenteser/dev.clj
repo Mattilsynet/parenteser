@@ -9,6 +9,8 @@
 
 (comment
 
+  (set! *print-namespace-maps* false)
+
   (app/start)
   (app/stop)
   (app/reset)
