@@ -235,6 +235,14 @@ a:hover, .clickable:hover {
   margin-right: 1rem;
 }
 
+.text-content .vcard .vcard-title {
+  margin: 0 0 0.5rem;
+}
+
+.text-content .vcard .vcard-body {
+  margin: 0.5rem 0 0;
+}
+
 .vcard-title a {
   text-decoration: none;
 }
