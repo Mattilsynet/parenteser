@@ -49,8 +49,8 @@ Vi må dermed komme opp med noen lure triks.
 
 ## Indeksering
 
-Indeksering er øvelsen vi gjør for å bygge opp indeksen fra kildematrialet vårt.
-Vi tar utgangspunkt i følgende datamatriale:
+Indeksering er øvelsen vi gjør for å bygge opp indeksen fra kildematerialet vårt.
+Vi tar utgangspunkt i følgende datamateriale:
 
 ```js
 var data = [
@@ -127,7 +127,7 @@ på `"rolle humor"` ingen treff.
 
 ### Søkesymboler
 
-Indeksen ble bygget opp ved å lage symboler fra kildematrialet. For å treffe
+Indeksen ble bygget opp ved å lage symboler fra kildematerialet. For å treffe
 godt i indeksen er vi nødt til å analysere søkestrengen med samme verktøy og så
 slå opp alle symbolene vi da ender opp med. La oss først lage en støttefunksjon
 som finner alle id-ene som matcher ett symbol:
@@ -263,7 +263,7 @@ får total score for en id ved å summere hver enkelt score.
 ## Fuzzy søk
 
 Søke-funksjonen klarer nå å søke på flere termer, men du må fortsatt skrive dem
-eksakt som de opptrer i kildematrialet. En måte å løse dette på er ved å bryte
+eksakt som de opptrer i kildematerialet. En måte å løse dette på er ved å bryte
 symbolene ned i mindre deler enn hele ord. Det er mange måter å gjøre dette på,
 og teknikken vi nå skal se på kalles "ngrams".
 
@@ -362,7 +362,7 @@ search(index, "forske")
 
 Dersom du skal implementere et autocomplete-aktig søk så er "edge ngrams"
 nyttige. Disse lages ved å kun lage ngrams fra starten og utover. Eksempelvis
-kan "klovneforskning" blit til edge ngrams med lengde 2 til 15:
+kan "klovneforskning" bli til edge ngrams med lengde 2 til 15:
 
 ```
 kl
