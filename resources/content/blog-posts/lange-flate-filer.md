@@ -58,7 +58,7 @@ ikke *må* ha denne kjørende prosessen? Mange nettsider skal bare presentere
 informasjon. Med ett kan løsningen være noe dramatisk enklere.
 
 Det var det som overrasket meg den gangen for ti år siden. Uten en server
-kjørende var det mange hensyn jeg kunne dumpe, som en bør jeg ikke lenger
+kjørende var det så mange hensyn jeg kunne dumpe, som en bør jeg ikke lenger
 trengte bære. Min jobb ble mye enklere. Jeg kvernet noe data og spyttet litt
 HTML ut på en disk. Som et byggesteg. Ferdig.
 
@@ -72,7 +72,9 @@ Uansett, modellen for å få dette på nett ble såre enkel. Den gangen brukte j
 nginx og et filsystem. I nyere tid, enda bedre: Vi lagrer alle filene i en bøtte
 på S3 / Google Cloud Storage og peker lastbalansereren rett på den.
 
-Det er så lite stress at man kan begynne å le. Det er dette som er serverless.
+Det er så lite stress at man kan begynne å le.
+
+Det er dette som er serverless.
 
 ## Til slutt
 
