@@ -34,10 +34,10 @@ en mapping mellom søkefraser og en liste med dokumenter som matcher:
 
 ```js
 {
-  "klovn": [1, 2, 3],
-  "forskning": [1, 3],
-  "føtter": [2],
-  "humor": [1, 2]
+  "klovn": ["id1", "id2", "id3"],
+  "forskning": ["id1", "id3"],
+  "føtter": ["id2"],
+  "humor": ["id1", "id2"]
 }
 ```
 
@@ -134,7 +134,7 @@ som finner alle id-ene som matcher ett symbol:
 
 ```js
 function lookupToken(index, token) {
-  const hitsById = _.countBy(index[token]);
+  var hitsById = _.countBy(index[token]);
 
   return Object.keys(hitsById)
     .map(id => ({
@@ -204,7 +204,7 @@ search(index, "rolle humor"); //=> ['a2']
 
 ## Indeksering, part deux
 
-La oss utvide indeksen ved å indeksere beskrivelsen også. Her er et utsnitt
+La oss utvide indeksen ved å indeksere beskrivelsen også. Her er et utsnitt av
 resultatet:
 
 ```js
