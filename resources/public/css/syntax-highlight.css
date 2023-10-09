@@ -16,7 +16,7 @@ code, .code, .codehilite {
 .codehilite .hll { background-color: #ffffcc }
 .codehilite .c { color: var(--hl-comment) } /* Comment */
 .codehilite .err {} /* Error */
-.codehilite .k { color: var(--hl-keyword) } /* Keyword */
+.codehilite .k { color: var(--hl-keyword); font-weight: bold; } /* Keyword */
 .codehilite .cm { color: var(--hl-comment) } /* Comment.Multiline */
 .codehilite .cp { color: var(--hl-preproc-comment) } /* Comment.Preproc */
 .codehilite .c1 { color: var(--hl-comment) } /* Comment.Single */
@@ -28,9 +28,11 @@ code, .code, .codehilite {
 .codehilite .gu { font-weight: bold } /* Generic.Subheading */
 .codehilite .kc { color: var(--hl-constant) } /* Keyword.Constant */
 .codehilite .kd { color: var(--hl-declaration); font-weight: bold; } /* Keyword.Declaration */
+.codehilite .kd + .nx,
+.codehilite .kr + .nx { color: var(--hl-macro); font-weight: bold; }
 .codehilite .kn { color: var(--hl-namespace) } /* Keyword.Namespace */
 .codehilite .kp { color: var(--hl-pseudo) } /* Keyword.Pseudo */
-.codehilite .kr { color: var(--hl-reserved) } /* Keyword.Reserved */
+.codehilite .kr { color: var(--hl-reserved); font-weight: bold; } /* Keyword.Reserved */
 .codehilite .kt { color: var(--hl-type) } /* Keyword.Type */
 .codehilite .s { color: var(--hl-string) } /* Literal.String */
 .codehilite .nc { color: var(--hl-class) } /* Name.Class */
