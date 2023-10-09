@@ -217,9 +217,11 @@ searchAll({
 //=> "De Komiske Føttenes Rolle i Humor"
 ```
 
-Og med det har vi et nokså kraftig liten søkemotor på rett over 100 linjer helt
-plain JavaScript - og da har jeg til og med inlinet de 3 lodash-funksjonene vi
-brukte, så koden er helt fri for avhengigheter. Ikke dårlig!
+Og med det har vi en nokså kraftig liten søkemotor på [rett over 100 linjer helt
+plain
+JavaScript](https://gist.github.com/cjohansen/c4ff8f7f997f654f2af396c55a7e9fde) -
+og da har jeg til og med inlinet de 3 lodash-funksjonene vi brukte, så koden er
+helt fri for avhengigheter. Ikke dårlig!
 
 Vi bruker denne søkemotoren til å søke i 2000 matvarer i den nye
 [matvaretabellen.no](https://matvaretabellen.no). For å redusere arbeidet som
