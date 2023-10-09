@@ -90,10 +90,10 @@ oss nå gjøre det igjen, men plassere dem i tre forskjellige indekser:
 }
 ```
 
-La oss så tilpasse søkefunksjonen vår fra sist. Sist tok den imot en index og en
-søkestreng, gjorde en hardkodet "tokenize" før den slo opp i indeksen, og hadde
-til slutt en hardkodet terskelverdi for hvor mange søkesymboler som måtte treffe
-for at vi skulle inkludere en id. Denne gangen parameteriserer vi alle disse:
+La oss så tilpasse søkefunksjonen. Sist tok den imot en indeks og en søkestreng,
+gjorde en hardkodet "tokenize" før den slo opp i indeksen, og hadde til slutt en
+hardkodet terskelverdi for hvor mange søkesymboler som måtte treffe for at vi
+skulle inkludere en id. Denne gangen parameteriserer vi alle disse:
 
 ```js
 function search({index, requiredMatches, tokenizer}, q) {
@@ -220,3 +220,8 @@ searchAll({
 Og med det har vi et nokså kraftig liten søkemotor på rett over 100 linjer helt
 plain JavaScript - og da har jeg til og med inlinet de 3 lodash-funksjonene vi
 brukte, så koden er helt fri for avhengigheter. Ikke dårlig!
+
+Vi bruker denne søkemotoren til å søke i 2000 matvarer i den nye
+[matvaretabellen.no](https://matvaretabellen.no). For å redusere arbeidet som
+gjøres på klienten serverer vi en ferdigtygget indeks fra serveren (en [statisk
+generert en](/blog-posts/lange-flate-filer/), selvfølgelig).
