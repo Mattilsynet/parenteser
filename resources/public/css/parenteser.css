@@ -454,3 +454,42 @@ body .text-content :last-child {
   .teaser .h5 {display: block;}
   .footer-content {max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; padding: 0 20px;}
 }
+
+.flex {display: flex}
+
+.bananas {position: relative; flex: 1; min-width: 124px;}
+.banana-1,
+.banana-2 {
+    position: absolute;
+    width: 113px;
+    height: 151px;
+    background: url('../images/banan.png');
+    background-size: 113px 151px;
+}
+.banana-1 {
+    right: -30px;
+    top: -10px;
+}
+.banana-2 {
+    right: 30px;
+    top: -30px;
+    transform: rotate(185deg);
+}
+
+@media only screen and (min-width: 768px) {
+    .bananas {min-width: 300px;}
+    .banana-1,
+    .banana-2 {
+        width: 170px;
+        height: 227px;
+        background-size: 170px 227px;
+    }
+    .banana-1 {
+        right: 10px;
+        top: -20px;
+    }
+    .banana-2 {
+        right: 120px;
+        top: -50px;
+    }
+}

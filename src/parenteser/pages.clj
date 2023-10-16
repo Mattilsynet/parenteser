@@ -53,7 +53,8 @@
    (list
     (e/header-section
      {:title "Parenteser"
-      :description "Beretninger fra Mat-teamets grønne enger"})
+      :description "Beretninger fra Mat-teamets grønne enger"
+      :bananas? true})
     (e/teaser-section
      {:teasers (->> (get-blog-posts (d/entity-db page))
                     (map prepare-blog-post-teaser))}))))
