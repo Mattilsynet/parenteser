@@ -42,9 +42,13 @@
     [:div.section-content
      [:div.teaser-list (map teaser teasers)]]]])
 
-(defn header-section [{:keys [title description]}]
+(defn header-section [{:keys [title description bananas?]}]
   [:div.section.header
    [:div.content
     [:div.section-content
-     (when title [:h1.h1 title])
-     (when description [:p.desc  description])]]])
+     [:div.flex
+      [:div
+       (when title [:h1.h1 title])
+       (when description [:p.desc description])]
+      (when bananas?
+        [:div.bananas [:div.banana-1] [:div.banana-2]])]]]])
