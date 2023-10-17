@@ -1,10 +1,11 @@
 {:paths ["src" "resources"]
  :deps {org.clojure/clojure {:mvn/version "1.11.1"}
         no.cjohansen/powerpack {:git/url "https://github.com/cjohansen/powerpack.git"
-                                :sha "1f994cdd4670a684a162025684d7c74959eabb12"}}
+                                :sha "83deabd4043ff23d2d9abb533ed71fd0b3686a4a"}}
  :aliases
  {:dev {:extra-paths ["dev"]}
   :server {:main-opts ["-m" "parenteser.dev"]}
   :ancient {:extra-deps {olical/depot {:mvn/version "1.8.4"}}
             :main-opts ["-m" "depot.outdated.main"]}
-  :build {:main-opts ["-m" "parenteser.web"]}}}
+  :build {:main-opts ["-m" "parenteser.export"]
+          :exec-fn parenteser.export/export}}}
