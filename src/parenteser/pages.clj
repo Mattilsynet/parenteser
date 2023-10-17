@@ -61,7 +61,8 @@
    req
    blog-post
    (list
-    (e/header-section {:title "Parenteser"})
+    (e/header-section {:title "Parenteser"
+                       :href "/"})
     [:div.section.foo
      [:div.content.text-content
       [:h1.h1 (:page/title blog-post)]
