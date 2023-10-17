@@ -15,6 +15,6 @@
   (app/stop)
   (app/reset)
 
-  (def system integrant.repl.state/system)
+  integrant.repl.state/system
 
   )

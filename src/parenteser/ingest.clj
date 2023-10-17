@@ -16,7 +16,7 @@
       (assoc :page/kind :page.kind/blog-post)
       (update-in-existing [:blog-post/tags] reify-tags)))
 
-(defn create-tx [_db file-name datas]
+(defn create-tx [file-name datas]
   (cond->> datas
     (re-find #"^blog-posts\/" file-name)
     (map ingest-blog-post)))

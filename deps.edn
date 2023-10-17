@@ -1,7 +1,7 @@
 {:paths ["src" "resources"]
  :deps {org.clojure/clojure {:mvn/version "1.11.1"}
         no.cjohansen/powerpack {:git/url "https://github.com/cjohansen/powerpack.git"
-                                :sha "795e455851c9b82c9679089b1b3cddfc9c213678"}}
+                                :sha "1f994cdd4670a684a162025684d7c74959eabb12"}}
  :aliases
  {:dev {:extra-paths ["dev"]}
   :server {:main-opts ["-m" "parenteser.dev"]}
