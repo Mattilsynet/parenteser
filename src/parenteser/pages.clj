@@ -1,7 +1,6 @@
 (ns parenteser.pages
   (:require [datomic-type-extensions.api :as d]
             [parenteser.elements :as e]
-            [powerpack.html :as html]
             [powerpack.markdown :as md])
   (:import (java.time LocalDateTime)
            (java.time.format DateTimeFormatter)
@@ -41,39 +40,34 @@
                                  :as blog-post}]
   (cond-> {:title title
            :url uri
-           :description (md/to-html description)
+           :description (md/render-html description)
            :aside (get-blog-post-vcard blog-post)
            :kind :teaser-article}
     published (assoc :published (ymd published))))
 
 (defn render-frontpage [req page]
-  (html/render-hiccup
-   req
-   page
-   (list
+  [:html
+   [:body
     (e/header-section {:title "Parenteser"})
     (e/teaser-section
      {:teasers (->> (get-blog-posts (d/entity-db page))
-                    (map prepare-blog-post-teaser))}))))
+                    (map prepare-blog-post-teaser))})]])
 
 (defn render-blog-post [req blog-post]
-  (html/render-hiccup
-   req
-   blog-post
-   (list
+  [:html
+   [:body
     (e/header-section {:title "Parenteser"
                        :href "/"})
-    [:div.section.foo
+    [:div.section
      [:div.content.text-content
       [:h1.h1 (:page/title blog-post)]
-      (md/to-html (:blog-post/body blog-post))
-      (e/vcard (get-blog-post-vcard blog-post))]])))
+      (md/render-html (:blog-post/body blog-post))
+      (e/vcard (get-blog-post-vcard blog-post))]]]])
 
 (defn render-404 [req page]
-  (html/render-hiccup
-   req
-   page
-   [:h1 "404 WAT"]))
+  [:html
+   [:body
+    [:h1 "404 WAT"]]])
 
 (defn render-page [req page]
   (if-let [f (case (:page/kind page)

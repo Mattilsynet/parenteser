@@ -22,7 +22,7 @@
                           {:public-dir "public"
                            :paths ["/css/parenteser.css"]}}
 
-        :powerpack.server/port 5052
+        :powerpack/port 5052
 
         :imagine/config {:prefix "image-assets"
                          :resource-path "public"
