@@ -377,6 +377,31 @@ body .text-content :last-child {
   }
 }
 
+
+.banana-header {
+    display: flex;
+    align-items: center;
+    max-width: 1266px;
+    margin: 0 auto;
+}
+
+/* 340 x 453 */
+
+.banana-1,
+.banana-2 {
+    width: 68px;
+    height: 91px;
+    background: url('../images/banan.png');
+    background-size: 68px 91px;
+}
+.banana-1 {
+    transform: rotate(185deg);
+    margin-top: -5px;
+}
+.banana-2 {
+    margin-top: 5px;
+}
+
 @media only screen and (min-width: 768px) {
   html, body {
     font-size: 21px;
@@ -436,6 +461,22 @@ body .text-content :last-child {
     grid-template-columns: 3fr 2fr;
     grid-gap: 0 2rem;
   }
+
+  .banana-header { padding-bottom: 5px; }
+  .banana-1,
+  .banana-2 {
+      width: 85px;
+      height: 113px;
+      background: url('../images/banan.png');
+      background-size: 85px 113px;
+  }
+  .banana-1 {
+      transform: rotate(185deg);
+      margin-top: -10px;
+  }
+  .banana-2 {
+      margin-top: 10px;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -453,43 +494,20 @@ body .text-content :last-child {
   .media + .teaser-content {margin: 0 0 0 2rem;}
   .teaser .h5 {display: block;}
   .footer-content {max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; padding: 0 20px;}
-}
 
-.flex {display: flex}
-
-.bananas {position: relative; flex: 1; min-width: 124px;}
-.banana-1,
-.banana-2 {
-    position: absolute;
-    width: 113px;
-    height: 151px;
-    background: url('../images/banan.png');
-    background-size: 113px 151px;
-}
-.banana-1 {
-    right: -30px;
-    top: -10px;
-}
-.banana-2 {
-    right: 30px;
-    top: -30px;
-    transform: rotate(185deg);
-}
-
-@media only screen and (min-width: 768px) {
-    .bananas {min-width: 300px;}
-    .banana-1,
-    .banana-2 {
-        width: 170px;
-        height: 227px;
-        background-size: 170px 227px;
-    }
-    .banana-1 {
-        right: 10px;
-        top: -20px;
-    }
-    .banana-2 {
-        right: 120px;
-        top: -50px;
-    }
+  .banana-header { padding-bottom: 10px; }
+  .banana-1,
+  .banana-2 {
+      width: 113px;
+      height: 151px;
+      background: url('../images/banan.png');
+      background-size: 113px 151px;
+  }
+  .banana-1 {
+      transform: rotate(185deg);
+      margin-top: -20px;
+  }
+  .banana-2 {
+      margin-top: 20px;
+  }
 }
