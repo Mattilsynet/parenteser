@@ -10,7 +10,7 @@
         :site/title "Parenteser"
 
         :stasis/build-dir "build"
-        :powerpack/content-dir "resources/content"
+        :powerpack/content-dir "content"
         :powerpack/source-dirs ["src" "dev"]
         :powerpack/resource-dirs ["resources"]
         :powerpack/db "datomic:mem://parenteser"
@@ -40,4 +40,3 @@
        :render-page #'pages/render-page
        :on-ingested #'ingest/on-ingested}
       highlight/install))
-
