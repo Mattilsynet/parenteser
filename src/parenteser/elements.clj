@@ -42,9 +42,12 @@
     [:div.section-content
      [:div.teaser-list (map teaser teasers)]]]])
 
-(defn header-section [{:keys [title]}]
+(defn header-section [{:keys [title href]}]
   [:div.section.header
    [:div.banana-header
     [:div.banana-1]
-    [:h1.h1 title]
+    [:h1.h1
+     (if href
+       [:a {:href href} title]
+       title)]
     [:div.banana-2]]])

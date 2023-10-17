@@ -370,6 +370,7 @@ body .text-content :last-child {
 .header.section .h1 {
     color: var(--header-fg);
 }
+.header.section a {text-decoration: none; color: inherit;}
 
 @media only screen and (orientation : landscape) {
   .codehilite {
