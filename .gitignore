@@ -1,4 +1,4 @@
 /.cpcache/
 /.nrepl-port
-/build/
+/docker/build/
 /.clj-kondo/

@@ -9,7 +9,7 @@
         :site/default-language "no"
         :site/title "Parenteser"
 
-        :stasis/build-dir "build"
+        :stasis/build-dir "docker/build"
         :powerpack/content-dir "content"
         :powerpack/source-dirs ["src" "dev"]
         :powerpack/resource-dirs ["resources"]
