@@ -51,10 +51,7 @@
    req
    page
    (list
-    (e/header-section
-     {:title "Parenteser"
-      :description "Beretninger fra Mat-teamets grønne enger"
-      :bananas? true})
+    (e/header-section {:title "Parenteser"})
     (e/teaser-section
      {:teasers (->> (get-blog-posts (d/entity-db page))
                     (map prepare-blog-post-teaser))}))))
@@ -64,11 +61,10 @@
    req
    blog-post
    (list
-    (e/header-section {:title (:page/title blog-post)
-                       :description (md/to-html
-                                     (:blog-post/introduction blog-post))})
-    [:div.section
+    (e/header-section {:title "Parenteser"})
+    [:div.section.foo
      [:div.content.text-content
+      [:h1.h1 (:page/title blog-post)]
       (md/to-html (:blog-post/body blog-post))
       (e/vcard (get-blog-post-vcard blog-post))]])))
 
