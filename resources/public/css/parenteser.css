@@ -209,6 +209,10 @@ a:hover, .clickable:hover {
   color: var(--byline-color);
 }
 
+.teaser-aside {
+    margin-top: 40px;
+}
+
 @media only screen and (min-width: 768px) {
   .teaser {
     display: flex;
@@ -221,6 +225,7 @@ a:hover, .clickable:hover {
   .teaser-aside {
     flex: 45%;
     padding-left: 40px;
+    margin-top: 0;
   }
 }
 
@@ -564,4 +569,5 @@ body .text-content :last-child {
     border-top: 1px solid var(--footer-separator);
     background: var(--footer-bg);
     font-size: 0.9rem;
+    margin-top: 40px;
 }
