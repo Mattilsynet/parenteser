@@ -53,3 +53,10 @@
         title)]
      [:p.slogan slogan]]
     [:div.banana-2]]])
+
+(defn info-section [{:keys [title text]}]
+  [:div.section
+   [:div.content.info-section
+    [:div.section-content.text-content
+     [:h2.h4 title]
+     text]]])
