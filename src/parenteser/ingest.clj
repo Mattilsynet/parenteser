@@ -14,23 +14,22 @@
     {:tag/id id}))
 
 (defn get-open-graph-image [blog-post]
-  (or (some-> (:blog-post/body blog-post)
+  (or (:open-graph/image blog-post)
+      (some-> (:blog-post/body blog-post)
               md/render-html
               (html5-walker/find-nodes [:img])
               first
-              (.getAttribute "src"))
-      (-> blog-post
-          :blog-post/author
-          :person/photo)))
+              (.getAttribute "src"))))
 
 (defn ingest-blog-post [blog-post]
-  (-> blog-post
-      (assoc :page/kind :page.kind/blog-post)
-      (update-in-existing [:page/uri] str/replace #"^/blog-posts" "")
-      (update-in-existing [:blog-post/tags] reify-tags)
-      (update :open-graph/title #(or % (:page/title blog-post)))
-      (update :open-graph/description #(or % (:blog-post/description blog-post)))
-      (update :open-graph/image #(or % (get-open-graph-image blog-post)))))
+  (let [og-image (get-open-graph-image blog-post)]
+    (cond-> (-> blog-post
+                (assoc :page/kind :page.kind/blog-post)
+                (update-in-existing [:page/uri] str/replace #"^/blog-posts" "")
+                (update-in-existing [:blog-post/tags] reify-tags)
+                (update :open-graph/title #(or % (:page/title blog-post)))
+                (update :open-graph/description #(or % (:blog-post/description blog-post))))
+      og-image (assoc :open-graph/image og-image))))
 
 (defn create-tx [file-name datas]
   (cond->> datas
