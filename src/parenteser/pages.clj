@@ -48,7 +48,9 @@
 (defn render-frontpage [page]
   [:html
    [:body
-    (e/header-section {:title "Parenteser"})
+    (e/header-section
+     {:title "Parenteser"
+      :slogan "Betraktninger fra Mat-teamets grønne enger"})
     (e/teaser-section
      {:teasers (->> (get-blog-posts (d/entity-db page))
                     (map prepare-blog-post-teaser))})]])
@@ -56,8 +58,10 @@
 (defn render-blog-post [blog-post]
   [:html
    [:body
-    (e/header-section {:title "Parenteser"
-                       :href "/"})
+    (e/header-section
+     {:title "Parenteser"
+      :slogan "Betraktninger fra Mat-teamets grønne enger"
+      :href "/"})
     [:div.section
      [:div.content.text-content
       [:h1.h1 (:page/title blog-post)]
