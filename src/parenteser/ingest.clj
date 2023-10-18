@@ -15,7 +15,8 @@
   (-> blog-post
       (assoc :page/kind :page.kind/blog-post)
       (update-in-existing [:blog-post/tags] reify-tags)
-      (update :open-graph/title #(or % (:page/title blog-post)))))
+      (update :open-graph/title #(or % (:page/title blog-post)))
+      (update :open-graph/description #(or % (:blog-post/description blog-post)))))
 
 (defn create-tx [file-name datas]
   (cond->> datas
