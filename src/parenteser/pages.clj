@@ -45,7 +45,7 @@
            :kind :teaser-article}
     published (assoc :published (ymd published))))
 
-(defn render-frontpage [req page]
+(defn render-frontpage [page]
   [:html
    [:body
     (e/header-section {:title "Parenteser"})
@@ -53,7 +53,7 @@
      {:teasers (->> (get-blog-posts (d/entity-db page))
                     (map prepare-blog-post-teaser))})]])
 
-(defn render-blog-post [req blog-post]
+(defn render-blog-post [blog-post]
   [:html
    [:body
     (e/header-section {:title "Parenteser"
@@ -64,18 +64,18 @@
       (md/render-html (:blog-post/body blog-post))
       (e/vcard (get-blog-post-vcard blog-post))]]]])
 
-(defn render-404 [req page]
+(defn render-404 [_page]
   [:html
    [:body
     [:h1 "404 WAT"]]])
 
-(defn render-page [req page]
+(defn render-page [_req page]
   (if-let [f (case (:page/kind page)
                :page.kind/frontpage render-frontpage
                :page.kind/blog-post render-blog-post
                nil)]
-    (f req page)
-    (render-404 req page)))
+    (f page)
+    (render-404 page)))
 
 (comment
 
