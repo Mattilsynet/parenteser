@@ -436,6 +436,7 @@ body .text-content :last-child {
   .h5, .text-content h5 {font-size: 1.25rem; }
   .codehilite {font-size: 0.7rem;}
   .section .content {padding: 4rem 40px;}
+  .slim .content {padding: 2rem 40px;}
   .theme-default + .theme-default .content {padding-top: 0;}
   .section:last-child .content {padding-bottom: 100px;}
   div.hide-mobile {display: block;}
@@ -555,8 +556,12 @@ body .text-content :last-child {
 }
 
 .section .info-section {
-    background: var(--botticelli);
     background: hsl(38, 40%, 96%);
     margin-top: 30px;
-    padding: 2rem 40px;
+}
+
+.footer-section {
+    border-top: 1px solid var(--footer-separator);
+    background: var(--footer-bg);
+    font-size: 0.9rem;
 }

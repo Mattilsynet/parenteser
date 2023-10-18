@@ -55,8 +55,14 @@
     [:div.banana-2]]])
 
 (defn info-section [{:keys [title text]}]
-  [:div.section
+  [:div.section.slim
    [:div.content.info-section
     [:div.section-content.text-content
      [:h2.h4 title]
+     text]]])
+
+(defn footer-section [{:keys [text]}]
+  [:div.section.footer-section.slim
+   [:div.content
+    [:div.section-content
      text]]])
