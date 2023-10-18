@@ -13,8 +13,8 @@
 
 (defn ingest-blog-post [blog-post]
   (-> blog-post
-      (update :page/uri str/replace #"^/blog-posts" "")
       (assoc :page/kind :page.kind/blog-post)
+      (update-in-existing [:page/uri] str/replace #"^/blog-posts" "")
       (update-in-existing [:blog-post/tags] reify-tags)
       (update :open-graph/title #(or % (:page/title blog-post)))
       (update :open-graph/description #(or % (:blog-post/description blog-post)))))
