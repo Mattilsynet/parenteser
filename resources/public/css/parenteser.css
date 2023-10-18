@@ -129,30 +129,35 @@ a:hover, .clickable:hover {
 }
 
 .h1,
-.text-content h1 {
+.text-content h1,
+.text-content .h1 {
   font-size: 2rem;
   line-height: 1.2;
 }
 
 .h2,
-.text-content h2 {
+.text-content h2,
+.text-content .h2 {
   font-size: 2rem;
   line-height: 1.2;
 }
 
 .h3,
-.text-content h3 {
+.text-content h3,
+.text-content .h3 {
   font-size: 1.7rem;
   line-height: 1.2;
 }
 
 .h4,
-.text-content h4 {
+.text-content h4,
+.text-content .h4 {
   font-size: 1.4rem;
 }
 
 .h5,
-.text-content h5 {
+.text-content h5,
+.text-content .h5 {
   font-size: 1.2rem;
   font-weight: normal;
 }
@@ -547,4 +552,11 @@ body .text-content :last-child {
       font-size: 0.95rem;
       margin-top: 5px;
   }
+}
+
+.section .info-section {
+    background: var(--botticelli);
+    background: hsl(38, 40%, 96%);
+    margin-top: 30px;
+    padding: 2rem 40px;
 }

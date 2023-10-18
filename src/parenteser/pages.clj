@@ -48,7 +48,7 @@
 (defn layout [& forms]
   [:html
    [:head
-    [:meta {:name "theme-color" :content "var(--header-bg)"}]]
+    [:meta {:name "theme-color" :content "#f1eadf"}]]
    (into [:body] forms)])
 
 (defn render-frontpage [page]
@@ -56,6 +56,11 @@
    (e/header-section
     {:title "Parenteser"
      :slogan "Betraktninger fra Mat-teamets grønne enger"})
+   (e/info-section
+    {:title "Jøss, er du her også?"
+     :text [:div
+            [:p "Trivelig at du stakk innom. Vi er et lite produktteam hos Mattilsynet som jobber med mattrygghet. Her er vår tidvis tekniske blogg hvor vi deler litt av hva vi jobber med, og ting vi lærer på veien."]
+            [:p "Hvorfor akkurat Parenteser? Vi jobber mye i Clojure, som har rykte på seg å være belemret med unødvendige mengder parenteser. Neida, ikke bare er de nødvendige, de er aldeles smakfulle - som to fine bananer i headeren. Også hadde vi tenkt at disse bloggpostene kom litt på siden - litt i parentes, om du vil."]]})
    (e/teaser-section
     {:teasers (->> (get-blog-posts (d/entity-db page))
                    (map prepare-blog-post-teaser))})))
