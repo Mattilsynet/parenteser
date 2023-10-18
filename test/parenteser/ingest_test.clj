@@ -40,4 +40,25 @@
                 :open-graph/description "Beskrivelse, kort"}
                sut/ingest-blog-post
                :open-graph/description)
-           "Beskrivelse, kort"))))
+           "Beskrivelse, kort")))
+
+  (testing "Uses first image in post as og:image"
+    (is (= (-> {:blog-post/body "Here is an image: ![A bird](/images/bird.jpg)"}
+               sut/ingest-blog-post
+               :open-graph/image)
+           "/images/bird.jpg")))
+
+  (testing "Uses author image as og:image when no body image"
+    (is (= (-> {:blog-post/body "Here is text"
+                :blog-post/author {:person/photo "/images/magnar.jpg"}}
+               sut/ingest-blog-post
+               :open-graph/image)
+           "/images/magnar.jpg")))
+
+  (testing "Prefers specific og:image"
+    (is (= (-> {:blog-post/body "Here is an image: ![A bird](/images/bird.jpg)"
+                :blog-post/author {:person/photo "/images/magnar.jpg"}
+                :open-graph/image "/images/cow.jpg"}
+               sut/ingest-blog-post
+               :open-graph/image)
+           "/images/cow.jpg"))))
