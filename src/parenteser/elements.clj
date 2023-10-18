@@ -15,7 +15,7 @@
 (defn vcard [{:keys [image url title body]}]
   [:div.vcard
    (when image
-     (let [img [:img.img {:src image :width 92}]]
+     (let [img [:img.img {:src (str "/vcard-small" image) :width 92}]]
        (if url
          [:a {:href url} img]
          img)))
