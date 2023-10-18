@@ -14,7 +14,8 @@
 (defn ingest-blog-post [blog-post]
   (-> blog-post
       (assoc :page/kind :page.kind/blog-post)
-      (update-in-existing [:blog-post/tags] reify-tags)))
+      (update-in-existing [:blog-post/tags] reify-tags)
+      (assoc :open-graph/title (:page/title blog-post))))
 
 (defn create-tx [file-name datas]
   (cond->> datas
