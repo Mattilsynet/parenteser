@@ -1,0 +1,11 @@
+* MVP [2/2]
+** DONE Lenke tilbake
+** DONE Banan-themed parentes-header
+* Snart [0/7]
+** TODO 404-side
+** TODO Config for 404 i nginx
+** TODO Varnish
+** TODO Favicon
+** TODO Profil-sider
+** TODO Flere bloggposter
+** TODO Tag-sider
