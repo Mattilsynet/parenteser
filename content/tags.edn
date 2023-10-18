@@ -1,4 +1,6 @@
 [{:tag/id :javascript
   :tag/name "JavaScript"}
  {:tag/id :sok
-  :tag/name "Søk"}]
+  :tag/name "Søk"}
+ {:tag/id :statisk-html
+  :tag/name "Statisk HTML"}]

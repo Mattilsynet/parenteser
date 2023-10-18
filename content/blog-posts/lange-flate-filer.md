@@ -1,6 +1,7 @@
 :page/title Lange flate filer
 :blog-post/author {:person/id :person/magnar}
-:blog-post/published #time/ldt "2023-10-17T09:00:00"
+:blog-post/published #time/ldt "2023-10-18T15:30:00"
+:blog-post/tags [:statisk-html]
 :blog-post/description
 
 Du skal lete lenge etter noe enklere og mer snappy enn å servere statisk HTML og
