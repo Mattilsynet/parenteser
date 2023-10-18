@@ -45,33 +45,35 @@
            :kind :teaser-article}
     published (assoc :published (ymd published))))
 
-(defn render-frontpage [page]
+(defn layout [& forms]
   [:html
-   [:body
-    (e/header-section
-     {:title "Parenteser"
-      :slogan "Betraktninger fra Mat-teamets grønne enger"})
-    (e/teaser-section
-     {:teasers (->> (get-blog-posts (d/entity-db page))
-                    (map prepare-blog-post-teaser))})]])
+   [:head
+    [:meta {:name "theme-color" :content "var(--header-bg)"}]]
+   (into [:body] forms)])
+
+(defn render-frontpage [page]
+  (layout
+   (e/header-section
+    {:title "Parenteser"
+     :slogan "Betraktninger fra Mat-teamets grønne enger"})
+   (e/teaser-section
+    {:teasers (->> (get-blog-posts (d/entity-db page))
+                   (map prepare-blog-post-teaser))})))
 
 (defn render-blog-post [blog-post]
-  [:html
-   [:body
-    (e/header-section
-     {:title "Parenteser"
-      :slogan "Betraktninger fra Mat-teamets grønne enger"
-      :href "/"})
-    [:div.section
-     [:div.content.text-content
-      [:h1.h1 (:page/title blog-post)]
-      (md/render-html (:blog-post/body blog-post))
-      (e/vcard (get-blog-post-vcard blog-post))]]]])
+  (layout
+   (e/header-section
+    {:title "Parenteser"
+     :slogan "Betraktninger fra Mat-teamets grønne enger"
+     :href "/"})
+   [:div.section
+    [:div.content.text-content
+     [:h1.h1 (:page/title blog-post)]
+     (md/render-html (:blog-post/body blog-post))
+     (e/vcard (get-blog-post-vcard blog-post))]]))
 
 (defn render-404 [_page]
-  [:html
-   [:body
-    [:h1 "404 WAT"]]])
+  (layout [:h1 "404 WAT"]))
 
 (defn render-page [_req page]
   (if-let [f (case (:page/kind page)
