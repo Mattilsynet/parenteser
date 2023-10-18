@@ -1,6 +1,8 @@
 (ns parenteser.ingest
   (:require [clojure.string :as str]
-            [datomic-type-extensions.api :as d]))
+            [datomic-type-extensions.api :as d]
+            [html5-walker.core :as html5-walker]
+            [powerpack.markdown :as md]))
 
 (defn update-in-existing [m path & args]
   (if-not (nil? (get-in m path))
@@ -11,13 +13,24 @@
   (for [id tags]
     {:tag/id id}))
 
+(defn get-open-graph-image [blog-post]
+  (or (some-> (:blog-post/body blog-post)
+              md/render-html
+              (html5-walker/find-nodes [:img])
+              first
+              (.getAttribute "src"))
+      (-> blog-post
+          :blog-post/author
+          :person/photo)))
+
 (defn ingest-blog-post [blog-post]
   (-> blog-post
       (assoc :page/kind :page.kind/blog-post)
       (update-in-existing [:page/uri] str/replace #"^/blog-posts" "")
       (update-in-existing [:blog-post/tags] reify-tags)
       (update :open-graph/title #(or % (:page/title blog-post)))
-      (update :open-graph/description #(or % (:blog-post/description blog-post)))))
+      (update :open-graph/description #(or % (:blog-post/description blog-post)))
+      (update :open-graph/image #(or % (get-open-graph-image blog-post)))))
 
 (defn create-tx [file-name datas]
   (cond->> datas
@@ -42,11 +55,18 @@
   (def system integrant.repl.state/system)
   (def db (d/db (:datomic/conn system)))
 
+  (-> (d/entity db [:page/uri "/blog-posts/byggeklosser-for-sok/"])
+      :blog-post/description
+      md/render-html
+      ;;(html5-walker.core/find-nodes [:p])
+      )
+
   (get-tag-name-fixes db)
 
-  (d/q '[:find ?e ?t
+  (d/q '[:find ?u ?t
          :where
          [?e :page/title]
+         [?e :page/uri ?u]
          [?e :blog-post/tags ?t]]
        db)
 
