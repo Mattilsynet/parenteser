@@ -10,7 +10,10 @@ docker: docker/build
 publish:
 	docker push $(IMAGE)
 
+test:
+	clojure -M:dev -m kaocha.runner
+
 clean:
 	rm -fr docker/build
 
-.PHONY: clean docker publish
+.PHONY: clean docker publish test
