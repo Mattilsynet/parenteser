@@ -19,17 +19,18 @@
               md/render-html
               (html5-walker/find-nodes [:img])
               first
-              (.getAttribute "src"))))
+              (.getAttribute "src"))
+      (->> blog-post
+           :blog-post/author
+           :person/photo)))
 
 (defn ingest-blog-post [blog-post]
-  (let [og-image (get-open-graph-image blog-post)]
-    (cond-> (-> blog-post
-                (assoc :page/kind :page.kind/blog-post)
-                (update-in-existing [:page/uri] str/replace #"^/blog-posts" "")
-                (update-in-existing [:blog-post/tags] reify-tags)
-                (update :open-graph/title #(or % (:page/title blog-post)))
-                (update :open-graph/description #(or % (:blog-post/description blog-post))))
-      og-image (assoc :open-graph/image og-image))))
+  (-> blog-post
+      (assoc :page/kind :page.kind/blog-post)
+      (update-in-existing [:page/uri] str/replace #"^/blog-posts" "")
+      (update-in-existing [:blog-post/tags] reify-tags)
+      (update :open-graph/title #(or % (:page/title blog-post)))
+      (update :open-graph/description #(or % (:blog-post/description blog-post)))))
 
 (defn create-tx [file-name datas]
   (cond->> datas
@@ -45,20 +46,37 @@
                  (remove :tag/name))]
     [:db/add (:db/id tag) :tag/name (str/capitalize (name (:tag/id tag)))]))
 
+(defn suggest-og-image [blog-post]
+  (when-let [image (get-open-graph-image blog-post)]
+    [:db/add (:db/id blog-post) :open-graph/image image]))
+
 (defn on-ingested [{:keys [conn]}]
   (when-let [txes (get-tag-name-fixes (d/db conn))]
-    @(d/transact conn txes)))
+    @(d/transact conn txes))
+  (let [db (d/db conn)]
+    (some->> (d/q '[:find [?e ...]
+                    :where
+                    [?e :page/kind :page.kind/blog-post]
+                    (not [?e :open-graph/image])]
+                  db)
+             (map #(d/entity db %))
+             (keep suggest-og-image)
+             seq
+             (d/transact conn)
+             deref)))
 
 (comment
 
   (def system integrant.repl.state/system)
   (def db (d/db (:datomic/conn system)))
 
-  (-> (d/entity db [:page/uri "/blog-posts/byggeklosser-for-sok/"])
-      :blog-post/description
-      md/render-html
-      ;;(html5-walker.core/find-nodes [:p])
-      )
+  (->> (d/q '[:find [?e ...]
+              :where
+              [?e :page/kind :page.kind/blog-post]
+              (not [?e :open-graph/image])]
+            db)
+       (map #(d/entity db %))
+       (map d/touch))
 
   (get-tag-name-fixes db)
 
