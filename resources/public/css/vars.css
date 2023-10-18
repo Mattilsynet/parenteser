@@ -9,6 +9,7 @@
   --astral: #338ba3;
   --spring-wood: #f9f6f1;
   --botticelli: #d4e7ec;
+  --mysterio: hsl(38, 40%, 96%);
 
   --fg-color: var(--smoky);
   --section-bg: #fff;
@@ -18,6 +19,8 @@
   --code-contrast: var(--lucky);
   --header-bg: var(--dawn-pink);
   --header-fg: var(--alizarin);
+  --footer-bg: var(--mysterio);
+  --footer-separator: var(--dawn-pink);
   --quote-border: var(--alizarin);
   --subtle: var(--botticelli);
   --byline-border: var(--hillary);
