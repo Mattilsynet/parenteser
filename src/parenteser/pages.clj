@@ -85,7 +85,9 @@
     [:div.content.text-content
      [:h1.h1 (:page/title blog-post)]
      (md/render-html (:blog-post/body blog-post))
-     (e/vcard (get-blog-post-vcard blog-post))]]))
+     (-> (get-blog-post-vcard blog-post)
+         (assoc :class "mtxl")
+         e/vcard)]]))
 
 (defn render-404 [_page]
   (layout [:h1 "404 WAT"]))
