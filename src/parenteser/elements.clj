@@ -1,17 +1,5 @@
 (ns parenteser.elements)
 
-(defn byline [{:keys [published updated tags]}]
-  [:p.byline.text-s
-   (cond
-     (and published updated)
-     [:span.date (str updated " (published " published ")")]
-
-     published [:span.date published])
-   (when tags
-     [:span.subtle (->> (for [{:keys [title url]} tags]
-                          [:a {:href url} title])
-                        (interpose ", "))])])
-
 (defn vcard [{:keys [image image-alt url title body]}]
   [:div.vcard
    (when image
