@@ -92,3 +92,15 @@ vårt](./tf/main.tf) har et "hello world" image. Dette imaget brukes kun ved
 første gangs oppsett. [Github
 Actions-arbeidsflyten](.github/workflows/build.yml) ber CloudRun om å kjøre nye
 images ved push.
+
+### Github Actions
+
+Verdt å merke seg: prosjekt-id-en som brukes med `workload_identity_provider`
+når vi autentiserer oss mot GCP for å oppdatere Cloud Run-konfigurasjonen vår
+kan finnes på følgende vis:
+
+```sh
+gcloud projects list \
+  --filter="$(gcloud config get-value project)" \
+  --format="value(PROJECT_NUMBER)"
+```
