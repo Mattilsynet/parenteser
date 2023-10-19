@@ -33,7 +33,13 @@
                                              [:crop {:preset :square}]]
                            :retina-optimized? true
                            :retina-quality 0.4
-                           :width 184}}}
+                           :width 184}
+
+                          :vcard-open-graph
+                          {:transformations [[:fit {:width 92 :height 92}]
+                                             [:crop {:preset :square}]]
+                           :retina-optimized? false
+                           :width 92}}}
 
         :datomic/schema-file "resources/schema.edn"}
        :create-ingest-tx #'ingest/create-tx
