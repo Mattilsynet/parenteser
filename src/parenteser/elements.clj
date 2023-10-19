@@ -1,7 +1,7 @@
 (ns parenteser.elements)
 
-(defn vcard [{:keys [image image-alt url title body]}]
-  [:div.vcard
+(defn vcard [{:keys [image image-alt url title body class]}]
+  [:div.vcard {:class class}
    (when image
      (let [img [:img.img {:src (str "/vcard-small" image)
                           :alt image-alt

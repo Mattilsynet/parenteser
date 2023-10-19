@@ -571,3 +571,9 @@ body .text-content :last-child {
     font-size: 0.9rem;
     margin-top: 40px;
 }
+
+.mtxs {margin-top: 8px}
+.mts {margin-top: 16px}
+.mtm {margin-top: 24px}
+.mtl {margin-top: 32px}
+.mtxl {margin-top: 48px}
