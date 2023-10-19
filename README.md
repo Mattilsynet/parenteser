@@ -104,3 +104,23 @@ gcloud projects list \
   --filter="$(gcloud config get-value project)" \
   --format="value(PROJECT_NUMBER)"
 ```
+
+### Bygge og publisere lokalt
+
+Det skal normalt ikke være nødvendig å hverken bygge eller publisere Docker
+images fra lokal maskin. Allikevel ønsker man av og til å gjøre nettopp det -
+kanskje for å sjekke akkurat hvilke ting som ikke fungerer eller lignende.
+
+Bygging er rett frem:
+
+```sh
+make docker
+```
+
+For å publisere må du først logge deg selv inn i GCP, og deretter sørge for at
+Docker-prosessen også får være med på moroa:
+
+```sh
+gcloud auth login
+gcloud auth configure-docker europe-north1-docker.pkg.dev
+```
