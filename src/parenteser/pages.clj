@@ -31,6 +31,7 @@
 
 (defn get-blog-post-vcard [{:blog-post/keys [author tags]}]
   {:image (:person/photo author)
+   :image-alt (:person/given-name author)
    :title (:person/given-name author)
    :body (when-let [tags (prepare-tags tags)]
            [:span "Om " (comma-separated tags)])})

@@ -12,10 +12,12 @@
                           [:a {:href url} title])
                         (interpose ", "))])])
 
-(defn vcard [{:keys [image url title body]}]
+(defn vcard [{:keys [image image-alt url title body]}]
   [:div.vcard
    (when image
-     (let [img [:img.img {:src (str "/vcard-small" image) :width 92}]]
+     (let [img [:img.img {:src (str "/vcard-small" image)
+                          :alt image-alt
+                          :width 92}]]
        (if url
          [:a {:href url} img]
          img)))
