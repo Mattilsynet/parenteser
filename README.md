@@ -64,7 +64,7 @@ Du må være autentisert mot GCP. Deretter setter du parenteser-prosjektet som
 default og autentiserer maskinen din mot dette prosjektet:
 
 ```sh
-glcoud auth login
+gcloud auth login
 gcloud config set project parenteser-b480
 gcloud auth application-default login
 ```
