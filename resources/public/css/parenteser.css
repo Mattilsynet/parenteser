@@ -183,6 +183,11 @@ a:hover, .clickable:hover {
   margin: 0 0 1rem;
 }
 
+.text-content blockquote {
+  padding: 2rem;
+  background: var(--blockquote-bg);
+}
+
 .hide-mobile {display: none;}
 
 .subtle {
@@ -429,11 +434,11 @@ body .text-content :last-child {
     line-height: 1.5;
   }
 
-  .h1, .text-content h1 {font-size: 2.75rem;}
-  .h2, .text-content h2 {font-size: 2.25rem;}
-  .h3, .text-content h3 {font-size: 2rem;}
-  .h4, .text-content h4 {font-size: 1.5rem;}
-  .h5, .text-content h5 {font-size: 1.25rem; }
+  .h1, .text-content h1, .text-content .h1 {font-size: 2.75rem;}
+  .h2, .text-content h2, .text-content .h2 {font-size: 2.25rem;}
+  .h3, .text-content h3, .text-content .h3 {font-size: 2rem;}
+  .h4, .text-content h4, .text-content .h4 {font-size: 1.5rem;}
+  .h5, .text-content h5, .text-content .h5 {font-size: 1.25rem; }
   .codehilite {font-size: 0.7rem;}
   .section .content {padding: 4rem 40px;}
   .slim .content {padding: 2rem 40px;}
@@ -512,8 +517,8 @@ body .text-content :last-child {
 }
 
 @media only screen and (min-width: 1024px) {
-  .h1, .text-content h1 {font-size: 3.2rem; line-height: 1;}
-  .h2, .text-content h2 {font-size: 2.5rem; line-height: 1.1;}
+  .h1, .text-content h1, .text-content .h1 {font-size: 3.2rem; line-height: 1;}
+  .h2, .text-content h2, .text-content .h2 {font-size: 2.5rem; line-height: 1.1;}
 
   .codehilite code {padding: 28px;}
   .codehilite {font-size: 0.9rem; line-height: 1.3;}
