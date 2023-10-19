@@ -2,3 +2,4 @@
 /.nrepl-port
 /docker/build/
 /.clj-kondo/
+/tf/.terraform*
