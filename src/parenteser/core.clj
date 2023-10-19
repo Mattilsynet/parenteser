@@ -6,7 +6,7 @@
 (defn create-app []
   (-> {:config
        {:site/base-url "https://parenteser.mattilsynet.io"
-        :site/default-language "no"
+        :site/default-locale :no
         :site/title "Parenteser"
 
         :stasis/build-dir "docker/build"
