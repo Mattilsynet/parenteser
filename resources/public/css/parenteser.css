@@ -204,11 +204,6 @@ a:hover, .clickable:hover {
   line-height: 1;
 }
 
-/* Byline */
-.byline {
-  color: var(--byline-color);
-}
-
 .teaser-aside {
     margin-top: 40px;
 }
