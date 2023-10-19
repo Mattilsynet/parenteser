@@ -20,9 +20,10 @@
               (html5-walker/find-nodes [:img])
               first
               (.getAttribute "src"))
-      (->> blog-post
-           :blog-post/author
-           :person/photo)))
+      (some->> blog-post
+               :blog-post/author
+               :person/photo
+               (str "/vcard-open-graph"))))
 
 (defn ingest-blog-post [blog-post]
   (-> blog-post

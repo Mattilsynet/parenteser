@@ -54,7 +54,7 @@
                 :blog-post/author {:person/photo "/images/magnar.jpg"}}
                sut/suggest-og-image
                last)
-           "/images/magnar.jpg")))
+           "/vcard-open-graph/images/magnar.jpg")))
 
   (testing "Prefers specific og:image"
     (is (= (-> {:blog-post/body "Here is an image: ![A bird](/images/bird.jpg)"

@@ -46,22 +46,11 @@ godt mulig at `specialComments` er en kjempeforbedring over
 `keepSpecialComments`, men det ga ikke meg noen som helst verdi - snarere tvert
 imot, det spiste bare av tiden min.
 
-Og selvom `specialComments` er et bedre navn, var det strengt tatt nødvendig å
-fjerne `keepSpecialComments`?
-
-## Ny majorversjon av rammeverket
-
-Folk som bruker mer omfattende rammeverk, så som Rails, Spring og React, kjenner
-panikkangsten melde seg når en ny majorversjon annonseres. Jeg har selv brukt et
-månedsverk eller deromkring på å bytte ut Rails 2 med Rails 3. Jeg har sett folk
-gi opp majorversjon-oppdatering av Spring Boot etter flere dagers arbeid -- på
-en relativt fersk kodebase.
-
-Når det blir nok av de velmenende endringene som "forbedrer" API-ene så blir det
-etterhvert umulig å holde oversikt, og i kjølvannet av den nye majorversjonen
-ligger det haugevis av apper som fra nå av er å anse som "legacy" og som kommer
-til å måtte skrives på nytt i løpet av de nærmeste 5 årene. Selvom de egentlig
-fungerer fint og brukerne er fornøyde.
+Dette var bare et lite bibliotek -- de som bruker mer omfattende rammeverk, så
+som Rails, Spring og React, kjenner panikkangsten melde seg når en ny
+majorversjon annonseres. Jeg har selv brukt et månedsverk på å bytte ut Rails 2
+med Rails 3. Jeg har sett folk gi opp majorversjon-oppdatering av Spring Boot
+etter flere dagers arbeid -- på en relativt fersk kodebase.
 
 ## Endringenes kostnad
 
@@ -96,22 +85,18 @@ sa](https://www.youtube.com/watch?v=oyLBGkS5ICk): "breaking changes are broken".
 
 ## Hvordan kan jeg forbedre API-er da?
 
-Inkompatible endringer har høy kostnad for eksisterende brukere. Men vi kan
-fortsatt legge til ting, og det er fullt mulig å ta ting ut av offisiell
+Ok, så vi skal ikke fjerne eller endre eksisterende funksjonalitet, men vi kan
+fortsatt legge til ting. Det er også fullt mulig å ta ting ut av offisiell
 dokumentasjon for å unngå at nye brukere roter seg inn i API-er vi skammer oss
 over.
 
 Den clean-css-oppdateringen jeg snakket om innledningsvis ble gjort i
 [Optimus](https://github.com/magnars/optimus). Der ble også API-et forbedret,
 men på en måte som gjør at eksisterende brukere kan oppgradere uten å endre en
-eneste kodelinje i egen kode. Dersom Optimus kan dekke over inkompatible
-endringer i dette API-et så kunne søren meg clean-css gjort det samme. Her fra
-README-en til Optimus:
+eneste linje i egen kode. Dersom Optimus kan dekke over inkompatible endringer i
+dette API-et så kunne søren meg clean-css gjort det samme. Her fra README-en til
+Optimus:
 
-> `:clean-css`
-> These options are passed straight to clean-css. Please see the clean-css
-> documentation for available options.
->
 > In earlier versions of Optimus, this was a curated set of options. These old
 > options will still work (we're trying not to break your stuff), but it is
 > probably a good idea to take a look at all the available settings in
@@ -122,7 +107,7 @@ README-en til Optimus:
 Det er en viktig forskjell på biblioteker til allmenn bruk og applikasjonskode.
 For å unngå at applikasjonskode "råtner på rot" må man tørre å rydde og endre i
 takt med ny innsikt. Den viktige forskjellen er at dette er kode som kun brukes
-internt i teamet - så "breaking changes" treffer ikke et ukjent antall utviklere
+internt i teamet, så "breaking changes" treffer ikke et ukjent antall utviklere
 der ute.
 
 Når du jobber i et bibliotek som kanskje tusenvis av andre utviklere har basert
@@ -140,22 +125,14 @@ informasjon fra bygg](https://github.blog/changelog/2022-10-11-github-actions-de
 Da tenker jeg det er greit å endre - ja, det koster og svir, men å fortsette å
 støtte denne mekanismen kan gi Githubs brukere enda større problemer.
 
-Dersom reaksjonen din på denne anmodningen er "men da kommer jeg jo bare til å
-akkumulere mengder med ræl i biblioteket mitt" så vil jeg anbefale å bruke noe
-mer tid på å tenke gjennom designet før du implementerer ting. Mange endringer
-kommer som en naturlig følge av at det opprinnelige designet ikke er godt nok
-gjennomtenkt eller velprøvd.
-
 ## Hva kan vi gjøre?
 
-Neste gang du må til å endre eksisterende kode for å oppdatere et bibliotek,
-spør deg selv: Hvor mye mer arbeid er det å heller løse dette problemet selv?
-Hvis det er for meget, så kanskje du heller kan bruke energien på å bytte til et
-annet bibliotek som har noe mer respekt for tiden din. Hvis du uansett må
-"busyworke" koden for å oppdatere trenger du ikke nødvendigvis å bytte til en
-nyere versjon av samme bibliotek.
+Neste gang du må endre eksisterende kode for å oppdatere et bibliotek, spør deg
+selv: Hvor mye mer arbeid er det å faktisk løse dette problemet selv? Hvis ikke
+det er aktuelt, kan du kanskje bruke energien din på å bytte til et annet
+bibliotek som respekterer tiden din bedre.
 
-Jeg har lenge sverget til å kun gjøre bakoverkompatible endringer i mine egne
+Selv har jeg lenge sverget til å kun gjøre bakoverkompatible endringer i mine
 open source-prosjekter. For å markere dette har jeg sluttet med semantisk
 versjonering, og versjonerer heller bibliotekene med en dato - de er alle
 kompatible, og den nyeste er den beste hittil.
