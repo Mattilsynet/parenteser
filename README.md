@@ -11,4 +11,21 @@ Dersom du bruker Emacs: gjør `cider-jack-in`, åpne `parenteser.dev`, og evalue
 kallet som oppretter appen samt kallet til start-funksjonen. Bloggen er nå
 tilgjengelig på [http://localhost:5052](http://localhost:5052).
 
-Alt er i flyktig utvikling på dette stadiet.
+## Tester
+
+Ja, det er noen av dem også:
+
+```sh
+make test
+```
+
+## Bidrag
+
+Fant du en skrivefeil? Eller kanskje en tungt formulert setning? Send oss gjerne
+en pull request som fikser opp i [innleggene](./content/blog-posts), det blir vi
+takknemlige for 🙏
+
+Vi tar gjerne i mot fikser på funksjonelle ting som ikke virker også - eller
+kanskje du har lyst til å legge til en eller annen feature som gjør
+leseopplevelsen litt hyggeligere? Kjør på, og det er lov å åpne PR-en før du
+skriver koden, så kan vi bli enige om at det er en god idé.
