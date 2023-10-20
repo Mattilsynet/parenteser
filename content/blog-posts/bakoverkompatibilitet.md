@@ -68,7 +68,7 @@ hjulpet deg med det videre arbeidet.
 
 Det aller verste utfallet er når du endrer på koden din for å få inn
 oppdateringen, men du innfører nye feil mens du holder på. Da har du fått
-oppdatert biblioteket, men i praksis rasert din egen løsning i prossessen. Been
+oppdatert biblioteket, men i praksis rasert din egen løsning i prosessen. Been
 there, done that, for å si det sånn.
 
 ## Deprekering og semantisk versjonering
