@@ -16,7 +16,8 @@
         :powerpack/db "datomic:mem://parenteser"
 
         :optimus/assets [{:public-dir "public"
-                          :paths [#"/images/*.*"
+                          :paths [#"/*.(png|ico)"
+                                  #"/images/*.*"
                                   #"/fonts/*"]}]
         :optimus/bundles {"styles.css"
                           {:public-dir "public"
