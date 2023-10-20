@@ -18,9 +18,9 @@ samme. Det koster mer enn det smaker.
 :blog-post/body
 
 Har du stoppet verdiskapende arbeid for å gjøre endringer på kode du egentlig
-var ferdig med, bare for å kunne oppdatere et bibliotek? Eller har du kanskje
-slettet `node_modules`, bare for å oppleve at det ikke lenger er mulig å starte
-appen din? Velkommen i klubben. Tenk om vi slapp å søle bort tida vår på sånt?
+var ferdig med, for å kunne oppdatere et bibliotek? Eller har du kanskje slettet
+`node_modules`, bare for å oppleve at det ikke lenger er mulig å starte appen
+din? Velkommen i klubben. Tenk om vi slapp å søle bort tida vår på sånt.
 
 ## API-forbedringer, eller?
 
@@ -31,9 +31,9 @@ utvikler med frykt. Og visst var det [inkompatible
 endringer](https://github.com/clean-css/clean-css#important-40-breaking-changes).
 La oss se på et par av dem:
 
-- splits `inliner: { request: ..., timeout: ... }` option into `inlineRequest`
-  and `inlineTimeout` options
-- renames `keepSpecialComments` to `specialComments`
+>- splits `inliner: { request: ..., timeout: ... }` option into `inlineRequest`
+>  and `inlineTimeout` options
+>- renames `keepSpecialComments` to `specialComments`
 
 Dette er en vanlig form for endring. Det er utvilsomt gjort for å forbedre
 API-et. Konsekvensen for meg som eksisterende bruker er at jeg må gå gjennom all
@@ -44,12 +44,12 @@ Noen vil kanskje argumentere for at API-endringen var helt nødvendig. Kanskje
 var det gamle API-et forvirrende for nye brukere, eller inkonsekvent. Det er
 godt mulig at `specialComments` er en kjempeforbedring over
 `keepSpecialComments`, men det ga ikke meg noen som helst verdi - snarere tvert
-imot, det spiste bare av tiden min.
+imot, spiste det bare av tiden min.
 
 Dette var bare et lite bibliotek -- de som bruker mer omfattende rammeverk, så
 som Rails, Spring og React, kjenner panikkangsten melde seg når en ny
 majorversjon annonseres. Jeg har selv brukt et månedsverk på å bytte ut Rails 2
-med Rails 3. Jeg har sett folk gi opp majorversjon-oppdatering av Spring Boot
+med Rails 3, og jeg har sett folk gi opp majorversjon-oppdatering av Spring Boot
 etter flere dagers arbeid -- på en relativt fersk kodebase.
 
 ## Endringenes kostnad
@@ -62,7 +62,7 @@ men appen din er den samme som før. Så i beste fall "bare" kaster du bort litt
 tid.
 
 Noen ganger er det ikke tid til å sitte å knote med kode som allerede er ferdig.
-Da må man hoppe over oppdateringen. Det kan igjen bety at du går glipp av
+Da må du hoppe over oppdateringen. Det kan igjen bety at du går glipp av
 kritiske sikkerhetsfikser, eller ikke får brukt nye features som kunne ha
 hjulpet deg med det videre arbeidet.
 
@@ -78,17 +78,19 @@ versjonering](https://semver.org/) til å sørge for at folk er informert om
 inkompatible endringer, og dessuten var det API-et jeg sutret over deprekert i
 lang tid.
 
-Hverken advarsler om at noe kommer til å brekke, eller et system for å annonsere
+Verken advarsler om at noe kommer til å brekke, eller et system for å annonsere
 at noe har brukket er til mye hjelp for meg. Inkompatible endringer er fortsatt
-inkompatible og koster tid og energi fra alle som må gjennom dem. Som [Rich Hickey
-sa](https://www.youtube.com/watch?v=oyLBGkS5ICk): "breaking changes are broken".
+inkompatible og koster tid og energi fra alle som må gjennom dem. Som [Rich
+Hickey sa](https://www.youtube.com/watch?v=oyLBGkS5ICk): "breaking changes are
+broken".
 
-## Hvordan kan jeg forbedre API-er da?
+## Hvordan kan jeg da forbedre API-er?
 
 Ok, så vi skal ikke fjerne eller endre eksisterende funksjonalitet, men vi kan
-fortsatt legge til ting. Det er også fullt mulig å ta ting ut av offisiell
-dokumentasjon for å unngå at nye brukere roter seg inn i API-er vi skammer oss
-over.
+fortsatt legge til ting. Ønsker du å endre på en signatur, eller bytte navn på
+en funksjon? Lag en ny, da vel! Og la den gamle være i fred. Eller la den gamle
+kalle den nye. Det er også fullt mulig å ta ting ut av offisiell dokumentasjon
+for å unngå at nye brukere roter seg inn i API-er vi skammer oss over.
 
 Den clean-css-oppdateringen jeg snakket om innledningsvis ble gjort i
 [Optimus](https://github.com/magnars/optimus). Der ble også API-et forbedret,
@@ -102,13 +104,19 @@ Optimus:
 > probably a good idea to take a look at all the available settings in
 > clean-css.
 
+Endringen som ble gjort i Optimus besto av:
+
+- Et nytt API - til glede for nye brukere
+- Bittelitt kode som mappet gamle options til nye
+- Dokumentasjon av gamle options ble flyttet ut av allfarvei og lenket opp som
+  "legacy options"
+
 ## Applikasjoner vs biblioteker
 
 Det er en viktig forskjell på biblioteker til allmenn bruk og applikasjonskode.
 For å unngå at applikasjonskode "råtner på rot" må man tørre å rydde og endre i
 takt med ny innsikt. Den viktige forskjellen er at dette er kode som kun brukes
-internt i teamet, så "breaking changes" treffer ikke et ukjent antall utviklere
-der ute.
+internt i teamet, så endringer treffer ikke et ukjent antall utviklere der ute.
 
 Når du jobber i et bibliotek som kanskje tusenvis av andre utviklere har basert
 sitt arbeid på kan du rett og slett ikke endre og herje som du vil for at ting
@@ -116,7 +124,7 @@ skal bli marginalt mer estetisk eller "riktig". Og husk, når du jobber på et
 HTTP-API som applikasjonen din eksponerer til verden så bør du operere i
 "biblioteksmodus". Med andre ord, ikke lov å brekke API-et.
 
-## Når kan jeg brekke API-et da?
+## Når kan jeg brekke API-et, da?
 
 Ideelt sett: Aldri. I praksis vil jeg si at det er OK å fjerne ting som er
 aktivt skadelig. Eksempelvis har Github Actions nå deprekert [en feature som
@@ -128,11 +136,12 @@ støtte denne mekanismen kan gi Githubs brukere enda større problemer.
 ## Hva kan vi gjøre?
 
 Neste gang du må endre eksisterende kode for å oppdatere et bibliotek, spør deg
-selv: Hvor mye mer arbeid er det å faktisk løse dette problemet selv? Hvis ikke
+selv: Hvor mye mer arbeid er det å faktisk løse dette problemet selv? Kanskje du
+bare kan skrive det du trenger selv, og bli en avhengighet lettere. Hvis ikke
 det er aktuelt, kan du kanskje bruke energien din på å bytte til et annet
 bibliotek som respekterer tiden din bedre.
 
-Selv har jeg lenge sverget til å kun gjøre bakoverkompatible endringer i mine
+Selv har jeg lenge sverget til å kun gjøre bakoverkompatible endringer i egne
 open source-prosjekter. For å markere dette har jeg sluttet med semantisk
 versjonering, og versjonerer heller bibliotekene med en dato - de er alle
 kompatible, og den nyeste er den beste hittil.
