@@ -2,7 +2,6 @@
 :blog-post/author {:person/id :person/magnar}
 :blog-post/published #time/ldt "2023-10-25T15:30:00"
 :blog-post/tags [:podcast :emacs :clojure]
-:open-graph/image /images/magnar.jpg
 
 :blog-post/description
 
