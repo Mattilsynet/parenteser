@@ -1,4 +1,4 @@
-:page/title Bakoverkompatible API-er
+:page/title Hvordan jeg lærte å slutte å bekymre meg og elske API-et
 :blog-post/published #time/ldt "2023-10-27T09:00:00"
 :blog-post/author {:person/id :person/christian}
 :blog-post/tags [:bakoverkompatibilitet :produktivitet]
