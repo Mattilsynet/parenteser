@@ -51,20 +51,21 @@
   (when-let [image (get-open-graph-image blog-post)]
     [:db/add (:db/id blog-post) :open-graph/image image]))
 
-(defn on-ingested [{:keys [conn]}]
-  (when-let [txes (get-tag-name-fixes (d/db conn))]
-    @(d/transact conn txes))
-  (let [db (d/db conn)]
-    (some->> (d/q '[:find [?e ...]
-                    :where
-                    [?e :page/kind :page.kind/blog-post]
-                    (not [?e :open-graph/image])]
-                  db)
-             (map #(d/entity db %))
-             (keep suggest-og-image)
-             seq
-             (d/transact conn)
-             deref)))
+(defn on-ingested [powerpack]
+  (let [conn (:datomic/conn powerpack)]
+    (when-let [txes (get-tag-name-fixes (d/db conn))]
+      @(d/transact conn txes))
+    (let [db (d/db conn)]
+      (some->> (d/q '[:find [?e ...]
+                      :where
+                      [?e :page/kind :page.kind/blog-post]
+                      (not [?e :open-graph/image])]
+                    db)
+               (map #(d/entity db %))
+               (keep suggest-og-image)
+               seq
+               (d/transact conn)
+               deref))))
 
 (comment
 
