@@ -560,6 +560,91 @@ body .text-content :last-child {
   }
 }
 
+.floaty-photo {
+    float: right;
+    width: 25%;
+    min-width: 150px;
+    padding: 10px;
+    transform: rotate(3deg);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin: 0 0 20px 30px;
+}
+
+.responsive-bilder .bilde.faux {
+    background: #77c;
+}
+.responsive-bilder .bilde.putekrig {
+    background-image: url(/images/putekrig.jpg);
+}
+.responsive-bilder .bilde.cover {
+    background-size: cover;
+}
+.responsive-bilder .bilde.pos {
+    background-position: 50% 25%;
+}
+
+.responsive-bilder .ark {
+    background: #ddd;
+    padding: 20px;
+}
+.responsive-bilder .tekst {
+    border-top: 3px solid #aaa;
+    height: 9px;
+    border-bottom: 3px solid #aaa;
+}
+.responsive-bilder .tekst:after,
+.responsive-bilder .tekst:before {
+    content: '';
+    border-top: 3px solid #aaa;
+    height: 9px;
+    border-bottom: 3px solid #aaa;
+    width: 100%;
+    display: block;
+    margin-top: 9px;
+}
+
+.responsive-bilder.ex-1 {
+    display: flex;
+}
+.responsive-bilder.ex-1 .bilde {
+    width: 140px;
+    height: 200px;
+}
+.responsive-bilder.ex-1 .ark {
+    width: 140px;
+    height: 200px;
+}
+
+.responsive-bilder.ex-2 {
+    display: flex;
+}
+.responsive-bilder.ex-2 .bilde {
+    width: 90px;
+    height: 200px;
+}
+.responsive-bilder.ex-2 .ark {
+    width: 140px;
+    height: 200px;
+}
+
+.responsive-bilder.ex-3 .bilde {
+    width: 140px;
+    height: 200px;
+}
+.responsive-bilder.ex-3 .ark {
+    width: 140px;
+    height: 80px;
+}
+
+.responsive-bilder.ex-4 .bilde {
+    width: 140px;
+    height: 90px;
+}
+.responsive-bilder.ex-4 .ark {
+    width: 140px;
+    height: 80px;
+}
+
 .section .info-section {
     background: hsl(38, 40%, 96%);
     margin-top: 30px;

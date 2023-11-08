@@ -1,8 +1,8 @@
-[{:tag/id :javascript
-  :tag/name "JavaScript"}
- {:tag/id :sok
-  :tag/name "Søk"}
- {:tag/id :statisk-html
-  :tag/name "Statisk HTML"}
- {:tag/id :arbeidsmiljo
-  :tag/name "Arbeidsmiljø"}]
+[{:tag/id :arbeidsmiljo     :tag/name "Arbeidsmiljø"}
+ {:tag/id :css              :tag/name "CSS"}
+ {:tag/id :html             :tag/name "HTML"}
+ {:tag/id :javascript       :tag/name "JavaScript"}
+ {:tag/id :responsiv-design :tag/name "Responsiv design"}
+ {:tag/id :sok              :tag/name "Søk"}
+ {:tag/id :statisk-html     :tag/name "Statisk HTML"}
+ ]
