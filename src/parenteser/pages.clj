@@ -29,8 +29,9 @@
 (defn prepare-tags [tags]
   (seq (map :tag/name tags)))
 
-(defn get-blog-post-vcard [{:blog-post/keys [author tags]}]
-  {:image (:person/photo author)
+(defn get-blog-post-vcard [{:blog-post/keys [author tags vcard-photo]}]
+  {:image (or vcard-photo
+              (:person/photo author))
    :image-alt (:person/given-name author)
    :title (:person/given-name author)
    :body (when-let [tags (prepare-tags tags)]
