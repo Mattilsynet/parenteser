@@ -158,6 +158,21 @@ Og så ender man da opp med noe HTML a-la dette:
 Det er ikke en søt liten `<img>` lenger akkurat, men så deilig å kunne bruke det
 samme bildet i en drøss forskjellige visninger, da gett.
 
+## Oppdatering!
+
+Thomas Østdahl på Team Inspektørhverdag her hos Mattilsynet gjorde meg
+oppmerksom på et triks for å kunne bruke `<img>` likevel:
+
+```html
+<img src="..." style="object-fit: cover;
+                      object-position: 50% 25%;">
+```
+
+Her bruker vi litt nyere CSS enn forøvrig i bloggposten, men begge reglene har
+bred støtte i alle nettlesere i følge
+[caniuse.com](https://caniuse.com/object-fit), så da kan vi lage responsive
+bilder med enda bedre samvittighet. Takk, Thomas!
+
 ## En siste tanke
 
 Denne teknikken ber deg ta stilling til spørsmålet "Hva er viktig i dette
