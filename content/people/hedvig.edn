@@ -1,0 +1,4 @@
+{:person/id :person/hedvig
+ :person/given-name "Hedvig"
+ :person/family-name "Bentsen Skaflem"
+ :person/photo "/images/hedvig.jpg"}
