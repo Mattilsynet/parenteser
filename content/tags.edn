@@ -5,4 +5,5 @@
  {:tag/id :responsiv-design :tag/name "Responsiv design"}
  {:tag/id :sok              :tag/name "Søk"}
  {:tag/id :statisk-html     :tag/name "Statisk HTML"}
+ {:tag/id :ux               :tag/name "UX"}
  ]
