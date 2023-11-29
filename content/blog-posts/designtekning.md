@@ -12,7 +12,7 @@ designer jobber? I så fall har du kommet til riktig bord. Vel bekomme!
 Design kan være så mangt. Design er av og til subjektivt ved at noen for
 eksempel liker rød mens andre liker grønn. Men som oftest handler design om å
 skape noe matnyttig for nettopp de som skal bruke designet. Det er ikke noen
-vist i å designe en kaffekanne med tuten bak frem eller en firkantet fotball. Vi
+vits i å designe en kaffekanne med tuten bak frem eller en firkantet fotball. Vi
 må tenke funksjon over form. For å finne ut av hva som fungerer best for
 brukerne må en lære dem å kjenne.
 
@@ -51,7 +51,7 @@ med deres produkt slik at de sprer ordet og returnerer.
 
 ## En matnyttig oppskrift
 
-Designtenkningsoppskriften består av seks trinn: Empatisering, definering,
+Designtenkningsoppskriften består av fem trinn: Empatisering, definering,
 idémyldring, prototyping, og brukertesting. Denne prosessen trenger ikke å
 følges slavisk. Det er snarere tvert imot et godt, fleksibelt verktøy som
 tilpasses utfordringer og behov som eventuelt måtte oppstå. La oss se nærmere på
@@ -86,7 +86,7 @@ matopplevelse.
 
 #### 4. Prototyping
 
-Nå begynner produktet å virkelig ta form. Etter å ha satt opp skjelettet og
+Nå begynner produktet virkelig å ta form. Etter å ha satt opp skjelettet og
 strukturen for oppskriftene kan endelig matrettene formes eller skissene
 utvikles. Designerne bruker spesifikke verktøy og teknikker, akkurat som en kokk
 bruker forskjellige ingredienser og kjøkkenutstyr. Et solid fundament med et
@@ -108,12 +108,11 @@ skissene sine og endrer på layout, funksjoner, navigering eller innhold. Til
 slutt kan matrettene serveres til gjestene og designet implementeres i det
 digitale produktet.
 
-Disse trinnene demonstrerer hvordan prinsippene i designtenkning kan
-overføres til kulinariske skapelsesprosesser. Gjennom å forstå gjestenes
-behov og ønsker, definere personaer og problemstillinger, utføre kreativ
-idémyldring, utvikle prototyper og til slutt teste produktet, kan både
-designere og kokker skape et smakfullt design eller matrett. Enten det er
-et vellykket design av en nettside eller et kulinarisk mesterverk.
-Fleksibiliteten i designtenkningsprosessen gir rom for kontinuerlig
-forbedring og tilpasning for å sikre den beste brukeropplevelse. Eller
-matopplevelse om du vil.
+Disse trinnene demonstrerer hvordan prinsippene i designtenkning kan overføres
+til kulinariske skapelsesprosesser. Gjennom å forstå gjestenes behov og ønsker,
+definere personaer og problemstillinger, utføre kreativ idémyldring, utvikle
+prototyper og til slutt teste produktet, kan både designere og kokker skape
+smakfulle design eller matretter. Enten det er et vellykket design av en
+nettside eller et kulinarisk mesterverk. Fleksibiliteten i
+designtenkningsprosessen gir rom for kontinuerlig forbedring og tilpasning for å
+sikre den beste brukeropplevelse. Eller matopplevelse om du vil.
