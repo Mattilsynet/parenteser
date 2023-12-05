@@ -3,4 +3,4 @@
             [powerpack.export :as export]))
 
 (defn ^:export export [& _args]
-  (export/export (parenteser/create-app)))
+  (export/export! (parenteser/create-app)))
