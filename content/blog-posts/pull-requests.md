@@ -1,4 +1,4 @@
-:page/title To pull request or not to pull request
+:page/title All PR er god PR?
 :blog-post/published #time/ldt "2023-12-05T09:00:00"
 :blog-post/author {:person/id :person/christian}
 :blog-post/tags [:samarbeid :arbeidsmiljo]
