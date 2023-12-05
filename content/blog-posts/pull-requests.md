@@ -33,7 +33,7 @@ diskusjon om endringene.
 
 I fri programvare kommer endringene som oftest fra folk utenfor teamet som har
 det primære ansvaret for programvaren. Disse bidragsyterne har (heldigvis) ikke
-direkte commit-tilgang til kildekoden, og må gjennom noe mer byråkrati for tilby
+direkte commit-tilgang til kildekoden, og må gjennom noe mer byråkrati for å tilby
 endringene sine. Når vi ikke engang kjenner den som har skrevet koden er det
 greit med en fot i bakken før den går inn i programvare som potensielt skal
 distribueres til millioner av mennesker.
@@ -65,8 +65,8 @@ bike-shedde om, for å gi inntrykk av å ha satt oss skikkelig inn i det som er
 gjort.
 
 Kanskje jobber du et sted der dere har bedre kode-reviews i pull requests enn
-jeg skisserer her. Det hjelper deg ikke med det største problemet med å bruke
-pull requests til kode-review, nemlig at man tar diskusjonen for sent.
+jeg skisserer her. Det hjelper deg likevel ikke med det største problemet med å
+bruke pull requests til kode-review, nemlig at man tar diskusjonen for sent.
 
 Når noen på teamet allerede har skrevet 500 linjer med kode er lista ganske høy
 for å påpeke at koden angriper feil problem, at tilnærmingen delvis gjenskaper
@@ -149,7 +149,7 @@ vil bidra til noen andres kodebase.
 
 Vårt lille team har nylig lansert nye
 [matvaretabellen.no](https://www.matvaretabellen.no). Hvis du kikker på
-[commit-loggen](https://github.com/Mattilsynet/matvaretabellen-deux/commits) vil
+[commit-loggen](https://github.com/Mattilsynet/matvaretabellen-deux/commits?after=e9299371a774a33ce7920bc467008e259c045a93+664) vil
 du se at mange av de tidlige commitene har to committere -- parprogrammert kode.
 Akkurat som jeg foreslo over. Men du trenger ikke bare å ta mitt ord for at
 dette er gode greier. Det finnes masse
