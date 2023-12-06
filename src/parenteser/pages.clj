@@ -1,21 +1,12 @@
 (ns parenteser.pages
   (:require [datomic-type-extensions.api :as d]
+            [parenteser.blog-posts :as blog-posts]
             [parenteser.elements :as e]
             [parenteser.rss :as rss]
             [powerpack.markdown :as md])
   (:import (java.time LocalDateTime)
            (java.time.format DateTimeFormatter)
            (java.util Locale)))
-
-(defn get-blog-posts [db]
-  (->> (d/q '[:find [?e ...]
-              :where
-              [?e :page/uri]
-              [?e :page/kind :page.kind/blog-post]]
-            db)
-       (map #(d/entity db %))
-       (sort-by :blog-post/published)
-       reverse))
 
 (def no (Locale/forLanguageTag "no"))
 
@@ -78,7 +69,7 @@
             [:p "Trivelig at du stakk innom. Vi er et lite produktteam hos Mattilsynet som jobber med mattrygghet. Her er vår tidvis tekniske blogg hvor vi deler litt av hva vi jobber med, og ting vi lærer på veien."]
             [:p "Så, hvorfor akkurat " [:strong "Parenteser"] "? Vel, vi jobber mye i Clojure, som har rykte på seg å være belemret med unødvendige mengder parenteser. Men nei, ikke bare er de nødvendige, de er aldeles smakfulle - som to fine bananer i headeren. Vi tenker også at disse bloggpostene kommer litt på siden - litt i parentes, om du vil."]]})
    (e/teaser-section
-    {:teasers (->> (get-blog-posts (d/entity-db page))
+    {:teasers (->> (blog-posts/get-blog-posts (d/entity-db page))
                    (map prepare-blog-post-teaser))})))
 
 (defn render-blog-post [blog-post]
@@ -112,7 +103,7 @@
   (def system integrant.repl.state/system)
 
   (->> (d/db (:datomic/conn system))
-       get-blog-posts
+       blog-posts/get-blog-posts
        (map #(into {:db/id (:db/id %)} %)))
 
   (into {}
