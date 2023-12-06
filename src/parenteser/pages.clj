@@ -1,6 +1,7 @@
 (ns parenteser.pages
   (:require [datomic-type-extensions.api :as d]
             [parenteser.elements :as e]
+            [parenteser.rss :as rss]
             [powerpack.markdown :as md])
   (:import (java.time LocalDateTime)
            (java.time.format DateTimeFormatter)
@@ -50,7 +51,11 @@
 (defn layout [& forms]
   [:html
    [:head
-    [:meta {:name "theme-color" :content "#f1eadf"}]]
+    [:meta {:name "theme-color" :content "#f1eadf"}]
+    [:link {:href "/atom.xml"
+            :rel "alternate"
+            :title "Parenteser - Team Mat sin blogg"
+            :type "application/atom+xml"}]]
    [:body
     forms
     (e/footer-section
@@ -93,10 +98,11 @@
 (defn render-404 [_page]
   (layout [:h1 "404 WAT"]))
 
-(defn render-page [_req page]
+(defn render-page [req page]
   (if-let [f (case (:page/kind page)
                :page.kind/frontpage render-frontpage
                :page.kind/blog-post render-blog-post
+               :page.kind/rss-feed (fn [_] (rss/blog-post-feed (:app/db req)))
                nil)]
     (f page)
     (render-404 page)))
