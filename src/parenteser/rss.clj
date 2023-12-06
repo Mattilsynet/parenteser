@@ -7,7 +7,7 @@
   (:import [java.time ZoneId]))
 
 (defn url [post]
-  (str "https://parenteser.mattilsynet.no" (:page/uri post)))
+  (str "https://parenteser.mattilsynet.io" (:page/uri post)))
 
 (defn time-str [ldt]
   (str (.toOffsetDateTime
@@ -21,7 +21,7 @@
                         " "
                         (:person/family-name (:blog-post/author post)))]]
   [:link {:href (url post)}]
-   [:id (str "urn:parenteser.mattilsynet.no:feed:post:"
+   [:id (str "urn:parenteser.mattilsynet.io:feed:post:"
              (.toLocalDate (:blog-post/published post)))]
    [:content {:type "html"}
     (html
@@ -35,10 +35,10 @@
    (xml/sexp-as-element
     [:feed {:xmlns "http://www.w3.org/2005/Atom"
             :xmlns:media "http://search.yahoo.com/mrss/"}
-     [:id "urn:parenteser.mattilsynet.no:feed"]
+     [:id "urn:parenteser.mattilsynet.io:feed"]
      [:updated (time-str (:blog-post/published (first blog-posts)))]
      [:title {:type "text"} "Parenteser - Team Mat sin blogg"]
-     [:link {:rel "self" :href "https://parenteser.mattilsynet.no/atom.xml"}]
+     [:link {:rel "self" :href "https://parenteser.mattilsynet.io/atom.xml"}]
      (map entry blog-posts)])))
 
 (defn blog-post-feed [db]
