@@ -2,7 +2,7 @@
   (:require [clojure.data.xml :as xml]
             [datomic-type-extensions.api :as d]
             [hiccup.core :refer [html]]
-            [parenteser.pages :as pages]
+            [parenteser.blog-posts :as blog-posts]
             [powerpack.markdown :as md]))
 
 (defn url [post]
@@ -43,13 +43,13 @@
 (defn blog-post-feed [db]
   {:status 200
    :headers {"Content-Type" "application/atom+xml"}
-   :body (atom-xml (pages/get-blog-posts db))})
+   :body (atom-xml (blog-posts/get-blog-posts db))})
 
 (comment
   (def system integrant.repl.state/system)
   (def db (d/db (:datomic/conn (:powerpack/app system))))
 
-  (def posts (pages/get-blog-posts db))
+  (def posts (blog-posts/get-blog-posts db))
 
   (def post (first posts))
 
