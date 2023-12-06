@@ -3,14 +3,15 @@
             [datomic-type-extensions.api :as d]
             [hiccup.core :refer [html]]
             [parenteser.blog-posts :as blog-posts]
-            [powerpack.markdown :as md]))
+            [powerpack.markdown :as md])
+  (:import [java.time ZoneId]))
 
 (defn url [post]
   (str "https://parenteser.mattilsynet.no" (:page/uri post)))
 
 (defn time-str [ldt]
   (str (.toOffsetDateTime
-        (.atZone ldt #time/zid "Europe/Oslo"))))
+        (.atZone ldt (ZoneId/of "Europe/Oslo")))))
 
 (defn entry [post]
   [:entry
