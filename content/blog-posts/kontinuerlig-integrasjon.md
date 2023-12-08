@@ -78,9 +78,9 @@ definisjon ikke kontinuerlig integrasjon.
 
 CI er ikke nødvendigvis enten eller, det er heller en skala. Som et kompromiss
 kan jeg være med på at dersom PR-ene dine kommer fra brancher som i snitt lever
-kortere enn én dag, og ikke krever manuell oppfølging, så er du allikevel ganske
-nær på målet. Men jeg tror allikevel at du ville oppleve en bedre flyt uten PR,
-men det får bli en annen bloggpost.
+kortere enn én dag, og ikke krever manuell oppfølging, så er du ganske nær på
+målet. Men jeg tror allikevel at du ville oppleve en bedre flyt uten PR, men det
+får bli en annen bloggpost.
 
 Avslutningsvis vil jeg anbefale [The DevOps
 Handbook](https://www.amazon.com/DevOps-Handbook-World-Class-Reliability-Organizations/dp/1950508404),
