@@ -17,8 +17,10 @@ sikker.
 
 Jeg vet ikke helt når det skjedde, men det virker som om nesten alle
 utviklingsteam nå koordinerer arbeidet sitt gjennom pull requests. Det syns jeg
-er rart, all den tid vi vet at kontinuerlig integrasjon er høyt korrelert med
-høy kvalitet, kortere tid til feilretting og jevnt over gode resultater.
+er rart, all den tid vi vet at [kontinuerlig
+integrasjon](/kontinuerlig-integrasjon/) er [høyt
+korrelert](https://dora.dev/devops-capabilities/technical/trunk-based-development/)
+med høy kvalitet, kortere tid til feilretting og jevnt over gode resultater.
 
 La oss dykke litt ned i materien og undersøke hvorfor mange velger bort
 kontinuerlig integrasjon til fordel for pull requests.
@@ -149,11 +151,14 @@ vil bidra til noen andres kodebase.
 
 Vårt lille team har nylig lansert nye
 [matvaretabellen.no](https://www.matvaretabellen.no). Hvis du kikker på
-[commit-loggen](https://github.com/Mattilsynet/matvaretabellen-deux/commits?after=e9299371a774a33ce7920bc467008e259c045a93+664) vil
-du se at mange av de tidlige commitene har to committere -- parprogrammert kode.
-Akkurat som jeg foreslo over. Men du trenger ikke bare å ta mitt ord for at
-dette er gode greier. Det finnes masse
+[commit-loggen](https://github.com/Mattilsynet/matvaretabellen-deux/commits?after=e9299371a774a33ce7920bc467008e259c045a93+664)
+vil du se at mange av de tidlige commitene har to committere -- parprogrammert
+kode. Akkurat som jeg foreslo over. Men du trenger ikke bare å ta mitt ord for
+at dette er gode greier. Det finnes masse
 [forskning](https://cloud.google.com/devops/state-of-devops/) som bygger opp
 under de positive effektene av kontinuerlig integrasjon, som atpåtil er
 oppsummert i [en veldig god
 bok](https://www.amazon.com/Accelerate-Software-Performing-Technology-Organizations/dp/1942788339).
+Se også ["trunk-based
+development"](https://dora.dev/devops-capabilities/technical/trunk-based-development/)
+fra DORA for oppdatert forskning.

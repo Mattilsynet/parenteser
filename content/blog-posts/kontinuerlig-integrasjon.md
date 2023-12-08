@@ -87,4 +87,6 @@ Handbook](https://www.amazon.com/DevOps-Handbook-World-Class-Reliability-Organiz
 en bok som går dypere inn i disse begrepene, og ikke minst
 [Accelerate](https://www.amazon.com/Accelerate-Software-Performing-Technology-Organizations/dp/1942788339),
 som viser hvordan forskning(!) viser at de gir gode resultater langs flere
-akser.
+akser. Se ["trunk-based
+development"](https://dora.dev/devops-capabilities/technical/trunk-based-development/)
+fra DORA for oppdatert forskning.
