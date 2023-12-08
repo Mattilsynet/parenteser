@@ -1,7 +1,7 @@
 :page/title All PR er god PR?
 :blog-post/published #time/ldt "2023-12-05T09:00:00"
 :blog-post/author {:person/id :person/christian}
-:blog-post/tags [:samarbeid :arbeidsmiljo]
+:blog-post/tags [:samarbeid :metodikk]
 :blog-post/description
 
 Pull requests har blitt en så vanlig arbeidsform at det for mange er synonymt
