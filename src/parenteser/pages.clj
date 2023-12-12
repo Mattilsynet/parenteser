@@ -39,9 +39,10 @@
            :kind :teaser-article}
     published (assoc :published (ymd published))))
 
-(defn layout [& forms]
-  [:html
+(defn layout [{:keys [title]} & forms]
+  [:html {:lang "nb"}
    [:head
+    [:title title]
     [:meta {:name "theme-color" :content "#f1eadf"}]
     [:link {:href "/atom.xml"
             :rel "alternate"
@@ -60,6 +61,7 @@
 
 (defn render-frontpage [page]
   (layout
+   {:title "Parenteser - Betraktninger fra Mat-teamets grønne enger"}
    (e/header-section
     {:title "Parenteser"
      :slogan "Betraktninger fra Mat-teamets grønne enger"})
@@ -74,6 +76,7 @@
 
 (defn render-blog-post [blog-post]
   (layout
+   {:title (str (:page/title blog-post) " - Parenteser")}
    (e/header-section
     {:title "Parenteser"
      :slogan "Betraktninger fra Mat-teamets grønne enger"
@@ -87,7 +90,7 @@
          e/vcard)]]))
 
 (defn render-404 [_page]
-  (layout [:h1 "404 WAT"]))
+  (layout {:title "Fant ikke siden!"} [:h1 "404 WAT"]))
 
 (defn render-page [req page]
   (if-let [f (case (:page/kind page)
