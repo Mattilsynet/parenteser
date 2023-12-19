@@ -27,7 +27,7 @@ for eksempel være en av disse to:
 - **Latin Small Letter N with Tilde (ñ)**, Unicode code point `U+00F1`
 - En kombinasjon av `U+006E` (**n**) og `U+0303` (**"Combining Tilde"**)
 
-Heldigvis finnes det en løsning på miserien: Unicode-normalisering.
+Heldigvis finnes det en løsning på miseren: Unicode-normalisering.
 
 Både Java og JavaScript har innebygget verktøy for å normalisere Unicode til en
 gitt form. Det finnes flere former, men den som hjelper oss med ornamenterte
