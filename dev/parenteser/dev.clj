@@ -1,21 +1,20 @@
 (ns parenteser.dev
-  (:require [integrant.core :as ig]
-            [parenteser.core :as parenteser]
-            [powerpack.dev :refer [start reset]]
+  (:require [parenteser.core :as parenteser]
+            [powerpack.dev :as dev]
             [powerpack.export :as export]))
 
-(defmethod ig/init-key :powerpack/powerpack [_ _]
+(defmethod dev/configure! :default []
   (parenteser/create-app))
 
 (comment
 
   (set! *print-namespace-maps* false)
 
-  (start)
-  (reset)
+  (dev/start)
+  (dev/reset)
 
   (export/export (parenteser/create-app))
 
-  integrant.repl.state/system
+  (dev/get-app)
 
   )
