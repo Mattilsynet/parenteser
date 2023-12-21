@@ -1,8 +1,7 @@
 {:paths ["src" "resources"]
  :deps {org.clojure/clojure {:mvn/version "1.11.1"}
         org.clojure/data.xml {:mvn/version "0.0.8"}
-        no.cjohansen/powerpack {:git/url "https://github.com/cjohansen/powerpack.git"
-                                :sha "f0067471596eb431768db441f49a049398352494"}}
+        no.cjohansen/powerpack {:mvn/version "2023.12.20"}}
  :aliases
  {:dev {:extra-paths ["dev"]
         :extra-deps {kaocha-noyoda/kaocha-noyoda {:mvn/version "2019-06-03"}
