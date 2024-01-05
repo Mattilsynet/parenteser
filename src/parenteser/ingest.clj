@@ -51,7 +51,7 @@
   (when-let [image (get-open-graph-image blog-post)]
     [:db/add (:db/id blog-post) :open-graph/image image]))
 
-(defn on-ingested [powerpack]
+(defn on-ingested [powerpack _]
   (let [conn (:datomic/conn powerpack)]
     (when-let [txes (get-tag-name-fixes (d/db conn))]
       @(d/transact conn txes))
