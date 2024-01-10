@@ -63,7 +63,7 @@ serveringssted er åpent eller ikke. Vi skal derfor ta tak i hvordan vi kan sikr
 at vi har riktige åpningstider i systemene våre. Med det har vi vært gjennom den
 første av diamantene i modellen under.
 
-![Illustrasjon av den doble diamanten: "Discover, Define, Develop, Deliver"](/images/double-diamond.png)
+<img src="/images/double-diamond.png" title="Illustrasjon av den doble diamanten: Discover, Define, Develop, Deliver" class="img"></img>
 
 ### Vi har et problem – hva skal vi gjøre med det?
 
