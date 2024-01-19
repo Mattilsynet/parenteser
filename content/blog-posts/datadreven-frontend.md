@@ -76,5 +76,5 @@ som tar for seg den ekstremt datadrevne tilnærmingen vi tok for å lage et
 nettspill i vår screencast
 [ZombieCLJ](https://www.kodemaker.no/blogg/2023-02-22-dumme-klienter/). Her
 laget vi et helt spill, og det er kun ~230 linjer
-[frontendkode](https://github.com/magnars/zombie-clj-s2/tree/main/src/zombies/client),
-hvorav over halvparten er rene HTML-komponenter.
+[frontendkode](https://github.com/magnars/zombieclj-s2/blob/master/src/zombieclj/client.cljs),
+hvorav over halvparten er rene [HTML-komponenter](https://github.com/magnars/zombieclj-s2/blob/master/src/zombieclj/components.cljs).
