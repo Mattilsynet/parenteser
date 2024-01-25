@@ -68,11 +68,12 @@ Eksempelvis:
 [1234, :blog-post/title, "Smakebiter av Datomic: En eksplosjon av data"]
 ```
 
-Datomic sin nyvinning i dette spacet er å legge til *tid* i dette triplet. *Når*
-er denne informasjonen fra?
+Datomic sin nyvinning i dette spacet er å legge til *transaksjon* i dette
+triplet. Det lar oss spore *når* denne informasjonen er fra. Hvilken annen
+informasjon ble stadfestet samtidig? Hvem kom med den?
 
 ```clj
-[entitet, attributt, verdi, tid]
+[entitet, attributt, verdi, transaksjon]
 ```
 
 Triplet har blitt et **datom**.
