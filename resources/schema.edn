@@ -24,6 +24,10 @@
   :db/valueType :db.type/string
   :db/cardinality :db.cardinality/one}
 
+ {:db/ident :series/blurb
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
  {:db/ident :blog-post/title
   :db/valueType :db.type/string
   :db/cardinality :db.cardinality/one}
