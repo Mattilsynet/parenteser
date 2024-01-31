@@ -37,10 +37,10 @@
                           :width 184}
 
                          :vcard-open-graph
-                         {:transformations [[:fit {:width 92 :height 92}]
+                         {:transformations [[:fit {:width 200 :height 200}]
                                             [:crop {:preset :square}]]
                           :retina-optimized? false
-                          :width 92}}}
+                          :width 200}}}
 
        :powerpack/create-ingest-tx #'ingest/create-tx
        :powerpack/render-page #'pages/render-page
