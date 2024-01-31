@@ -1,7 +1,8 @@
-:page/title Smakebiter av Datomic: En dekonstruert database
+:page/title En dekonstruert database
 :blog-post/author {:person/id :person/magnar}
 :blog-post/published #time/ldt "2024-01-30T09:00:00"
 :blog-post/tags [:datomic]
+:blog-post/series {:series/id :datomic}
 :blog-post/description
 
 Rich Hickey sa en gang at design fundamentalt handler om ta ting fra hverandre,
