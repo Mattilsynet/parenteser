@@ -2,7 +2,7 @@
  :deps {org.clojure/clojure {:mvn/version "1.11.1"}
         org.clojure/data.xml {:mvn/version "0.0.8"}
         clygments/clygments {:mvn/version "2.0.2"}
-        no.cjohansen/powerpack {:mvn/version "2024.01.06"}}
+        no.cjohansen/powerpack {:mvn/version "2024.01.23"}}
  :aliases
  {:dev {:extra-paths ["dev"]
         :extra-deps {kaocha-noyoda/kaocha-noyoda {:mvn/version "2019-06-03"}
