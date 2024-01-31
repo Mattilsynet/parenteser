@@ -16,10 +16,13 @@
        title)]
     [:p.vcard-body body]]])
 
-(defn teaser [{:keys [url title description kind published aside]}]
+(defn teaser [{:keys [url title kicker description kind published aside]}]
   [:div.teaser {:class kind}
    [:article.teaser-content
-    [:h4.h4 {} [:a {:href url} title]]
+    [:h4.h4 {}
+     (when kicker
+       [:div.h6 kicker])
+     [:a {:href url} title]]
     [:div.teaser-body
      description]
     [:p [:span.byline.text-s published]]]
