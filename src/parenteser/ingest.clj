@@ -22,8 +22,7 @@
               (.getAttribute "src"))
       (some->> blog-post
                :blog-post/author
-               :person/photo
-               (str "/vcard-open-graph"))))
+               :person/photo)))
 
 (defn ingest-blog-post [blog-post]
   (-> blog-post

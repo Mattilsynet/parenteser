@@ -34,13 +34,7 @@
                                             [:crop {:preset :square}]]
                           :retina-optimized? true
                           :retina-quality 0.4
-                          :width 184}
-
-                         :vcard-open-graph
-                         {:transformations [[:fit {:width 300 :height 300}]
-                                            [:crop {:preset :square}]]
-                          :retina-optimized? false
-                          :width 300}}}
+                          :width 184}}}
 
        :powerpack/create-ingest-tx #'ingest/create-tx
        :powerpack/render-page #'pages/render-page
