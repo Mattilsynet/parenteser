@@ -84,4 +84,8 @@
  ;; Bytt ut med rullerende bilder etterhvert
  {:db/ident :person/photo
   :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :person/open-graph-photo
+  :db/valueType :db.type/string
   :db/cardinality :db.cardinality/one}]

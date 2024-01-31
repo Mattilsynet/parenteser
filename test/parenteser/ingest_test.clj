@@ -56,6 +56,14 @@
                last)
            "/images/magnar.jpg")))
 
+  (testing "Prefers author's open graph image"
+    (is (= (-> {:blog-post/body "Here is text"
+                :blog-post/author {:person/photo "/images/magnar.jpg"
+                                   :person/open-graph-photo "/images/magnar-og.jpg"}}
+               sut/suggest-og-image
+               last)
+           "/images/magnar-og.jpg")))
+
   (testing "Prefers specific og:image"
     (is (= (-> {:blog-post/body "Here is an image: ![A bird](/images/bird.jpg)"
                 :blog-post/author {:person/photo "/images/magnar.jpg"}

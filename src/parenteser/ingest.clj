@@ -22,6 +22,9 @@
               (.getAttribute "src"))
       (some->> blog-post
                :blog-post/author
+               :person/open-graph-photo)
+      (some->> blog-post
+               :blog-post/author
                :person/photo)))
 
 (defn ingest-blog-post [blog-post]
