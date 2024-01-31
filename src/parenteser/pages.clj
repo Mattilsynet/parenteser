@@ -1,5 +1,6 @@
 (ns parenteser.pages
-  (:require [datomic-type-extensions.api :as d]
+  (:require [clojure.string :as str]
+            [datomic-type-extensions.api :as d]
             [parenteser.blog-posts :as blog-posts]
             [parenteser.elements :as e]
             [parenteser.rss :as rss]
@@ -75,23 +76,61 @@
     {:teasers (->> (blog-posts/get-blog-posts (d/entity-db page))
                    (map prepare-blog-post-teaser))})))
 
+(defn get-series-blurb [series]
+  (str/replace (:series/blurb series)
+               #"\[(.+)\]"
+               (fn [[_ content]]
+                 (str"<a href='" (:page/uri series) "'>" content "</a>"))))
+
+(defn get-relevant-post [blog-post series]
+  (let [other-posts (->> (:blog-post/_series series)
+                         (remove #{blog-post})
+                         (sort-by :blog-post/published))]
+    (if (:series/sequential? series)
+      (if-let [next-post (first (drop-while #(.isBefore (:blog-post/published %)
+                                                        (:blog-post/published blog-post))
+                                            other-posts))]
+        {:prelude "Lyst til å lese videre? Her er det neste innlegget i serien:"
+         :post next-post}
+        (when (seq other-posts)
+          {:prelude "Gikk du glipp av starten? Her er det første innlegget i serien:"
+           :post (first other-posts)}))
+      (when-let [newest-post (last other-posts)]
+        {:prelude "Her er det siste innlegget i serien:"
+         :post newest-post}))))
+
+(defn render-series-conclusion [blog-post series]
+  (let [blurb (get-series-blurb series)
+        {:keys [prelude post]} (get-relevant-post blog-post series)]
+    (when post
+      [:div.section.slim
+       [:div.content.info-section
+        [:div.section-content.text-content
+         (list
+          [:p.mbl blurb " " prelude]
+          (e/teaser (-> (prepare-blog-post-teaser post)
+                        (dissoc :kicker))))]]])))
+
 (defn render-blog-post [blog-post]
-  (layout
-   {:title (str (:page/title blog-post) " - Parenteser")}
-   (e/header-section
-    {:title "Parenteser"
-     :slogan "Betraktninger fra Mat-teamets grønne enger"
-     :href "/"})
-   [:div.section
-    [:div.content.text-content
-     [:h1.h1
-      (when-let [series (:blog-post/series blog-post)]
-        [:div.h4.mbxs [:a {:href (:page/uri series)} (:series/name series)] ": "])
-      [:span (:page/title blog-post)]]
-     (md/render-html (:blog-post/body blog-post))
-     (-> (get-blog-post-vcard blog-post)
-         (assoc :class "mtxl")
-         e/vcard)]]))
+  (let [series (:blog-post/series blog-post)]
+    (layout
+     {:title (str (:page/title blog-post) " - Parenteser")}
+     (e/header-section
+      {:title "Parenteser"
+       :slogan "Betraktninger fra Mat-teamets grønne enger"
+       :href "/"})
+     [:div.section
+      [:div.content.text-content
+       [:h1.h1
+        (when series
+          [:div.h4.mbxs [:a {:href (:page/uri series)} (:series/name series)] ": "])
+        [:span (:page/title blog-post)]]
+       (md/render-html (:blog-post/body blog-post))
+       (-> (get-blog-post-vcard blog-post)
+           (assoc :class "mtxl")
+           e/vcard)]]
+     (when series
+       (render-series-conclusion blog-post series)))))
 
 (defn render-404 [_page]
   (layout {:title "Fant ikke siden!"} [:h1 "404 WAT"]))

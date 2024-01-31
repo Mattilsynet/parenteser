@@ -4,6 +4,11 @@
 :series/sequential? true
 :page/uri /smakebiter-av-datomic/
 :page/kind :page.kind/series
+:series/blurb
+
+[Smakebiter av Datomic] er en serie med bloggposter om
+den spennende og rare databasen Datomic.
+
 :series/description
 
 Datomic er en jæskla interessant database. Den ble designet fra bunnen opp av
@@ -20,6 +25,10 @@ Datomic du også.
 :series/name Foredrag
 :page/uri /foredrag/
 :page/kind :page.kind/series
+:series/blurb
+
+Interessert i [flere foredrag] fra oss på Parenteser-bloggen?
+
 :series/description
 
 Det hender at vi også holder foredrag ute i den vide verden. Her har vi samlet
@@ -31,6 +40,11 @@ noen av dem til glede for nye lesere.
 :page/uri /hjemmelaget-sok/
 :series/sequential? true
 :page/kind :page.kind/series
+:series/blurb
+
+Jeg har skrevet mer om [fulltekstsøk fra bunnen av] i denne serien med
+bloggposter.
+
 :series/description
 
 Fulltekstsøk kan virke magisk. Hva er det egentlig som foregår når jeg får treff
