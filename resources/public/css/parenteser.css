@@ -162,6 +162,13 @@ a:hover, .clickable:hover {
   font-weight: normal;
 }
 
+.h6,
+.text-content h6,
+.text-content .h6 {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
 .text-content kbd,
 .text-content p code,
 .text-content li code,
@@ -272,7 +279,7 @@ a:hover, .clickable:hover {
   color: var(--section-fg);
 }
 
-.section .content {
+.content {
   max-width: 1120px;
   margin: 0 auto;
   padding: 20px;
@@ -440,7 +447,7 @@ body .text-content :last-child {
   .h4, .text-content h4, .text-content .h4 {font-size: 1.5rem;}
   .h5, .text-content h5, .text-content .h5 {font-size: 1.25rem; }
   .codehilite {font-size: 0.7rem;}
-  .section .content {padding: 4rem 40px;}
+  .content {padding: 4rem 40px;}
   .slim .content {padding: 2rem 40px;}
   .theme-default + .theme-default .content {padding-top: 0;}
   .section:last-child .content {padding-bottom: 100px;}
@@ -662,6 +669,13 @@ body .text-content :last-child {
 .mtm {margin-top: 24px}
 .mtl {margin-top: 32px}
 .mtxl {margin-top: 48px}
+.mbxs, .text-content .mbxs {margin-bottom: 8px}
+.mbs, .text-content .mbs {margin-bottom: 16px}
+.mbm, .text-content .mbm {margin-bottom: 24px}
+.mbl, .text-content .mbl {margin-bottom: 32px}
+.mbxl, .text-content .mbxl {margin-bottom: 48px}
+
+.pbn {padding-bottom: 0;}
 
 .video-responsive {
     position: relative;

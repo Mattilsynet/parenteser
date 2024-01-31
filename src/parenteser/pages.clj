@@ -29,10 +29,11 @@
    :body (when-let [tags (prepare-tags tags)]
            [:span "Om " (comma-separated tags)])})
 
-(defn prepare-blog-post-teaser [{:blog-post/keys [description published]
+(defn prepare-blog-post-teaser [{:blog-post/keys [description published series]
                                  :page/keys [title uri]
                                  :as blog-post}]
   (cond-> {:title title
+           :kicker (some-> (:series/name series) (str ": "))
            :url uri
            :description (md/render-html description)
            :aside (get-blog-post-vcard blog-post)
@@ -83,7 +84,10 @@
      :href "/"})
    [:div.section
     [:div.content.text-content
-     [:h1.h1 (:page/title blog-post)]
+     [:h1.h1
+      (when-let [series (:blog-post/series blog-post)]
+        [:div.h4.mbxs [:a {:href (:page/uri series)} (:series/name series)] ": "])
+      [:span (:page/title blog-post)]]
      (md/render-html (:blog-post/body blog-post))
      (-> (get-blog-post-vcard blog-post)
          (assoc :class "mtxl")
@@ -92,10 +96,38 @@
 (defn render-404 [_page]
   (layout {:title "Fant ikke siden!"} [:h1 "404 WAT"]))
 
+(defn prepare-sequential-kicker [index teaser]
+  (assoc teaser :kicker (str "Del " (inc index) ":")))
+
+(defn render-series-page [series]
+  (layout
+   {:title (str (:series/name series) " - Parenteser")}
+   (e/header-section
+    {:title "Parenteser"
+     :slogan "Betraktninger fra Mat-teamets grønne enger"
+     :href "/"})
+   [:div.section
+    [:div.content.text-content.pbn
+     [:h1.h1.mbm (:series/name series)]
+     (when-let [description (:series/description series)]
+       (md/render-html description))]]
+   (e/teaser-section
+    {:teasers (if (:series/sequential? series)
+                (->> (:blog-post/_series series)
+                     (sort-by :blog-post/published)
+                     (map prepare-blog-post-teaser)
+                     (map-indexed prepare-sequential-kicker))
+                (->> (:blog-post/_series series)
+                     (sort-by :blog-post/published)
+                     (reverse)
+                     (map prepare-blog-post-teaser)
+                     (map #(dissoc % :kicker))))})))
+
 (defn render-page [req page]
   (if-let [f (case (:page/kind page)
                :page.kind/frontpage render-frontpage
                :page.kind/blog-post render-blog-post
+               :page.kind/series render-series-page
                :page.kind/rss-feed (fn [_] (rss/blog-post-feed (:app/db req)))
                nil)]
     (f page)

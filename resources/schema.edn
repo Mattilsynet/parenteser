@@ -7,6 +7,23 @@
   :db/valueType :db.type/string
   :db/cardinality :db.cardinality/one}
 
+ {:db/ident :series/id
+  :db/valueType :db.type/keyword
+  :db/unique :db.unique/identity
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :series/name
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :series/sequential?
+  :db/valueType :db.type/boolean
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :series/description
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
  {:db/ident :blog-post/title
   :db/valueType :db.type/string
   :db/cardinality :db.cardinality/one}
@@ -40,6 +57,10 @@
   :db/cardinality :db.cardinality/one}
 
  {:db/ident :blog-post/author
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :blog-post/series
   :db/valueType :db.type/ref
   :db/cardinality :db.cardinality/one}
 
