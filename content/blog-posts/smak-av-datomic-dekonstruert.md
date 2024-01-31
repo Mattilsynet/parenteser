@@ -63,7 +63,9 @@ La oss se på litt kode. Datomic API-et gir tilgang til indeksen via `d/datoms`.
 Den gir oss en liste med datoms som matcher:
 
 ```clj
-(count (seq (d/datoms db :avet :player/name))) ;; => 8324
+(count (seq (d/datoms db :avet :player/name)))
+
+;; => 8324
 ```
 
 Her bruker vi `:avet`-indeksen som er sortert på **a**ttributt først, så
