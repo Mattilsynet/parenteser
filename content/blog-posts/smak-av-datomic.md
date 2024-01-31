@@ -1,7 +1,8 @@
-:page/title Smakebiter av Datomic: En eksplosjon av data
+:page/title En eksplosjon av data
 :blog-post/author {:person/id :person/magnar}
 :blog-post/published #time/ldt "2024-01-03T15:45:00"
 :blog-post/tags [:datomic :clojure]
+:blog-post/series {:series/id :datomic}
 :blog-post/description
 
 Datomic er en aldeles nydelig database å jobbe med. Vi starter året med en ny

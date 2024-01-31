@@ -2,6 +2,7 @@
 :blog-post/author {:person/id :person/christian}
 :blog-post/published #time/ldt "2023-11-07T09:00:00"
 :blog-post/tags [:sok :javascript]
+:blog-post/series {:series/id :fulltekstsok}
 :open-graph/image /images/search-banana.jpg
 :blog-post/description
 
@@ -382,5 +383,5 @@ oss si at du har noen tusen titler - ja, så er disse 100 linjene med JavaScript
 nok til å gi deg et ålreit søk.
 
 Ved å utvide søkemotoren med noen enkle konsepter for vekting kan dette bli
-svært nyttig. Hvordan det kan gjøres kommer jeg tilbake til i et
-oppfølgingsinnlegg.
+svært nyttig. Hvordan det kan gjøres kommer jeg tilbake til i [neste
+innlegg](/sok-vekting/).

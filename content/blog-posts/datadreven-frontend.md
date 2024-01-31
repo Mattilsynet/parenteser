@@ -1,7 +1,8 @@
-:page/title Foredrag: Datadreven frontend
+:page/title Datadreven frontend
 :blog-post/published #time/ldt "2024-01-17T09:00:00"
 :blog-post/author {:person/id :person/christian}
 :blog-post/tags [:framsideutvikling]
+:blog-post/series {:series/id :foredrag}
 :blog-post/description
 
 Helt siden jeg tok i bruk React for over 10 år siden har min tilnærming til

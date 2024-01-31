@@ -2,6 +2,7 @@
 :blog-post/published #time/ldt "2023-12-19T09:00:00"
 :blog-post/author {:person/id :person/christian}
 :blog-post/tags [:sok :unicode :java :javascript]
+:blog-post/series {:series/id :fulltekstsok}
 :blog-post/description
 
 Unicode er overalt. Men noen steder er det fortsatt tryggest med det gode gamle
