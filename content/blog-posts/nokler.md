@@ -55,14 +55,16 @@ som en litt mer jålete og/eller omstendig måte å navngi nøklene på:
 
 Når et keyword har navnerom er det en etablert konvensjon i Clojure at det er
 **globalt**. Det betyr at `:kommune/navn` alltid kan forventes å ha samme
-semantikk, uansett hvor i kodebasen det dukker opp.
+semantikk, uansett hvor i kodebasen det dukker opp. Det samme kan ikke sies om
+`:navn`.
 
 ## Eierskap
 
-Navnerom kan si noe om konteksten til datapunktet. Hvis jeg vil lagre kommunen i
-en database må jeg gi den en unik id. Å lene seg for hardt på en naturlig id kan
-fort gå galt. Det kan ikke ha vært noe gøy å bruke kommunenummer som
-primærnøkkel gjennom alle sammenslåingene i 2017, 2017 og 2020.
+Navnerom kan si noe om konteksten til datapunktet. For eksempel: Hvis jeg vil
+lagre kommunen i en database må jeg gi den en unik id. Å lene seg for hardt på
+en naturlig id kan fort gå galt. Det kan ikke ha vært noe gøy å bruke
+kommunenummer som primærnøkkel gjennom alle sammenslåingene i 2017, 2017 og
+2020.
 
 Kommunen får dermed en syntetisk id som handler mer om databasen min enn om
 selve kommunen. Navnerom kan tydeliggjøre dette skillet:
