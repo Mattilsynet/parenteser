@@ -63,7 +63,7 @@ semantikk, uansett hvor i kodebasen det dukker opp. Det samme kan ikke sies om
 Navnerom kan si noe om konteksten til datapunktet. For eksempel: Hvis jeg vil
 lagre kommunen i en database må jeg gi den en unik id. Å lene seg for hardt på
 en naturlig id kan fort gå galt. Det kan ikke ha vært noe gøy å bruke
-kommunenummer som primærnøkkel gjennom alle sammenslåingene i 2017, 2017 og
+kommunenummer som primærnøkkel gjennom alle sammenslåingene i 2017, 2018 og
 2020.
 
 Kommunen får dermed en syntetisk id som handler mer om databasen min enn om
