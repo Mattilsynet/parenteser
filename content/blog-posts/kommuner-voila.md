@@ -87,10 +87,13 @@ Igjen har vi upserts - to stykk. Hvis det allerede finnes et poststed med dette
 postnummeret, så brukes det - men berikes da med navn og kommune. Hvis det
 allerede finnes en kommune med den koden, så brukes den.
 
-Og dermed får vi flettet sammen spisesteder, via postnummer, til kommune - bare
+Og dermed får vi flettet sammen spisesteder, via poststed, til kommune - bare
 via upserts, uten at jeg "trengte gjøre noe" for å koble dem sammen.
 
 Herlig.
+
+PS! Jeg skjønner at jeg må skrive en liten smakebit om Datomic sitt fin-fine
+system for å beskrive transaksjoner av data i dette formatet. Det kommer!
 
 ## Småbit 2 -- hva er URL-en?
 
