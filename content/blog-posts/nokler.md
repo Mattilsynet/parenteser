@@ -89,7 +89,7 @@ sider for kommuner](https://smilefjes.mattilsynet.no/kommune/fredrikstad/). En
 måte å modellere dette på er å si at en side har en kommune:
 
 ```clj
-{:page/url "/kommune/fredrikstad/"
+{:page/uri "/kommune/fredrikstad/"
  :page/kind :page.kind/kommune-page
  :page/kommune {:kommune/kode "3107"
                 :kommune/navn "Fredrikstad"}}
@@ -104,7 +104,7 @@ at en kommune har en side-URL:
 {:db/id 17592186046486
  :kommune/kode "3107"
  :kommune/navn "Fredrikstad"
- :page/url "/kommune/fredrikstad/"
+ :page/uri "/kommune/fredrikstad/"
  :page/kind :page.kind/kommune-page}
 ```
 

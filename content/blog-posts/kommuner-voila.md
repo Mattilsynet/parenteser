@@ -109,7 +109,7 @@ du et eksempel på dette i praksis:
 {:db/id 17592186046486
  :kommune/kode "3107"
  :kommune/navn "Fredrikstad"
- :page/url "/kommune/fredrikstad/"
+ :page/uri "/kommune/fredrikstad/"
  :page/kind :page.kind/kommune-page}
 ```
 
