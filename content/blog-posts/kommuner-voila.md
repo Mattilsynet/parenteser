@@ -62,7 +62,7 @@ Datomic håndterer slike attributter spesielt, slik at dette ...
  {:poststed/postnummer (:postnr m)}
 ```
 
-... blir til en upsert. Altså, den bruker ekisterende poststed-entitet hvis den
+... blir til en upsert. Altså, den bruker eksisterende poststed-entitet hvis den
 allerede finnes -- og hvis ikke så lages det en ny.
 
 Og fordi poststedet deklareres sånn her ...
@@ -149,11 +149,11 @@ relevante koden ut:
   (->> [(-> spisested :spisested/adresse :poststed)
         (-> spisested :spisested/adresse :linje1)
         (-> spisested :spisested/adresse :linje2)]
-       (filter not-empty)
+       (remove empty?)
        (str/join " ")))
 ```
 
-Ja ha, denne funksjonen tar jo bare imot spisestedet. Ingen database å slå opp
+Jaha, denne funksjonen tar jo bare imot spisestedet. Ingen database å slå opp
 kommunen i.
 
 Tenk litt på hvordan du ville gått frem for å også sende kommunen ned til denne
