@@ -1,4 +1,30 @@
 --------------------------------------------------------------------------------
+:series/id :clojure-core
+:series/name clojure.core
+:series/sequential? true
+:page/uri /clojure-core/
+:page/kind :page.kind/series
+:series/blurb
+
+[clojure.core] er en serie med bloggposter om alle de nyttige verktøyene i
+`clojure.core`, hjørnesteinen i det rikholdige standardbiblioteket til Clojure.
+
+:series/description
+
+`clojure.core` er hjørnesteinen i det rikholdige standardbiblioteket til
+Clojure. Der bor det haugevis med nyttige små funksjoner. Stabler du sammen nok
+av disse generiske funksjonene kan du løse et bredt spekter av
+(domene-spesifikke) problemer med svært få skreddersydde abstraksjoner. God
+oversikt over hva `clojure.core` har å by på er på mange måter nøkkelen til å
+lykkes med Clojure. I denne serien med bloggposter trekker vi frem noen
+godbiter, i håp om at du også sier deg enig i følgende sitat:
+
+> It is better to have 100 functions operate on one data structure than 10
+> functions on 10 data structures.
+
+[Alan Perlis](https://en.wikipedia.org/wiki/Epigrams_on_Programming)
+
+--------------------------------------------------------------------------------
 :series/id :datomic
 :series/name Smakebiter av Datomic
 :series/sequential? true
