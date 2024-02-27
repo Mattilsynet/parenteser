@@ -112,7 +112,8 @@
                         (dissoc :kicker))))]]])))
 
 (defn render-blog-post [blog-post]
-  (let [series (:blog-post/series blog-post)]
+  (let [series (:blog-post/series blog-post)
+        published (:blog-post/published blog-post)]
     (layout
      {:title (str (:page/title blog-post) " - Parenteser")}
      (e/header-section
@@ -125,6 +126,7 @@
         (when series
           [:div.h4.mbxs [:a {:href (:page/uri series)} (:series/name series)] ": "])
         [:span (:page/title blog-post)]]
+       [:time.byline.text-s {:datetime published} (ymd published)]
        (md/render-html (:blog-post/body blog-post))
        (-> (get-blog-post-vcard blog-post)
            (assoc :class "mtxl")
