@@ -126,8 +126,9 @@
         (when series
           [:div.h4.mbxs [:a {:href (:page/uri series)} (:series/name series)] ": "])
         [:span (:page/title blog-post)]]
-       [:time.byline.text-s {:datetime published} (ymd published)]
        (md/render-html (:blog-post/body blog-post))
+       [:div.mtxxl [:time.byline.text-s {:datetime published}
+         "Publisert " (ymd published)]]
        (-> (get-blog-post-vcard blog-post)
            (assoc :class "mtxl")
            e/vcard)]]
