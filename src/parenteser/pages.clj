@@ -121,16 +121,18 @@
        :slogan "Betraktninger fra Mat-teamets grønne enger"
        :href "/"})
      [:div.section
-      [:div.content.text-content
-       [:h1.h1
-        (when series
-          [:div.h4.mbxs [:a {:href (:page/uri series)} (:series/name series)] ": "])
-        [:span (:page/title blog-post)]]
-       (md/render-html (:blog-post/body blog-post))
-       [:div.mtxxl [:time.byline.text-s {:datetime published}
-         "Publisert " (ymd published)]]
+      [:div.content
+       [:div.text-content
+        [:h1.h1
+         (when series
+           [:div.h4.mbxs [:a {:href (:page/uri series)} (:series/name series)] ": "])
+         [:span (:page/title blog-post)]]
+        (md/render-html (:blog-post/body blog-post))]
        (-> (get-blog-post-vcard blog-post)
-           (assoc :class "mtxl")
+           (assoc :class "mtxxl")
+           (update :body (fn [b] [:div b
+                                  [:div [:time.byline.text-s {:datetime published}
+                                         (ymd published)]]]))
            e/vcard)]]
      (when series
        (render-series-conclusion blog-post series)))))
