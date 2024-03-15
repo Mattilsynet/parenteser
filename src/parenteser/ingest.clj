@@ -17,6 +17,7 @@
   (or (:open-graph/image blog-post)
       (some-> (:blog-post/body blog-post)
               md/render-html
+              str
               (html5-walker/find-nodes [:img])
               first
               (.getAttribute "src"))
