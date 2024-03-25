@@ -1,6 +1,7 @@
 (ns parenteser.pages
   (:require [clojure.string :as str]
             [datomic-type-extensions.api :as d]
+            [dev.onionpancakes.chassis.core :as chassis]
             [parenteser.blog-posts :as blog-posts]
             [parenteser.elements :as e]
             [parenteser.rss :as rss]
@@ -77,10 +78,10 @@
                    (map prepare-blog-post-teaser))})))
 
 (defn get-series-blurb [series]
-  (str/replace (:series/blurb series)
-               #"\[(.+)\]"
-               (fn [[_ content]]
-                 (str"<a href='" (:page/uri series) "'>" content "</a>"))))
+  (-> (:series/blurb series)
+      (str/replace #"\[(.+)\]" (fn [[_ content]]
+                                 (str "<a href='" (:page/uri series) "'>" content "</a>")))
+      chassis/raw))
 
 (defn get-relevant-post [blog-post series]
   (let [other-posts (->> (:blog-post/_series series)
