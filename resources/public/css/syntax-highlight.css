@@ -1,6 +1,7 @@
 /* Syntax highlighting */
 
-.codehilite code {
+.codehilite code,
+.codelike {
   background: var(--code-bg);
   display: block;
   padding: 1rem;
