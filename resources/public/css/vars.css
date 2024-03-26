@@ -4,7 +4,7 @@
   --hillary: #adaa8a;
   --dawn-pink: #f1eadf;
   --alizarin: #e23128;
-  --lucky: #afb71a;
+  --olive: #5a7800;
   --venice: #075a78;
   --astral: #338ba3;
   --spring-wood: #f9f6f1;
@@ -17,7 +17,7 @@
   --blockquote-bg: var(--mysterio);
   --link-color: var(--venice);
   --code-bg: var(--spring-wood);
-  --code-contrast: var(--lucky);
+  --code-contrast: var(--olive);
   --header-bg: var(--dawn-pink);
   --header-fg: var(--alizarin);
   --footer-bg: var(--mysterio);
@@ -25,7 +25,7 @@
   --quote-border: var(--alizarin);
   --subtle: var(--botticelli);
   --teaser-border: var(--dawn-pink);
-  --hl-comment: var(--lucky);
+  --hl-comment: var(--olive);
   --hl-preproc-comment : var(--venice);
   --hl-keyword: var(--venice);
   --hl-constant: var(--venice);
@@ -53,13 +53,13 @@
   --hl-variable: var(--venice);
   --hl-number: var(--venice);
   --hl-s-exp: var(--alizarin);
-  --hl-special-form: var(--lucky);
+  --hl-special-form: var(--olive);
   --hl-reader-char: var(--alizarin);
   --hl-nil: var(--venice);
   --hl-repeat: var(--alizarin);
   --hl-regexp: var(--alizarin);
-  --hl-exception: var(--lucky);
-  --hl-boolean: var(--lucky);
+  --hl-exception: var(--olive);
+  --hl-boolean: var(--olive);
   --hl-character: var(--venice);
-  --hl-conditional: var(--lucky);
+  --hl-conditional: var(--olive);
 }
