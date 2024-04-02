@@ -127,10 +127,11 @@ Ganske stilig.
 
 ## Til slutt
 
-Sånn til daglig bruker man ikke indeksene direkte så ofte. Datomic har mer
-praktiske måter å hente ut data på enn dette. Men eksempelet illustrerer
-poenget: Med Datomic får applikasjonsprosessen din full tilgang til de dataene
-man normalt tenker er skjult bak et spørrespråk og en ekstern prosess.
+Sånn til daglig bruker man ikke indeksene direkte så ofte. [Datomic har mer
+praktiske måter å hente ut data på enn dette](/alle-gatene-i-kommunen/). Men
+eksempelet illustrerer poenget: Med Datomic får applikasjonsprosessen din full
+tilgang til de dataene man normalt tenker er skjult bak et spørrespråk og en
+ekstern prosess.
 
 Ikke bare betyr det at problemer som
 [N+1](https://docs.sentry.io/product/issues/issue-details/performance-issues/n-one-queries/)
