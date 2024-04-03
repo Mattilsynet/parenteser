@@ -79,3 +79,24 @@ håper jeg å finne ut av det ved å bygge en enkel søkemotor fra bunnen av i
 JavaScript. Resultatet blir godt nok til å ta i bruk i prod på
 [beskjedne](https://www.matvaretabellen.no/)
 [datamengder](https://smilefjes.mattilsynet.no/) (noen tusen dokumenter).
+
+--------------------------------------------------------------------------------
+:series/id :nats
+:series/name Nyttig å vite om NATS
+:series/sequential? true
+:page/uri /nats/
+:page/kind :page.kind/series
+:series/blurb
+
+[Nyttig å vite om NATS] er en serie med bloggposter om det distribuerte
+meldingssystemet NATS.
+
+:series/description
+
+[NATS](https://nats.io) er et distribuert meldingssystem med mange bruksmønstre:
+fra pubsub, arbeidskøer og strømming av persistente logger til key/value og
+object storage. Alt fra den samme primitiven, emnebasert meldingsutveksling.
+
+NATS er skrevet i Go og distribueres dermed som en rask frittstående binærfil.
+Den har en implementasjon av [Raft konsensusalgoritmen](https://raft.github.io/)
+for distribuert persistens med replikering.
