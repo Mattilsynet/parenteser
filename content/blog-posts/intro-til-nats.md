@@ -28,8 +28,9 @@ sammen.
 
 La oss starte med et eksempel. Det er fort gjort å installere NATS: du trenger
 bare å laste ned [den frittstående kjørbare fila](https://nats.io/download/) og
-starte den. På OSX kan du slippe unna med `brew tap nats-io/nats-tools` og så
-`brew install nats-io/nats-tools/nats`.
+starte den. På OSX kan du slippe unna med `brew install nats-server` for
+serveren, og `brew tap nats-io/nats-tools` og så `brew install
+nats-io/nats-tools/nats` for CLI-et.
 
 For å starte serveren åpner du en terminal og skriver:
 
@@ -135,7 +136,7 @@ Jeg og Christian setter oss og skriver litt Clojure
 
 Det er verdt å merke seg at filtreringen av meldinger skjer på NATS-serveren --
 ikke på klienten. Med andre ord gir NATS deg stor frihet til å fordele
-arbeid/interesse mellom klienter med lav kostnad på klient-siden.
+arbeid/interesse mellom klienter med lav kostnad på klientsiden.
 
 I senere innlegg skal vi se hvilke spennende muligheter som dukker opp når vi
 legger persistens på denne modellen.
