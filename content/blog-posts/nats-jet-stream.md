@@ -75,9 +75,9 @@ nats publish jobs.emails \
   "body": "Hei via NATS!"}'
 ```
 
-## Konsummering av en strøm
+## Konsumering av en strøm
 
-Vi _kan_ også konsummere emnet som før om vi vil:
+Vi _kan_ også konsumere emnet som før om vi vil:
 
 ```sh
 nats subscribe jobs.emails
@@ -86,7 +86,7 @@ nats subscribe jobs.emails
 Her får vi kun meldinger som publiseres etter at vi abonnerte. En av fordelene
 med persistering er at vi slipper å koordinere i tid for å snakke sammen.
 
-For å konsummere en strøm kan vi opprette en "consumer". Akkurat som strømmer er
+For å konsumere en strøm kan vi opprette en "consumer". Akkurat som strømmer er
 disse persistente, og tilstanden deres bor på NATS-serveren. Og akkurat som
 strømmer er litt konfigurasjon for noen emner er konsumenter litt konfigurasjon
 for noen abonnenter:
