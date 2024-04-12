@@ -3,7 +3,7 @@
 :blog-post/published #time/ldt "2024-04-12T09:00:00"
 :blog-post/tags [:nats :koer]
 :blog-post/series {:series/id :nats}
-:open-graph/image /images/clj-nats.png
+:open-graph/image /images/nats.png
 :blog-post/description
 
 JetStream er en bryter som gir [NATS](https://nats.io) persistens. Det åpner opp
