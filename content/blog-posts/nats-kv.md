@@ -1,7 +1,7 @@
 :page/title NATS key/value store
 :blog-post/author {:person/id :person/christian}
-:blog-post/published #time/ldt "2024-05-07T09:00:00"
-:blog-post/tags [:nats]
+:blog-post/published #time/ldt "2024-04-15T09:00:00"
+:blog-post/tags [:nats :koer]
 :blog-post/series {:series/id :nats}
 :blog-post/description
 
@@ -71,8 +71,8 @@ nats kv get chat-channels \
     --raw \
 
 {"id": "3d5570f5-1651-4f54-9657-534dba9a78b8",
-      "members": ["christian", "magnar"],
-      "isPublic": true}
+ "members": ["christian", "magnar"],
+ "isPublic": true}
 ```
 
 Vel og bra. Det er en key/value store. For å få et innblikk i hvordan NATS
@@ -108,9 +108,9 @@ KV_chat-channels │ 2024-04-02 22:12:38 │ 2        │ 359 B │ 2m43s
 
 Det er ikke så nyttig å bruke denne direkte -- de spissede key/value-verktøyene
 er bedre egnet. Men jeg fant det veldig opplysende at key/value stores rett og
-slett er litt convenience på toppen av strømmer, som igjen "bare" er persistens
-på toppen av NATS sin emnebaserte meldingsutveksling. Så fokusert og simpelt,
-men allikevel så bredt anvendbart.
+slett er litt bekvemmelighet på toppen av strømmer, som igjen "bare" er
+persistens på toppen av NATS sin emnebaserte meldingsutveksling. Så fokusert og
+simpelt, men allikevel så bredt anvendbart.
 
 ## Bonus-poeng: Object store
 
