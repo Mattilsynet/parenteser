@@ -117,7 +117,7 @@ simpelt, men allikevel så bredt anvendbart.
 
 NATS kommer forresten også med en object store ala S3, altså en key/value store
 der verdiene er større elementer (NATS sin key/value kan ikke ha verdier på
-større enn 64MB). Hvordan tror du den er implentert?
+større enn 64MB). Hvordan tror du den er implementert?
 
 Kjør opp en terminal som kun ser på headerne på meldingene (med mindre du er
 veldig glad i binær output):
