@@ -3,6 +3,7 @@
 :blog-post/published #time/ldt "2024-04-15T09:00:00"
 :blog-post/tags [:nats :koer]
 :blog-post/series {:series/id :nats}
+:open-graph/image /images/nats.png
 :blog-post/description
 
 At et meldingssystem også skal kunne fungere som en key/value-database ga ikke
