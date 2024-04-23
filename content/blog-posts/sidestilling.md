@@ -153,8 +153,8 @@ bruksområder: Å lage oppslagstabeller eller sortere lister.
 
 #### Lage oppslagstabeller
 
-Til dette formål kombinerer vi `juxt` med `identity`. Det er en til av de rare
-småfunksjonene i clojure.core. Denne returnerer argumentet sitt uendret:
+Til dette formål kombinerer vi `juxt` med `identity` -- en til av de rare
+småfunksjonene i clojure.core. `identity` returnerer argumentet sitt uendret:
 
 ```clj
 (= (identity foo) foo) ;; => true
