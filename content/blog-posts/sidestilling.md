@@ -205,16 +205,16 @@ Her sorterer vi først på antall tegn i `:blog-post/body` -- altså selve tekst
 -- og deretter `:page/title`. Når vi slenger på `-` (minus) så får vi sortert
 flest først.
 
-Vi kan avslutte med å bruke `juxt` en siste gang for å gjøre disse dataene lett
-å se på:
+Vi kan avslutte med å bruke `juxt` en siste gang for å sidestille disse dataene
+så de blir lette å se på:
 
 ```clj
 (->> (blog-posts/get-blog-posts db)
-       (sort-by (juxt (comp - count :blog-post/body)
-                      (comp - count :page/title)))
-       (map (juxt get-blog-post-author-name
-                  :page/title
-                  (comp count :blog-post/body))))
+     (sort-by (juxt (comp - count :blog-post/body)
+                    (comp - count :page/title)))
+     (map (juxt get-blog-post-author-name
+                :page/title
+                (comp count :blog-post/body))))
 
 ;; =>
 
