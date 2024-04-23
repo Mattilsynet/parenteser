@@ -190,7 +190,7 @@ oppslagstabeller fra en liste. Det er hendige greier.
 Her kommer vi inn på en av fordelene med uforanderlige data. I de
 fleste programmeringsspråk så er lister muterbare, og dermed ikke
 sammenlignbare. Det er ikke noe poeng i å sammenligne objektpekere.
-Uforanderlige lister derimot er faste verdier -- som kan vi sortere.
+Uforanderlige lister derimot er faste verdier -- som vi kan sortere.
 
 La oss se hvem som skriver de lengste bloggpostene, med lengste tittel som tie
 breaker:
