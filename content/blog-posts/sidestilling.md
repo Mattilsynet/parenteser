@@ -81,7 +81,7 @@ Aha! Er det ikke fint? `juxt` fikser biffen.
 `juxt` er en såkalt høyere ordens funksjon. Disse kommer i to former:
 
 - funksjoner som tar imot andre funksjoner som parametere (slik som `map`)
-- funksjoner som returnerer en ny funksjon (slik som `partial`)
+- funksjoner som returnerer en ny funksjon (slik som `constantly`)
 
 `juxt` har gleden av å oppfylle begge disse kriteriene. 💪
 
