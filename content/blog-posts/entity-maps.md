@@ -240,7 +240,7 @@ Dette kan transactes til databasen slik:
 Det ser ganskelig likt ut, bare med placeholder strenger for å fortelle Datomic
 hvilke attributter som hører til samme entitet.
 
-Men igjen kan vi bruke entity maps for å gjøre det hele mer bekvemmelig. Da ser
+Igjen kan vi bruke entity maps for å gjøre det hele mer bekvemmelig. Da ser
 det slik ut:
 
 ```clj
@@ -276,5 +276,5 @@ dette.
 
 Alt dette er porselen på toppen av røret `[:db/add e a v]`. Du kunne fått til
 det samme med de enkleste byggeklossene. Men herlighet så bekvemmelig, da gett!
-Dead Kennedys ville vært fornøy... nei, hvem er det jeg prøver å lure. Jello
+Selv Dead Kennedys ville vært fornøy... nei, hvem er det jeg prøver å lure. Jello
 Biafra gir full faen i alt dette. Men fett er det, likevel.
