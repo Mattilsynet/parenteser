@@ -168,7 +168,7 @@ for å fortelle Datomic at det her er snakk om en ny entitet:
 
 ```clj
 (d/transact conn
- [[:db/add "ny person" :person/id "TheBoosja"]
+ [[:db/add "ny person" :person/id "boosja"]
   [:db/add "ny person" :person/given-name "Mathias"]
   [:db/add "ny person" :person/family-name "Iversen"]])
 ```
@@ -178,7 +178,7 @@ person"`. Supert! Men det finnes en mer bekvemmelig måte:
 
 ```clj
 (d/transact conn
- [{:person/id "TheBoosja"
+ [{:person/id "boosja"
    :person/given-name "Mathias"
    :person/family-name "Iversen"}])
 ```
