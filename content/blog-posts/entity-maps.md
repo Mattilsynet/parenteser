@@ -196,7 +196,7 @@ Jeg kan også gjøre endringer på denne måten. Fra dette:
  [[:db/add [:person/id "magnars"] :person/given-name "Magnar Trygve"]])
 ```
 
-til
+til dette:
 
 ```clj
 (d/transact conn
@@ -206,7 +206,7 @@ til
 
 Men det ser jo helt likt ut som når vi legger til en ny person? Det stemmer. Det
 er *upsert*. Hvis en entitet med `:person/id "magnars"` allerede finnes, så
-endres den. Hvis ikke, så lager den en ny.
+endres den. Hvis ikke, så lages det en ny.
 
 ## Finalen
 

@@ -95,6 +95,8 @@ Herlig.
 PS! Jeg skjønner at jeg må skrive en liten smakebit om Datomic sitt fin-fine
 system for å beskrive transaksjoner av data i dette formatet. Det kommer!
 
+PPS! Magnar fra framtiden her, med [den lovte bloggposten](/entity-maps/).
+
 ## Småbit 2 -- hva er URL-en?
 
 Jeg har [tidligere skrevet om](/smak-av-datomic/) at Datomic modellerer sine
