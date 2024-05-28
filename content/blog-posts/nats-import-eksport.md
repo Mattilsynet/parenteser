@@ -109,7 +109,7 @@ Den viktigste delen av denne konfigurasjonen er:
 
 Dette er policyen som gjør at NATS fjerner meldinger fra køen etterhvert som de
 prosesseres. Forøvrig er det verdt å merke seg at `:nats.stream/allow-direct?
-true` lar oss inspisere meldingene på køen uten å konsummere dem.
+true` lar oss inspisere meldingene på køen uten å konsumere dem.
 
 Konsumenten vår ser sånn ut:
 
