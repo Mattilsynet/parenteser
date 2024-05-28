@@ -2,6 +2,7 @@
 :blog-post/author {:person/id :person/christian}
 :blog-post/published #time/ldt "2024-05-15T09:00:00"
 :blog-post/tags [:clojure :nats]
+:blog-post/series {:series/id :nats}
 :open-graph/image /images/nats.png
 :blog-post/description
 
