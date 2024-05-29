@@ -9,28 +9,6 @@
             [parenteser.rss :as rss]
             [powerpack.markdown :as md]))
 
-(defn prepare-tags [tags]
-  (seq (map :tag/name tags)))
-
-(defn get-blog-post-vcard [{:blog-post/keys [author tags vcard-photo]}]
-  {:image (or vcard-photo
-              (:person/photo author))
-   :image-alt (:person/given-name author)
-   :title (:person/given-name author)
-   :body (when-let [tags (prepare-tags tags)]
-           [:span "Om " (i18n/enumerate tags)])})
-
-(defn prepare-blog-post-teaser [{:blog-post/keys [description published series]
-                                 :page/keys [title uri]
-                                 :as blog-post}]
-  (cond-> {:title title
-           :kicker (some-> (:series/name series) (str ": "))
-           :url uri
-           :description (md/render-html description)
-           :aside (get-blog-post-vcard blog-post)
-           :kind :teaser-article}
-    published (assoc :published (i18n/format-ymd published))))
-
 (defn render-frontpage [page]
   (layout/layout
    {:title "Parenteser - Betraktninger fra Mat-teamets grønne enger"}
@@ -44,7 +22,7 @@
             [:p "Så, hvorfor akkurat " [:strong "Parenteser"] "? Vel, vi jobber mye i Clojure, som har rykte på seg å være belemret med unødvendige mengder parenteser. Men nei, ikke bare er de nødvendige, de er aldeles smakfulle - som to fine bananer i headeren. Vi tenker også at disse bloggpostene kommer litt på siden - litt i parentes, om du vil."]]})
    (e/teaser-section
     {:teasers (->> (blog-posts/get-blog-posts (d/entity-db page))
-                   (map prepare-blog-post-teaser))})))
+                   (map blog-posts/prepare-blog-post-teaser))})))
 
 (defn get-series-blurb [series]
   (-> (:series/blurb series)
@@ -78,7 +56,7 @@
         [:div.section-content.text-content
          (list
           [:p.mbl blurb " " prelude]
-          (e/teaser (-> (prepare-blog-post-teaser post)
+          (e/teaser (-> (blog-posts/prepare-blog-post-teaser post)
                         (dissoc :kicker))))]]])))
 
 (defn render-blog-post [blog-post]
@@ -98,7 +76,7 @@
            [:div.h4.mbxs [:a {:href (:page/uri series)} (:series/name series)] ": "])
          [:span (:page/title blog-post)]]
         (md/render-html (:blog-post/body blog-post))]
-       (-> (get-blog-post-vcard blog-post)
+       (-> (blog-posts/get-blog-post-vcard blog-post)
            (assoc :class "mtxxl")
            (update :body (fn [b] [:div b
                                   [:div [:time.byline.text-s {:datetime published}
@@ -129,12 +107,12 @@
     {:teasers (if (:series/sequential? series)
                 (->> (:blog-post/_series series)
                      (sort-by :blog-post/published)
-                     (map prepare-blog-post-teaser)
+                     (map blog-posts/prepare-blog-post-teaser)
                      (map-indexed prepare-sequential-kicker))
                 (->> (:blog-post/_series series)
                      (sort-by :blog-post/published)
                      (reverse)
-                     (map prepare-blog-post-teaser)
+                     (map blog-posts/prepare-blog-post-teaser)
                      (map #(dissoc % :kicker))))})))
 
 (defn render-page [req page]
