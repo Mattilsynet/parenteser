@@ -4,25 +4,11 @@
             [dev.onionpancakes.chassis.core :as chassis]
             [parenteser.blog-posts :as blog-posts]
             [parenteser.elements :as e]
+            [parenteser.frontpage :as frontpage]
             [parenteser.i18n :as i18n]
             [parenteser.layout :as layout]
             [parenteser.rss :as rss]
             [powerpack.markdown :as md]))
-
-(defn render-frontpage [page]
-  (layout/layout
-   {:title "Parenteser - Betraktninger fra Mat-teamets grønne enger"}
-   (e/header-section
-    {:title "Parenteser"
-     :slogan "Betraktninger fra Mat-teamets grønne enger"})
-   (e/info-section
-    {:title "Jøss, er du her også?"
-     :text [:div
-            [:p "Trivelig at du stakk innom. Vi er et lite produktteam hos Mattilsynet som jobber med mattrygghet. Her er vår tidvis tekniske blogg hvor vi deler litt av hva vi jobber med, og ting vi lærer på veien."]
-            [:p "Så, hvorfor akkurat " [:strong "Parenteser"] "? Vel, vi jobber mye i Clojure, som har rykte på seg å være belemret med unødvendige mengder parenteser. Men nei, ikke bare er de nødvendige, de er aldeles smakfulle - som to fine bananer i headeren. Vi tenker også at disse bloggpostene kommer litt på siden - litt i parentes, om du vil."]]})
-   (e/teaser-section
-    {:teasers (->> (blog-posts/get-blog-posts (d/entity-db page))
-                   (map blog-posts/prepare-blog-post-teaser))})))
 
 (defn get-series-blurb [series]
   (-> (:series/blurb series)
@@ -117,7 +103,7 @@
 
 (defn render-page [req page]
   (if-let [f (case (:page/kind page)
-               :page.kind/frontpage render-frontpage
+               :page.kind/frontpage frontpage/render-frontpage
                :page.kind/blog-post render-blog-post
                :page.kind/series render-series-page
                :page.kind/rss-feed (fn [_] (rss/blog-post-feed (:app/db req)))
