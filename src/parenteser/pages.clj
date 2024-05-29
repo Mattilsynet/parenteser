@@ -4,22 +4,10 @@
             [dev.onionpancakes.chassis.core :as chassis]
             [parenteser.blog-posts :as blog-posts]
             [parenteser.elements :as e]
+            [parenteser.i18n :as i18n]
             [parenteser.layout :as layout]
             [parenteser.rss :as rss]
-            [powerpack.markdown :as md])
-  (:import (java.time LocalDateTime)
-           (java.time.format DateTimeFormatter)
-           (java.util Locale)))
-
-(def no (Locale/forLanguageTag "no"))
-
-(defn ymd [^LocalDateTime ldt]
-  (.format ldt (DateTimeFormatter/ofPattern "d. MMMM y" no)))
-
-(defn comma-separated [coll]
-  (drop 1 (interleave (into (list " og " "")
-                            (repeat (dec (count coll)) ", "))
-                      coll)))
+            [powerpack.markdown :as md]))
 
 (defn prepare-tags [tags]
   (seq (map :tag/name tags)))
@@ -30,7 +18,7 @@
    :image-alt (:person/given-name author)
    :title (:person/given-name author)
    :body (when-let [tags (prepare-tags tags)]
-           [:span "Om " (comma-separated tags)])})
+           [:span "Om " (i18n/enumerate tags)])})
 
 (defn prepare-blog-post-teaser [{:blog-post/keys [description published series]
                                  :page/keys [title uri]
@@ -41,7 +29,7 @@
            :description (md/render-html description)
            :aside (get-blog-post-vcard blog-post)
            :kind :teaser-article}
-    published (assoc :published (ymd published))))
+    published (assoc :published (i18n/format-ymd published))))
 
 (defn render-frontpage [page]
   (layout/layout
@@ -114,7 +102,7 @@
            (assoc :class "mtxxl")
            (update :body (fn [b] [:div b
                                   [:div [:time.byline.text-s {:datetime published}
-                                         (ymd published)]]]))
+                                         (i18n/format-ymd published)]]]))
            e/vcard)]]
      (when series
        (render-series-conclusion blog-post series)))))
