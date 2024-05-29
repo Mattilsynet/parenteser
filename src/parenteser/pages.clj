@@ -4,6 +4,7 @@
             [dev.onionpancakes.chassis.core :as chassis]
             [parenteser.blog-posts :as blog-posts]
             [parenteser.elements :as e]
+            [parenteser.layout :as layout]
             [parenteser.rss :as rss]
             [powerpack.markdown :as md])
   (:import (java.time LocalDateTime)
@@ -42,28 +43,8 @@
            :kind :teaser-article}
     published (assoc :published (ymd published))))
 
-(defn layout [{:keys [title]} & forms]
-  [:html {:lang "nb"}
-   [:head
-    [:title title]
-    [:meta {:name "theme-color" :content "#f1eadf"}]
-    [:link {:href "/atom.xml"
-            :rel "alternate"
-            :title "Parenteser - Team Mat sin blogg"
-            :type "application/atom+xml"}]]
-   [:body
-    forms
-    (e/footer-section
-     {:text [:div
-             [:p "Har du innspill eller tanker? Kontakt gjerne "
-              [:a {:href "mailto:magnar.sveen@mattilsynet.no"} "Magnar"]
-              " eller "
-              [:a {:href "mailto:christian.johansen@mattilsynet.no"} "Christian"]
-              " på e-post."]
-             [:p "Innleggene speiler våre personlige meninger. Vi snakker ikke for hele Mattilsynet, akkurat."]]})]])
-
 (defn render-frontpage [page]
-  (layout
+  (layout/layout
    {:title "Parenteser - Betraktninger fra Mat-teamets grønne enger"}
    (e/header-section
     {:title "Parenteser"
@@ -115,7 +96,7 @@
 (defn render-blog-post [blog-post]
   (let [series (:blog-post/series blog-post)
         published (:blog-post/published blog-post)]
-    (layout
+    (layout/layout
      {:title (str (:page/title blog-post) " - Parenteser")}
      (e/header-section
       {:title "Parenteser"
@@ -139,13 +120,13 @@
        (render-series-conclusion blog-post series)))))
 
 (defn render-404 [_page]
-  (layout {:title "Fant ikke siden!"} [:h1 "404 WAT"]))
+  (layout/layout {:title "Fant ikke siden!"} [:h1 "404 WAT"]))
 
 (defn prepare-sequential-kicker [index teaser]
   (assoc teaser :kicker (str "Del " (inc index) ":")))
 
 (defn render-series-page [series]
-  (layout
+  (layout/layout
    {:title (str (:series/name series) " - Parenteser")}
    (e/header-section
     {:title "Parenteser"
