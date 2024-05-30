@@ -8,7 +8,9 @@
             [parenteser.series-page :as series-page]))
 
 (defn render-404 [_page]
-  (layout/layout {:title "Fant ikke siden!"} [:h1 "404 WAT"]))
+  (layout/layout
+   {:title [:i18n ::not-found-title]}
+   [:h1 [:i18n ::not-found-heading]]))
 
 (defn render-page [req page]
   (if-let [f (case (:page/kind page)

@@ -30,4 +30,9 @@
   :header-slogan "Betraktninger fra Mat-teamets grønne enger"
   :page-title [:fn/str "{{:title}} – Parenteser"]
   }
+
+ #:parenteser.pages
+ {:not-found-heading "404 WAT"
+  :not-found-title "Fant ikke siden!"
+  }
  ]
