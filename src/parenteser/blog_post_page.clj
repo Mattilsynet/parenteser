@@ -4,6 +4,7 @@
             [parenteser.blog-posts :as blog-posts]
             [parenteser.elements :as e]
             [parenteser.layout :as layout]
+            [parenteser.router :as router]
             [powerpack.markdown :as md]))
 
 (defn get-series-blurb [series]
@@ -46,7 +47,7 @@
         published (:blog-post/published blog-post)]
     (layout/layout
      {:title [:i18n ::layout/page-title {:title (:page/title blog-post)}]}
-     (layout/header {:href "/"})
+     (layout/header {:href (router/get-frontpage-url blog-post)})
      [:div.section
       [:div.content
        [:div.text-content

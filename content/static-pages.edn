@@ -3,5 +3,11 @@
   :open-graph/title "Parenteser"
   :open-graph/description "Betraktninger fra Mat-teamets grønne enger"
   :open-graph/image "/images/bananadev.png"}
+ {:page/uri "/en/"
+  :page/locale :en
+  :page/kind :page.kind/frontpage
+  :open-graph/title "Parens"
+  :open-graph/description "Software reflections from team Mat/NFSA"
+  :open-graph/image "/images/bananadev.png"}
  {:page/uri "/atom.xml"
   :page/kind :page.kind/rss-feed}]

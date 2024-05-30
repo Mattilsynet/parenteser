@@ -2,6 +2,7 @@
   (:require [parenteser.blog-posts :as blog-posts]
             [parenteser.elements :as e]
             [parenteser.layout :as layout]
+            [parenteser.router :as router]
             [powerpack.markdown :as md]))
 
 (defn prepare-sequential-kicker [index teaser]
@@ -10,7 +11,7 @@
 (defn render-series-page [series]
   (layout/layout
    {:title [:i18n ::title {:title (:series/name series)}]}
-   (layout/header {:href "/"})
+   (layout/header {:href (router/get-frontpage-url series)})
    [:div.section
     [:div.content.text-content.pbn
      [:h1.h1.mbm (:series/name series)]
