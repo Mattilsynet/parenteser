@@ -1,6 +1,12 @@
 (ns parenteser.layout
   (:require [parenteser.elements :as e]))
 
+(defn header [& [{:keys [href]}]]
+  (e/header-section
+   (cond-> {:title [:i18n ::header-title]
+            :slogan [:i18n ::header-slogan]}
+     href (assoc :href href))))
+
 (defn layout [{:keys [title]} & forms]
   [:html {:lang "nb"}
    [:head

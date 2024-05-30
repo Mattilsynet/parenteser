@@ -7,9 +7,7 @@
 (defn render-frontpage [page]
   (layout/layout
    {:title [:i18n ::page-title]}
-   (e/header-section
-    {:title [:i18n ::header-title]
-     :slogan [:i18n ::header-slogan]})
+   (layout/header)
    (e/info-section
     {:title [:i18n ::into-title]
      :text [:i18n ::info-text]})

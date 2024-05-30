@@ -1,7 +1,5 @@
 [#:parenteser.frontpage
  {:page-title "Parenteser – Betraktninger fra Mat-teamets grønne enger"
-  :header-title "Parenteser"
-  :header-slogan "Betraktninger fra Mat-teamets grønne enger"
   :into-title "Jøss, er du her også?"
   :info-text [:div
               [:p "Trivelig at du stakk innom. Vi er et lite produktteam hos Mattilsynet som jobber med mattrygghet. Her er vår tidvis tekniske blogg hvor vi deler litt av hva vi jobber med, og ting vi lærer på veien."]
@@ -17,5 +15,7 @@
                    [:a {:href "mailto:christian.johansen@mattilsynet.no"} "Christian"]
                    " på e-post."]
                   [:p "Innleggene speiler våre personlige meninger. Vi snakker ikke for hele Mattilsynet, akkurat."]]
+  :header-title "Parenteser"
+  :header-slogan "Betraktninger fra Mat-teamets grønne enger"
   }
  ]
