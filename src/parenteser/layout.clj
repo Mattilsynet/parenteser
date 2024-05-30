@@ -8,15 +8,9 @@
     [:meta {:name "theme-color" :content "#f1eadf"}]
     [:link {:href "/atom.xml"
             :rel "alternate"
-            :title "Parenteser - Team Mat sin blogg"
+            :title [:i18n ::atom-feed-title]
             :type "application/atom+xml"}]]
    [:body
     forms
     (e/footer-section
-     {:text [:div
-             [:p "Har du innspill eller tanker? Kontakt gjerne "
-              [:a {:href "mailto:magnar.sveen@mattilsynet.no"} "Magnar"]
-              " eller "
-              [:a {:href "mailto:christian.johansen@mattilsynet.no"} "Christian"]
-              " på e-post."]
-             [:p "Innleggene speiler våre personlige meninger. Vi snakker ikke for hele Mattilsynet, akkurat."]]})]])
+     {:text [:i18n ::footer-hiccup]})]])

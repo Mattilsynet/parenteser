@@ -36,6 +36,8 @@
                           :retina-quality 0.4
                           :width 184}}}
 
+       :m1p/dictionaries {:nb ["src/parenteser/i18n/nb.edn"]}
+
        :powerpack/create-ingest-tx #'ingest/create-tx
        :powerpack/render-page #'pages/render-page
        :powerpack/on-ingested #'ingest/on-ingested}
