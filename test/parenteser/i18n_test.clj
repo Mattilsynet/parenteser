@@ -4,5 +4,9 @@
 
 (deftest enumerate-test
   (testing "Separates by comma"
-    (is (= (sut/enumerate ["banan" "båt" "hest"])
-           ["banan" ", " "båt" " og " "hest"]))))
+    (is (= (sut/enumerate :nb ["banan" "båt" "hest"])
+           ["banan" ", " "båt" " og " "hest"])))
+
+  (testing "Enumerates in english"
+    (is (= (sut/enumerate :en ["banana" "boat" "horse"])
+           ["banana" ", " "boat" " and " "horse"]))))

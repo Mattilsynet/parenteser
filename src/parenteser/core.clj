@@ -1,5 +1,6 @@
 (ns parenteser.core
-  (:require [parenteser.ingest :as ingest]
+  (:require [parenteser.i18n :as i18n]
+            [parenteser.ingest :as ingest]
             [parenteser.pages :as pages]
             [powerpack.highlight :as highlight]))
 
@@ -37,6 +38,7 @@
                           :width 184}}}
 
        :m1p/dictionaries {:nb ["src/parenteser/i18n/nb.edn"]}
+       :m1p/dictionary-fns {:fn/enumerate #'i18n/m1p-fn-enumerate}
 
        :powerpack/create-ingest-tx #'ingest/create-tx
        :powerpack/render-page #'pages/render-page
