@@ -22,17 +22,15 @@
 
 (comment
 
-  (def system integrant.repl.state/system)
+  (def system (:powerpack/app integrant.repl.state/system))
 
   (->> (d/db (:datomic/conn system))
        blog-posts/get-blog-posts
        (map #(into {:db/id (:db/id %)} %)))
 
   (into {}
-        (->> [:page/uri "/blog/byggeklosser-for-sok/"]
+        (->> [:page/uri "/nats-import-eksport/"]
              (d/entity (d/db (:datomic/conn system)))
-
-             #_:blog-post/author
-             #_:person/photo))
+             :blog-post/author))
 
   )
