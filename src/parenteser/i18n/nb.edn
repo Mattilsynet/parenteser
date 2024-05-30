@@ -1,4 +1,7 @@
-[#:parenteser.blog-post-page
+[#:datetime
+ {:short-date [:fn/format-date [:fn/param] "d. MMMM y"]}
+
+ #:parenteser.blog-post-page
  {:series-next-prelude "Lyst til å lese videre? Her er det neste innlegget i serien:"
   :series-start-prelude "Gikk du glipp av starten? Her er det første innlegget i serien:"
   :series-latest-prelude "Her er det siste innlegget i serien:"}

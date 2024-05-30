@@ -1,6 +1,5 @@
 (ns parenteser.blog-posts
   (:require [datomic-type-extensions.api :as d]
-            [parenteser.i18n :as i18n]
             [powerpack.markdown :as md]))
 
 (defn get-blog-posts [db]
@@ -33,4 +32,4 @@
            :description (md/render-html description)
            :aside (get-blog-post-vcard blog-post)
            :kind :teaser-article}
-    published (assoc :published (i18n/format-ymd published))))
+    published (assoc :published [:i18n :datetime/short-date published])))

@@ -3,7 +3,6 @@
             [dev.onionpancakes.chassis.core :as chassis]
             [parenteser.blog-posts :as blog-posts]
             [parenteser.elements :as e]
-            [parenteser.i18n :as i18n]
             [parenteser.layout :as layout]
             [powerpack.markdown :as md]))
 
@@ -60,7 +59,7 @@
            (assoc :class "mtxxl")
            (update :body (fn [b] [:div b
                                   [:div [:time.byline.text-s {:datetime published}
-                                         (i18n/format-ymd published)]]]))
+                                         [:i18n :datetime/short-date published]]]]))
            e/vcard)]]
      (when series
        (render-series-conclusion blog-post series)))))
