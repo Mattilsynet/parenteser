@@ -12,12 +12,12 @@
    {:title [:i18n ::not-found-title]}
    [:h1 [:i18n ::not-found-heading]]))
 
-(defn render-page [req page]
+(defn render-page [_req page]
   (if-let [f (case (:page/kind page)
                :page.kind/frontpage frontpage/render-frontpage
                :page.kind/blog-post blog-post-page/render-blog-post
                :page.kind/series series-page/render-series-page
-               :page.kind/rss-feed (fn [_] (rss/blog-post-feed (:app/db req)))
+               :page.kind/rss-feed rss/blog-post-feed
                nil)]
     (f page)
     (render-404 page)))

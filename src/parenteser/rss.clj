@@ -41,16 +41,18 @@
      [:link {:rel "self" :href "https://parenteser.mattilsynet.io/atom.xml"}]
      (map entry blog-posts)])))
 
-(defn blog-post-feed [db]
+(defn blog-post-feed [page]
   {:status 200
    :headers {"Content-Type" "application/atom+xml"}
-   :body (atom-xml (blog-posts/get-blog-posts db))})
+   :body (-> (d/entity-db page)
+             (blog-posts/get-blog-posts (:page/locale page))
+             atom-xml)})
 
 (comment
   (def system integrant.repl.state/system)
   (def db (d/db (:datomic/conn (:powerpack/app system))))
 
-  (def posts (blog-posts/get-blog-posts db))
+  (def posts (blog-posts/get-blog-posts db :nb))
 
   (def post (first posts))
 

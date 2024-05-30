@@ -31,6 +31,7 @@
 (defn ingest-blog-post [blog-post]
   (-> blog-post
       (assoc :page/kind :page.kind/blog-post)
+      (update :page/locale #(or % :nb))
       (update-in-existing [:page/uri] str/replace #"^/blog-posts" "")
       (update-in-existing [:blog-post/tags] reify-tags)
       (update :open-graph/title #(or % (:page/title blog-post)))

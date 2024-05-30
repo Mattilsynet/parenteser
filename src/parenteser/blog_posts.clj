@@ -2,15 +2,24 @@
   (:require [datomic-type-extensions.api :as d]
             [powerpack.markdown :as md]))
 
-(defn get-blog-posts [db]
-  (->> (d/q '[:find [?e ...]
-              :where
-              [?e :page/uri]
-              [?e :page/kind :page.kind/blog-post]]
-            db)
-       (map #(d/entity db %))
-       (sort-by :blog-post/published)
-       reverse))
+(defn get-blog-posts
+  ([db]
+   (get-blog-posts db nil))
+  ([db locales]
+   (->> (d/q '[:find [?e ...]
+               :in $ [?locales ...]
+               :where
+               [?e :page/uri]
+               [?e :page/kind :page.kind/blog-post]
+               [?e :page/locale ?locales]]
+             db
+             (cond
+               (keyword? locales) #{locales}
+               (nil? locales) #{:nb :en}
+               :else locales))
+        (map #(d/entity db %))
+        (sort-by :blog-post/published)
+        reverse)))
 
 (defn prepare-tags [tags]
   (seq (for [tag tags]

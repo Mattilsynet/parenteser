@@ -1,4 +1,5 @@
 [{:page/uri "/"
+  :page/locale :nb
   :page/kind :page.kind/frontpage
   :open-graph/title "Parenteser"
   :open-graph/description "Betraktninger fra Mat-teamets grønne enger"
@@ -10,4 +11,5 @@
   :open-graph/description "Software reflections from team Mat/NFSA"
   :open-graph/image "/images/bananadev.png"}
  {:page/uri "/atom.xml"
+  :page/locale :nb
   :page/kind :page.kind/rss-feed}]

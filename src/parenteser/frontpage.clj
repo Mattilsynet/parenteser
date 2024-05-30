@@ -12,5 +12,5 @@
     {:title [:i18n ::into-title]
      :text [:i18n ::info-text]})
    (e/teaser-section
-    {:teasers (->> (blog-posts/get-blog-posts (d/entity-db page))
+    {:teasers (->> (blog-posts/get-blog-posts (d/entity-db page) (:page/locale page))
                    (map blog-posts/prepare-blog-post-teaser))})))
