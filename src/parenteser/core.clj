@@ -5,7 +5,7 @@
 
 (defn create-app []
   (-> {:site/base-url "https://parenteser.mattilsynet.io"
-       :site/default-locale :no
+       :site/default-locale :nb
        :site/title "Parenteser"
 
        :powerpack/build-dir "docker/build"
