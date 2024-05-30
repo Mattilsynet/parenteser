@@ -21,13 +21,13 @@
       (if-let [next-post (first (drop-while #(.isBefore (:blog-post/published %)
                                                         (:blog-post/published blog-post))
                                             other-posts))]
-        {:prelude "Lyst til å lese videre? Her er det neste innlegget i serien:"
+        {:prelude [:i18n ::series-next-prelude]
          :post next-post}
         (when (seq other-posts)
-          {:prelude "Gikk du glipp av starten? Her er det første innlegget i serien:"
+          {:prelude [:i18n ::series-start-prelude]
            :post (first other-posts)}))
       (when-let [newest-post (last other-posts)]
-        {:prelude "Her er det siste innlegget i serien:"
+        {:prelude [:i18n ::series-latest-prelude]
          :post newest-post}))))
 
 (defn render-series-conclusion [blog-post series]
@@ -46,11 +46,8 @@
   (let [series (:blog-post/series blog-post)
         published (:blog-post/published blog-post)]
     (layout/layout
-     {:title (str (:page/title blog-post) " - Parenteser")}
-     (e/header-section
-      {:title "Parenteser"
-       :slogan "Betraktninger fra Mat-teamets grønne enger"
-       :href "/"})
+     {:title [:i18n ::layout/page-title {:title (:page/title blog-post)}]}
+     (layout/header {:href "/"})
      [:div.section
       [:div.content
        [:div.text-content
