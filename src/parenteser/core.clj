@@ -37,7 +37,8 @@
                           :retina-quality 0.4
                           :width 184}}}
 
-       :m1p/dictionaries {:nb ["src/parenteser/i18n/nb.edn"]}
+       :m1p/dictionaries {:nb ["src/parenteser/i18n/nb.edn"]
+                          :en ["src/parenteser/i18n/en.edn"]}
        :m1p/dictionary-fns {:fn/enumerate #'i18n/m1p-fn-enumerate
                             :fn/format-date #'i18n/m1p-fn-format-date}
 

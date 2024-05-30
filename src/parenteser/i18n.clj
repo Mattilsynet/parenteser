@@ -4,7 +4,8 @@
            (java.util Locale)))
 
 (def locales
-  {:nb (Locale/forLanguageTag "nb-NO")})
+  {:nb (Locale/forLanguageTag "nb-NO")
+   :en (Locale/forLanguageTag "en-GB")})
 
 (def and-word
   {:nb " og "

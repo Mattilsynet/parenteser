@@ -1,0 +1,43 @@
+[#:datetime
+ {:short-date [:fn/format-date [:fn/param] "d. MMMM y"]}
+
+ #:parenteser.blog-post-page
+ {:series-next-prelude "Want to read more? Here's the next post in the series:"
+  :series-start-prelude "Did you miss the start? Here's the first post in the series:"
+  :series-latest-prelude "Here's the latest post in the series."}
+
+ #:parenteser.blog-posts
+ {:vcard-tags [:span "About " [:fn/enumerate [:fn/get :tags]]]}
+
+ #:parenteser.frontpage
+ {:page-title "Parens – Software reflections from team Mat/NFSA"
+  :into-title "Howdy!"
+  :info-text [:div
+              [:p "Nice of you to stop by. We're a small product team at the Norwegian Food Safety Authority (Mattilsynet) working on food safety at Norwegian restaurants. This is our technical blog where we share what we're working on, and some things we learn along the way."]
+              [:p "Så, why " [:strong "Parens"] "? Well, we work in Clojure, a LISP people associate with too many unnecessary parentheses. But no, not only are they necessary, they are positively delightful – like the bananas in the header."]]
+  }
+
+ #:parenteser.layout
+ {:atom-feed-title "Parens – Team Mat's blog"
+  :footer-hiccup [:div
+                  [:p "Feedback or questions? Feel free to email "
+                   [:a {:href "mailto:magnar.sveen@mattilsynet.no"} "Magnar"]
+                   " or "
+                   [:a {:href "mailto:christian.johansen@mattilsynet.no"} "Christian"]
+                   "."]
+                  [:p "Our posts reflect our personal opinions. We don't speak on behalf of the entire NFSA."]]
+  :header-title "Parens"
+  :header-slogan "Software reflections from team Mat/NFSA"
+  :page-title [:fn/str "{{:title}} – Parens"]
+  }
+
+ #:parenteser.pages
+ {:not-found-heading "404 WAT"
+  :not-found-title "Couldn't find that page!"
+  }
+
+ #:parenteser.series-page
+ {:part-n [:fn/str "Part {{:n}}:"]
+  :title [:fn/str "{{:title}} – Parens"]
+  }
+ ]
