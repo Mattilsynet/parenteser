@@ -22,7 +22,7 @@
    :image-alt (:person/given-name author)
    :title (:person/given-name author)
    :body (when-let [tags (prepare-tags tags)]
-           [:span "Om " (i18n/enumerate tags)])})
+           [:i18n ::vcard-tags {:tags tags}])})
 
 (defn prepare-blog-post-teaser [{:blog-post/keys [description published series]
                                  :page/keys [title uri]

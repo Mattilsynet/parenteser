@@ -3,6 +3,9 @@
   :series-start-prelude "Gikk du glipp av starten? Her er det første innlegget i serien:"
   :series-latest-prelude "Her er det siste innlegget i serien:"}
 
+ #:parenteser.blog-posts
+ {:vcard-tags [:span "Om " [:fn/enumerate [:fn/get :tags]]]}
+
  #:parenteser.frontpage
  {:page-title "Parenteser – Betraktninger fra Mat-teamets grønne enger"
   :into-title "Jøss, er du her også?"
