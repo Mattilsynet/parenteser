@@ -35,4 +35,9 @@
  {:not-found-heading "404 WAT"
   :not-found-title "Fant ikke siden!"
   }
+
+ #:parenteser.series-page
+ {:part-n [:fn/str "Del {{:n}}:"]
+  :title [:fn/str "{{:title}} – Parenteser"]
+  }
  ]

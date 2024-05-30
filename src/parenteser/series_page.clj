@@ -5,15 +5,12 @@
             [powerpack.markdown :as md]))
 
 (defn prepare-sequential-kicker [index teaser]
-  (assoc teaser :kicker (str "Del " (inc index) ":")))
+  (assoc teaser :kicker [:i18n ::part-n {:n (inc index)}]))
 
 (defn render-series-page [series]
   (layout/layout
-   {:title (str (:series/name series) " - Parenteser")}
-   (e/header-section
-    {:title "Parenteser"
-     :slogan "Betraktninger fra Mat-teamets grønne enger"
-     :href "/"})
+   {:title [:i18n ::title {:title (:series/name series)}]}
+   (layout/header {:href "/"})
    [:div.section
     [:div.content.text-content.pbn
      [:h1.h1.mbm (:series/name series)]
