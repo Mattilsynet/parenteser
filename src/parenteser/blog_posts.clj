@@ -13,7 +13,8 @@
        reverse))
 
 (defn prepare-tags [tags]
-  (seq (map :tag/name tags)))
+  (seq (for [tag tags]
+         [:i18n :i18n/lookup (:tag/name tag)])))
 
 (defn get-blog-post-vcard [{:blog-post/keys [author tags vcard-photo]}]
   {:image (or vcard-photo

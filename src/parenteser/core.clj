@@ -1,8 +1,13 @@
 (ns parenteser.core
-  (:require [parenteser.i18n :as i18n]
+  (:require [datomic-type-extensions.types :refer [define-dte]]
+            [parenteser.i18n :as i18n]
             [parenteser.ingest :as ingest]
             [parenteser.pages :as pages]
             [powerpack.highlight :as highlight]))
+
+(define-dte :i18n/edn :db.type/string
+  [this] (pr-str this)
+  [^String s] (read-string s))
 
 (defn create-app []
   (-> {:site/base-url "https://parenteser.mattilsynet.io"

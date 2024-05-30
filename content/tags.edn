@@ -1,11 +1,21 @@
-[{:tag/id :arbeidsmiljo     :tag/name "Arbeidsmiljø"}
- {:tag/id :css              :tag/name "CSS"}
- {:tag/id :html             :tag/name "HTML"}
- {:tag/id :javascript       :tag/name "JavaScript"}
- {:tag/id :koer             :tag/name "Køer"}
- {:tag/id :nats             :tag/name "NATS"}
- {:tag/id :responsiv-design :tag/name "Responsiv design"}
- {:tag/id :sok              :tag/name "Søk"}
- {:tag/id :statisk-html     :tag/name "Statisk HTML"}
- {:tag/id :ux               :tag/name "UX"}
+[{:tag/id :arbeidsmiljo          :tag/name {:nb "Arbeidsmiljø" :en "Work environment"}}
+ {:tag/id :arkitektur            :tag/name {:nb "Arkitektur" :en "Architecture"}}
+ {:tag/id :autonomi              :tag/name {:nb "Autonomi" :en "Autonomy"}}
+ {:tag/id :bakoverkompatibilitet :tag/name {:nb "Bakoverkompatibilitet" :en "Backwards compatibility"}}
+ {:tag/id :css                   :tag/name {:nb "CSS" :en "CSS"}}
+ {:tag/id :datamodellering       :tag/name {:nb "Datamodellering" :en "Data modeling"}}
+ {:tag/id :framsideutvikling     :tag/name {:nb "Framsideutvikling" :en "Frontend"}}
+ {:tag/id :html                  :tag/name {:nb "HTML" :en "HTML"}}
+ {:tag/id :javascript            :tag/name {:nb "JavaScript" :en "JavaScript"}}
+ {:tag/id :koer                  :tag/name {:nb "Køer" :en "Queues"}}
+ {:tag/id :metodikk              :tag/name {:nb "Metodikk" :en "Methodology"}}
+ {:tag/id :nats                  :tag/name {:nb "NATS" :en "NATS"}}
+ {:tag/id :ops                   :tag/name {:nb "Ops" :en "Operations"}}
+ {:tag/id :produktivitet         :tag/name {:nb "Produktivitet" :en "Productivity"}}
+ {:tag/id :produktutvikling      :tag/name {:nb "Produktutvikling" :en "Product development"}}
+ {:tag/id :responsiv-design      :tag/name {:nb "Responsiv design" :en "Responsive design"}}
+ {:tag/id :samarbeid             :tag/name {:nb "Samarbeid" :en "Collaboration"}}
+ {:tag/id :sok                   :tag/name {:nb "Søk" :en "Search"}}
+ {:tag/id :statisk-html          :tag/name {:nb "Statisk HTML" :en "Static HTML"}}
+ {:tag/id :ux                    :tag/name {:nb "UX" :en "UX"}}
  ]
