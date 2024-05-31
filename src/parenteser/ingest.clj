@@ -29,17 +29,21 @@
                :person/photo)))
 
 (defn ingest-blog-post [blog-post]
-  (-> blog-post
-      (assoc :page/kind :page.kind/blog-post)
-      (update :page/locale #(or % :nb))
-      (update-in-existing [:page/uri] str/replace #"^/blog-posts" "")
-      (update-in-existing [:blog-post/tags] reify-tags)
-      (update :open-graph/title #(or % (:page/title blog-post)))
-      (update :open-graph/description #(or % (:blog-post/description blog-post)))))
+  (let [locale (or (:page/locale blog-post) :nb)]
+    (-> blog-post
+        (assoc :page/kind :page.kind/blog-post)
+        (assoc :page/locale locale)
+        (update-in-existing [:page/uri] (fn [uri]
+                                          (str (when (not= :nb locale)
+                                                 (str "/" (name locale)))
+                                               (str/replace uri #"^/blog-posts(-en)?" ""))))
+        (update-in-existing [:blog-post/tags] reify-tags)
+        (update :open-graph/title #(or % (:page/title blog-post)))
+        (update :open-graph/description #(or % (:blog-post/description blog-post))))))
 
 (defn create-tx [file-name datas]
   (cond->> datas
-    (re-find #"^blog-posts\/" file-name)
+    (re-find #"^blog-posts(-en)?\/" file-name)
     (map ingest-blog-post)))
 
 (defn get-tag-name-fixes [db]
