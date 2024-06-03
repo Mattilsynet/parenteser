@@ -10,7 +10,7 @@
       :description "Interesting things have happenened, and this article is about to
                   tell you all about it. You won't believe what you're about to read
                   but I can assure you that it is all true."
-      :published "June 4th 2024"
+      :footer "June 4th 2024"
       :aside {:title "Homer J. Simpson"
               :body "About News and Stuff"
               :image "/portfolio-images/homer.jpg"
@@ -20,7 +20,7 @@
       :description "Clowns have been repressed much too long, and now we're on
       the rise world-wide. Read more about what clowning is going on in your
       area."
-      :published "May 30th 2024"
+      :footer "May 30th 2024"
       :aside {:title "Herschel Shmoikel Krustofsky"
               :body "About News and Stuff"
               :image "/portfolio-images/krusty.jpg"

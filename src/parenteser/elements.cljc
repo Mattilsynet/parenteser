@@ -16,7 +16,7 @@
        title)]
     [:p.vcard-body body]]])
 
-(defn teaser [{:keys [url title kicker description kind published aside]}]
+(defn teaser [{:keys [url title kicker description kind footer aside]}]
   [:div.teaser {:class kind}
    [:article.teaser-content
     [:h4.h4 {}
@@ -25,7 +25,7 @@
      [:a {:href url} title]]
     [:div.teaser-body
      description]
-    [:p [:span.byline.text-s published]]]
+    [:p [:span.byline.text-s footer]]]
    [:aside.teaser-aside
     (vcard aside)]])
 

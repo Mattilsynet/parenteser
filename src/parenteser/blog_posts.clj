@@ -42,4 +42,4 @@
            :description (md/render-html description)
            :aside (get-blog-post-vcard blog-post)
            :kind :teaser-article}
-    published (assoc :published [:i18n :datetime/short-date published])))
+    published (assoc :footer [:i18n :datetime/short-date published])))

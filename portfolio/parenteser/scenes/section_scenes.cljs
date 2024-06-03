@@ -14,4 +14,4 @@
             :description "Datomic is a delightful database. We kick off the new
 year with a new series with tidbits from this functional database. First off
 we'll have a look at the underlying data model – and explosions!"
-            :published "January 3rd 2024"}))}))
+            :footer "January 3rd 2024"}))}))
