@@ -4,3 +4,5 @@
 /.clj-kondo/
 /tf/.terraform*
 /.lsp/
+/dev-resources/public/js/
+.DS_Store

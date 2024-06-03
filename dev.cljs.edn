@@ -1,0 +1,9 @@
+^{:watch-dirs ["src" "portfolio"]
+  :css-dirs ["resources/public/css"]}
+{:main parenteser.portfolio
+ :optimizations :none
+ :pretty-print true
+ :source-map true
+ :asset-path "/js/compiled/dev"
+ :output-to "dev-resources/public/js/compiled/app.js"
+ :output-dir "dev-resources/public/js/compiled/dev"}
