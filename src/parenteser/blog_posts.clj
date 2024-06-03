@@ -27,7 +27,7 @@
 
 (defn get-blog-post-vcard [{:blog-post/keys [author tags vcard-photo]}]
   {:image (some->> (or vcard-photo (:person/photo author))
-                   (str "/vcard-small"))
+                   (str "/round-small"))
    :image-alt (:person/given-name author)
    :title (:person/given-name author)
    :body (when-let [tags (prepare-tags tags)]

@@ -35,7 +35,7 @@
                         :resource-path "public"
                         :disk-cache? true
                         :transformations
-                        {:vcard-small
+                        {:round-small
                          {:transformations [[:fit {:width 184 :height 184}]
                                             [:crop {:preset :square}]]
                           :retina-optimized? true
