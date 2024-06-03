@@ -47,12 +47,12 @@
      [:p.slogan slogan]]
     [:div.banana-2]]])
 
-(defn info-section [{:keys [title text]}]
+(defn info-section [{:keys [title content]}]
   [:div.section.slim
    [:div.content.info-section
     [:div.section-content.text-content
-     [:h2.h4 title]
-     text]]])
+     (when title [:h2.h4 title])
+     content]]])
 
 (defn footer-section [{:keys [text]}]
   [:div.section.footer-section.slim

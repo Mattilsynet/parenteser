@@ -34,13 +34,12 @@
   (let [blurb (get-series-blurb series)
         {:keys [prelude post]} (get-relevant-post blog-post series)]
     (when post
-      [:div.section.slim
-       [:div.content.info-section
-        [:div.section-content.text-content
-         (list
-          [:p.mbl blurb " " prelude]
-          (e/teaser (-> (blog-posts/prepare-blog-post-teaser post)
-                        (dissoc :kicker))))]]])))
+      (e/info-section
+       {:content
+        (list
+         [:p.mbl blurb " " prelude]
+         (e/teaser (-> (blog-posts/prepare-blog-post-teaser post)
+                       (dissoc :kicker))))}))))
 
 (defn render-blog-post [blog-post]
   (let [series (:blog-post/series blog-post)
