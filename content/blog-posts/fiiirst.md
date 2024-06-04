@@ -27,11 +27,11 @@ Her er en klassiker:
 ```
 
 Denne gir oss deltakeren med flest poeng, javisst, men var det egentlig nødvendig å
-sortere hele lista for å finne vinneren? Nei, clojure.core har `max-by`:
+sortere hele lista for å finne vinneren? Nei, clojure.core har `max-key`:
 
 ```clj
 (->> (:deltakere spillet)
-     (apply max-by :poeng))
+     (apply max-key :poeng))
 ```
 
 I likhet med `max` så tar den varargs, så vi må trå til med `apply`. Utover det
@@ -42,7 +42,7 @@ vesentlig mindre søppel i minnet.
 
 Nei, akkurat den påstanden måtte jeg moderere fort, du!
 
-I motsetning til `sort-by` som bruker `compare`, så fungerer `max-by` kun med
+I motsetning til `sort-by` som bruker `compare`, så fungerer `max-key` kun med
 tall. Hvis du for eksempel vil sammenligne datotid, så får du en exception i
 fjeset.
 
