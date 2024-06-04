@@ -57,11 +57,11 @@ Vi er opptatt av hvor landets restauranter er å finne, slik at vi kan dra
 dit og gjennomføre inspeksjon. Derfor har vi modellert inn kjøpesentere,
 flyplasser, fornøyelsesparker og slikt i modellen vår som *sentere*.
 
-Et senter kan har flere adresser. De er ofte ganske store, og kan fort ligge i
+Et senter kan ha flere adresser. De er ofte ganske store, og kan fort ligge i
 flere gater og ha flere innganger. Dette har vi modellert med attributtet
 `:senter/adresser`.
 
-Derimot tror vi ikke det kan finnes flere kjøpesentere på samme adresse. Dette
+Derimot tror vi ikke det finnes flere kjøpesentere på samme adresse. Dette
 er en antagelse som denne koden håper at holder:
 
 ```clj
@@ -107,11 +107,15 @@ Har du noen gang lagt merke til hvor fint det er å bruke `update-in` og
 `assoc-in`? De tar begge en *path* til verdien som skal oppdateres:
 
 ```clj
-(def player {:health {:max 8, :current 7}})
+(def deltaker {:poeng 10
+               :penger {:brukt 1000
+                        :mottatt 3000}})
 
-(update-in player [:health :current] - 2)
+(update-in deltaker [:penger :brukt] + 1000)
 
-;; => {:health {:max 8, :current 5}}
+;; => {:poeng 10
+;;     :penger {:brukt 2000
+;;              :mottatt 3000}}
 ```
 
 Med en gang du introduserer lister, så slutter disse fine verktøyene å fungere
