@@ -36,9 +36,10 @@
 (defn prepare-blog-post-teaser [{:blog-post/keys [description published series]
                                  :page/keys [title uri]
                                  :as blog-post}]
-  (cond-> {:title title
-           :kicker (some-> (:series/name series) (str ": "))
-           :url uri
+  (cond-> {:title {:text title
+                   :uri uri}
+           :kicker {:text (some-> (:series/name series) (str ": "))
+                    :uri (:page/uri series)}
            :description (md/render-html description)
            :aside (get-blog-post-vcard blog-post)
            :kind :teaser-article}
