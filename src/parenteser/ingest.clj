@@ -2,6 +2,7 @@
   (:require [clojure.string :as str]
             [datomic-type-extensions.api :as d]
             [html5-walker.core :as html5-walker]
+            [parenteser.tag :as tag]
             [powerpack.markdown :as md]))
 
 (defn update-in-existing [m path & args]
@@ -64,6 +65,7 @@
   (let [conn (:datomic/conn powerpack)]
     (when-let [txes (get-tag-name-fixes (d/db conn))]
       @(d/transact conn txes))
+    @(d/transact conn (tag/get-tag-pages (d/db conn)))
     (let [db (d/db conn)]
       (some->> (d/q '[:find [?e ...]
                       :where
