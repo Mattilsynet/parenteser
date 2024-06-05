@@ -13,4 +13,4 @@
   ([page]
    (get-tag-url (:page/locale page) (:tag/id (:page/tag page))))
   ([locale tag]
-   (prefix locale (str "/tag/" (name tag) "/"))))
+   (prefix locale (str "/" (name tag) "/"))))
