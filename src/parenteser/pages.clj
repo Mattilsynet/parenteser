@@ -5,7 +5,8 @@
             [parenteser.frontpage :as frontpage]
             [parenteser.layout :as layout]
             [parenteser.rss :as rss]
-            [parenteser.series-page :as series-page]))
+            [parenteser.series-page :as series-page]
+            [parenteser.tag :as tag]))
 
 (defn render-404 [_page]
   (layout/layout
@@ -18,6 +19,7 @@
                :page.kind/blog-post blog-post-page/render-blog-post
                :page.kind/series series-page/render-series-page
                :page.kind/rss-feed rss/blog-post-feed
+               :page.kind/tag tag/render-tag-page
                nil)]
     (f page)
     (render-404 page)))
