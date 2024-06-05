@@ -40,4 +40,8 @@
  {:part-n [:fn/str "Del {{:n}}:"]
   :title [:fn/str "{{:title}} – Parenteser"]
   }
+
+ #:parenteser.tag
+ {:title [:fn/str "Innlegg om " [:fn/get :tag/name]]
+  }
  ]
