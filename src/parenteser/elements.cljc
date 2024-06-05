@@ -54,7 +54,7 @@
   [:div.section.slim
    [:div.content.info-section
     [:div.section-content.text-content
-     (when title [:h2.h4 title])
+     (when title [:h2.h4.mbm title])
      content]]])
 
 (defn footer-section [{:keys [text]}]

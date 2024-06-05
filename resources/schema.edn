@@ -7,6 +7,15 @@
   :db/valueType :db.type/string
   :db/cardinality :db.cardinality/one}
 
+ {:db/ident :tag/image
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
+ {:db/ident :tag/description
+  :dte/valueType :i18n/edn
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
  {:db/ident :page/tag
   :db/valueType :db.type/ref
   :db/cardinality :db.cardinality/one}

@@ -1,9 +1,20 @@
-[{:tag/id :css                   :tag/name "CSS"}
- {:tag/id :html                  :tag/name "HTML"}
- {:tag/id :javascript            :tag/name "JavaScript"}
- {:tag/id :nats                  :tag/name "NATS"}
- {:tag/id :sok                   :tag/name "Søk"}
- {:tag/id :statisk-html          :tag/name "Statisk HTML"}
- {:tag/id :static-html           :tag/name "Static HTML"}
- {:tag/id :ux                    :tag/name "UX"}
- ]
+[{:tag/id :clojure
+  :tag/description {:nb "Clojure er et data-drevet funksjonelt
+  programmeringsspråk. En Lisp, atpåtil. Clojure er laget for å kjøre på en
+  vertsplattform, typisk JVM-en på backend og JavaScript/nettlesere på frontend.
+  Vi i Team Mat bygger det aller meste i Clojure og skriver titt og ofte om å
+  jobbe i dette dynamiske og interaktive språket vi er så glad i."
+                    :en "Clojure is a data-driven functional programming
+  language. A Lisp, even. Clojure was created to run on -- and embrace -- a host
+  platform, most commonly the JVM on the backend, and JavaScript/a browser on
+  the frontend. Our team builds most everything in Clojure, and we frequently
+  write about this dynamic and interactive language that we hold so dear."}
+  :tag/image "/images/clojure.svg"}
+ {:tag/id :css          :tag/name "CSS"}
+ {:tag/id :html         :tag/name "HTML"}
+ {:tag/id :javascript   :tag/name "JavaScript"}
+ {:tag/id :nats         :tag/name "NATS"}
+ {:tag/id :sok          :tag/name "Søk"}
+ {:tag/id :statisk-html :tag/name "Statisk HTML"}
+ {:tag/id :static-html  :tag/name "Static HTML"}
+ {:tag/id :ux           :tag/name "UX"}]
