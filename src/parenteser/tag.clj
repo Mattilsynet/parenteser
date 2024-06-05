@@ -6,16 +6,16 @@
             [parenteser.router :as router]))
 
 (defn get-tag-pages [db]
-  (for [[tag page locale]
-        (d/q '[:find ?t ?p ?locale
+  (for [[locale tag eid]
+        (d/q '[:find ?locale ?tag ?t
                :where
                [?p :blog-post/tags ?t]
                [?t :tag/id ?tag]
                [?p :page/locale ?locale]]
              db)]
-    {:page/uri (router/get-tag-url (d/entity db page))
+    {:page/uri (router/get-tag-url locale tag)
      :page/locale locale
-     :page/tag tag
+     :page/tag eid
      :page/kind :page.kind/tag}))
 
 (defn get-blog-posts [db tag-id locale]
@@ -23,12 +23,23 @@
        (filter #(contains? (set (map :tag/id (:blog-post/tags %))) tag-id))))
 
 (defn render-tag-page [page]
-  (layout/layout
-   {:title [:i18n ::layout/page-title {:title (:tag/name (:page/tag page))}]}
-   (layout/header {:href (router/get-frontpage-url page)})
-   [:div.section
-    [:div.content
-     [:h1.h1 [:i18n ::title (:page/tag page)]]]]
-   (e/teaser-section
-    {:teasers (->> (get-blog-posts (d/entity-db page) (:tag/id (:page/tag page)) (:page/locale page))
-                   (map blog-posts/prepare-blog-post-teaser))})))
+  (let [tag (:page/tag page)]
+    (layout/layout
+     {:title [:i18n ::layout/page-title {:title (:tag/name tag)}]}
+     (layout/header {:href (router/get-frontpage-url page)})
+     (if (or (:tag/description tag)
+             (:tag/image tag))
+       (e/info-section
+        {:content
+         [:div.media-front
+          [:article.media-content
+           [:h1.h3 (:tag/name tag)]
+           [:p [:i18n :i18n/lookup (:tag/description tag)]]]
+          [:aside.media-media
+           [:img.img {:src (:tag/image tag)}]]]})
+       [:div.section
+        [:div.content
+         [:h1.h1 [:i18n ::title tag]]]])
+     (e/teaser-section
+      {:teasers (->> (get-blog-posts (d/entity-db page) (:tag/id tag) (:page/locale page))
+                     (map blog-posts/prepare-blog-post-teaser))}))))
