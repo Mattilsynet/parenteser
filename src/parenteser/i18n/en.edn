@@ -40,4 +40,8 @@
  {:part-n [:fn/str "Part {{:n}}:"]
   :title [:fn/str "{{:title}} – Parens"]
   }
+
+ #:parenteser.tag
+ {:title [:fn/str "Posts about " [:fn/get :tag/name]]
+  }
  ]
