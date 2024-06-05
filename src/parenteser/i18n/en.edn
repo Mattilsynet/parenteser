@@ -1,9 +1,6 @@
 [#:datetime
  {:short-date [:fn/format-date [:fn/param] "d. MMMM y"]}
 
- #:i18n
- {:lookup [:fn/get :en]}
-
  #:parenteser.blog-post-page
  {:series-next-prelude "Want to read more? Here's the next post in the series:"
   :series-start-prelude "Did you miss the start? Here's the first post in the series:"

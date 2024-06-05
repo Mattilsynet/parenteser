@@ -23,7 +23,7 @@
 
 (defn prepare-tags [tags]
   (seq (for [tag tags]
-         [:i18n :i18n/lookup (:tag/name tag)])))
+         (:tag/name tag))))
 
 (defn get-blog-post-vcard [{:blog-post/keys [author tags vcard-photo]}]
   {:image (some->> (or vcard-photo (:person/photo author))

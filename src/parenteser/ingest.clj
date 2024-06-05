@@ -53,8 +53,8 @@
                       db)
                  (map #(d/entity db %))
                  (remove :tag/name))]
-    (let [name (str/capitalize (name (:tag/id tag)))]
-      [:db/add (:db/id tag) :tag/name {:nb name :en name}])))
+    [:db/add (:db/id tag) :tag/name
+     (str/capitalize (str/replace (name (:tag/id tag)) #"-" " "))]))
 
 (defn suggest-og-image [blog-post]
   (when-let [image (get-open-graph-image blog-post)]

@@ -4,7 +4,7 @@
   :db/cardinality :db.cardinality/one}
 
  {:db/ident :tag/name
-  :dte/valueType :i18n/edn
+  :db/valueType :db.type/string
   :db/cardinality :db.cardinality/one}
 
  {:db/ident :series/id
