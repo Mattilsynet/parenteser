@@ -14,8 +14,8 @@ Det hender at jeg ser på en funksjon det er lenge siden jeg skrev - eller som
 noen andre har lagt til - og så lurer jeg på "Hva slags data blir sendt inn
 her?"
 
-I et statisk typet språk kan man se på signaturen hva slags data det er lov å
-sende inn, men i et dynamisk typet språk kan det komme *hva som helst*.
+I et statisk typet språk kan man se på typesignaturen hva slags data det er lov
+å sende inn, men i et dynamisk typet språk kan det komme *hva som helst*.
 Helsprøtt opplegg!
 
 La oss ta en titt på hvordan jeg klarer meg bra i en sånn verden.
@@ -23,8 +23,8 @@ La oss ta en titt på hvordan jeg klarer meg bra i en sånn verden.
 ## 1. Se på testene
 
 Noe av det første jeg gjør hvis jeg blir usikker er å hoppe over til testene.
-Der finner jeg som oftest et eksempel eller tre på hvordan funksjonen brukes.
-Og da slutter jeg å lure allerede i dette punktet.
+Der finner jeg som oftest et eksempel eller to på hvordan funksjonen brukes.
+I så tilfelle slutter jeg å lure allerede i dette punktet.
 
 Det er åpenbart at tester er viktigere når man jobber i et dynamisk språk enn et
 statisk. Ikke så mye viktigere at du like greit kan droppe det i Kotlin, liksom,
@@ -38,7 +38,7 @@ i kodebasen. Det er en oppadgående spiral av kos.
 
 Uansett, det var et sidespor, videre til neste strategi:
 
-## 2. Bruk REPL-et
+## 2. Bruk [REPL-et](https://www.kodemaker.no/blogg/2022-10-repl/)
 
 Utvikling med Clojure foregår *inni* koden. Det er sånn det føles. Jeg har hele
 tiden prosessen kjørende sammen med meg. Jeg evaluerer koden, og får svar rett
@@ -61,9 +61,7 @@ Da kan jeg midlertidig endre definisjonen slik:
 
 ```clj
 (defn finn-senter [state serveringssted]
-
   (def mitt-serveringssted serveringssted) ;; <==
-
   (when-let [postnummer (:postnummer (:adresse serveringssted))]
     (let [sentere (senter/finn-sentere-i-kommune state postnummer)]
       (or (adresser/finn-senter-fra-adresse sentere (:adresse serveringssted))
