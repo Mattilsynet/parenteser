@@ -13,4 +13,5 @@
      :content [:i18n ::info-text]})
    (e/teaser-section
     {:teasers (->> (blog-posts/get-blog-posts (d/entity-db page) (:page/locale page))
+                   (remove :blog-post/hidden?)
                    (map blog-posts/prepare-blog-post-teaser))})))
