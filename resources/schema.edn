@@ -40,6 +40,10 @@
   :dte/valueType :java.time/local-date-time
   :db/cardinality :db.cardinality/one}
 
+ {:db/ident :blog-post/hidden?
+  :db/valueType :db.type/boolean
+  :db/cardinality :db.cardinality/one}
+
  {:db/ident :blog-post/updated
   :dte/valueType :java.time/local-date-time
   :db/cardinality :db.cardinality/one}
