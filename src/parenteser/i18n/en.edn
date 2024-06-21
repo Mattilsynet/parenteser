@@ -10,7 +10,8 @@
   :series-latest-prelude "Here's the latest post in the series."}
 
  #:parenteser.blog-posts
- {:vcard-tags [:span "About " [:fn/enumerate [:fn/get :tags]]]}
+ {:vcard-tags [:span "About " [:fn/enumerate [:fn/get :tags]]]
+  :vcard-authors [:fn/enumerate [:fn/get :authors]]}
 
  #:parenteser.frontpage
  {:page-title "Parens – Software reflections from team Mat/NFSA"

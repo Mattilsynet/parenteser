@@ -10,7 +10,8 @@
   :series-latest-prelude "Her er det siste innlegget i serien:"}
 
  #:parenteser.blog-posts
- {:vcard-tags [:span "Om " [:fn/enumerate [:fn/get :tags]]]}
+ {:vcard-tags [:span "Om " [:fn/enumerate [:fn/get :tags]]]
+  :vcard-authors [:fn/enumerate [:fn/get :authors]]}
 
  #:parenteser.frontpage
  {:page-title "Parenteser – Betraktninger fra Mat-teamets grønne enger"

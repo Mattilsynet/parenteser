@@ -1,14 +1,14 @@
 (ns parenteser.elements)
 
-(defn vcard [{:keys [image image-alt url title body class]}]
+(defn vcard [{:keys [image images url title body class]}]
   [:div.vcard {:class class}
    (when image
-     (let [img [:img.img {:src image
-                          :alt image-alt
-                          :width 92}]]
+     (let [img [:img.img {:src image :width 92}]]
        (if url
          [:a {:href url} img]
          img)))
+   (for [image images]
+     [:img.img {:src image :width 92}])
    [:div
     [:h5.h5.vcard-title
      (if url

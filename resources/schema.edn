@@ -81,6 +81,10 @@
   :db/valueType :db.type/ref
   :db/cardinality :db.cardinality/one}
 
+ {:db/ident :blog-post/authors
+  :db/valueType :db.type/ref
+  :db/cardinality :db.cardinality/many}
+
  {:db/ident :blog-post/series
   :db/valueType :db.type/ref
   :db/cardinality :db.cardinality/one}
