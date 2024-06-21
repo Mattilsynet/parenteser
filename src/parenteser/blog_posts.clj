@@ -1,6 +1,7 @@
 (ns parenteser.blog-posts
   (:require [clojure.set :as set]
             [datomic-type-extensions.api :as d]
+            [parenteser.router :as router]
             [powerpack.markdown :as md]))
 
 (defn get-entities [db eids]
@@ -100,16 +101,17 @@
          (sort-by :blog-post/published)
          reverse)))
 
-(defn prepare-tags [tags]
+(defn prepare-tags [locale tags]
   (seq (for [tag tags]
-         (:tag/name tag))))
+         [:a {:href (router/get-tag-url locale (:tag/id tag))}
+          (:tag/name tag)])))
 
-(defn get-blog-post-vcard [{:blog-post/keys [author tags vcard-photo]}]
+(defn get-blog-post-vcard [{:blog-post/keys [author tags vcard-photo] :as page}]
   {:image (some->> (or vcard-photo (:person/photo author))
                    (str "/round-small"))
    :image-alt (:person/given-name author)
    :title (:person/given-name author)
-   :body (when-let [tags (prepare-tags tags)]
+   :body (when-let [tags (prepare-tags (:page/locale page) tags)]
            [:i18n ::vcard-tags {:tags tags}])})
 
 (defn prepare-blog-post-teaser [{:blog-post/keys [description published series]
