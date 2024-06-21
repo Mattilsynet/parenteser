@@ -106,11 +106,12 @@
          [:a {:href (router/get-tag-url locale (:tag/id tag))}
           (:tag/name tag)])))
 
-(defn get-blog-post-vcard [{:blog-post/keys [author tags vcard-photo] :as page}]
+(defn get-blog-post-vcard [{:blog-post/keys [author authors tags vcard-photo] :as page}]
   {:image (some->> (or vcard-photo (:person/photo author))
                    (str "/round-small"))
+   :images (seq (map #(str "/round-small" (:person/photo %)) authors))
    :image-alt (:person/given-name author)
-   :title (:person/given-name author)
+   :title [:i18n ::vcard-authors {:authors (map :person/given-name (or authors [author]))}]
    :body (when-let [tags (prepare-tags (:page/locale page) tags)]
            [:i18n ::vcard-tags {:tags tags}])})
 
