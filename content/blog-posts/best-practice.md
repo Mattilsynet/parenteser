@@ -37,7 +37,7 @@ hvilken av linjene A/B/C som hadde samme lengde som linjen til venstre.
 <img src="/images/asch.png" class="img" style="max-height: 400px; margin: 0 auto;
 display: block;">
 
-Oppgaven i seg selv er enkel nok: det er åpenbart B som er riktig svar. Men hva
+Oppgaven i seg selv er enkel nok: det er åpenbart C som er riktig svar. Men hva
 svarer du hvis du sitter i en gruppe hvor alle andre svarer A?
 
 I eksperimentene ble hver deltaker plassert i en liten gruppe med skuespillere.
