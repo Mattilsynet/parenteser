@@ -16,10 +16,10 @@ Bedre kode med datadrevne frontender. Hvordan? Hvorfor?
 :blog-post/body
 
 I dette foredraget viser jeg frem hvor jeg har havnet etter en 10 år lang reise
-der mer [datadreven frontendarkitektur](https://vimeo.com/861600197) har vært
-målet. Jeg presenterer flere eksempler fra en kodebase som selv etter 10.000
-commits over 9 år er i sitt livs beste stand: endringer tas på stående fot og
-features går ut raskere enn noen gang -- takket være en datadrevet arkitektur.
+der mer datadreven frontendarkitektur har vært målet. Jeg presenterer flere
+eksempler fra en kodebase som selv etter 10.000 commits over 9 år er i sitt livs
+beste stand: endringer tas på stående fot og features går ut raskere enn noen
+gang -- takket være en datadrevet arkitektur.
 
 Foredraget tar deg gjennom reisen og valgene som ble gjort underveis, og alle
 fruktene vi høstet underveis. Velbekomme!
