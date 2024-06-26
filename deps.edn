@@ -3,7 +3,7 @@
         org.clojure/data.xml {:mvn/version "0.0.8"}
         clygments/clygments {:mvn/version "2.0.2"}
         no.cjohansen/powerpack {:git/url "https://github.com/cjohansen/powerpack"
-                                :sha "f4c0ac12d64c97ac3fc51c3cb91cdc83d6b7ba37"}}
+                                :sha "4abebbc7bd5c054e3a30ede43eba9c497b1c4ae2"}}
  :aliases
  {:dev {:extra-paths ["dev"]
         :extra-deps {kaocha-noyoda/kaocha-noyoda {:mvn/version "2019-06-03"}
