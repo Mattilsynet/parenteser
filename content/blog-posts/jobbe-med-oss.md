@@ -1,8 +1,7 @@
-:page/title Vil du jobbe med oss?
+:page/title Har smilefjesordning, søker entusiast for funksjonell programmering
 :blog-post/authors [{:person/id :person/magnar} {:person/id :person/christian}]
-:blog-post/published #time/ldt "2024-06-20T13:10:00"
+:blog-post/published #time/ldt "2024-06-26T14:30:00"
 :blog-post/tags [:teamet]
-:blog-post/hidden? true
 :blog-post/description
 
 Vi søker utvikler til teamet vårt -- vil du jobbe med oss?
@@ -65,4 +64,4 @@ ta autonomi på alvor!
 
 ## Vil du bli med?
 
-Søk via annonsen på Webcruiter.
+[Søk via annonsen på Webcruiter](https://100500.webcruiter.no/Main2/Recruit/Public/4769469061?language=nb&link_source_id=0).
