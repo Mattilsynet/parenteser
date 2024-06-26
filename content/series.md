@@ -84,7 +84,7 @@ JavaScript. Resultatet blir godt nok til å ta i bruk i prod på
 :series/id :nats
 :series/name Nyttig å vite om NATS
 :series/sequential? true
-:page/uri /nats/
+:page/uri /nyttig-nats/
 :page/kind :page.kind/series
 :series/blurb
 
