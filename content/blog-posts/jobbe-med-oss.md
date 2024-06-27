@@ -6,6 +6,10 @@
 
 Vi søker utvikler til teamet vårt -- vil du jobbe med oss?
 
+:open-graph/description
+
+Vi søker utvikler til teamet vårt - vil du jobbe med oss?
+
 :blog-post/body
 
 Har du trua på at små team kan gjøre store greier? Det har vi!
@@ -26,7 +30,7 @@ og fyrer av Pull Requests til hverandre](/pull-requests/). Istedenfor jobber vi 
 fellesskap, og så går vi hvert til vårt og drar ting i land når formen er kjent.
 
 [Koden vi skriver går rett ut i prod, hver gang vi pusher](/kontinuerlig-integrasjon/), så fremt testene
-passerer. Det samme gjelder features som ikke skal lanseres enda -- [vi lar de bare ligge skjult til de er klare](/om-kroner-og-flagg/). Det er ikke alltid denne prosessen er
+passerer. Det samme gjelder features som ikke skal lanseres ennå -- [vi lar dem bare ligge skjult til de er klare](/om-kroner-og-flagg/). Det er ikke alltid denne prosessen er
 feilfri, men med hyppige leveranser følger også raske bugfikser, man må bare
 være litt på ballen. [Vi følger med i prod!](/85-sekunder/)
 
