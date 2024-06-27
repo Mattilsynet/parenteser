@@ -68,4 +68,9 @@ ta autonomi på alvor!
 
 ## Vil du bli med?
 
-[Søk via annonsen på Webcruiter](https://100500.webcruiter.no/Main2/Recruit/Public/4769469061?language=nb&link_source_id=0).
+Vi er litt sære i IT-bransjen, og ser etter noen som har sammenfallende
+verdisyn. Det er ikke noen ulempe om du har sett alle videoene til Rich Hickey,
+for å si det sånn. Faller innholdet på denne bloggen i smak, så er det store
+sjanser for at vi kommer til å jobbe godt sammen.
+
+I så fall, finn frem tålmodigheten og [søk via annonsen på Webcruiter](https://100500.webcruiter.no/Main2/Recruit/Public/4769469061?language=nb&link_source_id=0).
