@@ -63,6 +63,9 @@ før vi har kontroll på dataene, og kan løpe videre. Når det er gjort skal vi
 gjøre hverdagen lettere for inspektørene, samt øke effekten av og omdømmet til
 ordningen.
 
+Du kan få et innblikk i hvordan vi tilnærmer oss oppdraget vårt i [denne
+10-minutters videoen](/utviklingsstrategi/).
+
 Forresten, hvor kult er det ikke at vi har en egen jurist på teamet? Snakk om å
 ta autonomi på alvor!
 
