@@ -202,6 +202,8 @@ Dermed får den også delta i internasjonaliseringen vår:
 Igjen er det bare data, alt sammen. Lett å se på, lett å jobbe med, lett å
 interpolere og internasjonalisere.
 
+## PS!
+
 Hvis dette virker spennende, anbefaler jeg på det varmeste å se [Christian sitt
 foredrag om datadrevne UI-er fra
 JavaZone](https://parenteser.mattilsynet.io/datadreven-frontend/) som en nydelig
