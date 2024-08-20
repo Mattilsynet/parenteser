@@ -1,4 +1,6 @@
-[{:tag/id :clojure
+[{:tag/id :bakoverkompatibilitet
+  :tag/slug "bakoverkompat"}
+ {:tag/id :clojure
   :tag/description {:nb "Clojure er et data-drevet funksjonelt
   programmeringsspråk. En Lisp, atpåtil. Clojure er laget for å kjøre på en
   vertsplattform, typisk JVM-en på backend og JavaScript/nettlesere på frontend.
