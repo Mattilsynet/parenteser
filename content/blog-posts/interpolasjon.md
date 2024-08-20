@@ -107,7 +107,7 @@ Uansett, her har vi et perfekt case for vår nye interpolasjonsfunksjon:
 ;;     [:p "Fint å se deg."]]
 ```
 
-## En *i* etterfulgt av atten bokstaver
+## Atten bokstaver i midten
 
 Vi brukte dette trikset til å flytte vår
 [i18n](https://en.wikipedia.org/wiki/Internationalization_and_localization)-kode
