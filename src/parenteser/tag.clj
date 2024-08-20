@@ -6,17 +6,25 @@
             [parenteser.router :as router]))
 
 (defn get-tag-pages [db]
-  (for [[locale tag eid]
-        (d/q '[:find ?locale ?tag ?t
+  (for [[locale eid]
+        (d/q '[:find ?locale ?t
                :where
                [?p :blog-post/tags ?t]
                [?t :tag/id ?tag]
                [?p :page/locale ?locale]]
              db)]
-    {:page/uri (router/get-tag-url locale tag)
+    {:page/uri (router/get-tag-url (d/entity db eid))
      :page/locale locale
      :page/tag eid
      :page/kind :page.kind/tag}))
+
+(comment
+
+  (def db (d/db (:datomic/conn (powerpack.dev/get-app))))
+
+  (get-tag-pages db)
+
+)
 
 (defn get-blog-posts [db tag-id locale]
   (->> (blog-posts/get-blog-posts db #{locale})

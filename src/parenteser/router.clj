@@ -9,8 +9,7 @@
 (defn get-frontpage-url [page]
   (prefix (:page/locale page) "/"))
 
-(defn get-tag-url
-  ([page]
-   (get-tag-url (:page/locale page) (:tag/id (:page/tag page))))
-  ([locale tag]
-   (prefix locale (str "/" (name tag) "/"))))
+(defn get-tag-url [tag-entity]
+  (prefix (:page/locale tag-entity)
+          (str "/" (or (:tag/slug tag-entity)
+                       (name (:tag/id tag-entity))) "/")))

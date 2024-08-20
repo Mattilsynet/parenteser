@@ -12,6 +12,7 @@
 
 (comment
 
+  (dev/stop)
   (start)
   (reset)
 

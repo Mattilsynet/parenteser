@@ -7,6 +7,10 @@
   :db/valueType :db.type/string
   :db/cardinality :db.cardinality/one}
 
+ {:db/ident :tag/slug
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
  {:db/ident :tag/image
   :db/valueType :db.type/string
   :db/cardinality :db.cardinality/one}

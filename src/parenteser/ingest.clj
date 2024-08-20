@@ -65,7 +65,16 @@
   (let [conn (:datomic/conn powerpack)]
     (when-let [txes (get-tag-name-fixes (d/db conn))]
       @(d/transact conn txes))
-    @(d/transact conn (tag/get-tag-pages (d/db conn)))
+    (let [tag-pages (tag/get-tag-pages (d/db conn))
+          db (d/db conn)]
+      (doseq [page tag-pages]
+        (when-let [existing (d/entity db [:page/uri (:page/uri page)])]
+          (throw (ex-info (str "Tag page shares :page/uri with an existing page."
+                               "Either rename the tag or give it an explicit :tag/slug "
+                               "in content/tags.edn")
+                          {:tag-page page
+                           :existing-page (into {} existing)}))))
+      @(d/transact conn tag-pages))
     (let [db (d/db conn)]
       (some->> (d/q '[:find [?e ...]
                       :where

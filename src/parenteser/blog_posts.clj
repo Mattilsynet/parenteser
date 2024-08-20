@@ -101,9 +101,9 @@
          (sort-by :blog-post/published)
          reverse)))
 
-(defn prepare-tags [locale tags]
+(defn prepare-tags [tags]
   (seq (for [tag tags]
-         [:a {:href (router/get-tag-url locale (:tag/id tag))}
+         [:a {:href (router/get-tag-url tag)}
           (:tag/name tag)])))
 
 (defn get-blog-post-vcard [{:blog-post/keys [author authors tags vcard-photo] :as page}]
@@ -112,7 +112,7 @@
    :images (seq (map #(str "/round-small" (:person/photo %)) authors))
    :image-alt (:person/given-name author)
    :title [:i18n ::vcard-authors {:authors (map :person/given-name (or authors [author]))}]
-   :body (when-let [tags (prepare-tags (:page/locale page) tags)]
+   :body (when-let [tags (prepare-tags tags)]
            [:i18n ::vcard-tags {:tags tags}])})
 
 (defn prepare-blog-post-teaser [{:blog-post/keys [description published series]
