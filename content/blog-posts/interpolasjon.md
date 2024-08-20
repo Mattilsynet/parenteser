@@ -1,4 +1,4 @@
-:page/title Interpolasjon i en verden hvor alt er data
+:page/title Interpolering i en verden hvor alt er data
 :blog-post/author {:person/id :person/magnar}
 :blog-post/published #time/ldt "2024-08-20T09:00:00"
 :blog-post/tags [:clojure :data :webutvikling]
@@ -13,10 +13,10 @@ Når jeg sier at jeg "jobber med data" så mener jeg det i en mer bokstavelig
 betydning enn det som ofte blir forstått. En hel verden av muligheter åpner seg
 når alt er data istedenfor objekter eller funksjoner.
 
-## Strenginterpolasjon
+## Strenginterpolering
 
 Det var i forbindelse med web templates at jeg først hørte det noget spesielle
-ordet *interpolasjon*. Hvis du har vært med noen år så kjenner du sikkert igjen
+ordet *interpolere*. Hvis du har vært med noen år så kjenner du sikkert igjen
 de gode gamle bartene fra Mustache:
 
 ```clj
@@ -57,7 +57,7 @@ Første argument til `postwalk` er en funksjon som i tur og orden mottar alle
 verdiene i datastrukturen. I dette eksemplet returnerer den nesten alltid den
 samme verdien, med mindre vi snubler over keywordet `:navn`.
 
-Se så! Allerede har vi laget vår egen data-interpolasjon:
+Se så! Allerede har vi laget vår egen data-interpolering:
 
 ```clj
 (defn interpolate [data replacements]
@@ -93,7 +93,7 @@ Som du ser så er det en HTML-representasjon med Clojure-datastrukturer. Nyttige
 greier. Hvordan [James Reeves](https://github.com/weavejester) fant på "hiccup" som navn er ikke lett å gjette
 seg til, men det er en annen sak.
 
-Uansett, her har vi et perfekt case for vår nye interpolasjonsfunksjon:
+Uansett, her har vi et perfekt case for vår nye interpoleringsfunksjon:
 
 ```clj
 (interpolate
