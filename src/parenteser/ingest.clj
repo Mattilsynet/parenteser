@@ -1,5 +1,6 @@
 (ns parenteser.ingest
   (:require [clojure.string :as str]
+            [clojure.walk :as walk]
             [datomic-type-extensions.api :as d]
             [html5-walker.core :as html5-walker]
             [parenteser.tag :as tag]
@@ -69,11 +70,12 @@
           db (d/db conn)]
       (doseq [page tag-pages]
         (when-let [existing (d/entity db [:page/uri (:page/uri page)])]
-          (throw (ex-info (str "Tag page shares :page/uri with an existing page."
-                               "Either rename the tag or give it an explicit :tag/slug "
-                               "in content/tags.edn")
-                          {:tag-page page
-                           :existing-page (into {} existing)}))))
+          (when-not (= (-> existing :page/tag :db/id) (:page/tag page))
+            (throw (ex-info (str "Tag page shares :page/uri with an existing page. "
+                                 "Either rename the tag or give it an explicit :tag/slug "
+                                 "in content/tags.edn")
+                            {:tag-page page
+                             :existing-page (into {} existing)})))))
       @(d/transact conn tag-pages))
     (let [db (d/db conn)]
       (some->> (d/q '[:find [?e ...]
