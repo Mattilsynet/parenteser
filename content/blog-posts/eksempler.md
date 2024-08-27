@@ -138,9 +138,6 @@ Altså:
          h/->dom)))
 ```
 
-Med denne regelen i lomma er vi plutselig i stand til å teste uendelig mange
-eksempler. Men hvor får vi uendelig mange eksempler fra?
-
 Med denne regelen i lomma er vi plutselig i stand til å teste alle eksempler.
 Men hvor mange eksempler er nok? Fem? Ti? Kanskje vi må diske opp med femti for
 å føle oss sikre?
