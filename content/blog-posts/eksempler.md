@@ -156,8 +156,9 @@ data av forskjellig art:
 (gen/generate gen/int) ;;=> 25
 ```
 
-`gen/generate` genererer ett eksempel fra en generator. `gen/sample` spytter ut
-en håndfull eksempler:
+`gen/generate` genererer ett eksempel fra en generator. Som du ser har
+test.check ansatt en QA-person til å generere strenger for seg. `gen/sample`
+spytter ut en håndfull eksempler:
 
 ```clj
 (gen/sample gen/int) ;;=> (0 0 -2 0 2 -3 1 2 -5 2)
