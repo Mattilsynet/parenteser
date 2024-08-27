@@ -209,7 +209,7 @@ for spesielt interesserte.
 
 Hvordan blir dette til ti tusen tester?
 
-## Ti tusen tester i én
+## Ti tusen tester (i én)
 
 Når vi har både en invariant og en generator som lager relevante data kan vi
 formulere en property og be testverktøyet vårt kjøre den:
