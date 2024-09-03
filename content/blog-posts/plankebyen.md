@@ -18,7 +18,7 @@ av trær.
 ## Forskjellen mellom `postwalk` og `tree-seq`
 
 For et par uker siden så vi på `postwalk` og hvordan det var [et nyttig verktøy
-for å gjøre oppdateringer i en trestruktur](/interpolasjon/). Vi brukte dentil
+for å gjøre oppdateringer i en trestruktur](/interpolasjon/). Vi brukte den til
 å lage en `interpolate`-funksjon:
 
 ```clj
