@@ -43,10 +43,17 @@
         (update :open-graph/title #(or % (:page/title blog-post)))
         (update :open-graph/description #(or % (:blog-post/description blog-post))))))
 
+(defn ingest-blog-post-pages [blog-post]
+  (let [page (ingest-blog-post blog-post)]
+    (into [page]
+          (for [alt-uri (:page/alt-uris blog-post)]
+            {:page/redirect-uri (:page/uri page)
+             :page/uri alt-uri}))))
+
 (defn create-tx [file-name datas]
   (cond->> datas
     (re-find #"^blog-posts(-en)?\/" file-name)
-    (map ingest-blog-post)))
+    (mapcat ingest-blog-post-pages)))
 
 (defn get-tag-name-fixes [db]
   (for [tag (->> (d/q '[:find [?e ...]

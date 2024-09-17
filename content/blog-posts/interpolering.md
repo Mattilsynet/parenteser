@@ -1,4 +1,5 @@
 :page/title Interpolering i en verden hvor alt er data
+:page/alt-uris ["/interpolasjon/"]
 :blog-post/author {:person/id :person/magnar}
 :blog-post/published #time/ldt "2024-08-20T09:00:00"
 :blog-post/tags [:clojure :data :webutvikling]

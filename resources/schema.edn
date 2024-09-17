@@ -24,6 +24,14 @@
   :db/valueType :db.type/ref
   :db/cardinality :db.cardinality/one}
 
+ {:db/ident :page/alt-uris
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/many}
+
+ {:db/ident :page/redirect-uri
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
  {:db/ident :series/id
   :db/valueType :db.type/keyword
   :db/unique :db.unique/identity
