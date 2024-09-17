@@ -9,6 +9,14 @@
                :page/uri)
            "/lange-flate-filer/")))
 
+  (testing "Adds redirect URIs"
+    (is (= (-> {:page/uri "/blog-posts/skrivefeil/"
+                :page/alt-uris ["/skriveleif/"]}
+               sut/ingest-blog-post-pages
+               (->> (map #(select-keys % [:page/redirect-uri :page/uri]))))
+           [{:page/uri "/skrivefeil/"}
+            {:page/uri "/skriveleif/" :page/redirect-uri "/skrivefeil/"}])))
+
   (testing "Turns tags into refs"
     (is (= (-> {:blog-post/tags [:clojure :html]}
                sut/ingest-blog-post

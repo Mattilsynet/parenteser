@@ -13,16 +13,21 @@
    {:title [:i18n ::not-found-title]}
    [:h1 [:i18n ::not-found-heading]]))
 
+(defn render-redirect [page]
+  {:status 302
+   :headers {"Location" (:page/redirect-uri page)}})
+
 (defn render-page [_req page]
-  (if-let [f (case (:page/kind page)
-               :page.kind/frontpage frontpage/render-frontpage
-               :page.kind/blog-post blog-post-page/render-blog-post
-               :page.kind/series series-page/render-series-page
-               :page.kind/rss-feed rss/blog-post-feed
-               :page.kind/tag tag/render-tag-page
-               nil)]
-    (f page)
-    (render-404 page)))
+  (let [f (case (:page/kind page)
+            :page.kind/frontpage frontpage/render-frontpage
+            :page.kind/blog-post blog-post-page/render-blog-post
+            :page.kind/series series-page/render-series-page
+            :page.kind/rss-feed rss/blog-post-feed
+            :page.kind/tag tag/render-tag-page
+            nil)]
+    (cond f (f page)
+          (:page/redirect-uri page) (render-redirect page)
+          :else (render-404 page))))
 
 (comment
 
