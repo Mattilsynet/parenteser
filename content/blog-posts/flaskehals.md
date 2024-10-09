@@ -100,7 +100,7 @@ domineres av kallet til `matnyttig.datomic/q`. På forhånd hadde vi mistenkt at
 det var lite optimaliserte queries som var syndebukken, så dette er enn så lenge
 som forventet. Men så skjer det noe interessant: halvparten av tiden i
 `matnyttig.datomic/q` går med i `open-telemetry.tracing/make-span`. Snakk om
-Schrödingers ytelsesproblem.
+Heisenbergs ytelsesproblem.
 
 ## Many ... minutes later
 
