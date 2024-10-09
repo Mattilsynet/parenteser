@@ -77,9 +77,7 @@ med profileren:
 Etter å ha kjørt denne kodesnutten kan vi få opp såkalte flame graphs i
 nettleseren ved å evaluere `(prof/serve-ui 9998)`. Vår første så sånn ut:
 
-<a href="/images/flame-graph1.png">
 <img src="/images/flame-graph1.png" style="max-width: 100%" border="0" alt="Flammegraf over funksjonskallene i én import">
-</a>
 
 Hvordan skal vi så lese denne? Kort fortalt: Fra bunnen og opp. Den aller
 nederste linja har teksten "all" og viser all tid brukt for operasjonen som er
@@ -88,18 +86,14 @@ profilert.
 Allerede på neste linje deler grafen seg i to, og illustrerer at ca halvparten
 av tiden går med i en ny tråd som ser ut til å drive med garbage collection:
 
-<a href="/images/flame-graph2.png">
 <img src="/images/flame-graph2.png" style="max-width: 100%" border="0" alt="Flammegraf som viser garbage collection">
-</a>
 
 Vår kode finnes blant de blå linjene i flammegrafen som indikerer Clojure-kode.
 Når strekene over hverandre er omtrent like brede så betyr det at mer eller
 mindre all tiden brukt på den nederste streken er dekket av streken som er
 høyere opp.
 
-<a href="/images/flame-graph3.png">
 <img src="/images/flame-graph3.png" style="max-width: 100%" border="0" alt="Flammegraf som viser et veiskille">
-</a>
 
 Denne delen av grafen viser at tiden brukt av vår funksjon `forbered-vurdering`
 domineres av kallet til `matnyttig.datomic/q`. På forhånd hadde vi mistenkt at
@@ -131,9 +125,7 @@ dev-profilen til prosjektet. Deretter krydra vi OpenTelemetry-koden vår med 50+
 typehint for å unngå reflection ved kall på ymse Java-metoder. Resultatet var en
 litt hyggeligere flammegraf:
 
-<a href="/images/flame-graph4.png">
 <img src="/images/flame-graph4.png" style="max-width: 100%" border="0" alt="Flammegraf som viser mindre overhead i tracingen">
-</a>
 
 `time` for 10k imports forteller oss også at vi er på rett vei:
 
