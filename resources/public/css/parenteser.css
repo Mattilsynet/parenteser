@@ -193,6 +193,18 @@ a:hover, .clickable:hover {
 .text-content blockquote {
   padding: 2rem;
   background: var(--blockquote-bg);
+  position: relative;
+}
+
+.text-content blockquote:before {
+    content: '”';
+    color: rgba(0, 0, 0, 0.05);
+    position: absolute;
+    top: -10px;
+    left: -25px;
+    font-size: 200px;
+    line-height: 1;
+    font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, Garamond, serif;
 }
 
 .hide-mobile {display: none;}
