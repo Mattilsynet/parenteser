@@ -117,7 +117,7 @@ ikke ha det.
 ## Det som var fint
 
 Og da har vi kommet til det jeg syns er fint. Denne testen havnet på et bra
-nivå. Et komfortabelt mellomsjikte, hvor den kun tester at siden er satt opp
+nivå. Et komfortabelt mellomsjikt, hvor den kun tester at siden er satt opp
 riktig, uten å gå i for mye detaljer. Den overlater detaljer om
 forsideimplementasjonen til enhetstester, og detaljer om systemet til en mer
 generell integrasjonstest.
