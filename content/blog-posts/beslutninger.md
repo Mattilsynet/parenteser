@@ -1,4 +1,4 @@
-:page/title Varfor gör dom på detta viset?
+:page/title Voffor gör dom på detta viset?
 :blog-post/author {:person/id :person/christian}
 :blog-post/published #time/ldt "2024-10-22T09:00:00"
 :blog-post/tags [:metodikk]
