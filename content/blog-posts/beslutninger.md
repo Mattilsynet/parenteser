@@ -60,10 +60,8 @@ Her er noen eksempler fra kodebasen vi jobber med for tiden:
 - ADR 8: Funksjonell kjerne, imperativt skall
 - ADR 10: Defensiv kode og parametere inn i systemet
 
-Disse er skrevet for folk med en viss forståelse av vårt domene og
-omstendigheter ("MATS", "omfattet av ordningen"). Hvis du syns den siste ser
-kjent ut, så er det nok fordi Magnar nylig omformulerte den som [en
-bloggpost](/forsvar-mot-svartekunster/).
+Hvis du syns den siste ser kjent ut, så er det nok fordi Magnar nylig
+omformulerte den som [en bloggpost](/forsvar-mot-svartekunster/).
 
 Da vi bygget [Matvaretabellen](https://matvaretabellen.no) i fjor skrev vi også
 [noen
