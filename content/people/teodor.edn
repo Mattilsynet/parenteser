@@ -1,0 +1,5 @@
+{:person/id :person/teodor
+ :person/given-name "Teodor"
+ :person/family-name "Heggelund"
+ :person/photo "/images/teodor.jpg"
+ :person/open-graph-photo "/images/teodor-vifter-med-armene.jpg"}
