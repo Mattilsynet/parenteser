@@ -8,9 +8,9 @@ forretningsutvikling. Time vil show, som de sier på Flåklypa TV.
 
 ## Kjør lokalt
 
-Dersom du bruker Emacs: gjør `cider-jack-in`, åpne `dev/parenteser/dev.clj`, og evaluer
-kallet som oppretter appen samt kallet til start-funksjonen. Bloggen er nå
-tilgjengelig på [http://localhost:5052](http://localhost:5052).
+Dersom du bruker Emacs: gjør `cider-jack-in`, åpne `dev/parenteser/dev.clj`, og
+evaluer kallet som oppretter appen samt kallet til start-funksjonen. Bloggen er
+nå tilgjengelig på [http://localhost:5052](http://localhost:5052).
 
 ## Tester
 
