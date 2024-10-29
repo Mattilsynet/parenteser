@@ -115,9 +115,10 @@ Jeg tror det!
 - Høyere endringsfart gjør det lettere å jobbe sammen på koden.
   Under en parprogrammeringsøkt for to uker siden manglet det en bit i maskineriet.
   Siden Magnar var med og så at biten manglet, kunne han fikse problemet.
-  Først én commit på master som la til det vi fikk til å legge til i UI-et på master.
-  Så en ny commit med maskineriet som manglet, på master.
-  Så commit som brukte maskineriet til å lage resten av UI-et, på master.
+  Først la vi til det vi fikk til i UI-et uten nytt maskineri.
+  Så la vi til maskineri.
+  Så la vi til mer UI, siden vi nå hadde maskineri til å støtte opp.
+  Alt rett på master!
 
 - Høyere endringsfart gjør det lettere å forbedre produktet.
   Vi har laget statistikk for inspektørene som viser resultater fra tidligere tilsyn.
