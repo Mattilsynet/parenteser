@@ -43,8 +43,8 @@ Gjennom [Smilefjesordningen] besøker smilefjesinspektører flere tusen serverin
 
 På tre timer skal inspektøren:
 
-- masjere inn på kjøkkenet til et serveringssted
-- kontrollere det som kan true matsikkerhet
+- marsjere inn på kjøkkenet til et serveringssted
+- kontrollere det som kan true matsikkerheten
 - vurdere hva som må rettes
 - og få med seg kjøkkensjefen på å rette problemene.
 
@@ -58,9 +58,9 @@ Jeg vil trekke fram hvordan repetisjon sikrer at kjøkkensjefen vet hva som må 
   Hva står igjen?
 
 - Når inspektøren finner et problem under inspeksjonsrunden, spør inspektøren kjøkkensjefen om rutiner.
-  Ikke "Dette smørbrødet har ligget framme for lenge.", men "Hva er rutinene deres for å sikre temperatur og tid smørbrødet ligger framme inntil smørbrødet blir solgt?"
+  Ikke "Dette smørbrødet har ligget framme for lenge", men "Hva er rutinene deres for å sikre temperatur og tid smørbrødet ligger framme inntil smørbrødet blir solgt?"
   Spørsmål om rutiner gjør samtalen mer konstruktiv.
-  Det egentlige problemet er ikke at man fant noe som er skittent—problemet er hvordan man sikrer matsikkerhet hver dag.
+  Det egentlige problemet er ikke at man fant noe som er skittent -— problemet er hvordan man sikrer matsikkerhet hver dag.
 
 - Etter inspeksjonsrunden skriver inspektøren smilefjesrapport mens inspektøren fremdeles er på stedet.
   Før rapporten sendes inn, går inspektøren gjennom rapporten med kjøkkensjefen punkt for punkt, og spør om kjøkkensjefen har spørsmål.
@@ -71,7 +71,7 @@ Når kjøkkensjefen til slutt får rapporten, er det liten tvil om hva rapporten
 
 Team Mat har strengere kontroll på work in progress enn alle andre team jeg har jobbet i.
 Vi gjør én, smal ting hver uke.
-På mandag setter vi målet for uka, og på fredag ser vi tilbake og spørs oss selv hvordan det har gått.
+På mandag setter vi målet for uka, og på fredag ser vi tilbake og spør oss selv hvordan det har gått.
 
 Dette smalet fokuset hver uke løser en haug med utfordringer.
 Vi vet hva de andre driver med, fordi vi jobber på samme ting.
@@ -80,7 +80,7 @@ Hvis jeg lager brukergrensesnitt og mangler data, løser vi det helst sammen, sa
 ## Parprogrammering og kontinuerlig leveranse
 
 Jeg diskuterte parprogrammering med en tidligere kollega for en uke siden.
-Han spurte hvorfor det var vits i å parprogrammering når han kunne skrive koden raskere på egen hånd.
+Han spurte hvorfor det var vits i å parprogrammere når han kunne skrive koden raskere på egen hånd.
 
 Å skrive koden er imidlertid ikke hele jobben.
 Plutselig må noen andre ta i min kode, eller jeg må bruke andres kode.
@@ -124,13 +124,13 @@ Jeg tror det!
   Da inspektørene fikk se statistikken, stilte de et spørsmål.
   Christian dyttet så ut en ny commit som svarte på spørsmålet.
 
-Jeg kjenner at hvilke ting som går fort og sakte fremdeles er litt uvandt for meg.
+Jeg kjenner at hvilke ting som går fort og sakte fremdeles er litt uvant for meg.
 Men det er noe "slow is smooth, smooth is fast" over dette.
 Pluss en ekte anerkjennelse av _folk_ i utviklingsprosessen.
 
 Hvis du har lest helt hit, tusen takk for at du leste!
 Jeg har skrevet litt for egen nytte, og litt for å dele.
 Har du kommentarer?
-Jeg tror det er sundt å snakke om disse hvordan vi jobber, og at diskusjon kan gi gode ideer om framtidige tekster.
+Jeg tror det er sunt å snakke om disse hvordan vi jobber, og at diskusjon kan gi gode ideer om framtidige tekster.
 
 Hilsen Teodor
