@@ -105,7 +105,7 @@ At vi vet hva vi skal gjøre, og har jobbet gjennom "risikabel" kode med to pers
 
 ## Endringsfart og kvalitet
 
-Så, er denne koden å jobbe på noe bra?
+Så, er denne måten å jobbe på noe bra?
 
 Jeg tror det!
 
