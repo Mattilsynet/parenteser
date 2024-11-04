@@ -9,7 +9,7 @@ Hvordan får Mattilsynet produktorganisering til å virke?
 :blog-post/body
 
 Hvordan får Mattilsynet produktorganisering til å virke? For i all beskjedenhet,
-i Mattilsynet får vi til produktutvikling og -modellen vår til å fungere veldig
+i Mattilsynet får vi produktutvikling og -modellen vår til å fungere veldig
 bra. Vi leverer produkter og tjenester som både inspektører og næringen har lyst
 til å bruke. Vi reduserer teknisk gjeld i rekordtempo, vi klatrer på omdømme, og
 vi får mange gode søkere når vi lyser ut stillinger. Hvordan har vi kommet dit
@@ -64,7 +64,7 @@ og får full frihet til å jobbe ut fra det.
 Team i Mattilsynet har sponsorer, og vårt team har sponsorene Marit, Petter og
 Inge. "Team Mat er sponset av ...", det høres nesten ut som starten på en
 sportssending på NRK! Men her snakker vi om noe annet enn seier på
-femmila:sweat_smile:
+femmila 😅
 
 Sponsorene er toppledere i Mattilsynet og har et særskilt ansvar for å støtte
 teamet vårt, og det innebærer alt fra allokering av ressurser, fjerning av
