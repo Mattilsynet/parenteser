@@ -1,4 +1,4 @@
-:page/title Gjør det enklest mulig
+:page/title Gjør det enklest mulig!
 :blog-post/author {:person/id :person/teodor}
 :blog-post/published #time/ldt "2024-11-13T09:00:00"
 :blog-post/tags [:metodikk]
