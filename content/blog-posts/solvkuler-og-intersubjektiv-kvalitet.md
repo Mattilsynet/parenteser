@@ -7,10 +7,8 @@
 
 :blog-post/body
 
-Dagens tekst er skrevet av Magnar og Teodor.
-
 <!-- <div style="text-align: right;"> -->
-<div style="background-color: #052024; color: white; padding: 1em">
+<div style="background-color: #052024; color: #f8fdfe; padding: 1em">
 <p>
 Jeg tror at god kode finnes.
 Jeg antok at andre utviklere tenkte det samme.
@@ -28,8 +26,15 @@ Da kollapser søkenen etter bedre kode til politisk pratmakeri.
 </p>
 </div>
 
+<br>
+
+<div style="color: #052024; background-color: #f8fdfe; padding: 1em;">
+<p>
+Magnar ønsker kanskje å skrive inni denne boksen?
+</p>
+</div>
+
 <!--
 Jeg tenkte at teksten ville flyte bedre hvis det var tydelig hvem som snakket.
 Jeg har prøvd å høyrejustere meg, og å endre fargen på min tekst til noe annet, men føler ikke at det fungerte helt som jeg ville.
 -->
-
