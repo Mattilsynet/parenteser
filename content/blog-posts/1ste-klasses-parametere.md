@@ -137,4 +137,4 @@ Når denne form-en postes, så får vi:
 ```
 
 Jeg må fortelle mer om hvordan vi håndterer skjemaer snart, men jeg lovet at
-denne bloggposten skulle bli kort.
+denne bloggposten skulle bli kort, så det får bli en annen dag. Snækkæs!
