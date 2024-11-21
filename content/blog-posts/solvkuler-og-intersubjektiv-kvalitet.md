@@ -30,7 +30,24 @@ Da kollapser søkenen etter bedre kode til politisk pratmakeri.
 
 <div style="color: #052024; background-color: #f8fdfe; padding: 1em;">
 <p>
-Magnar ønsker kanskje å skrive inni denne boksen?
+Det minner meg om Eliyahu Goldratt i boka <a href="https://www.amazon.com/Beyond-Goal-Eliyahu-Goldratt-Constraints/dp/1596590238">Beyond the
+Goal</a>.
+Han har veldig lite til overs for uttrykket "There are no silver bullets".
+Uttrykket forteller oss at det ikke finnes enkle løsninger, at alle forbedringer
+vi kan strebe etter er inkrementelle. Det er ment å være realistisk. Og det er
+bra, det. Vi skal være realistiske — alt har sine trade-offs — men det betyr
+ikke at alt er like bra. Det finnes faktisk bedre måter. Selv peker Goldratt
+på sin <a href="https://en.wikipedia.org/wiki/Theory_of_constraints">Theory of
+Constraints</a> som en "stor samling med sølvkuler".
+</p>
+<p>
+Etter at jeg hadde lest <a
+href="https://en.wikipedia.org/wiki/The_Pragmatic_Programmer">The Pragmatic
+Programmer</a> så ble jeg inspirert til å lære meg ett programmeringsspråk i
+året. Det gjorde jeg hvert år, til jeg møtte Clojure. Det var ikke en
+endestasjon for min læring, men det var en endestasjon for min søken etter et
+verktøy som virkelig passet med hodet mitt. Det er ingen overdrivelse å si at
+det data-drevne, funksjonelle språket med alle parentesene var min sølvkule.
 </p>
 </div>
 
