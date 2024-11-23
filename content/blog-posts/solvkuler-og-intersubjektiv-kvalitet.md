@@ -1,4 +1,4 @@
-:page/title Sølvkuler og intersubjektiv kvalitet
+:page/title Sølvkuler i bruk
 :blog-post/authors [{:person/id :person/teodor} {:person/id :person/magnar}]
 :blog-post/published #time/ldt "2024-11-18T09:00:00"
 :blog-post/description
@@ -7,7 +7,6 @@
 
 :blog-post/body
 
-<!-- <div style="text-align: right;"> -->
 <div style="background-color: #052024; color: #f8fdfe; padding: 1em">
 <p>
 Jeg tror at god kode finnes.
@@ -51,7 +50,61 @@ det data-drevne, funksjonelle språket med alle parentesene var min sølvkule.
 </p>
 </div>
 
+<br>
+
 <!--
-Jeg tenkte at teksten ville flyte bedre hvis det var tydelig hvem som snakket.
-Jeg har prøvd å høyrejustere meg, og å endre fargen på min tekst til noe annet, men føler ikke at det fungerte helt som jeg ville.
+Steg 3, første forsøk.
+Jeg ble ikke helt fornøyd: for abstrakt, for svevende, tror vi mister folk.
+Jeg prøver på nytt under.
+<div style="background-color: #052024; color: #f8fdfe; padding: 1em">
+<p>
+Men er Clojure <em>objektivt</em> bedre enn andre programmeringsspråk?
+Det er et standpunkt jeg ikke ønsker å ta!
+<p>
+<ul>
+<li>Det finnes typer programmering jeg ikke kjenner gode Clojure-løsninger.
+Grafikkprogrammering og tallknusing er to eksempler.</li>
+<li>Selv om jeg ikke hadde kjent <em>noen</em> eksempler der Clojure ikke hadde
+vært best, hadde ikke det vært nok til å si at Clojure er <em>objektivt</em>
+bedre enn andre alternativer!</li>
+</ul>
+<p>
+Kan vi komme videre ved å spørre “i hvilken kontekst?” og “for hvem?”?
+Kanskje sølvkuler kun finnes for en kontekst.
+Hvis vi angriper denne konteksten med denne sølvkulen, forsvinner nærmest problemet.
+</p>
+<p>
+</p>
+</div>
 -->
+
+<!-- Steg 3, andre forsøk!
+OPPLEVD KVALITET.
+Tror dette avsnittet både kan og bør trimmes litt ned, men er forholdsvis fornøyd med kjernen.
+-->
+<div style="background-color: #052024; color: #f8fdfe; padding: 1em">
+<p>Når én person har funnet en sølvkule, hvordan går vi videre?
+En sølvkule er opplevd som en god løsning til et problem, men <em>for hvem</em>?
+</p>
+<p>Vi som jobber med programmering sier ofte at vi jobber med <em>systemer</em>.
+Men hvordan setter vi systemgrensene?
+Er koden vår systemet?
+
+Rich Hickey sier at koden er en for snever systemdefinisjon i <a style="color: #cdff92"
+href="https://www.youtube.com/watch?v=ROor6_NGIWU">The Language of the
+System</a>: Rich vil ha med databasen og køer.
+
+Jessica Kerr argumenterer for en bredere systemdefinisjon i
+<a style="color: #cdff92" href="https://jessitron.com/2018/04/15/the-origins-of-opera-and-the-future-of-programming/">
+The Origins of Opera and the Future of Programming</a>: hun vil ha med seg <em>folk</em>.
+Hvem kjenner systemet?
+Hvem kjenner prinsippene som systemet er bygget etter?
+Hvem kjenner bruken av systemet?
+</p>
+<p>🤔</p>
+<p>Kanskje det å finne sølvkuler ikke er hele jobben?
+Si at jeg har funnet en sølvkule, og kanskje til og med fått inn en fulltreffer på en vampyr.
+Er jobben ferdig der?
+Eller bør jeg ta med meg vennene mine på skytebanen og jobbe litt mer med hvordan vi skyter disse sølvkulene?
+Hva tenker du, Magnar, hva bør jeg gjøre hvis jeg finner en sølvkule?</p>
+</div>
