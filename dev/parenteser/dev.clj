@@ -10,11 +10,13 @@
   (set! *print-namespace-maps* false)
   (dev/start))
 
-(comment
-
+(comment ;; s-:
   (dev/stop)
   (start)
   (reset)
+  )
+
+(comment
 
   (export/export (parenteser/create-app))
 
