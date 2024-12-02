@@ -27,7 +27,7 @@ Da kollapser søkenen etter bedre kode til politisk pratmakeri.
 
 <br>
 
-<div style="color: #052024; background-color: #f8fdfe; padding: 1em;">
+<div style="color: #052024; background-color: rgba(0,0,0,0.05); padding: 1em;">
 <p>
 Det minner meg om Eliyahu Goldratt i boka <a href="https://www.amazon.com/Beyond-Goal-Eliyahu-Goldratt-Constraints/dp/1596590238">Beyond the
 Goal</a>.
@@ -107,4 +107,48 @@ Si at jeg har funnet en sølvkule, og kanskje til og med fått inn en fulltreffe
 Er jobben ferdig der?
 Eller bør jeg ta med meg vennene mine på skytebanen og jobbe litt mer med hvordan vi skyter disse sølvkulene?
 Hva tenker du, Magnar, hva bør jeg gjøre hvis jeg finner en sølvkule?</p>
+</div>
+
+<br>
+
+<div style="color: #052024; background-color: rgba(0,0,0,0.05); padding: 1em;">
+<p>
+Her er jeg ikke så preskriptiv, kjenner jeg. For å sitere moren min: "<em>Bør</em> er en
+byrde". Men jeg kan si hva <em>jeg</em> gjorde: Jeg satte meg ned og begynte å lage ting,
+og koste meg glugg i hjel. Det var jo en opplevelse, å finne et språk som var så
+godt alignet med mitt eget hode. Jeg lærte meg så mye jeg kunne, med stor begeistring.
+</p>
+<p>
+Jeg startet med å bygge ny motor til hobbyprosjektet mitt — <a
+href="https://www.adventur.no">Adventur Delux</a> — og tok språket med på jobb når
+jeg hadde litt mer erfaring å by på.
+</p>
+<p>
+Du kan si at jeg brukte sølvkula mi til å levere resultater.
+</p>
+<p>
+Det er klart, jeg hadde jo også lyst til å dele oppdagelsen med andre. Jeg tok
+med meg videoene til Rich og viste til de andre utviklere i lunsjen på jobben.
+Jeg husker godt opplevelsen av å vise <a
+href="https://www.youtube.com/watch?v=SxdOUGdseq4">Simple Made Easy</a> til en
+forsamling veldig erfarne utviklere. Det var langt fra alle som ble like
+begeistret som meg. Men det er greit det. Jeg fant et par andre som ville være
+med, og det var nok.
+</p>
+<p>
+Nå over et tiår senere, så endte jeg opp med to sidestilte tilnærminger:
+</p>
+<ul>
+<li><strong>Tenk på meg sjæl:</strong> Christian og jeg søkte på jobb her hos
+Mattilsynet under forutsetning av at vi fikk jobbe sammen med de verktøyene vi
+er effektive med og har glede av.</li>
+<li><strong>Tenk på andre:</strong> Jeg har ikke lyst til å prakke ting på folk,
+men jeg prøvd å vise frem hvorfor språket er kult med <a href="https://www.zombieclj.no">videoserier</a>
+og <a href="/foredrag/">foredrag</a>.
+</ul>
+<p>
+Så jeg dodget unna spørsmålet om hva man <em>bør</em> gjøre, og svarte heller
+hva jeg gjorde selv. Det har jo fungert fint for meg, i det minste. Har du selv
+noen tanker om saken, Teodor?
+</p>
 </div>
