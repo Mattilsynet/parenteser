@@ -1,6 +1,6 @@
 :page/title Lynraske modultester med én tastekombinasjon
 :blog-post/author {:person/id :person/teodor}
-:blog-post/published #time/ldt "2024-12-03T09:00:00"
+:blog-post/published #time/ldt "2024-12-03T12:39:00"
 :blog-post/tags [:metodikk]
 :blog-post/description
 
