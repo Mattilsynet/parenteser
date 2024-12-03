@@ -1,7 +1,7 @@
 :page/title Lynraske modultester med én tastekombinasjon
 :blog-post/author {:person/id :person/teodor}
 :blog-post/published #time/ldt "2024-12-03T12:39:00"
-:blog-post/tags [:metodikk]
+:blog-post/tags [:testing :metodikk]
 :blog-post/description
 
 Å oppleve lynraske modultester i bruk har endret på hvordan jeg liker å strukturere og jobbe med kode.
