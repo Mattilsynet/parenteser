@@ -152,3 +152,26 @@ hva jeg gjorde selv. Det har jo fungert fint for meg, i det minste. Har du selv
 noen tanker om saken, Teodor?
 </p>
 </div>
+
+<br>
+
+<div style="background-color: #052024; color: #f8fdfe; padding: 1em">
+<p>
+Jeg tror bruken av sølvkulene er vel så viktig som sølvkulene i seg selv.
+Når vi abstraherer sølvkulene vekk fra praksisen til en dreven vampyrjeger er det vanskelig å se hvordan disse sølkulene faktisk er så gode.
+</p>
+<p>
+Det <em>er</em> mulig å finne objektivt gode løsninger på problemer.
+De objektivt kode løsningene kjennetegnes av at de løser problemet sitt på en god måte.
+For andre personer som allerede har sett verdien i sølkulene er det kanskje nok å snakke om en ny serie sølvkuler som flyr fortere, eller har nok tyngde til at de også kan brukes på varulver.
+Men for en person som ikke kjenner god praksis for bruken av sølvkulene, faller sølvkulesnakket sammen.
+</p>
+<p>
+Det blir særlig viktig for oss som praktiserer interaktiv programmering.
+Hvis vi lar oss fiksere på koden som en statisk ting, mister vi en hel del av verdien.
+Som er grunnen til at jeg synes at zombieclj.no er et veldig spennende initiativ: du og Christian viser ekte programmering, ikke en artikkel der koden er slipt til perfeksjon på forhånd.
+</p>
+</div>
+
+<div></div>
+<br>
