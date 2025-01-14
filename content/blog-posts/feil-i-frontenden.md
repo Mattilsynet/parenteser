@@ -1,7 +1,7 @@
 :page/title Hva kan gå galt i nettleseren til folk?
 :blog-post/author {:person/id :person/magnar}
 :blog-post/published #time/ldt "2025-01-14T09:00:00"
-:blog-post/tags [:null-hull]
+:blog-post/tags [:framsideutvikling :null-hull]
 :blog-post/description
 
 Her er et av våre mål: Ingen kjente feil i prod. Det er ambisiøst, men vi
@@ -42,11 +42,11 @@ Altså, å oppdage feilene er greit:
 Å sende den, likeså:
 
 ```clj
-(js/sendBeacon window "/frontend-exception" exDetails)
+(js/sendBeacon js/window "/frontend-exception" exDetails)
 ```
 
-Så, selv om vi vil ha null hull, så handler denne bloggposten om alle de feilene
-vi IKKE vil ha rett i fleisen.
+Så, selv om vi vil ha null hull, handler denne bloggposten om alle de feilene vi
+IKKE vil ha rett i fleisen.
 
 ## Noen andres maskiner
 
@@ -59,7 +59,7 @@ det første:
 
 I klienten kan det fort kjøre kode fra noen helt andre, rett ved siden av din
 egen. Det er spesielt aktuelt hvis du drar inn masse ræl for å spore brukerne
-dine. Kanskje du endatil lar markedsføringsfolka dra inn alt mulig drit med
+dine. Kanskje du endatil lar markedsføringsfolka dra inn all mulig drit med
 Google Tag Manager? Grøss og gru. Slutt med det.
 
 Uansett så trenger du da en sånn:
@@ -123,7 +123,7 @@ absolutt alle eventene i en resize innenfor én requestAnimationFrame.
 ```
 
 Disse er helt ufarlig. Ikke dumt å gjøre litt ytelsestesting på gamle klienter,
-altså, men her har vi fått resizet som vi skulle, bare ikke smoooth.
+altså, men her har vi fått resizet som vi skulle, bare ikke smooooth.
 
 ## Lalala, kan ikke høre deg 🙉
 
