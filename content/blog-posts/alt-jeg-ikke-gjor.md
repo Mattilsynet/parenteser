@@ -4,8 +4,8 @@
 :blog-post/tags [:metodikk]
 :blog-post/description
 
-Er det noen programmeringspraksiser som har større glede av "auto-complete" av
-en LLM enn andre? La oss ta en titt.
+Er det noen programmeringspraksiser som har større glede av auto complete av en
+LLM enn andre? La oss ta en titt.
 
 :blog-post/body
 
@@ -61,6 +61,7 @@ er så mye kode som skal til. Da oppsøker vi heller en LLM ved behov -- pull
 istedenfor push, om du vil.
 
 "Look at all the things I'm not doing" sa en entusiastisk David Heinemeier
-Hanson da han presenterte verden for Rails. Den gangen handlet det om å lene seg
-på noen konvensjoner for å fjerne repetetivt arbeid med lav verdiskapning. Det
-målet står seg sørenmeg godt fortsatt, tjue år senere.
+Hanson da han [presenterte verden for Rails](https://youtu.be/Gzj723LkRJY). Den
+gangen handlet det om å lene seg på noen konvensjoner for å fjerne repetetivt
+arbeid med lav verdiskapning. Det målet står seg sørenmeg godt fortsatt, tjue år
+senere.
