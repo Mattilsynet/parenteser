@@ -1,7 +1,7 @@
 :page/title "Bygg delt forståelse av kvalitet med parprogrammering"
 :blog-post/author {:person/id :person/teodor}
 :blog-post/published #time/ldt "2025-01-28T08:30:00"
-:blog-post/tags []
+:blog-post/tags [:samarbeid :metodikk :parprogrammering]
 :blog-post/description
 
 Jeg vil skrive _god kode_.

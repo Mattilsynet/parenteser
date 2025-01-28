@@ -1,7 +1,7 @@
 :page/title Hvem bør skrive dokumentasjonen?
 :blog-post/author {:person/id :person/teodor}
 :blog-post/published #time/ldt "2024-12-17T08:30:00"
-:blog-post/tags []
+:blog-post/tags [:metodikk]
 :blog-post/description
 
 Hvem bør skrive dokumetasjonen?
