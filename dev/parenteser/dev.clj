@@ -1,7 +1,8 @@
 (ns parenteser.dev
   (:require [parenteser.core :as parenteser]
             [powerpack.dev :as dev :refer [reset]]
-            [powerpack.export :as export]))
+            [powerpack.export :as export]
+            clojure.java.browse))
 
 (defmethod dev/configure! :default []
   (parenteser/create-app))
@@ -14,6 +15,7 @@
   (dev/stop)
   (start)
   (reset)
+  (clojure.java.browse/browse-url "http://localhost:5052")
   )
 
 (comment
