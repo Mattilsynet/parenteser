@@ -1,6 +1,6 @@
 :page/title "Bygg delt forståelse av kvalitet med parprogrammering"
 :blog-post/author {:person/id :person/teodor}
-:blog-post/published #time/ldt "2025-01-28T08:30:00"
+:blog-post/published #time/ldt "2025-01-29T08:15:00"
 :blog-post/tags [:samarbeid :metodikk :parprogrammering]
 :blog-post/description
 
@@ -29,9 +29,9 @@ Jeg foreslår følgende:
    Det er håndfast, og øker farten på _alt_.
 2. For å bygge delt forståelse av kvalitet, parprogrammer regelmessig.
 
-## Delt forståelse av kvalitet i gårsdagens parprogrammering
+## Delt forståelse av kvalitet under mandagens parprogrammering
 
-I går satt Ole Marius, Christian og jeg sammen.
+På mandag satt Ole Marius, Christian og jeg sammen.
 Jeg har ikke parprogrammert noe særlig med Ole Marius før.
 
 Tiden gikk slik:
