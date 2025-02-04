@@ -32,12 +32,14 @@ spørringer. Vi kan be Datomic gi oss denne informasjonen ved å sette et flagg
 for `:query-stats` og angi en `:io-context`:
 
 ```clj
+(require '[datomic.api :as d])
+
 ;; Dette er en veldig tullete spørring
-(da/query {:query '[:find [?e ...]
-                    :where [?e :db/ident]]
-           :args [my-db]
-           :query-stats true
-           :io-context :my/io-context})
+(d/query {:query '[:find [?e ...]
+                   :where [?e :db/ident]]
+          :args [my-db]
+          :query-stats true
+          :io-context :my/io-context})
 ```
 
 Istedenfor å få resultatet direkte, får vi nå ut en *map* der resultatet av
