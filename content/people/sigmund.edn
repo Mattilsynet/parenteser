@@ -1,0 +1,5 @@
+{:person/id :person/sigmund
+ :person/given-name "Sigmund"
+ :person/family-name "Hansen"
+ :person/photo "/images/sigmund.jpg"
+ :person/open-graph-photo "/images/sigmund-sjo.jpg"}
