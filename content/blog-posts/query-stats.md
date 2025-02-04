@@ -148,12 +148,12 @@ det var her med Datomics query-stats, men det blir det tilsvarende verktøyet.
 ## Kjekt å ha
 
 Det hadde jo vært fint om man ikke trengte å manuelt teste hver eneste spørring
-i et REPL. Ikke det at det ikke er fint at det går an. Vi har jo en masse fin
-sporing i OpenTelemetry allerede. Da hadde det jo vært fint å ha dette med der,
-men vi vil ikke at dette skal påvirke ytelsen i produksjon. Så dette kan slåes
-av eller på for applikasjonen i sin helhet i konfigurasjonen, og dette er på i
-utvikling. Man kan også bruke en annen funksjon i en liten wrapper vi har foran
-Datomic, for å få denne sporingen på én enkelt spørring.
+i et REPL, selv om det er fint at det går an. Vi har jo en masse fin sporing i
+OpenTelemetry allerede. Da hadde det jo vært fint å ha dette med der, men vi vil
+ikke at dette skal påvirke ytelsen i produksjon. Så dette kan slåes av eller på
+for applikasjonen i sin helhet i konfigurasjonen, og dette er på i utvikling.
+Man kan også bruke en annen funksjon i en liten wrapper vi har foran Datomic,
+for å få denne sporingen på én enkelt spørring.
 
 <img src="/images/query-stats-jaeger1.png" style="max-width: 100%" border="0"
 alt="Visning av query-stats i Jaeger UI før optimering av spørringen">
