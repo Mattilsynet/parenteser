@@ -17,7 +17,7 @@ bruk i OpenTelemetry-sporingen vår.
 :blog-post/body
 
 Nå i januar var vi en gjeng på fire som ble med i Team mat, en tjenestedesigner
-og tre utviklere. Ole-Marius og jeg har brukt noe av tiden til å se litt på
+og tre utviklere. Ole Marius og jeg har brukt noe av tiden til å se litt på
 ytelsesproblemer. Vi fikk se hvordan noen av sidene tok litt vel laaang tid å
 laste, og en introduksjon til [sporingen som var satt opp med
 OpenTelemetry](/85-sekunder/).
@@ -25,7 +25,7 @@ OpenTelemetry](/85-sekunder/).
 ## Treige spørringer
 
 En av tingene vi fant i sporene var spørringer som tok lengre tid enn vi hadde
-forventet. Ole-Marius hadde sett [et foredrag fra Clojure Conj
+forventet. Ole Marius hadde sett [et foredrag fra Clojure Conj
 2023](https://www.youtube.com/watch?v=bvEsnJiCs7E) om
 *query-stats* og *io-stats* i Datomic som gir oss informasjon om kjøringen av
 spørringer. Vi kan be Datomic gi oss denne informasjonen ved å sette et flagg
