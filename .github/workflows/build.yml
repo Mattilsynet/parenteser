@@ -17,21 +17,20 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       sha: ${{ steps.sha.outputs.sha }}
-      slack-message: ${{ steps.slack.outputs.message_id }}
+      slack-message: ${{ steps.slack.outputs.message-id }}
     steps:
       - uses: actions/checkout@v3
       - name: Get deployment sha
         id: sha
         run: echo "sha=$(cut -c 1-10 <<< ${{ github.sha }})" >> $GITHUB_OUTPUT
-      - uses: voxmedia/github-action-slack-notify-build@v1.6.0
-        name: Notify build start
+      - name: Notify build start
         id: slack
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_NOTIFICATION_TOKEN }}
+        uses: Mattilsynet/slacker-action@main
         with:
-          channel_id: C06192XRMNW
-          status: Starter …
-          color: warning
+          channel-id: C06192XRMNW
+          text: ":pear: Starter …"
 
   test:
     runs-on: ubuntu-latest
@@ -67,12 +66,11 @@ jobs:
       - name: Notify testing
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_NOTIFICATION_TOKEN }}
-        uses: voxmedia/github-action-slack-notify-build@v1.6.0
+        uses: Mattilsynet/slacker-action@main
         with:
-          message_id: ${{ needs.configure.outputs.slack-message }}
-          channel_id: C06192XRMNW
-          status: Kjører tester …
-          color: warning
+          channel-id: C06192XRMNW
+          message-id: ${{ needs.configure.outputs.slack-message }}
+          text: ":broccoli: Kjører tester …"
       - name: Test
         run: make test
 
@@ -86,12 +84,11 @@ jobs:
       - name: Notify build
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_NOTIFICATION_TOKEN }}
-        uses: voxmedia/github-action-slack-notify-build@v1.6.0
+        uses: Mattilsynet/slacker-action@main
         with:
-          message_id: ${{ needs.configure.outputs.slack-message }}
-          channel_id: C06192XRMNW
-          status: Bygger docker image …
-          color: warning
+          channel-id: C06192XRMNW
+          message-id: ${{ needs.configure.outputs.slack-message }}
+          text: ":kiwifruit: Bygger docker image …"
       - uses: actions/checkout@v3
       - name: Set up JDK
         uses: actions/setup-java@v3
@@ -135,12 +132,11 @@ jobs:
       - name: Notify publish
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_NOTIFICATION_TOKEN }}
-        uses: voxmedia/github-action-slack-notify-build@v1.6.0
+        uses: Mattilsynet/slacker-action@main
         with:
-          message_id: ${{ needs.configure.outputs.slack-message }}
-          channel_id: C06192XRMNW
-          status: Publiserer docker image …
-          color: warning
+          channel-id: C06192XRMNW
+          message-id: ${{ needs.configure.outputs.slack-message }}
+          text: ":strawberry: Publiserer docker image …"
       - name: Publish docker image
         run: make publish
 
@@ -165,12 +161,11 @@ jobs:
       - name: Notify publish
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_NOTIFICATION_TOKEN }}
-        uses: voxmedia/github-action-slack-notify-build@v1.6.0
+        uses: Mattilsynet/slacker-action@main
         with:
-          message_id: ${{ needs.configure.outputs.slack-message }}
-          channel_id: C06192XRMNW
-          status: Sjøsetter herligheta …
-          color: warning
+          channel-id: C06192XRMNW
+          message-id: ${{ needs.configure.outputs.slack-message }}
+          text: ":blueberries: Sjøsetter herligheta …"
       - name: Deploying
         uses: google-github-actions/deploy-cloudrun@v1
         with:
@@ -193,12 +188,11 @@ jobs:
       - name: Notify build & push success
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_NOTIFICATION_TOKEN }}
-        uses: voxmedia/github-action-slack-notify-build@v1.6.0
+        uses: Mattilsynet/slacker-action@main
         with:
-          channel_id: C06192XRMNW
-          message_id: ${{ needs.configure.outputs.slack-message }}
-          status: Ferdig og godt fornøyd
-          color: good
+          channel-id: C06192XRMNW
+          message-id: ${{ needs.configure.outputs.slack-message }}
+          text: ":banana: Ferdig og godt fornøyd"
 
   notify-failure:
     runs-on: ubuntu-latest
@@ -214,9 +208,8 @@ jobs:
       - name: Notify failure
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_NOTIFICATION_TOKEN }}
-        uses: voxmedia/github-action-slack-notify-build@v1.6.0
+        uses: Mattilsynet/slacker-action@main
         with:
-          channel_id: C06192XRMNW
-          message_id: ${{ needs.configure.outputs.slack-message }}
-          status: Trøbbel i tårnet!
-          color: danger
+          channel-id: C06192XRMNW
+          message-id: ${{ needs.configure.outputs.slack-message }}
+          text: ":mushroom: Trøbbel i tårnet!"
