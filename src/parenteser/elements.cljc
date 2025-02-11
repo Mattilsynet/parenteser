@@ -41,14 +41,20 @@
 (defn header-section [{:keys [title slogan href]}]
   [:div.section.header
    [:div.banana-header
-    [:div.banana-1]
+    [:div.banana-1
+     (if href
+       {:class "transition-banan-2"}
+       {:class "transition-banan-1"})]
     [:div
      [:h1.h1.banana-h1
       (if href
         [:a {:href href} title]
         title)]
      [:p.slogan slogan]]
-    [:div.banana-2]]])
+    [:div.banana-2
+     (if href
+       {:class "transition-banan-1"}
+       {:class "transition-banan-2"})]]])
 
 (defn info-section [{:keys [title content]}]
   [:div.section.slim

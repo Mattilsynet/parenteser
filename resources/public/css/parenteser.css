@@ -1,6 +1,7 @@
 @import url("fonts.css");
 @import url("vars.css");
 @import url("syntax-highlight.css");
+@import url("view-transition.css");
 
 html,
 body {

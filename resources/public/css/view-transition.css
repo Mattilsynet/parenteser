@@ -1,0 +1,19 @@
+/* ========================= */
+/* [[[[ VIEW TRANSITION ]]]] */
+/* ========================= */
+
+@view-transition {
+    navigation: auto;
+}
+
+.transition-banan-1 {
+    view-transition-name: banan-1;
+}
+
+.transition-banan-2 {
+    view-transition-name: banan-2;
+}
+
+/* ========================= */
+/* [[[[ VIEW TRANSITION ]]]] */
+/* ========================= */
