@@ -14,6 +14,44 @@
     view-transition-name: banan-2;
 }
 
+
+
+/* Example article */
+.view-transition-page {
+    view-transition-name: view-transition-page;
+}
+
+::view-transition-old(view-transition-page) {
+    animation: 0.4s ease-out both scale-out;
+}
+
+::view-transition-new(view-transition-page) {
+    animation: 0.4s ease-in both scale-in;
+}
+
+@keyframes scale-out {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+@keyframes scale-in {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 /* ========================= */
 /* [[[[ VIEW TRANSITION ]]]] */
 /* ========================= */

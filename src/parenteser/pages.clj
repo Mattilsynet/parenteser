@@ -6,7 +6,8 @@
             [parenteser.layout :as layout]
             [parenteser.rss :as rss]
             [parenteser.series-page :as series-page]
-            [parenteser.tag :as tag]))
+            [parenteser.tag :as tag]
+            [parenteser.view-transition-page :as view-transition-page]))
 
 (defn render-404 [_page]
   (layout/layout
@@ -24,6 +25,7 @@
             :page.kind/series series-page/render-series-page
             :page.kind/rss-feed rss/blog-post-feed
             :page.kind/tag tag/render-tag-page
+            :page.kind/view-transition view-transition-page/render-view-transition-page
             nil)]
     (cond f (f page)
           (:page/redirect-uri page) (render-redirect page)

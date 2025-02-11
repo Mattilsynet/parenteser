@@ -442,6 +442,24 @@ body .text-content :last-child {
     margin-left: -10px;
 }
 
+.transition-banana-teaser {
+    width: 70%;
+    height: 8rem;
+    margin: 0 auto;
+    display: grid;
+    justify-items: center;
+    overflow: hidden;
+    margin-bottom: 3rem;
+    border-radius: 4px;
+    box-shadow: 1px 1px 10px #ddd;
+}
+
+figure.transition-banana-teaser .banana-2 {
+    transform: rotateY(180deg) rotateZ(70deg);
+    scale: 3;
+    filter: grayscale(80%) blur(1px);
+}
+
 .slogan {
     font-size: 0.75rem;
 }

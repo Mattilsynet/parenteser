@@ -7,8 +7,9 @@
             :slogan [:i18n ::header-slogan]}
      href (assoc :href href))))
 
-(defn layout [{:keys [title]} & forms]
-  [:html {:lang "nb"}
+(defn layout [{:keys [title class]} & forms]
+  [:html {:lang "nb"
+          :class class}
    [:head
     [:title title]
     [:meta {:name "theme-color" :content "#f1eadf"}]

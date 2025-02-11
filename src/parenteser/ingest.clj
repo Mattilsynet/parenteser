@@ -50,10 +50,20 @@
             {:page/redirect-uri (:page/uri page)
              :page/uri alt-uri}))))
 
+(defn ingest-view-transition-pages [page]
+  [(-> page
+       (assoc :page/kind :page.kind/view-transition
+              :page/locale :nb)
+       (update :open-graph/title #(or % (:page/title page)))
+       (update :open-graph/description #(or % "View transition example page")))])
+
 (defn create-tx [file-name datas]
   (cond->> datas
     (re-find #"^blog-posts(-en)?\/" file-name)
-    (mapcat ingest-blog-post-pages)))
+    (mapcat ingest-blog-post-pages)
+
+    (re-find #"^view-transition-.\.md" file-name)
+    (mapcat ingest-view-transition-pages)))
 
 (defn get-tag-name-fixes [db]
   (for [tag (->> (d/q '[:find [?e ...]
