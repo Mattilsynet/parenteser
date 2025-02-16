@@ -3,7 +3,8 @@
             [parenteser.blog-posts :as blog-posts]
             [parenteser.elements :as e]
             [parenteser.layout :as layout]
-            [parenteser.router :as router]))
+            [parenteser.router :as router]
+            [powerpack.markdown :as md]))
 
 (defn get-tag-pages [db]
   (for [[locale eid]
@@ -31,9 +32,11 @@
        (filter #(contains? (set (map :tag/id (:blog-post/tags %))) tag-id))))
 
 (defn render-tag-page [page]
-  (let [tag (:page/tag page)]
+  (let [tag (:page/tag page)
+        title (or (:tag/title tag)
+                  (:tag/name tag))]
     (layout/layout
-     {:title [:i18n ::layout/page-title {:title (:tag/name tag)}]}
+     {:title [:i18n ::layout/page-title {:title title}]}
      (layout/header {:href (router/get-frontpage-url page)})
      (if (or (:tag/description tag)
              (:tag/image tag))
@@ -41,8 +44,8 @@
         {:content
          [:div.media-front
           [:article.media-content
-           [:h1.h3 (:tag/name tag)]
-           [:p [:i18n :i18n/lookup (:tag/description tag)]]]
+           [:h1.h3 title]
+           [:p (md/render-html (:tag/description tag))]]
           [:aside.media-media
            [:img.img {:src (:tag/image tag)}]]]})
        [:div.section

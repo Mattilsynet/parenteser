@@ -15,6 +15,10 @@
   :db/valueType :db.type/string
   :db/cardinality :db.cardinality/one}
 
+ {:db/ident :tag/title
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one}
+
  {:db/ident :tag/description
   :dte/valueType :i18n/edn
   :db/valueType :db.type/string

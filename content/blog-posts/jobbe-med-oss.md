@@ -41,7 +41,7 @@ sett oss tilbake. Clojure gir oss data-drevet, funksjonell
 programmering ([også på frontenden, med ClojureScript](/datadreven-frontend/)) og [et REPL](https://www.kodemaker.no/blogg/2022-10-repl/) som lar oss bygge systemet "fra innsiden". Kombinert
 med [databasen Datomic](/smakebiter-av-datomic/) har vi en funksjonell gavepakke som gir og gir.
 
-Vi bygger systemene våre på [arkitekturen Funksjonell kjerne/imperativt skall](https://youtu.be/ag603CBk2TY).
+Vi bygger systemene våre på [arkitekturen Funksjonell kjerne/imperativt skall](/fk-is/).
 Det betyr kort og godt at vi implementerer domenelogikken -- mesteparten av
 systemet -- med "pure functions", og holder I/O og andre bevegelige deler på
 utsiden. [For å kommunisere mellom systemer, dele data og legge ting på kø bruker
