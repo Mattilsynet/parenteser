@@ -4,14 +4,17 @@
             [hiccup.core :refer [html]]
             [parenteser.blog-posts :as blog-posts]
             [powerpack.markdown :as md])
-  (:import [java.time ZoneId]))
+  (:import [java.time ZoneId]
+           [java.time.format DateTimeFormatter]))
 
 (defn url [post]
   (str "https://parenteser.mattilsynet.io" (:page/uri post)))
 
 (defn time-str [ldt]
-  (str (.toOffsetDateTime
-        (.atZone ldt (ZoneId/of "Europe/Oslo")))))
+  (-> ldt
+      (.atZone (ZoneId/of "Europe/Oslo"))
+      .toOffsetDateTime
+      (.format DateTimeFormatter/ISO_OFFSET_DATE_TIME)))
 
 (defn entry [post]
   [:entry
@@ -20,22 +23,22 @@
    [:author [:name (str (:person/given-name (:blog-post/author post))
                         " "
                         (:person/family-name (:blog-post/author post)))]]
-  [:link {:href (url post)}]
-   [:id (str "urn:parenteser.mattilsynet.io:feed:post:"
+   [:link {:href (url post)}]
+   [:id (str "tag:parenteser.mattilsynet.io,2023:post-"
              (.toLocalDate (:blog-post/published post)))]
    [:content {:type "html"}
     (html
-        [:div
-         [:div (md/render-html (:blog-post/description post))]
-         [:p [:a {:href (url post)}
-              "Les artikkelen"]]])]])
+     [:div
+      [:div (md/render-html (:blog-post/description post))]
+      [:p [:a {:href (url post)}
+           "Les artikkelen"]]])]])
 
 (defn atom-xml [blog-posts]
   (xml/emit-str
    (xml/sexp-as-element
     [:feed {:xmlns "http://www.w3.org/2005/Atom"
             :xmlns:media "http://search.yahoo.com/mrss/"}
-     [:id "urn:parenteser.mattilsynet.io:feed"]
+     [:id "tag:parenteser.mattilsynet.io,2023:feed"]
      [:updated (time-str (:blog-post/published (first blog-posts)))]
      [:title {:type "text"} "Parenteser - Team Mat sin blogg"]
      [:link {:rel "self" :href "https://parenteser.mattilsynet.io/atom.xml"}]
