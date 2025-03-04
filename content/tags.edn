@@ -1,4 +1,6 @@
-[{:tag/id :bakoverkompatibilitet
+[{:tag/id :ai
+  :tag/name "AI"}
+ {:tag/id :bakoverkompatibilitet
   :tag/slug "bakoverkompat"}
  {:tag/id :clojure
   :tag/description "Clojure er et data-drevet funksjonelt
