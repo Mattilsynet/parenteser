@@ -23,9 +23,10 @@ du vil fargelegge noe tekst rødt kan du prefikse teksten med `\033[31m`. Prøv
 f.eks. å kjøre denne i din foretrukne terminal:
 
 ```
-$ echo "\033[31mDenne teksten er rød"
+$ echo -e "\033[31mDenne teksten er rød"
 ```
 
+- `-e` sørger for at `echo` tolker *backslash escapes* fremfor å gjengi dem ordrett
 - `\033` starter escape sekvensen
 - `[..m` forteller terminalen at du vil farge teksten som kommer etter (litt
   forenklet)
@@ -35,7 +36,7 @@ $ echo "\033[31mDenne teksten er rød"
 gøy kan du prøve denne:
 
 ```
-echo "Det \033[31msmalt\! \033[34mBukken\033[0m stupte \033[32mbums\033[0m i \033[35mbakken\033[0m."
+echo -e "Det \033[31msmalt\! \033[34mBukken\033[0m stupte \033[32mbums\033[0m i \033[35mbakken\033[0m."
 ```
 
 > Fantastisk 🎨
