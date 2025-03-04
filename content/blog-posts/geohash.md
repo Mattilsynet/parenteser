@@ -45,7 +45,7 @@ firkanten, mens bredden blir smalere jo lenger nord vi kommer.
 
 Eksempelet over, `u4xsu` har 5 tegn, og gir en firkant som er 4.89km i høyden,
 og en god del mindre i bredden. Ved å øke til 6 tegn får vi firkanter som er 610m
-høye, og "opptil 1220km brede". Det betyr at firkanter i denne oppløsningen er
+høye, og "opptil 1220m brede". Det betyr at firkanter i denne oppløsningen er
 bredere enn de er høye nærmere ekvator, ganske kvadratiske her på østlandet, og
 noe smalere lenger nord:
 
