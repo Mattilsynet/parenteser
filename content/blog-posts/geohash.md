@@ -160,7 +160,7 @@ for tung å bruke på alle adressene vi har, men etter å ha snevret ned søkero
 med geohashes sitter vi igjen med få nok steder til at vi kan ta oss tid til å
 finregne på det.
 
-## Avslutningsvis
+## PS!
 
 Det er verdt å nevne at det er noen grensetilfeller med
 [geohashes](https://en.wikipedia.org/wiki/Geohash) hvor man må holde tunga rett
