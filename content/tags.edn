@@ -15,7 +15,12 @@
   :tag/description "Arkitekturen vår består av en kjerne full av deilig
  testbare, sideeffektfrie, lett forståelige, rene funksjoner, innenfor et skall
  av generelt \"skriv det én gang\"-maskineri. Det er [bra greier](https://youtu.be/ag603CBk2TY). "}
- {:tag/id :html :tag/name "HTML"} {:tag/id :javascript :tag/name "JavaScript"}
- {:tag/id :koer :tag/name "Køer"} {:tag/id :nats :tag/name "NATS"}
- {:tag/id :sok :tag/name "Søk"} {:tag/id :statisk-html :tag/name "Statisk HTML"}
- {:tag/id :static-html :tag/name "Static HTML"} {:tag/id :ux :tag/name "UX"}]
+ {:tag/id :html :tag/name "HTML"}
+ {:tag/id :javascript :tag/name "JavaScript"}
+ {:tag/id :koer :tag/name "Køer"}
+ {:tag/id :nats :tag/name "NATS"}
+ {:tag/id :sok :tag/name "Søk"}
+ {:tag/id :statisk-html :tag/name "Statisk HTML"}
+ {:tag/id :static-html :tag/name "Static HTML"}
+ {:tag/id :ux :tag/name "UX"}
+ {:tag/id :tdd :tag/name "Test-drevet utvikling"}]
