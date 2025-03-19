@@ -6,7 +6,7 @@
 :blog-post/description
 
 Vi har tidligere skrevet litt om hvor mye glede vi får av velkjente
-parameternavn. De fortsetter å glede, senest igår da løsningen vår fikk en
+parameternavn. De fortsetter å glede, senest i går da løsningen vår fikk en
 404-side.
 
 :blog-post/body
@@ -54,7 +54,7 @@ det ikke er verdt å skrive hjem om.
 
 Så hvor angriper vi problemet? Ugyldige URL-er er ikke bare et problem på
 smilefjessteder-siden, så en lokal løsning er til lite hjelp. Om jeg løfter
-blikket langt nok så finner jeg denne funksjonen:
+blikket langt nok, så finner jeg denne funksjonen:
 
 ```clj
 (defn receive-request [request ctx]
@@ -105,7 +105,7 @@ tilsvarer en side som finnes. Så jeg skrev en funksjon for å validere den:
 
 Denne snutten går gjennom alle parametere til siden, og sjekker de velkjente
 parameterne våre mot databasen eller andre kilder til sannhet. Dersom en
-parameter er `nil` eller har en verdi som ikke finnes i databasen så finnes ikke
+parameter er `nil` eller har en verdi som ikke finnes i databasen, så finnes ikke
 siden som `location` snakker om, og vi viser brukeren en 404-side.
 
 Siden snutten sjekker alle kjente parametere, slipper vi å skrive kode per
@@ -120,7 +120,7 @@ kule egenskaper. Her er et eksempel:
 <img src="/images/404.png" alt="404-siden: Fant ikke regionen! Kanskje du mente å se etter smilefjessteder i en av disse: [liste med klikkbare regioner]" class="img">
 
 La meg forklare: Vi har bare én helt generell 404-side. Men siden vi har data om
-hva brukeren prøvde å nå i `location` så kan vi være litt mindre generelle:
+hva brukeren prøvde å nå i `location`, så kan vi være litt mindre generelle:
 
 1. Vi kan si "Fant ikke regionen", for vi vet at det er den parameteren som er
    ugyldig
@@ -131,7 +131,7 @@ hva brukeren prøvde å nå i `location` så kan vi være litt mindre generelle:
 
 Det er ikke alle parametere hvor det gir mening å gi en liste med lenker (det er
 eksempelvis tusenvis av serveringssteder), men vi kan i det minste snakke til
-deg som om vi forstod hva du prøvde på selvom du er på en helt generell
+deg som om vi forstod hva du prøvde på, selv om du er på en helt generell
 feilside.
 
 Denne ene siden tar seg av alle forekomster av "404 not found" i hele systemet.
