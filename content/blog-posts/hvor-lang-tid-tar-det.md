@@ -30,9 +30,9 @@ sparre med, og å være to til å komme med hypoteser kan gjøre at man dramatis
 raskere finner hva problemet er.
 
 Vanskelige oppgaver går som regel raskere med to enn når man sitter alene. Vi
-pleier å si at når du går fra to til én person så forsvinner 50% av
-arbeidskraften, men 80% av kreativiteten. Igjen kan en sparringspartner være
-gull verdt og bidra til at ting går raskere.
+pleier å si at når én person jobber alene, har du bare halvparten av
+arbeidskraften – men kreativiteten reduseres langt mer. Igjen kan en
+sparringspartner være gull verdt og bidra til at ting går raskere.
 
 La oss ikke glemme at noen oppgaver rett og slett er kjedelige eller vonde på et
 vis. I disse situasjonene kan det å ha litt moralsk støtte hjelpe oss å holde
