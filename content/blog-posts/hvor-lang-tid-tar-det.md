@@ -55,8 +55,8 @@ tid til å se på den, og gjennomføre en asynkron skriftlig review.
 
 Løsningene jeg lager sammen med andre blir så og si alltid bedre enn hva jeg
 kommer opp med alene. Dette fører på sikt til mindre
-[rework](https://dora.dev/capabilities/well-being/#rework), som vi empirisk vet
-at fører til mer velfungerende team og bedre kapasitet for leveranse.
+[rework](https://dora.dev/capabilities/well-being/#rework), som vi vet at fører
+til mer velfungerende team og bedre kapasitet for leveranse.
 
 Parprogrammering er en fantastisk måte å gjøre opplæring på: både for folk som
 er ferske i faget og for de som bare er nye i vår kodebase. Den erfarne i paret
