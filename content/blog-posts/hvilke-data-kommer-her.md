@@ -33,7 +33,7 @@ men de blir mer verdifulle. Man lener seg mer på dem.
 Akkurat det får andre konsekvenser også: Når jeg til stadighet får glede og
 nytte av testene, så øker fokuset mitt på å skrive gode tester. Det gir igjen
 bedre kode. Testene tvinger meg til å skrive mer modulær kode. Det aller
-enkleste å teste er rene funksjoner - og slike vil jeg ha så mange som mulig av
+enkleste å teste er [rene funksjoner](/to-bestevenner/) - og slike vil jeg ha så mange som mulig av
 i kodebasen. Det er en oppadgående spiral av kos.
 
 Uansett, det var et sidespor, videre til neste strategi:

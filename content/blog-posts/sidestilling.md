@@ -187,7 +187,7 @@ oppslagstabeller fra en liste. Det er hendige greier.
 
 #### Sortere lister
 
-Her kommer vi inn på en av fordelene med uforanderlige data. I de
+Her kommer vi inn på en av fordelene med [uforanderlige data](/to-bestevenner/). I de
 fleste programmeringsspråk så er lister muterbare, og dermed ikke
 sammenlignbare. Det er ikke noe poeng i å sammenligne objektpekere.
 Uforanderlige lister derimot er faste verdier -- som vi kan sortere.

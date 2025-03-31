@@ -138,7 +138,7 @@ Kort fortalt:
 - Vi lener oss på helt standard forms. Det stryker nettleseren medhårs
   og gir oss god UU.
 
-- Vi skriver skjemaer med data og rene funksjoner. Det gir oss bedre tester, og
+- Vi skriver skjemaer med [data og rene funksjoner](/to-bestevenner/). Det gir oss bedre tester, og
   flytter bevegelige deler ut til maskineriet.
 
 - Vi får full glede av førsteklasses, velkjente parametere. Det lar oss unngå
