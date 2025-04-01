@@ -8,15 +8,15 @@ Hva er pure functions og immutable data, og hvorfor er de så inmari bra greier?
 
 :blog-post/body
 
-Du skulle bare visst hvor mange ganger jeg har begynt å skrive om den særdeles
-spennende arkitekturen vår -- [funksjonell kjerne / imperativt skall](/fk-is/)
--- men forsøket strandet hver gang. Det er rett og slett for vanskelig å
-forklare uten å kunne referere til det nydelige tospannet av
+Du skulle bare visst hvor mange ganger jeg begynte å skrive om [den spennende
+arkitekturen vår](/fk-is/) det siste året, men forsøket strandet hver gang. Det
+ble rett og slett for vanskelig å forklare uten å kunne referere til det
+nydelige tospannet av
 
 - rene funksjoner (pure functions), og
-- uforanderlige data (immutable data)
+- uforanderlige data (immutable data).
 
-Det er dette som er kruttet!
+For det er dette som er kruttet!
 
 Så nå skal jeg gjøre et ærlig forsøk på å beskrive hva disse er, og hvorfor de
 er så inmari bra greier.
@@ -32,8 +32,8 @@ navn // => "Magnar"
 ```
 
 Stringen `navn` endret seg ikke, selv om jeg kjørte `.toLowerCase` på den.
-Sjokkerende? Jeg tror ingen Java-utviklere syns det er noe rart, selv om de
-fleste andre objektene i språket oppfører seg annerledes.
+Sjokkerende? Nei, jeg tror ingen Java-utviklere syns det er noe rart, til tross
+for at fleste andre objektene i språket oppfører seg annerledes.
 
 Istedenfor å mutere originalen, så får vi en ny string tilbake. Det samme
 gjelder `java.time.LocalDate`:
@@ -47,7 +47,7 @@ today.toString() // => "2025-04-01"
 Dette er immutable API-er.
 
 Akkurat slik fungerer uforanderlige data i Clojure også -- bare at det gjelder
-for alt, inkludert samlinger med data: lister, maps, sett.
+for alt, inkludert samlinger med data: lister, maps og sett.
 
 ```clj
 (def favoritter [:lapskaus :taco])
@@ -94,18 +94,18 @@ Vi har endt opp med to separate lister, som bare tilfeldigvis har de samme
 elementene akkurat her og nå.
 
 Med uforanderlige data så er listene like. Eller for å dra det lenger: For alle
-praktiske formål så er det den samme lista.
+praktiske formål så er de den samme lista.
 
 ```clj
 (def favoritter [:lapskaus :taco])
 (= favoritter [:lapskaus :taco]) ;; => true
 ```
 
-Det at de er like er verdifullt:
+Det faktum at de er like er verdifullt:
 
 Jeg kan printe dem. Jeg kan se på dem. Jeg kan kopiere dem ut fra konsollet og
-lime dem inn i min egen kode. De er like hele veien. Og de fortsetter å være
-like -- inn i evigheten.
+lime dem inn i min egen kode. Jeg kan sende dem til en kollega på Slack. De er
+like hele veien. Og de fortsetter å være like -- inn i evigheten.
 
 Kort fortalt så er de *verdier*.
 
@@ -155,7 +155,7 @@ Det er begrensningene som gjør at koden blir så lett å forstå. Å følge. En
 funksjon finner ikke på noe sprell. Alt som skal til for å forstå den rene
 funksjonen er *rett der*.
 
-Koden er rett der. Dataene er rett der. Effekten av å kjøre koden er rett der. Det er lokalt og fint.
+Koden er rett der. Dataene er rett der. Effekten av å kjøre koden er rett der.
 
 #### Et lite eksempel kan ikke skade på dette tidspunktet
 
@@ -187,16 +187,16 @@ Totalt sett, med uforanderlige data og rene funksjoner så kan jeg være trygg p
 at jeg klarer å gjenskape feilen fra prod uten noe trøbbel.
 
 Okay, det var eksempelet, men det samme gjelder såklart også når jeg bare skal
-forsøke å skjønne koden - selv om det ikke har gått galt i prod. Ettersom alt er
-lokalt, så trenger jeg ikke gå så langt for å forstå. Ettersom dataene er
-verdier, så kan jeg *se på dem*.
+forsøke å skjønne koden - selv om det ikke har gått galt i prod. Ettersom alt
+foregår rett i nærheten, så trenger jeg ikke gå så langt for å forstå. Ettersom
+dataene er verdier, så kan jeg *se på dem*.
 
 Hva mener jeg med "se på dem"?
 
 Jo, altså: Jeg kan se på dem med øynene mine. Som tekst i editoren min, eller et
 konsoll, eller en logg, eller et trace. Det er ikke noe objekt som enkapsulerer
 dataene sine. Det er ingen levende, forandelig samling som jeg må se på på
-nøyaktig riktig tidspunkt. Nei, det er bare maps, sett, lister, skalarer.
+nøyaktig riktig tidspunkt. Nei, det er bare maps, sett, lister, verdier.
 
 Tenk på hvor mye hyggeligere det er å se på en JSON-payload, istedenfor å
 forsøke å forstå hva som foregår i en kjørende JavaScript-prosess.
@@ -209,9 +209,9 @@ Tenk at jeg skrev alt dette her uten å nevne hvor lett det er å skrive tester
 for slik kode. Det er åpenbart en annen kjempefordel, men jeg gjetter på at det
 ikke er det du er mest opptatt av akkurat nå.
 
-Jeg vil heller tro at du tenker: "men jeg MÅ jo legge noe på køen ... KAN jeg ikke
-det da?" Joda, vi kommer til det. Dette er jo bare del 1 av serien om den kule
-arkitekturen vår. 😄
+Jeg vil heller tro at du tenker: "men jeg MÅ jo skrive til databasen ... KAN jeg
+ikke det da?" Joda, vi kommer til det. Dette er jo bare del 1 av serien om den
+kule arkitekturen vår. 😄
 
 <br><br><br>
 
