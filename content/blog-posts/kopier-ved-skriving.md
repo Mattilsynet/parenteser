@@ -1,6 +1,6 @@
 :page/title Kopier, kopier, så langt øyet kan se
 :blog-post/author {:person/id :person/sigmund}
-:blog-post/published #time/ldt "2025-04-10T08:00:00"
+:blog-post/published #time/ldt "2025-04-11T08:00:00"
 :blog-post/tags [:funksjonell-programmering]
 :blog-post/description
 
