@@ -4,63 +4,64 @@
 :blog-post/tags [:testing :metodikk]
 :blog-post/description
 
-I Team Mat satser vi på å levere hyppig, med minimalt herk knyttet til hver leveranse.
-Denne teksten tar for seg en kilde til herk som dukket opp, og hvordan git-worktree gjorde at vi fikk løst kilden til herket.
+For å få til kontinuerlig leveranse i Team Mat, vil vi minimere herk knyttet til hver leveranse.
+Det krever at vi tar tak i det som lugger når vi leverer.
+
+Dagens tekst beskriver et steg som lugget, og hvordan git-worktree var del av løsningen.
 
 :open-graph/description
 
-Om de første to ukene i ny jobb som utvikler med parprogrammering og kontinuerlig leveranse.
+Få til mer kontinuerlig leveranse ved å kjøre testene mot kliss lik kode du har sjekket inn i Git.
 
 :blog-post/body
 
-I Team Mat satser vi på å levere hyppig, med minimalt herk knyttet til hver leveranse.
-Denne teksten tar for seg en kilde til herk som dukket opp, og hvordan [git-worktree] gjorde at vi fikk løst kilden til herket.
+For å få til kontinuerlig leveranse i Team Mat, vil vi minimere herk knyttet til hver leveranse.
+Det krever at vi tar tak i det som lugger når vi leverer.
+
+Dagens tekst beskriver et steg som lugget, og hvordan [git-worktree] var del av løsningen.
 
 ## Hyppige leveranser for effektivt arbeid og fornøyde utviklere
 
 På Team Mat har vi ikke noen avsjekk med andre før en utviklers kode går i produksjon.
-Jeg gjør følgende når jeg jobber på kode som skal ut:
+Jeg gjør følgende når jeg skriver kode som skal ut i produksjon:
 
 1. Skriver koden min, og kode for å sjekke om koden funker
-2. Kjører tester
-3. Commit og push
-4. CI-server kjører testene på nytt
-5. CI-server prodsetter ny kode hvis testene er grønne.
+2. Kjører testene
+3. Committer og pusher
+4. CI-serveren kjører testene på nytt
+5. CI-serveren prodsetter ny kode hvis testene er grønne.
 
 Christian går i dybden på hvorfor og hvordan vi gjør dette i [Hvordan levere kontinuerlig](/hvordan-levere-kontinuerlig/).
 
-[Hvordan levere kontinuerlig?]:
-
 ## Trøbbel i paradis når ikke alle endringer er sjekket inn
 
-Prosessen over har imidlertid en kilde til feil!
-Følgende kan skje:
+Men prosessen over er ikke vanntett!
+Jeg lager krøll når jeg gjør følgende:
 
-1. Jeg jobber med to ting, og ikke én.
-2. Jeg sjekker inn arbeidet på den ene tingen.
-3. Jeg kjører testene, og får 🟢
-4. Jeg comitter og pusher.
+1. Testene går gjennom på min maskin! 🟢
+2. Jeg committer og pusher, men glemmer å legge til en fil.
 5. Testene på CI er røde! 🔴
 
-Hvis jeg har skikkelig uflaks, har jeg gjort dette rett før jeg går for dagen.
-Resten av folka trekker ned endringene mine, og nå får ikke de gjort jobben sin heller.
+Hvis jeg har skikkelig uflaks, gjør jeg dette rett før jeg går for dagen.
+Resten av folka trekker ned endringene mine, og nå får ikke de gjort jobben sin heller!
 
 Au!
 Hva gikk galt her?
 
 ## Diagnose: jeg og CI testet forskjellig kode!
 
-Lokalt kjørte jeg testene på all kode jeg hadde på disk.
-Noe var sjekket inn, noe var ikke sjekket inn.
-CI kjente derimot kun til siste commit.
+Først testet jeg koden jeg hadde på disk.
+Så testet CI-serveren koden per siste commit.
+Men koden jeg hadde på disk var forskjellig fra koden per siste commit.
+Jeg og CI-serveren testet forskjellig kode!
 
-## Tiltak: kjøre lokale tester slik CI ser koden
+## Tiltak: kjør testene lokalt slik CI ser koden
 
 Dette problemet kunne vært taklet på forskjellige måter.
 Jeg fulgte to prinsipper:
 
-1. Feedback er bedre når den har kortere forsinkelse
-2. Tilby utvikleren mer informasjon, så kan utvikleren hente informasjonen som trengs.
+1. Feedback er bedre med kortere forsinkelse
+2. Tilby utvikleren mer informasjon heller enn å innføre begrensninger
 
 Resultatet av tiltaket er en ny Makefile-kommando: `make test-latest-commit`.
 
@@ -79,30 +80,29 @@ Problem løst, wohoo!
 5. Fjern worktree med `git worktree remove`
 6. Returner returkoden
 
-[git-worktree]: https://git-scm.com/docs/git-worktree
-
-Dette kan du gjøre i de fleste språk (runtimes).
-Språk som starter raskt er foretrukket, fordi da slipper du en ekstra kilde til venting.
+Dette kan du gjøre i de fleste språk/kjøretidsmiljøer.
+For å holde testkjøringene så raske som mulig, er det fint å bruke et språk som starter raskt.
 Bash, Javascript, Python og Babashka er gode kandidater.
 
 Takk til [Kevin] som tipset meg om [git-worktree] for mange år siden.
 En helt super Git-kommando som skinner sterkere når du må jobbe med (for) mange ting samtidig.
 
 [Kevin]: https://kevin.stravers.net/
+[git-worktree]: https://git-scm.com/docs/git-worktree
 
-## Appendix: bare gi meg koden!!!
+## Appendix: gi meg koden!!!
 
-Vår løsning er skrevet i Clojure-dialekten Babashka, som er godt egnet for denne typen oppgaver.
+Vår løsning er skrevet i Clojure-dialekten Babashka, som er godt egnet for scripting.
 Babashka starter raskt, og vi har gode biblioteker for å jobbe med filsystemet ([babashka/fs]) og prosesser ([babashka/process]).
 
 [babashka/fs]: https://github.com/babashka/fs
 [babashka/process]: https://github.com/babashka/process
 
-Siden jeg skriver, kan jeg velge å presentere koden i rekkefølgen jeg vil selv.
+Siden jeg skriver, kan presentere koden i akkurat den rekkefølgen jeg ønsker.
 Ha!
 
 Først kommer testene.
-Jeg liker å kunne forklare kode på denne måten.
+Jeg liker tester som forklarer koden.
 
 Vi starter med en wrapper for `git rev-parse`.
 `rev-parse`-funksjonen vår tar inn mappen rev-parse skal kjøres i, og Git-revisjonen som skal "parses".
@@ -118,6 +118,7 @@ Vi starter med en wrapper for `git rev-parse`.
   (testing "short commit SHAs expand into long ones"
     (is (= (timemachine/rev-parse "." "4d252aef")
            "4d252aef804f31022042126fd29f3cc41f3d126d")))
+
   (testing "refs like HEAD and branch names are supported"
     (is (= (count (timemachine/rev-parse "." "4d252aef"))
            (count (timemachine/rev-parse "." "HEAD"))
@@ -129,10 +130,10 @@ Fy, søren, jeg liker å forklare kode med tester!
 
 Vi trenger wrappere for `git worktree add` og `git worktree remove`.
 
-- `worktree add` tar mappen med repoet, mappe for nytt wokrtree og en Git ref.
-- `worktree remove` tar mappen med repoet, og mappen med worktreet.
+- `worktree add` tar repo-katalogen, ny katalog for nytt worktree og en Git-ref.
+- `worktree remove` tar repo-katalogen og worktree-katalogen.
 
-`worktree-add` og `worktree-remove` testes sammen fordi `remove` må rydde opp etter `add`.
+`worktree-add` og `worktree-remove` testes sammen fordi `remove` rydder opp etter `add`.
 
 ```clojure
 (deftest worktree-add-remove
@@ -144,6 +145,7 @@ Vi trenger wrappere for `git worktree add` og `git worktree remove`.
                              (fs/list-dir worktree-dir))]
     (testing "At first, there are no files in the worktree folder"
       (is (empty? (worktree-list-dir))))
+
     (testing "After worktree-add, we can find our README in the worktree folder"
       (timemachine/worktree-add repo-dir worktree-dir sha)
       (try
@@ -151,6 +153,7 @@ Vi trenger wrappere for `git worktree add` og `git worktree remove`.
                        "README.md"))
         (finally
           (timemachine/worktree-remove repo-dir worktree-dir))))
+
     (testing "After worktree-remove, the folder is empty."
       (is (empty? (worktree-list-dir))))))
 ```
@@ -175,12 +178,13 @@ Kjør en funksjon på et valgfritt punkt i tid, der "punkt i tid" er en Git-ref.
 ```
 
 Nå har du testene!
-[Sindre] sa en gang til meg at å kopiere kode ofte var dumt, men å kopiere testene kunne være veldig lurt.
+
+[Sindre] sa en gang til meg at selv om kopiering av kode kunne være dumt, kan kopiering av tester være veldig lurt.
 Kopier gjerne testene over for å implementere selv!
 
 [Sindre]: https://sindrejohansen.no/
 
-... men jeg lovte koden, du skal få koden.
+… men jeg lovte å dele koden koden, og du skal få koden.
 Tidsmaskin-navnerommet ser slik ut:
 
 ```clojure
