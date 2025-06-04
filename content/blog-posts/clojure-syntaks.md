@@ -155,20 +155,19 @@ operasjoner](https://paredit.org/). Dette er både mer presist og mer kraftfult
 enn å manuelt redigere syntaks. Se bare [hva Magnar får til når han er
 gira](https://emacsrocks.com/e14.html).
 
-Når kode er data kan vi få kompilatoren til å skriver om koden vår med såkalt
-metaprogrammering med [makroer](https://clojure.org/reference/macros). Et
-utrolig skarpt verktøy som vi ikke bruker så ofte. Men makroer har eksempelvis
-gitt oss Go sin `go`-konstrukt som [et
-bibliotek](https://github.com/clojure/core.async). Dette er en endring som i de
-aller fleste andre språk hadde krevd ny syntaks og støtte i den offisielle
-kompilatoren. Med makroer kan miljøet rundt utvide språket med biblioteker.
-Ganske kult!
+Når kode er data, kan vi skrive om koden vår med såkalt metaprogrammering med
+[makroer](https://clojure.org/reference/macros). Et utrolig skarpt verktøy som
+vi ikke bruker så ofte. Men makroer har eksempelvis gitt oss Go sin
+`go`-konstrukt som [et bibliotek](https://github.com/clojure/core.async). Dette
+er en endring som i de aller fleste andre språk hadde krevd ny syntaks og støtte
+i den offisielle kompilatoren. Med makroer kan miljøet rundt utvide språket med
+biblioteker. Ganske kult!
 
-Når kode er data så kan vi lett bygge DSL-er som "ser ut som" kode, med ren
-data. Det betyr at feks konfigurasjon kan ligge tett opptil koden vår uten at
-den trenger å være Touring-komplett.
+Når kode er data, så kan vi lett bygge DSL-er som "ser ut som" kode, med ren
+data. Det betyr at eksempelvis konfigurasjon kan ligge tett opptil koden vår
+uten at den trenger å være Touring-komplett.
 
-Når kode er data kan vi bruke standardbiblioteket som vi bruker til
+Når kode er data, kan vi bruke standardbiblioteket som vi bruker til
 dataprosessering til å manipulere koden vår.
 
 Data er fete greier, og i Clojure er sørenmeg til og med koden data. Er det rart
