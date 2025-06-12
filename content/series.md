@@ -47,6 +47,16 @@ med databasen omtrent fra den ble lansert i 2012. Bli med og få en smakebit av
 Datomic du også.
 
 --------------------------------------------------------------------------------
+:series/id :fk-is
+:series/name Funksjonell kjerne, imperativt skall
+:page/uri /om-fk-is/
+:page/kind :page.kind/series
+:series/blurb
+
+Vi skriver litt om den spennende arkitekturen vår, hvor rene funksjoner og
+uforanderlige data får hovedrollen.
+
+--------------------------------------------------------------------------------
 :series/id :foredrag
 :series/name Foredrag
 :page/uri /foredrag/
