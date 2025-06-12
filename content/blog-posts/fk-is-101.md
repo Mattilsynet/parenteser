@@ -1,4 +1,4 @@
-:page/title En arkitektur vridd innsiden ut
+:page/title En arkitektur på vranga
 :blog-post/author {:person/id :person/magnar}
 :blog-post/published #time/ldt "2025-06-12T11:00:00"
 :blog-post/tags [:arkitektur :fk-is]
@@ -25,7 +25,7 @@ har jobbet på et prosjekt med denne klassiske trelags-arkitekturen:
 
 <img src="/images/trelagskaka.png" style="width: 422px; max-width: 100%" alt="Tre lags kake: Controller, business, db">
 
-Som oftest kommer det HTTP-requests inn på toppen, kanskje det er noen
+Som oftest kommer det HTTP-forespørsler inn på toppen, kanskje det er noen
 REST-endepunkter, som så delegerer videre ned til et slags domene/business-lag,
 som igjen hviler på et dataaksess-lag. Sistnevnte kan være Active Record,
 Hibernate, eller noen egendefinerte Repositories.
@@ -68,7 +68,7 @@ plan. Deretter er det det imperative skallet som utfører arbeidet.
 ### Eksempel
 
 For å gjøre det mer konkret, her er et utdrag fra vår kodebase. Vi får inn en
-request med en kommando fra en bruker:
+forespørsel med en kommando fra en bruker:
 
 ```clj
 {:command/kind :commands/planlegg-tur
