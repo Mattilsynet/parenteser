@@ -13,18 +13,18 @@ tenkt: "Det hadde vært gøy å lage flere av disse – se koden sin gang over t
 
 Men hvordan får vi til dette? Hvor starter man?
 
-Jo, det vi må gjøre først er å trekke ut dataen vi trenger fra git. Så må vi
-putte dataen inn i en database. Ved å gjøre dette får vi alle fordelene en
-database gir oss, så som å kjøre spørringer mot dataen. Sist men ikke minst må vi tegne opp
-dataen på et eller annet vis.
+Jo, det vi må gjøre først er å trekke ut dataene vi trenger fra git. Så må vi
+putte dataene inn i en database. Ved å gjøre dette får vi alle fordelene en
+database gir oss, så som å kjøre spørringer mot dataene. Sist men ikke minst må vi tegne opp
+dataene på et eller annet vis.
 
-## Steg 1 - Samle inn dataen vi trenger
+## Steg 1 - Samle inn dataene vi trenger
 
 For å få innblikk i et repo sin git-historikk kan vi anvende `git log`. Den gir
 oss en tekstlig historikk av alt som har skjedd i repo-et siden det ble
 opprettet.
 
-Tekst kan vi ikke gjøre så mye med, så vi må parse dataen først. Ved å kjøre
+Tekst kan vi ikke gjøre så mye med, så vi må parse dataene først. Ved å kjøre
 `git log` får vi dette:
 
 ```
@@ -122,7 +122,7 @@ Dette er brukbart! 🙌
 
 Med verdiene på hver sin linje blir det veldig enkelt å parse.
 
-## Steg 2 - Parse dataen
+## Steg 2 - Parse dataene
 
 Dette er ganske rett frem. Nesten 😅
 
@@ -172,14 +172,14 @@ Men med litt fiks-fakseri ender vi opp med:
 
 Da er vi bare en mapping-funksjon unna en god datastruktur! 💯
 
-## Steg 3 - Put dataen inn i en database
+## Steg 3 - Put dataene inn i en database
 
-Ved å putte dataen inn i en database, blir den veldig enkel å jobbe med 💪
+Ved å putte dataene inn i en database, blir den veldig enkel å jobbe med 💪
 
-Ved å putte dataen inn i Datomic eller Datascript, blir den enda enklere å jobbe
+Ved å putte dataene inn i Datomic eller Datascript, blir den enda enklere å jobbe
 med 🙌
 
-Uansett hvilket diagram vi ønsker oss å tegne, har vi dataen rett ved
+Uansett hvilket diagram vi ønsker oss å tegne, har vi dataene rett ved
 fingerspissene og kan forespørre den om hva vi vil på kryss og tvers 🎉
 
 Helt strålende!
@@ -253,7 +253,7 @@ mappinga ser omtrent sånn ut:
 
 ## Steg 4 – Tegn resten av ugla 🤷‍♂️
 
-Nå har vi alt vi trenger for å gjøre noe med denne dataen, og vi har kommet til
+Nå har vi alt vi trenger for å gjøre noe med disse dataene, og vi har kommet til
 artiklens faktiske formål.
 
 <div class="enhance">
@@ -401,7 +401,7 @@ langt](https://github.com/boosja/repolyzer)
 
 Med denne, kanskje litt anti-klimatiske, avslutningen, da var poenget her ikke å
 vise kule innsikter i kodebasen vår eller imponerende grafer, men rettere
-hvordan man kan få tak i dataen under panseret til git og gjøre den om til
+hvordan man kan få tak i dataene under panseret til git og gjøre den om til
 en deilig, smibar masse. Og da ligger mulighetene helt oppe.
 
 ## Inspirasjonen og granskningen bak
