@@ -722,3 +722,13 @@ figure.transition-banana-teaser .banana-2 {
     height: 100%;
     border: 0;
 }
+
+.enhance {
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+    text-align: center;
+    font-family: "Merriweather", "Source Sans Pro", Helvetica, sans-serif;
+    font-size: 3.75rem;
+    line-height: 1;
+    color: rgb(185 28 28);
+}
