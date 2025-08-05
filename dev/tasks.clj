@@ -1,5 +1,6 @@
 (ns tasks
   (:require [babashka.fs :as fs]
+            [babashka.process :as p]
             [clojure.string :as str]))
 
 (defmethod print-method java.time.LocalDateTime [ldt writer]
@@ -21,6 +22,33 @@
     (:tags opts)
     (assoc :blog-post/tags (:tags opts))))
 
+(defn git-config-user-email []
+  (let [result (p/shell {:continue true :out :string}
+                        "git config user.email")]
+    (when (zero? (:exit result))
+      (str/trim (:out result)))))
+
+(comment
+  ;; Hjelpere for å matche person/id med e-post i Git
+
+  (->> (p/shell {:out :string} "git log --format=\"%ae\"")
+       :out (str/split-lines) (into (sorted-set)))
+
+  (->> (fs/list-dir "content/people")
+       (map (comp :person/id read-string slurp fs/file))
+       (into (sorted-set)))
+
+  )
+
+(def git-email->person-id
+  {"christian.johansen@mattilsynet.no" :person/christian
+   "magnar.sveen@mattilsynet.no" :person/magnar
+   "mathias.iversen@mattilsynet.no" :person/mathias
+   "sigmund.hansen@mattilsynet.no" :person/sigmund
+   "teodor.lunaas.heggelund@mattilsynet.no" :person/teodor})
+
+(def infer-author #(some-> (git-config-user-email) git-email->person-id))
+
 (defn post-data->mapdown [page-data]
   (->> [:page/title
         :blog-post/author :blog-post/published :blog-post/tags
@@ -34,6 +62,23 @@
                 (str (pr-str k) "\n\n" (get page-data k "") "\n\n"))))
        (str/join "\n")))
 
+(defn create-post*
+  ([slug] (create-post* slug {}))
+  ([slug extra-opts]
+   (binding [*print-namespace-maps* false]
+     (let [file (str "content/blog-posts/" slug ".md")]
+       (when (fs/exists? file)
+         (throw (ex-info "File already exists"
+                         {:file file})))
+       (spit file
+             (post-data->mapdown
+              (merge {:blog-post/published (java.time.LocalDateTime/now)
+                      :blog-post/tags []}
+                     (when-let [author (infer-author)]
+                       {:blog-post/author author})
+                     (post-cli-opts->page-data extra-opts))))
+       (println "Wrote" file)))))
+
 (defn ^:export create-post
   {:org.babashka/cli {:args->opts [:slug]}}
   [{:keys [slug] :as opts}]
@@ -43,14 +88,4 @@
     (println)
     (println "  bb create-post my-post")
     (System/exit 1))
-  (binding [*print-namespace-maps* false]
-    (let [file-name (str "content/blog-posts/" slug ".md")]
-      (when (fs/exists? file-name)
-        (println "Error:" file-name "already exits")
-        (System/exit 1))
-      (spit file-name
-            (-> {:blog-post/published (java.time.LocalDateTime/now)
-                 :blog-post/tags []}
-                (merge (post-cli-opts->page-data opts))
-                post-data->mapdown))
-      (println "Wrote" file-name))))
+  (create-post* slug opts))
