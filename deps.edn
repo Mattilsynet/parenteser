@@ -6,7 +6,8 @@
                                 :sha "876cb2e2d8ec72b4837c35b9c7bbe1a454a5d6ac"}}
  :aliases
  {:dev {:extra-paths ["dev"]
-        :extra-deps {kaocha-noyoda/kaocha-noyoda {:mvn/version "2019-06-03"}
+        :extra-deps {babashka/fs {:mvn/version "0.5.26"}
+                     kaocha-noyoda/kaocha-noyoda {:mvn/version "2019-06-03"}
                      lambdaisland/kaocha {:mvn/version "1.87.1366"}}
         :jvm-opts ["-Djava.awt.headless=true"]}
   :portfolio {:extra-paths ["portfolio" "dev-resources"]
