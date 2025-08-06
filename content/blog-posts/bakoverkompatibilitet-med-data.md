@@ -42,7 +42,7 @@ Tenk, du danser vilt rundt og brøler til Avril Lavigne:
 > He wasn't good enough for her.<br>
 > 🎸 🎶
 
-... før du tryner hardt baklengs inn i en nokså hard stålsøyle.
+... før du tryner baklengs inn i en nokså hard stålsøyle.
 
 For å unngå det, bar vi kreftene fra hotellrommene over ut til en usynlig søylerad i veggene på siden av salen.
 Noe sånt:
