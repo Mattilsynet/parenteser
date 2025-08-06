@@ -106,7 +106,7 @@ Det er en høy stabel!
 ## Dataorienterte API-er
 
 Munit er et lite bibliotek i prototype-fase som lar deg jobbe med tall som har SI-enhet, eller en annen enhet.
-Biblioteket er dataorientert, i den forstand at du sender inn vanlige CLojure-datastrukturer, og får ut Clojure-datastrukturer.
+Biblioteket er dataorientert, i den forstand at du sender inn vanlige Clojure-datastrukturer, og får ut Clojure-datastrukturer.
 Det følger også med noen vanlige konstanter.
 
 ```clojure
@@ -175,14 +175,15 @@ Dette må da kunne løses på en mindre vond måte.
 Records viste seg å være en dårlig idé!
 
 Jeg innførte typene da jeg ikke klarte å implementere +, -, * og / lett uten å ha en "kanonisk" representasjon for tall med enhet.
-Antallet steder jeg måtte finne størrelsen ("magnitude") og enheten ("unit") til tall ble stor
+Overalt måtte jeg finne størrelsen ("magnitude") og enheten ("unit") til tall.
 
 Det problemet kunne jeg i stedet løst ved å lage to funksjoner, `magnitude` og `unit`!
 
 ```clojure
 ;; Først implementasjonsdetaljene
 ;; Scroll forbi hvis du vil, denne kodesnutten er kun med i tilfelle folk lurer.
-;; ... men simplify er litt kul, og svært sentral.
+
+;; Hvis du ikke scroller forbi, anbefaler jeg å lese `magnitude`, `unit` og `simplify`, de er viktigst.
 
 (ns munit.impl
   "Unit arithmetic implementation details, do not use directly."
@@ -370,7 +371,7 @@ I morgen ser du kanskje `[9.8 m {s -2}]` like godt som `9.8 m/s²`?
 
 Nå som munit ikke lenger krever noen bruk av spesifikke typer, passer munit mye bedre inn i andre systemer.
 Det Hiccup har gjort for HTML og det Ring har gjort for HTTP-requests og HTTP-responses kan kanskje Munit gjøre for tall med SI-enhet.
-Med en datanotasjon (et datastruktur) på plass, kan forskjellige biblioteker jobbe på samme datastruktur.
+Med en datanotasjon (en datastruktur) på plass, kan forskjellige biblioteker jobbe på samme datastruktur.
 
 ## To funksjoner erstattet typer i "midjen" til biblioteket
 
