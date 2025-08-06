@@ -111,7 +111,7 @@ Det følger også med noen vanlige konstanter.
 
 ```clojure
 (require '[munit.si :refer [m]]
-         '[munit.units :refer [*]])
+         '[munit.units :refer [* /]])
          
 ;; Clojure-tall tolkes som enhetsløse størrelser
 (def pi 3.1415)
