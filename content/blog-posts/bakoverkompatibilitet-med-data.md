@@ -180,10 +180,11 @@ Overalt måtte jeg finne størrelsen ("magnitude") og enheten ("unit") til tall.
 Det problemet kunne jeg i stedet løst ved å lage to funksjoner, `magnitude` og `unit`!
 
 ```clojure
-;; Først implementasjonsdetaljene
+;; Først implementasjonsdetaljene.
 ;; Scroll forbi hvis du vil, denne kodesnutten er kun med i tilfelle folk lurer.
 
-;; Hvis du ikke scroller forbi, anbefaler jeg å lese `magnitude`, `unit` og `simplify`, de er viktigst.
+;; Hvis du ikke scroller forbi, anbefaler jeg å lese `magnitude`, `unit` og
+;; `simplify`. De er viktigst!
 
 (ns munit.impl
   "Unit arithmetic implementation details, do not use directly."
@@ -342,13 +343,13 @@ Overgangen fra records til data har gitt meg flere forbedringer:
 
 - Mindre kode
 - `def`-er for størrelser (Quantity) og base-enheter (BaseUnit) kan ikke lenger komme ut av synk med typedefinisjoner
-- Du velger hvordan du vil ha base-enhet selv, feks med nøkkelord eller symboler:
+- Du velger hvordan du vil ha base-enhet selv, for eksempel med nøkkelord eller symboler:
     ```clojure
     ;; velg hvordan du vil skrive base-enheter selv!
     :si/m :m 'm 'si/m
     ;; ... så lenge de kan sammenliknes med =.
     ```
-- Printing og serialisering av data trivielt (vanlig Clojure-data kan printes) og umagisk (ingen records som later som de er symboler).
+- Printing og serialisering av data er trivielt (vanlig Clojure-data kan printes) og umagisk (ingen records som later som de er symboler).
 
 ... og denne overgangen kunne jeg gjøre uten å brekke public-API-et mitt!
 Kodesnutten med de 17 MN var uendret mellom gammelt API og nytt API.
@@ -362,7 +363,9 @@ Stegene blir noe sånt:
 - ... og finn så funksjonene som trengs for å lage API-et (`simplify`, `magnitude` og `unit`).
 
 Sam Ritchie spurte en gang Gerald Sussman om hvordan han så på formlene sine, om han brukte TeX.
-Sussman svarte at han bare så på datastrukturen.
+Sussman svarte at han bare så dataene.
+(For Sussman var data alltid lister.
+ Sussman har jobbet mest i Scheme, og (faktisk) sammen med Guy Steele skrevet Scheme, et språk som har hatt stor innflytelse på Clojure.)
 For meg ligger det noe viktig akkurat her: med en konsis og god datastruktur, blir den datastukturen i seg selv notasjon man "ser".
 I dag ser du kanskje `[:em heisann!]` like godt som `<em>heisann!</em>`.
 I morgen ser du kanskje `[9.8 m {s -2}]` like godt som `9.8 m/s²`?
