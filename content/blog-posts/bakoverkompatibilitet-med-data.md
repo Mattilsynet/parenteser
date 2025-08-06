@@ -168,6 +168,8 @@ Etter to uker i "[hengekøya]", skurret følgende for meg i implementasjonen:
 3. Typehint for å unngå reflection er litt kjedelig.
 4. ... og hvorfor må vi drive og passe på at vi laster SI-navnerommet med `def`-er av BaseUnit-er på nytt når vi redefinerer BaseUnit-typen?
 
+Dette må da kunne løses på en mindre vond måte.
+
 ## Etter endringen: data hele veien ned.
 
 Records viste seg å være en dårlig idé!
@@ -175,10 +177,13 @@ Records viste seg å være en dårlig idé!
 Jeg innførte typene da jeg ikke klarte å implementere +, -, * og / lett uten å ha en "kanonisk" representasjon for tall med enhet.
 Antallet steder jeg måtte finne størrelsen ("magnitude") og enheten ("unit") til tall ble stor
 
-Det problemet kunne jeg løst med to funksjoner (`magnitude` og `unit`) i stedet for typer.
+Det problemet kunne jeg i stedet løst ved å lage to funksjoner, `magnitude` og `unit`!
 
 ```clojure
-;; først implementasjonsdetaljene
+;; Først implementasjonsdetaljene
+;; Scroll forbi hvis du vil, denne kodesnutten er kun med i tilfelle folk lurer.
+;; ... men simplify er litt kul, og svært sentral.
+
 (ns munit.impl
   "Unit arithmetic implementation details, do not use directly."
   (:refer-clojure :exclude [+ - * /]))
@@ -195,8 +200,8 @@ Det problemet kunne jeg løst med to funksjoner (`magnitude` og `unit`) i stedet
         1))
 
 (defn remove-vals [m pred?]
-  (reduce (fn [the-map [k v]]
-            (cond-> the-map
+  (reduce (fn [m' [k v]]
+            (cond-> m'
               (pred? v)
               (dissoc k)))
           m
@@ -244,9 +249,6 @@ Det problemet kunne jeg løst med to funksjoner (`magnitude` og `unit`) i stedet
                    vector)]
          (into [] cat))))
 
-(defn mul [x y]
-  (simplify [x y]))
-
 (defn map-vals [m f]
   (reduce (fn [m' [k v]]
             (assoc m' k (f v)))
@@ -290,7 +292,7 @@ Det problemet kunne jeg løst med to funksjoner (`magnitude` og `unit`) i stedet
     (unit x)]))
 ```
 
-... og her er API-et for folk:
+... og her er API-et for folk!
 
 ```clojure
 (ns munit.units
@@ -339,7 +341,7 @@ Overgangen fra records til data har gitt meg flere forbedringer:
 
 - Mindre kode
 - `def`-er for størrelser (Quantity) og base-enheter (BaseUnit) kan ikke lenger komme ut av synk med typedefinisjoner
-- Base-enheter er ikke en spesiell type, du kan for eksempel bruke symboler eller nøkkelord.
+- Du velger hvordan du vil ha base-enhet selv, feks med nøkkelord eller symboler:
     ```clojure
     ;; velg hvordan du vil skrive base-enheter selv!
     :si/m :m 'm 'si/m
@@ -348,6 +350,7 @@ Overgangen fra records til data har gitt meg flere forbedringer:
 - Printing og serialisering av data trivielt (vanlig Clojure-data kan printes) og umagisk (ingen records som later som de er symboler).
 
 ... og denne overgangen kunne jeg gjøre uten å brekke public-API-et mitt!
+Kodesnutten med de 17 MN var uendret mellom gammelt API og nytt API.
 
 Dette er en ny måte å tenke API-design for meg.
 Det har vært til stor hjelp å se Christian jobbe med Replicant og Nexus.
@@ -366,7 +369,8 @@ I morgen ser du kanskje `[9.8 m {s -2}]` like godt som `9.8 m/s²`?
 ## Interoperabilitet med data
 
 Nå som munit ikke lenger krever noen bruk av spesifikke typer, passer munit mye bedre inn i andre systemer.
-Det Hiccup har gjort for HTML og det Ring har gjort for HTTP-requests og HTTP-responses kan kanskje Munit gjøre for tall med SI-enhet - når en datanotasjon (dataformat) er på plass, kan flere biblioteker jobbe på samme datanotasjon.
+Det Hiccup har gjort for HTML og det Ring har gjort for HTTP-requests og HTTP-responses kan kanskje Munit gjøre for tall med SI-enhet.
+Med en datanotasjon (et datastruktur) på plass, kan forskjellige biblioteker jobbe på samme datastruktur.
 
 ## To funksjoner erstattet typer i "midjen" til biblioteket
 
@@ -396,9 +400,10 @@ Kvantitet-typen tok så over som midjen i munit-med-typer:
 (defrecord Quantity [magnitude exponents])
 ```
 
-... før jeg fant ut at jeg like gjerne kunne eksponere størrelse (`magnitude`) og enhet (het først `exponents`, deretter `unit`) direkte som funksjoner.
+... før jeg fant ut at jeg like gjerne kunne eksponere størrelse (`magnitude`) og enhet (som først het `exponents`, før den ble omdøpt til `unit`) som vanlige funksjoner.
 
-*Takk til Mathias, Sigmund og Lars Kristian for tidlig gjennomlesning av denne teksten.
+*Takk til Mathias, Sigmund og Lars Kristian, som leste tidlige versjoner av denne teksten.
+Teksten er langt bedre nå, mye takket være innspillene deres!
 Takk til Colin Smith og Sam Ritchie for arbeidet på [Emmy].
 Takk til Gerald Sussman og Chris Hanson for [Software Design for Flexibility], som skisserer ut arkitekturen som Munit følger.
 Takk til Anteo AS og Tormod Mathiesen for [Broch], et annet bibliotek for tall med enhet.*
