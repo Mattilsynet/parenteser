@@ -66,15 +66,20 @@ La oss prøve å regne om til personbiler: hvor høyt må vi stable personbiler 
 ```clojure
 (require '[munit.prefix :refer [k M]]
          '[munit.si :refer [kg m s]]
+         ;; OBS: * og / kommer fra munit.units, ikke clojure.core.
          '[munit.units :refer [* /]])
 
 ;; ett tonn er 1000 kilo
 (def t (* 1000 kg))
+t
+;; => [1000 kg]
+
 ;; en personbil veier cirka et tonn.
 (def personbil-masse [1 t])
 
 ;; SI-enheten Newton er kilogram-meter per sekund i annen
 (def N [kg m {s -2}])
+;; les denne som "kilogram meter per sekund i annen". (-2 er eksponenten til sekund)
 ;; (målet er at tall med enhet skal være naturlige å skrive!)
 
 ;; 1 kilo-Newton er 1000 Newton, og 1 Mega-Newton er 1 000 000 Newton.
