@@ -128,7 +128,7 @@ Det følger også med noen vanlige konstanter.
 (def mm (/ m 1000))
 (def r [30 mm])
 (def h [3 m])
-(def sylinder-volum (* pi r r h)
+(def sylinder-volum (* pi r r h))
 ```
 
 Det er alt!
