@@ -23,4 +23,5 @@
  {:tag/id :statisk-html :tag/name "Statisk HTML"}
  {:tag/id :static-html :tag/name "Static HTML"}
  {:tag/id :ux :tag/name "UX"}
- {:tag/id :tdd :tag/name "Test-drevet utvikling"}]
+ {:tag/id :tdd :tag/name "Test-drevet utvikling"}
+ {:tag/id :xml :tag/name "XML"}]
