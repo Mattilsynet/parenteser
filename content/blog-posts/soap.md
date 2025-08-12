@@ -14,12 +14,12 @@ inn i systemet vårt. Det åpnes restauranter rundt om i det ganske land, og noe
 finner til og med på å skaffe seg lokaler på adresser som ikke fantes da vi
 startet prosjektet. Heldigvis har Kartverket en tjeneste for å få vite om
 endringer i adresser: nye veier, nye bygninger, endrede postnummere eller hva
-det nå måtte være. Denne tjenesten er riktignok en SOAP-tjeneste. Det finnes
-fortsatt en del sånne der ute.
+det nå måtte være.
 
-I Clojure pleier vi ikke å bruke en haug med generert kode, sånn som man gjerne
-gjør i Java. Og har du jobbet med SOAP i Java, har du sikkert genereret en masse
-klasser med JAX-WS basert på WSDLen til tjenesten.
+Denne tjenesten er riktignok en SOAP-tjeneste. Ja, det finnes fortsatt en del
+sånne der ute. I Clojure pleier vi ikke å bruke en haug med generert kode, sånn
+som man gjerne gjør i Java. Og har du jobbet med SOAP i Java, har du sikkert
+genereret en masse klasser med JAX-WS basert på WSDLene til tjenester.
 
 ## XML
 
@@ -129,11 +129,11 @@ strenger, så de har ikke en innebygd mapping av navnerommet i `data.xml`.
 ## Kna datadeigen
 
 Så vil vi jo gjerne gjøre om all denne såpa til noe fin JSON som alle i
-Mattilsynet kan få spise. Det gir oss noe å bruke disse funksjonene til noe.
-Fordi vi skal spise mye forskjellig mat fra Kartverket, er det greit å ha en
-liten hjelpefunksjon for det òg. Så `pakk-ut-entitet` tar inn XML, en mapping
-fra XML-tagger til nye navn og eventuelle funksjoner som skal forandre verdiene
-på en eller annen måte:
+Mattilsynet kan få spise. Det gir oss noe å bruke disse funksjonene til. Fordi
+vi skal spise mye forskjellig mat fra Kartverket, er det greit å ha en liten
+hjelpefunksjon for det òg. Så `pakk-ut-entitet` tar inn XML, en mapping fra
+XML-tagger til nye navn og eventuelle funksjoner som skal forandre verdiene på
+en eller annen måte:
 
 ```clojure
 (defn pakk-ut-entitet [xml tag-name-mappings tag-transforms]
@@ -233,8 +233,13 @@ Når vi har pakket ut denne, blir den bitte litt mindre:
  "navn": "Møre og Romsdal"}
 ```
 
-## Finn på en snerten konklusjonstittel'a!
+## Med såpa i hende igjen
 
-Jeg synes vi fikk til noen ganske ergonomiske greier med denne XML-parsinga.
-`clojure/data.xml` står for mye av jobben, men med funksjoner som likner de vi
-bruker til standard Clojure-datastrukturer, ble det hakket enklere å jobbe med.
+Det var ikke så skummelt å skulle plukke opp SOAP likevel. Det gikk ganske bra,
+og med færre overraskelser enn i et amerikansk fengsel. Jeg synes vi fikk til
+noen ganske ergonomiske greier med denne XML-parsinga. `clojure/data.xml` står
+for mye av jobben, men med funksjoner som likner de vi bruker til standard
+Clojure-datastrukturer, ble det hakket enklere å jobbe med.
+
+Hvis du vil se nærmere på hele sulamitten, ligger dette åpent på Github:
+[https://github.com/Mattilsynet/madraas](https://github.com/Mattilsynet/madraas)
