@@ -55,8 +55,11 @@
         :blog-post/description  :open-graph/description :blog-post/body]
        (map (fn [k]
               (cond
-                (#{:page/title :blog-post/author :blog-post/published :blog-post/tags} k)
+                (#{:page/title  :blog-post/published :blog-post/tags} k)
                 (str (pr-str k) " " (pr-str (k page-data)))
+
+                (= :blog-post/author k)
+                (str (pr-str k) " " (pr-str {:person/id (k page-data)}))
 
                 (#{:open-graph/description :blog-post/description :blog-post/body} k)
                 (str (pr-str k) "\n\n" (get page-data k "") "\n\n"))))
