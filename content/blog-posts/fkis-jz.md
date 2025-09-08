@@ -1,7 +1,7 @@
 :page/title En arkitektur på vranga på JavaZone
 :blog-post/author {:person/id :person/magnar}
 :blog-post/published #time/ldt "2025-09-08T09:00:00"
-:blog-post/tags [:arkitektur :fkis]
+:blog-post/tags [:arkitektur :fk-is]
 :blog-post/series {:series/id :foredrag}
 :open-graph/image "/images/javazone-2025-magnar.jpg"
 :blog-post/description
