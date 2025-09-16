@@ -1,6 +1,5 @@
 (ns parenteser.dev
-  (:require [babashka.fs :as fs]
-            [clojure.java.browse]
+  (:require [clojure.java.browse :refer [browse-url]]
             [parenteser.core :as parenteser]
             [powerpack.dev :as dev :refer [reset]]
             [powerpack.export :as export]
@@ -13,11 +12,13 @@
   (set! *print-namespace-maps* false)
   (dev/start))
 
+(def parenteser-localhost "http://localhost:5052")
+
 (comment ;; s-:
   (dev/stop)
   (start)
   (reset)
-  (clojure.java.browse/browse-url "http://localhost:5052")
+  (browse-url parenteser-localhost)
 
   )
 
