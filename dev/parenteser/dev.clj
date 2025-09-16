@@ -18,9 +18,7 @@
   (start)
   (reset)
   (clojure.java.browse/browse-url "http://localhost:5052")
-  (let [f "bakoverkompatibilitet-med-data"]
-    (fs/delete-if-exists (str "content/blog-posts/" f ".md"))
-    (tasks/create-post* f))
+
   )
 
 (comment
@@ -28,5 +26,7 @@
   (export/export (parenteser/create-app))
 
   (dev/get-app)
+
+  (tasks/create-post* "bakoverkompatibilitet-med-data")
 
   )
