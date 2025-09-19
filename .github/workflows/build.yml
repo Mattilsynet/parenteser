@@ -7,7 +7,7 @@ on:
       - main
 
 env:
-  BOT_ICON: ":parenteser:"
+  BOT_ICON: ":banenteser:"
   BOT_NAME: "Bananbloggen"
 
 permissions:
