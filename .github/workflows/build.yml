@@ -6,6 +6,10 @@ on:
     branches:
       - main
 
+env:
+  BOT_ICON: ":parenteser:"
+  BOT_NAME: "Bananbloggen"
+
 permissions:
   id-token: write
   contents: read
@@ -31,6 +35,8 @@ jobs:
         with:
           channel-id: C06192XRMNW
           text: ":pear: Starter …"
+          bot-icon: "${{ env.BOT_ICON }}"
+          bot-name: "${{ env.BOT_NAME }}"
 
   test:
     runs-on: ubuntu-latest
@@ -71,6 +77,8 @@ jobs:
           channel-id: C06192XRMNW
           message-id: ${{ needs.configure.outputs.slack-message }}
           text: ":broccoli: Kjører tester …"
+          bot-icon: "${{ env.BOT_ICON }}"
+          bot-name: "${{ env.BOT_NAME }}"
       - name: Test
         run: make test
 
@@ -89,6 +97,8 @@ jobs:
           channel-id: C06192XRMNW
           message-id: ${{ needs.configure.outputs.slack-message }}
           text: ":kiwifruit: Bygger docker image …"
+          bot-icon: "${{ env.BOT_ICON }}"
+          bot-name: "${{ env.BOT_NAME }}"
       - uses: actions/checkout@v3
       - name: Set up JDK
         uses: actions/setup-java@v3
@@ -137,6 +147,8 @@ jobs:
           channel-id: C06192XRMNW
           message-id: ${{ needs.configure.outputs.slack-message }}
           text: ":strawberry: Publiserer docker image …"
+          bot-icon: "${{ env.BOT_ICON }}"
+          bot-name: "${{ env.BOT_NAME }}"
       - name: Publish docker image
         run: make publish
 
@@ -166,6 +178,8 @@ jobs:
           channel-id: C06192XRMNW
           message-id: ${{ needs.configure.outputs.slack-message }}
           text: ":blueberries: Sjøsetter herligheta …"
+          bot-icon: "${{ env.BOT_ICON }}"
+          bot-name: "${{ env.BOT_NAME }}"
       - name: Deploying
         uses: google-github-actions/deploy-cloudrun@v1
         with:
@@ -193,6 +207,8 @@ jobs:
           channel-id: C06192XRMNW
           message-id: ${{ needs.configure.outputs.slack-message }}
           text: ":banana: Ferdig og godt fornøyd"
+          bot-icon: "${{ env.BOT_ICON }}"
+          bot-name: "${{ env.BOT_NAME }}"
 
   notify-failure:
     runs-on: ubuntu-latest
@@ -213,3 +229,5 @@ jobs:
           channel-id: C06192XRMNW
           message-id: ${{ needs.configure.outputs.slack-message }}
           text: ":mushroom: Trøbbel i tårnet!"
+          bot-icon: "${{ env.BOT_ICON }}"
+          bot-name: "${{ env.BOT_NAME }}"
