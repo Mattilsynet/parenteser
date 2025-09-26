@@ -388,7 +388,7 @@ M.mapMaybe :: (a -> Maybe b) -> [a] -> [b]
 Argumentene er byttet om så funksjonen kommer først, men ellers er den lik vår `mystery`.
 
 ```haskell
-ghci> Data.Maybe.mapMaybe safeHalf [0..20]
+ghci> M.mapMaybe safeHalf [0..20]
 [0,1,2,3,4,5,6,7,8,9,10]
 ```
 
