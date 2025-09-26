@@ -1,6 +1,6 @@
 :page/title clojure.core/keep forklart med monader
 :blog-post/author {:person/id :person/teodor}
-:blog-post/published #time/ldt "2025-09-16T12:56:31.413378"
+:blog-post/published #time/ldt "2025-09-26T15:15:00.00000"
 :blog-post/tags [:haskell :clojure :funksjonell-programmering]
 :blog-post/description
 
