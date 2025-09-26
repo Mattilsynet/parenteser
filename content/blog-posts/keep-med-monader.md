@@ -12,8 +12,9 @@ Bli med på en reise i typer.
 *Monader*, kanskje det dårligst forklarte og mest forvirrende computer science-begrepet på internett!
 "Det er en burrito", hva pokker?
 ("Monader er burritoer" er en faktisk forklaring folk har prøvd seg på, prøv et google-søk).
-
 Og hva i all verden har monader med `keep` fra `clojure.core` å gjøre?
+
+Jeg liker utfordringer, så jeg tenkte jeg skulle prøve meg på å forklare keep med monader, og dermed også forklare monader.
 Dagens tekst tar deg gjennom litt "type først"-tankegods, før vi returnerer til Clojure for å få eksempler i REPL:
 
 1. Lynkurs i lesing av Haskell-typer
