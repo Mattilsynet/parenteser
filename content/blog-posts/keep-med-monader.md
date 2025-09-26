@@ -384,5 +384,5 @@ ghci> Data.Maybe.mapMaybe safeHalf [0..20]
 
 *fotnoter*:
 
-<a name="fot1">¹</a>:
+<a id="fot1">¹</a>:
 Start for eksempel på "Higher order functions"-kapittelet i Learn You a Haskell for Great Good: https://learnyouahaskell.com/higher-order-functions#curried-functions
