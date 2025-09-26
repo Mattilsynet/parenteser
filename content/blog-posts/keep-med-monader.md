@@ -405,9 +405,9 @@ ghci> M.mapMaybe safeHalf [0..20]
   Vi kan si mye med lite kode.
 
 - Haskell oppfordrer til å tenke i typer, Clojure oppfordrer til å tenke i eksempler.
-  Bruke begge.
+  Bruk begge.
 
-- Når et prinsipp er for abstrakt, spespesialiser til eksempler.
+- Når et prinsipp er for abstrakt, spesialiserer til eksempler.
   Når du har kontroll på eksemplene, løft blikket og gi prinsippene et nytt blikk.
 
 <hr style="margin-top: 6rem; margin-bottom: 3rem"></hr>
