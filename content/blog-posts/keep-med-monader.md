@@ -79,7 +79,7 @@ En monade er en API-kontrakt for en type.
 API-kontrakten krever at du implementerer to funksjoner.
 
 Den første funksjonen er `return`.
-`return` skal returnere en tom instans av den monadiske typen.
+`return` skal gi en tom instans av den monadiske typen.
 La oss implementere den for lister og maybe.
 
 ```haskell
@@ -92,8 +92,43 @@ returnMaybe = Nothing
 
 Hvis du lurer på hvor `a` kommer fra, er dette en ubrukt type, som vi heller ikke går inn på i dag.
 
-Den andre funksjonen kalles `bind` (og har sin egen infix-operator, `>>=`, som vi også ignorerer i dag).
-Dette er typen til bind:
+Før vi den andre funksjonen i API-kontrakten for monader, må vi lære oss å evaluere eksempelkode i Haskell.
+Det gjør vi med programmet `ghci`.
+`ghci` også kjent som GHCi er kort for "GHC Interactive", igjen kort for "Glasgow Haskell Compiler Interactive" (fordi kompilatoren ble laget i Skottland).
+
+```haskell
+$ ghci
+GHCi, version 9.12.2: https://www.haskell.org/ghc/  :? for help
+ghci> 1 + 2
+3
+```
+
+GHCi lar deg enten evaluere Haskell, eller gjøre andre ting.
+Andre ting skal prefikses med kolon.
+Den ene andre tingen vi bryr oss om i dag, er "gi meg typen til", med `:t` eller `:type`.
+
+```
+ghci> :t map
+map :: (a -> b) -> [a] -> [b]
+ghci> :type map
+map :: (a -> b) -> [a] -> [b]
+```
+
+For å få typen til en infix-operator, må vi omringe operatoren med parenteser.
+
+```haskell
+ghci> :t +
+<interactive>:1:1: error: [GHC-58481]
+    parse error on input ‘+’
+
+ghci> :t (+)
+(+) :: Num a => a -> a -> a
+```
+
+Tilbake til planlagt sending.
+
+Den første monade-funksjonen heter `return`, den andre kalles *bind*.
+Bind brukes med infix-operatoren `>>=`.
 
 ```haskell
 ghci> :t (>>=)
@@ -128,7 +163,7 @@ Nothing
 
 Tom liste for lister og en "ingenting" for Maybe.
 
-Bind er gjør noe mer spennende.
+Bind gjør noe mer spennende.
 Typen til bind avdekker at ett av argumentene er en funksjon.
 
 ```haskell
@@ -159,14 +194,6 @@ ghci> adjectivize "Arne"
 Når vi adjektiviserer flere navn, passer signaturen til `bindList`!
 
 ```haskell
-ghci> bindList ["Arne", "Tom", "Tim", "John"] adjectivize
-["The fabulous Arne","The ingenious Arne","The completely dreamy-eyed Arne","The fabulous Tom","The ingenious Tom","The completely dreamy-eyed Tom","The fabulous Tim","The ingenious Tim","The completely dreamy-eyed Tim","The fabulous John","The ingenious John","The completely dreamy-eyed John"]
-```
-
-Bred linje, sorry.
-Jeg jukser litt (med hemmelige, ikke-forklarte funksjoner) så vi kan se resultatet.
-
-```haskell
 ghci> mapM_ print $ bindList ["Arne", "Tom", "Tim", "John"] adjectivize
 "The fabulous Arne"
 "The ingenious Arne"
@@ -181,6 +208,8 @@ ghci> mapM_ print $ bindList ["Arne", "Tom", "Tim", "John"] adjectivize
 "The ingenious John"
 "The completely dreamy-eyed John"
 ```
+
+(jeg jukser litt og bruker `mapM_`, `print` og `$` for å splitte resultatet over flere linjer, uten videre forklaring).
 
 Lekse:
 
