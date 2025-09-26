@@ -93,7 +93,7 @@ returnMaybe = Nothing
 
 Hvis du lurer på hvor `a` kommer fra, er dette en ubrukt type, som vi heller ikke går inn på i dag.
 
-Før vi den andre funksjonen i API-kontrakten for monader, må vi lære oss å evaluere eksempelkode i Haskell.
+Før vi forklarer den andre funksjonen i API-kontrakten for monader, må vi lære oss å evaluere eksempelkode i Haskell.
 Det gjør vi med programmet `ghci`.
 `ghci` også kjent som GHCi er kort for "GHC Interactive", igjen kort for "Glasgow Haskell Compiler Interactive" (fordi kompilatoren ble laget i Skottland).
 
