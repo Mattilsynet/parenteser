@@ -242,7 +242,7 @@ Just 25
 
 Bind som infix-operator lar oss i tillegg unngå eksplosjon av parenteser.
 
-```
+```haskell
 -- med infix >>= kan vi slenge på mer jobb på slutten:
 ghci> (safeHalf 1000) >>= safeHalf >>= safeHalf >>= safeHalf
 Nothing
