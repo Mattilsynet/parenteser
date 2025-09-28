@@ -136,7 +136,7 @@ ghci> :t (>>=)
 (>>=) :: Monad m => m a -> (a -> m b) -> m b
 ```
 
-Her får vi *to* ubrukte typer, `m` og `a`.
+Her får vi *tre* ubrukte typer, `m`, `a` og `b`.
 Vi kan få vekk `m` ved å spesialisere bind til lister og maybe.
 
 ```haskell
