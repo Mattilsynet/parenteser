@@ -80,15 +80,15 @@ En monade er en API-kontrakt for en type.
 API-kontrakten krever at du implementerer to funksjoner.
 
 Den første funksjonen er `return`.
-`return` skal gi en tom instans av den monadiske typen.
+`return` tar en verdi, og gir verdien pakket inn i den monadiske typen.
 La oss implementere den for lister og maybe.
 
 ```haskell
-returnList :: [a]
-returnList = []
+returnList :: a -> [a]
+returnList x = [x]
 
-returnMaybe :: Maybe a
-returnMaybe = Nothing
+returnMaybe :: a -> Maybe a
+returnMaybe x = Just x
 ```
 
 Hvis du lurer på hvor `a` kommer fra, er dette en ubrukt type, som vi heller ikke går inn på i dag.
