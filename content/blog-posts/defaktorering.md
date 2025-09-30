@@ -4,8 +4,8 @@
 :blog-post/tags [:design :metodikk]
 :blog-post/description
 
-En liten historie om hvordan den samme endringen i kode gjør koden bedre eller
-dårligere i en gitt kontekst.
+Kan det samme grepet først gjøre koden bedre for så å gjøre den verre? Javisst,
+dersom forutsetningene endrer seg.
 
 :blog-post/body
 
@@ -143,7 +143,7 @@ den første. En _defaktorering_ om vi er i det lystige hjørnet:
 
 There and back again.
 
-Refaktorering er en essensiell del av å skrive gode kode. Men nådeløs oppdeling
+Refaktorering er en essensiell del av å skrive god kode. Men nådeløs oppdeling
 av kode er ikke et mål i seg selv. Indireksjon kan være et slagkraftig verktøy
 som hjelper kode å kommunisere bedre, men har også en kostnad. Direkte og rett
 frem kode er lettere å lese og forstå, og når indireksjonen ikke lenger er
