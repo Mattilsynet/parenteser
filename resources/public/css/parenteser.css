@@ -229,6 +229,10 @@ a:hover, .clickable:hover {
   line-height: 1;
 }
 
+.text-content img {
+  max-width: 100%;
+}
+
 .teaser-aside {
     margin-top: 40px;
 }
