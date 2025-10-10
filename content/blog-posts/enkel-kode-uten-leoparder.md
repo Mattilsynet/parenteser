@@ -31,7 +31,7 @@ Hva er `echo $PATH`?
 Hva gjør `export PATH="/opt/homebrew/bin:$PATH"`?
 Hvordan kan vi finne programmer med `which`?
 Hva skjer når vi har flere `vim`-programmer på PATH?
-Hva er forskjellen på terminalen (Terminal eller Ghostty) og skallet.
+Hva er forskjellen på terminalen (for eksempel Terminal eller Ghostty) og skallet (for eksempel Zsh, Bash eller Fish).
 
 ![Leopard nr 2](/images/leopard2.jpg)
 
@@ -62,9 +62,10 @@ Bilde: [Wikimedia](https://en.wikipedia.org/wiki/File:Day_47_Leopard_(Panthera_p
 
 Oppsummert:
 
-- For å skrive enkel kode, må du forstå fundamentet til plattformen: terminalen din, programmeringsspråket ditt, Internett og nettleseren.
+- For å skrive enkel kode, må du forstå fundamentet: terminalen din, programmeringsspråket ditt, Internett og nettleseren.
 - Du kan forenkle koden ved å fjerne leopardene du ser.
-- Du får enklere kode ved å løse nye problemer på enklest mulig måte først - heller enn å planlegge for eventualiteter langt fram i tid.
+- Du får enklere kode ved å løse nye problemer på enklest mulig vis.
+  Det er sjelden nyttig med halvferdig kode som planlegger for framtidige eventualiteter.
 
 Takk til Douglas Adams og Jack Rusher for den nydelige leopard-analogien.
 Jack Rusher har skrevet [Leopards in the source code](https://jackrusher.com/journal/leopards-in-the-source-code.html),
