@@ -16,4 +16,7 @@ test:
 clean:
 	rm -fr docker/build
 
-.PHONY: clean docker publish test
+ngrok:
+	ngrok http 5052
+
+.PHONY: clean docker publish test ngork
