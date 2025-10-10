@@ -12,7 +12,7 @@ For å fjerne leopardene må du forstå fundamentet.
 
 ![Leopard nr 1](/images/leopard1.jpg)
 
-_Husk å kjøre setup-scriptet før du starter dev-miljøet (må kjøres med Ruby 3).
+_Husk å kjøre setup-scriptet før du starter dev-miljøet (krever Ruby 3).
 Bilde: [Wikimedia](https://en.wikipedia.org/wiki/File:African_leopard_male_(cropped).jpg), CC S-A 4.0_
 
 Denne uka har jeg fått kode litt sammen med Isam, som startet som utvikler i Mattilsynet på mandag.
