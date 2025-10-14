@@ -33,8 +33,10 @@ Hva blir da liggende igjen i backlogen?
 - Ting som ikke egentlig er så viktige.
 - Ting som ingen har tydelig ansvar for.
 - Ting som hadde vært fint å få gjort en vakker dag.
-- Ting utviklerne ikke egentlig vil gjøre, men som blir lagt der for å please
-  produktlederen.
+
+
+Ja, og så ting utviklerne ikke egentlig vil gjøre, men som blir lagt der for å
+please produktlederen, da.
 
 Problemet er at ting som ligger i backlogen blir som forkalkninger. Vi er ikke
 så flinke til å fjerne dem igjen, de må jo tross alt ha blitt lagt der av en
