@@ -47,14 +47,13 @@ produktet. Det som fremstår som "fint å få gjort på sikt" i dag kan være ak
 ## Fokus
 
 Backlogen spiser også av fokuset vårt. Uferdige oppgaver forblir mentalt aktiv
-og tapper oss for energi, [selv når vi ikke aktivt jobber med
-dem](https://en.wikipedia.org/wiki/Zeigarnik_effect).
+og tapper oss for energi, selv når vi ikke aktivt jobber med dem. [Cal
+Newport](https://calnewport.com/) traff spikeren på hodet: Han kalte
+gjøremålslister for "guilt machines".
 
-[Cal Newport](https://calnewport.com/) kalte en gang gjøremålslister "guilt
-machines". Det kan jeg kjenne meg godt igjen i. Når lista blir lang nok så
-genererer den bare dårlig samvittighet for alt jeg ikke har rukket å ta unna.
-Selv når jeg kommer innom den for å krysse av noe - som jo skulle vært en liten
-seier.
+Det kan jeg kjenne meg godt igjen i. Når lista blir lang nok så genererer den
+bare dårlig samvittighet for alt jeg ikke har rukket å ta unna. Selv når jeg
+kommer innom den for å krysse av noe - som jo skulle vært en liten seier.
 
 ## Hva skal vi gjøre da?
 
