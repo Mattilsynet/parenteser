@@ -8,6 +8,10 @@
 Du kommer aldri til å tømme backlogen din. Du kommer aldri til å jobbe deg
 gjennom den. Jo større den blir, jo mindre nytte har du av den.
 
+:open-graph/description
+
+JIRA eller Github issues? Ingen av delene, takk.
+
 :blog-post/body
 
 Du er akkurat ferdig med en større oppgave, og det er et par timer igjen av
@@ -66,16 +70,14 @@ opp på tavla. Når fredagen kommer samles vi igjen for å snakke litt rundt må
 vi satte oss fore, og forhåpentligvis feire alt vi fikk til.
 
 Neste mandag møtes vi igjen og pusser vekk alt på tavla. Også de tingene vi ikke
-kom i mål med. Hvis de fortsatt er viktige, så skriver vi dem opp på nytt.
+kom i mål med. Hvis de fortsatt er viktige, så [skriver vi dem opp på
+nytt](https://cutlefish.substack.com/p/tbm-292-friction-documentation-and).
 
 Denne tilnærmingen tvinger oss til å prioritere jevnlig, og stadig ta en fot i
 bakken på om langt-levende saker fortsatt er så viktige som vi mente da vi
 starta. Den gjør det også lettere å belyse mindre konkrete "todos" enn det som
 typisk går i en backlog: forankringsaktiviteter, utredning, utforskning, og alt
 annet som er en del av produktarbeidet.
-
-John Cutler [har flere gode
-poenger](https://cutlefish.substack.com/p/tbm-292-friction-documentation-and).
 
 Vi har naturligvis en langsiktig strategi også - og vi kobler de ukentlige
 målene våre på den. Å fjerne backlogen hjelper oss også her, fordi en backlog
