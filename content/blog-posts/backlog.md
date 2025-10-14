@@ -47,6 +47,11 @@ grunn. I tillegg blir sakene sjelden oppdatert med ny innsikt og utvikling av
 produktet. Det som fremstår som "fint å få gjort på sikt" i dag kan være aktivt
 ødeleggende for produktet om noen måneder.
 
+En stadig voksende backlog er ofte et symptom på et annet problem: For lite
+slækk. Produktutvikling er en kontinuerlig prosess som vi skal stå i lenge. Hvis
+det aldri er rom til å ta unna ting som dukker opp i løpet av uka, så er det
+kanskje for mye fokus på nye ting og for lite fokus på helheten i produktet.
+
 ## Fokus
 
 Backlogen spiser av fokuset vårt. Uferdige oppgaver tapper oss for energi, selv
