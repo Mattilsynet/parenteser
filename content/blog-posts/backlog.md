@@ -22,12 +22,12 @@ oppgaver, men gjelder prioriteringene fortsatt? Er oppgavene fortsatt relevante?
 Og hva mente vi egentlig da vi skrev den første oppgaven her?
 
 Her er greia med backloger: De blir aldri tomme. Du kommer aldri til å jobbe deg
-gjennom den. Og jo større den blir, jo mindre nytte har du av den.
+gjennom dem. Og jo større de blir, jo mindre nytte har du av dem.
 
 ## Problemet med backlogen
 
 Vi liker å tro at backlogen gir oss oversikt. At vi kan samle alt på ett sted,
-så vi ikke glemmer noe, men viktige saker løses ikke fordi de ligger i
+så vi ikke glemmer noe, men det er en felle. Viktige saker løses ikke fordi de ligger i
 backloggen. De blir løst fordi de er viktige. Fordi de bobler opp igjen og
 igjen.
 
@@ -39,7 +39,7 @@ Hva blir da liggende igjen i backlogen?
 - Ting som hadde vært fint å få gjort en vakker dag.
 
 
-Ja, og så ting utviklerne ikke egentlig vil gjøre, men som blir lagt der for å
+Ja, også ting utviklerne ikke egentlig vil gjøre, men som blir lagt der for å
 please produktlederen, da.
 
 Problemet er at ting som ligger i backlogen blir som forkalkninger. Vi er ikke
@@ -50,10 +50,11 @@ produktet. Det som fremstår som "fint å få gjort på sikt" i dag kan være ak
 
 ## Fokus
 
-Backlogen spiser også av fokuset vårt. Uferdige oppgaver forblir mentalt aktiv
-og tapper oss for energi, selv når vi ikke aktivt jobber med dem. [Cal
-Newport](https://calnewport.com/) traff spikeren på hodet: Han kalte
-gjøremålslister for "guilt machines".
+Backlogen spiser av fokuset vårt. Uferdige oppgaver tapper oss for energi, selv
+når vi ikke aktivt jobber med dem. [Cal Newport](https://calnewport.com/) traff
+spikeren på hodet:
+
+Han kalte gjøremålslister for "guilt machines".
 
 Det kan jeg kjenne meg godt igjen i. Når lista blir lang nok så genererer den
 bare dårlig samvittighet for alt jeg ikke har rukket å ta unna. Selv når jeg
@@ -61,7 +62,7 @@ kommer innom den for å krysse av noe - som jo skulle vært en liten seier.
 
 ## Hva skal vi gjøre da?
 
-Ok, vi kaster backlogen. Hva nå? Vel, la meg fortelle deg hvordan vi organiserer
+Ok, vi kaster backlogen. Hva nå? Vel, la meg fortelle hvordan vi organiserer
 arbeidet på teamet vårt.
 
 Hver uke samles vi foran en fysisk tavle. Der står vi 30-40 minutter og snakker
@@ -74,13 +75,13 @@ kom i mål med. Hvis de fortsatt er viktige, så [skriver vi dem opp på
 nytt](https://cutlefish.substack.com/p/tbm-292-friction-documentation-and).
 
 Denne tilnærmingen tvinger oss til å prioritere jevnlig, og stadig ta en fot i
-bakken på om langt-levende saker fortsatt er så viktige som vi mente da vi
-starta. Den gjør det også lettere å belyse mindre konkrete "todos" enn det som
-typisk går i en backlog: forankringsaktiviteter, utredning, utforskning, og alt
-annet som er en del av produktarbeidet.
+bakken på om langt-levende saker fortsatt egentlig er så viktige. Den gjør det
+også lettere å belyse mindre konkrete "todos" enn det som typisk går i en
+backlog: forankringsaktiviteter, utredning, utforskning, og alt annet som er en
+del av produktarbeidet.
 
 Vi har naturligvis en langsiktig strategi også - og vi kobler de ukentlige
 målene våre på den. Å fjerne backlogen hjelper oss også her, fordi en backlog
-*er ikke en strategi*. Den er på feil nivå. Det er bare en gjøremålsliste som
+*ikke er en strategi*. Den er på feil nivå. Det er bare en gjøremålsliste som
 kanskje, og kanskje ikke, leder oss mot de faktiske målene våre. Så kast
 backlogen!
