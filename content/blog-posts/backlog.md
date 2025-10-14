@@ -27,9 +27,9 @@ gjennom dem. Og jo større de blir, jo mindre nytte har du av dem.
 ## Problemet med backlogen
 
 Vi liker å tro at backlogen gir oss oversikt. At vi kan samle alt på ett sted,
-så vi ikke glemmer noe, men det er en felle. Viktige saker løses ikke fordi de ligger i
-backloggen. De blir løst fordi de er viktige. Fordi de bobler opp igjen og
-igjen.
+så vi ikke glemmer noe, men det er en felle. Viktige saker løses ikke fordi de
+ligger i backloggen. De blir løst fordi de er viktige. Fordi de bobler opp igjen
+og igjen.
 
 Hva blir da liggende igjen i backlogen?
 
@@ -38,8 +38,7 @@ Hva blir da liggende igjen i backlogen?
 - Ting som ingen har tydelig ansvar for.
 - Ting som hadde vært fint å få gjort en vakker dag.
 
-
-Ja, også ting utviklerne ikke egentlig vil gjøre, men som blir lagt der for å
+Ja, og ting utviklerne ikke egentlig vil gjøre, men som blir lagt der for å
 please produktlederen, da.
 
 Problemet er at ting som ligger i backlogen blir som forkalkninger. Vi er ikke
