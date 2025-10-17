@@ -1,4 +1,4 @@
-# Parenteser - Mat-teamets blogg
+# Parenteser - Team Servering sin fagblogg
 
 Dette er bloggen til Team Servering i Mattilsynet,
 [parenteser.mattilsynet.io](https://parenteser.mattilsynet.io). Her tenker vi å

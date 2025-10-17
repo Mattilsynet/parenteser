@@ -14,10 +14,10 @@
   :vcard-authors [:fn/enumerate [:fn/get :authors]]}
 
  #:parenteser.frontpage
- {:page-title "Parenteser – Betraktninger fra Mat-teamets grønne enger"
+ {:page-title "Parenteser – Betraktninger fra Team Servering"
   :into-title "Jøss, er du her også?"
   :info-text [:div
-              [:p "Trivelig at du stakk innom. Vi er et lite produktteam hos Mattilsynet som jobber med mattrygghet. Her er vår tidvis tekniske blogg hvor vi deler litt av hva vi jobber med, og ting vi lærer på veien."]
+              [:p "Trivelig at du stakk innom. Vi er et lite produktteam hos Mattilsynet som jobber med serveringsbransjen og smilefjes. Her er vår tekniske blogg hvor vi deler litt av hva vi jobber med, og ting vi lærer på veien."]
               [:p "Så, hvorfor akkurat " [:strong "Parenteser"] "? Vel, vi jobber mye i Clojure, som har rykte på seg å være belemret med unødvendige mengder parenteser. Men nei, ikke bare er de nødvendige, de er aldeles smakfulle - som to fine bananer i headeren. Vi tenker også at disse bloggpostene kommer litt på siden - litt i parentes, om du vil."]]
   }
 
@@ -31,7 +31,7 @@
                    " på e-post."]
                   [:p "Innleggene speiler våre personlige meninger. Vi snakker ikke for hele Mattilsynet, akkurat."]]
   :header-title "Parenteser"
-  :header-slogan "Betraktninger fra Mat-teamets grønne enger"
+  :header-slogan "Betraktninger fra Team Servering"
   :page-title [:fn/str "{{:title}} – Parenteser"]
   }
 

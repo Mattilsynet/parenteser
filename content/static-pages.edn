@@ -2,7 +2,7 @@
   :page/locale :nb
   :page/kind :page.kind/frontpage
   :open-graph/title "Parenteser"
-  :open-graph/description "Betraktninger fra Mat-teamets grønne enger"
+  :open-graph/description "Betraktninger fra Team Servering"
   :open-graph/image "/images/bananadev.png"}
  {:page/uri "/en/"
   :page/locale :en
