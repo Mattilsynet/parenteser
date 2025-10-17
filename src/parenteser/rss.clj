@@ -40,7 +40,7 @@
             :xmlns:media "http://search.yahoo.com/mrss/"}
      [:id "tag:parenteser.mattilsynet.io,2023:feed"]
      [:updated (time-str (:blog-post/published (first blog-posts)))]
-     [:title {:type "text"} "Parenteser - Team Mat sin blogg"]
+     [:title {:type "text"} "Parenteser - Team Servering sin blogg"]
      [:link {:rel "self" :href "https://parenteser.mattilsynet.io/atom.xml"}]
      (map entry blog-posts)])))
 

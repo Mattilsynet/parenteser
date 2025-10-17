@@ -175,7 +175,7 @@ gjort det samme med en helt generell diff-funksjon, måtte vi nok ha massert
 dataene på mye mer kronglete måter og hatt typesjekker på verdier for å håndtere
 nøstinga.
 
-Etter å ha blitt med i Team mat, har jeg gjenlært mange gamle lekser. Vi bruker
+Etter å ha blitt med i Team Servering, har jeg gjenlært mange gamle lekser. Vi bruker
 TDD og par-programmering aktivt, noe jeg var med å lære nyansatte i min første
 jobb, selv om vi nesten aldri brukte det i praksis der. Litt klassisk "gjør som
 jeg sier, ikke som jeg gjør", og så gjør ingen det vi sier at vi skal gjøre.

@@ -42,7 +42,7 @@ Rich Hickey i 2010 -- etter at han laget et nytt programmeringsspråk nettopp fo
 å kunne realisere idéene sine. Det er noen begrensninger som har forsvunnet på
 de 40 årene sidene de tradisjonelle databasene ble utformet. For de av oss som
 er melket opp på SQL, så er det spennende å se hvor annerledes det kan tenkes
-rundt lagring og henting av data. Vi her på Team Mat har hatt gleden av å jobbe
+rundt lagring og henting av data. Vi her på Team Servering har hatt gleden av å jobbe
 med databasen omtrent fra den ble lansert i 2012. Bli med og få en smakebit av
 Datomic du også.
 

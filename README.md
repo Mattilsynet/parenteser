@@ -1,6 +1,6 @@
 # Parenteser - Mat-teamets blogg
 
-Dette er bloggen til team Mat i Mattilsynet,
+Dette er bloggen til Team Servering i Mattilsynet,
 [parenteser.mattilsynet.io](https://parenteser.mattilsynet.io). Her tenker vi å
 blogge litt om utviklingsarbeidet vårt: alt fra interessante (i våre øyne)
 detaljer fra det tekniske arbeidet, hvordan vi jobber med arkitektur, til

@@ -17,7 +17,7 @@ dette blogginnlegget reflekterer jeg litt over hva vi har gjort i teamet de
 første månedene.
 
 Jeg har en ambisjon: Når folka i teamet skal si hvor de jobber, sier de at de
-jobber i Team Mat først og Mattilsynet etter det. Jeg tror tilhørighet til
+jobber i Team Servering først og Mattilsynet etter det. Jeg tror tilhørighet til
 teamet er veldig viktig. Hva gjør vi for å bygge tilhørigheten? Kort oppsummert
 er det noen få ting; å bruke tid på å bli kjent, noen ritualer og felles
 kontordager.

@@ -62,7 +62,7 @@ og får full frihet til å jobbe ut fra det.
 ## Sponsorgruppa
 
 Team i Mattilsynet har sponsorer, og vårt team har sponsorene Marit, Petter og
-Inge. "Team Mat er sponset av ...", det høres nesten ut som starten på en
+Inge. "Team Servering er sponset av ...", det høres nesten ut som starten på en
 sportssending på NRK! Men her snakker vi om noe annet enn seier på
 femmila 😅
 

@@ -5,12 +5,12 @@
 (defscene default
   (e/header-section
    {:title "Parens"
-    :slogan "Software reflections from Team Mat"}))
+    :slogan "Software reflections from Team Servering"}))
 
 (defscene with-link
   (e/header-section
    {:title "Parens"
-    :slogan "Software reflections from Team Mat"
+    :slogan "Software reflections from Team Servering"
     :href "/"}))
 
 (defscene different-text

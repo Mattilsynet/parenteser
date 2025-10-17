@@ -86,7 +86,7 @@ utfører kommandoene, trenger nå bare endres når de skal få nye egenskaper.
 returnerer map-et slik det er, men gjør litt dev-time validering for å gi gode
 feilmeldinger hvis definisjonen ikke har blitt helt riktig. </small>
 
-I koden vår hos Team Mat i dag har vi laget håndfaste konsepter av:
+I koden vår hos Team Servering i dag har vi laget håndfaste konsepter av:
 
 - **Commands**: kommandoer fra brukere som skal gjennomføres.
 - **Queries**: forespørsler om data fra klienten.

@@ -14,7 +14,7 @@
   :vcard-authors [:fn/enumerate [:fn/get :authors]]}
 
  #:parenteser.frontpage
- {:page-title "Parens – Software reflections from team Mat/NFSA"
+ {:page-title "Parens – Software reflections from Team Servering/NFSA"
   :into-title "Howdy!"
   :info-text [:div
               [:p "Nice of you to stop by. We're a small product team at the Norwegian Food Safety Authority (Mattilsynet) working on food safety at Norwegian restaurants. This is our technical blog where we share what we're working on, and some things we learn along the way."]
@@ -22,7 +22,7 @@
   }
 
  #:parenteser.layout
- {:atom-feed-title "Parens – Team Mat's blog"
+ {:atom-feed-title "Parens – Team Servering's blog"
   :footer-hiccup [:div
                   [:p "Feedback or questions? Feel free to email "
                    [:a {:href "mailto:magnar.sveen@mattilsynet.no"} "Magnar"]
@@ -31,7 +31,7 @@
                    "."]
                   [:p "Our posts reflect our personal opinions. We don't speak on behalf of the entire NFSA."]]
   :header-title "Parens"
-  :header-slogan "Software reflections from team Mat/NFSA"
+  :header-slogan "Software reflections from Team Servering/NFSA"
   :page-title [:fn/str "{{:title}} – Parens"]
   }
 

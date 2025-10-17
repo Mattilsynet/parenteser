@@ -6,7 +6,7 @@
   :tag/description "Clojure er et data-drevet funksjonelt
   programmeringsspråk. En Lisp, atpåtil. Clojure er laget for å kjøre på en
   vertsplattform, typisk JVM-en på backend og JavaScript/nettlesere på frontend.
-  Vi i Team Mat bygger det aller meste i Clojure og skriver titt og ofte om å
+  Vi i Team Servering bygger det aller meste i Clojure og skriver titt og ofte om å
   jobbe i dette dynamiske og interaktive språket vi er så glad i."
   :tag/image "/images/clojure.svg"}
  {:tag/id :css          :tag/name "CSS"}

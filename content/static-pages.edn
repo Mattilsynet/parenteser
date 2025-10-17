@@ -8,7 +8,7 @@
   :page/locale :en
   :page/kind :page.kind/frontpage
   :open-graph/title "Parens"
-  :open-graph/description "Software reflections from team Mat/NFSA"
+  :open-graph/description "Software reflections from Team Servering/NFSA"
   :open-graph/image "/images/bananadev.png"}
  {:page/uri "/atom.xml"
   :page/locale :nb

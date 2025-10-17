@@ -14,7 +14,7 @@ Vi søker utvikler til teamet vårt - vil du jobbe med oss?
 
 Har du trua på at små team kan gjøre store greier? Det har vi!
 
-Hei, Christian og Magnar her -- de to utviklerne på Team Mat. Vi skulle gjerne
+Hei, Christian og Magnar her -- de to utviklerne på Team Servering. Vi skulle gjerne
 hatt med én til på laget, men så får det også holde. Er det deg vi ser etter?
 
 Som en av kun tre utviklere jobber du like gjerne med integrasjoner på backenden

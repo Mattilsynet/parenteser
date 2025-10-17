@@ -22,7 +22,7 @@
   }
 
  #:parenteser.layout
- {:atom-feed-title "Parenteser – Team Mat sin blogg"
+ {:atom-feed-title "Parenteser – Team Servering sin blogg"
   :footer-hiccup [:div
                   [:p "Har du innspill eller tanker? Kontakt gjerne "
                    [:a {:href "mailto:magnar.sveen@mattilsynet.no"} "Magnar"]

@@ -31,12 +31,12 @@ Teksten lar meg trekke fram ting jeg er interessert i, så kan andre diskutere o
 
 Hvis du leser videre, får du mitt svar på følgende:
 
-- Hvorfor finnes Team Mat i Mattilsynet? Hvilke mennesker er sentrale i jobben vår?
+- Hvorfor finnes Team Servering i Mattilsynet? Hvilke mennesker er sentrale i jobben vår?
 - Hvordan muliggjør parprogrammering og ukentlig fokus at vi kan levere kontinuerlig?
 
 ## Smilefjesinspektørene
 
-Oppdraget til Team Mat er å sikre at maten du spiser på serveringssteder er trygg å spise.
+Oppdraget til Team Servering er å sikre at maten du spiser på serveringssteder er trygg å spise.
 Gjennom [Smilefjesordningen] besøker smilefjesinspektører flere tusen serveringssteder i året.
 
 [Smilefjesordningen]: https://www.mattilsynet.no/mat-og-drikke/forbrukere/smilefjesordningen
@@ -67,9 +67,9 @@ Jeg vil trekke fram hvordan repetisjon sikrer at kjøkkensjefen vet hva som må 
 
 Når kjøkkensjefen til slutt får rapporten, er det liten tvil om hva rapporten betyr, og hvordan problemene kan fikses.
 
-## Ukentlig fokus på Team Mat
+## Ukentlig fokus på Team Servering
 
-Team Mat har strengere kontroll på work in progress enn alle andre team jeg har jobbet i.
+Team Servering har strengere kontroll på work in progress enn alle andre team jeg har jobbet i.
 Vi gjør én, smal ting hver uke.
 På mandag setter vi målet for uka, og på fredag ser vi tilbake og spør oss selv hvordan det har gått.
 

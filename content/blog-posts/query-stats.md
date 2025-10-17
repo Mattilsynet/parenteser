@@ -16,7 +16,7 @@ bruk i OpenTelemetry-sporingen vår.
 
 :blog-post/body
 
-Nå i januar var vi en gjeng på fire som ble med i Team mat, en tjenestedesigner
+Nå i januar var vi en gjeng på fire som ble med i Team Servering, en tjenestedesigner
 og tre utviklere. Ole Marius og jeg har brukt noe av tiden til å se litt på
 ytelsesproblemer. Vi fikk se hvordan noen av sidene tok litt vel laaang tid å
 laste, og en introduksjon til [sporingen som var satt opp med

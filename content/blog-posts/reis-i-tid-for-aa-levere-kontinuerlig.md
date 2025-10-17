@@ -4,7 +4,7 @@
 :blog-post/tags [:testing :metodikk]
 :blog-post/description
 
-For å få til kontinuerlig leveranse i Team Mat, vil vi minimere herk knyttet til hver leveranse.
+For å få til kontinuerlig leveranse i Team Servering, vil vi minimere herk knyttet til hver leveranse.
 Det krever at vi tar tak i det som lugger når vi leverer.
 
 Dagens tekst beskriver et steg som lugget, og hvordan git-worktree var del av løsningen.
@@ -15,14 +15,14 @@ Få til mer kontinuerlig leveranse ved å kjøre testene mot kliss lik kode du h
 
 :blog-post/body
 
-For å få til kontinuerlig leveranse i Team Mat, vil vi minimere herk knyttet til hver leveranse.
+For å få til kontinuerlig leveranse i Team Servering, vil vi minimere herk knyttet til hver leveranse.
 Det krever at vi tar tak i det som lugger når vi leverer.
 
 Dagens tekst beskriver et steg som lugget, og hvordan [git-worktree] var del av løsningen.
 
 ## Hyppige leveranser for effektivt arbeid og fornøyde utviklere
 
-På Team Mat har vi ikke noen avsjekk med andre før en utviklers kode går i produksjon.
+På Team Servering har vi ikke noen avsjekk med andre før en utviklers kode går i produksjon.
 Jeg gjør følgende når jeg skriver kode som skal ut i produksjon:
 
 1. Skriver koden min, og kode for å sjekke om koden funker

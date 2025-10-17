@@ -10,7 +10,7 @@ hvor så mye rart kan gå galt?
 
 :blog-post/body
 
-Her i Team Mat sine grønne enger har vi noen ambisiøse mål. Et av dem er *null
+Her i Team Servering sine grønne enger har vi noen ambisiøse mål. Et av dem er *null
 hull*. Kort fortalt: Ingen kjente feil i prod. Vi vil ikke leve med [knuste
 vinduer](https://blog.codinghorror.com/the-broken-window-theory/).
 

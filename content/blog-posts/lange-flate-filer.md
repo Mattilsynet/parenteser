@@ -91,7 +91,7 @@ Dette er en måte å bygge nettsider vi har hatt
 [opp](https://strom.fortum.no)
 [gjennom](https://cjohansen.no)
 [årene](https://www.parens-of-the-dead.com).
-Her i Team Mat hos Mattilsynet har vi enn så lenge to nettsteder som lages på denne måten:
+Her i Team Servering hos Mattilsynet har vi enn så lenge to nettsteder som lages på denne måten:
 Denne bloggen, og den nye [matvaretabellen.no](https://matvaretabellen.no) som
 vi driver og jobber med.
 
