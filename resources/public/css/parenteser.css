@@ -229,7 +229,8 @@ a:hover, .clickable:hover {
   line-height: 1;
 }
 
-.text-content img {
+.text-content img,
+.text-content video {
   max-width: 100%;
 }
 

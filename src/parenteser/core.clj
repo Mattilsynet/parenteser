@@ -24,6 +24,7 @@
        :optimus/assets [{:public-dir "public"
                          :paths [#"/*.(png|ico)"
                                  #"/images/*.*"
+                                 #"/videos/*.*"
                                  #"/fonts/*"]}]
        :optimus/bundles {"styles.css"
                          {:public-dir "public"
