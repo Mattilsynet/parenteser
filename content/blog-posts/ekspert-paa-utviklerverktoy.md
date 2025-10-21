@@ -108,7 +108,7 @@ hånden, gir det meg en finfølelse uten like. Jeg får til å gjøre akkurat de
 vil, med én gang, uten å tenke så mye på det, uten å tenke på hvor musen står.
 Jeg danner meg et synergisk forhold til Emacs.
 
-Poenget jeg prøver å komme fram til er ikke å heie på Emacs. Du vil kunne få til
+Poenget jeg ønsker å trekke fram er ikke å heie på Emacs. Du vil kunne få til
 det samme i Vim eller VSCode eller hva du enn måtte bruke. Rettere, det jeg vil
 med denne artiklen, er å vise effekten av å kjenne utviklerverktøyet sitt fult
 ut, eller nærmere effekten av å ha brukt litt tid på å bli dus med verktøyet
