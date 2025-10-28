@@ -20,7 +20,7 @@ Jeg argumenterer ikke mot å dokumentere, bare mot å samle alt i en evig voksen
 gjøremålsliste. La oss se på noen konkrete systemer som kan støtte arbeidet
 bedre enn en liste med tickets i JIRA.
 
-# Strategi og langsiktig mål
+## Strategi og langsiktig mål
 
 Det er viktig for et team å ha et langsiktig mål og en strategi, men en backlog
 er ikke en strategi. Så hvor har vi strategien vår? Vi har jobbet mye med å
@@ -43,7 +43,7 @@ nå-situasjon om vi ikke også skulle foregripe begivenhetenes gang ved å noter
 ned masse oppgaver som understøtter hva vi tror er løsningen akkurat nå, for så
 å implementere dem om et halvt år.
 
-# Alt vi ikke må glemme
+## Alt vi ikke må glemme
 
 Mange jeg har snakket med er bekymret for at de kommer til å glemme viktige ting
 om de kvitter seg med backlogen. Som jeg også sa sist: de viktige tingene har
@@ -63,7 +63,7 @@ Dette er definitivt viktig, og samtidig ikke noe som ville tvunget seg fram
 naturlig. Sånt er lurt å notere ned. Denne fila er ikke en backlog, men snarere
 et sett med ferdigkriterier for deler av arbeidet vårt.
 
-# Backlogen skuffer igjen
+## Backlogen skuffer igjen
 
 Vi har pleid å ha noen små todo-filer sammen med koden. Disse bryter gjerne ned
 en større oppgave i mindre, gjennomførbare biter. Det startet uskyldig, men
