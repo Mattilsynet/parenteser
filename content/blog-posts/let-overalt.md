@@ -2,7 +2,7 @@
 :blog-post/author {:person/id :person/sigmund}
 :blog-post/published #time/ldt "2025-11-11T11:11:11"
 :blog-post/tags [:geografi :sok :ytelse]
-:open-graph/image /images/zonlady.jpg
+:open-graph/image /images/zonlady.png
 :blog-post/description
 
 Jo, da blir svingen bred. Vi fant nylig ut at svingen vi tok i geo-søkene våre
