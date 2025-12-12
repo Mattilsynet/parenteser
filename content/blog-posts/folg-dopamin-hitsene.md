@@ -68,7 +68,7 @@ mange fler er definert med data.
 dataene, prosesserer dataene og til sist utfører side-effekter basert på
 dataene. Dette gjør det sykt behagelig å jobbe med. Det meste er rene funksjoner
 som bare manipulerer med data, og når du skal lage en ny side, så skriver du
-bare data. Oprette en ny feed? Skriv data og rene funksjoner. Alle de imperative
+bare data. Opprette en ny feed? Skriv data og rene funksjoner. Alle de imperative
 greiene som er vanskelige og snakker med verden utenfor er ferdig håndtert,
 gjømt bort og bare skrevet én gang.
 
