@@ -34,11 +34,12 @@ Utfordringer er meningsfulle og vanskelige.
 Det er ikke åpenbart hva løsningen er før man er i gang.
 Det er ikke engang åpenbart hva *problemet* er før man er i gang.
 
-Rydding er veldefinert.
+Jobb er veldefinert.
 Og uungåelig!
 Når du har løst *kjernen* i en utfordring, må du gjøre deg helt ferdig.
 Det som gjenstår er jobb.
 Og hvis du ikke gjør *hele jobben*, kommer restene tilbake og biter deg i rompa.
+*Hele jobben* kan bety å bli *helt ferdig* med en refaktorering, eller å ta de små kildene til friksjon i et API.
 
 Jeg blir motivert av utfordringer, men trenger samtidig motivasjon for å gripe utfordringer.
 Jobb er lettere.
