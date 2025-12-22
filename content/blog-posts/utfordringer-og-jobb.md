@@ -46,13 +46,15 @@ Jobb er lettere.
 Jeg vet at det må gjøres.
 Jeg har funnet ut at jeg *trenger* en tilførsel av begge to.
 Uten utfordringer begynner jeg å kjede meg, og blir frakoblet.
-Men morsommere for meg, uten jobb blir det også problemer!
+Men! Uten jobb blir det også problemer!
+Det kom overraskende på meg. Er det ikke bra å eliminere små kilder til friksjon?
 Jeg har vært i noen situasjoner der alt rundt meg er store utfordringer, og det er utmattende.
-Ingenting man gjør er godt nok.
+Ingenting jeg gjør er godt nok.
+Nå har jeg kommet på bedre tanker.
 Etter å ha lagt inn fire gode timer på formiddagen, må man søren meg legge inn fire timer til på ettermiddagen!
-Hvis jeg derimot *både* har en utfordring og litt jobb liggende, kan jeg balansere.
-Jeg kan alltid komme *litt* videre på utfordringen.
-Og jeg har gjørejobb jeg kan komme tilbake til.
+Da kan ikke *alt* være utfordringer.
+Hvis jeg derimot har litt jobb liggende, kan jeg plukke opp det.
+Og når jobben blir kjedelig, kan jeg se om jeg har mer å komme med på utfordringen.
 
 Så det er leksa for meg selv.
 Teodor: pass på at du i framtiden både har en tilgjengelig utfordring *og* tilgjengelig jobb, det er bra for deg.
