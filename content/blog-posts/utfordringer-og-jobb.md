@@ -53,8 +53,8 @@ Ingenting jeg gjør er godt nok.
 Nå har jeg kommet på bedre tanker.
 Etter å ha lagt inn fire gode timer på formiddagen, må man søren meg legge inn fire timer til på ettermiddagen!
 Da kan ikke *alt* være utfordringer.
-Hvis jeg derimot har litt jobb liggende, kan jeg plukke opp det.
-Og når jobben blir kjedelig, kan jeg se om jeg har mer å komme med på utfordringen.
+Jeg kan plukke fra litt jobb jeg har liggende.
+Og når gjørejobbingen blir for ensidig, har kan jeg kanskje komme videre på utfordringen.
 
 Så det er leksa for meg selv.
 Teodor: pass på at du i framtiden både har en tilgjengelig utfordring *og* tilgjengelig jobb, det er bra for deg.
