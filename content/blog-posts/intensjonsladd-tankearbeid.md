@@ -99,10 +99,12 @@ Jeg vil finne den roen når jeg leser og skriver.
 
 **NEI!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!**
 
-Du må skrive for å å bli like artikulert som Niklas!
-Og du må publisere for å gjøre det ekte.
-Det letteste trikset for å både skrive og publisere er å holde stålkontroll på omfang.
-Gi deg selv en halvtime.
-Skriv om det du driver med og hva du synes om det.
-Publiser.
+Du må skrive for å bli like artikulert som Niklas!
+Og når du publiserer, blir det ekte.
+Det letteste trikset for å både skrive og publisere er å holde stålkontroll på omfang:
+
+1. Sett av en halvtime
+2. Skriv om hva du gjør og hva du synes om det
+3. Publiser.
+
 De fargerike allegoriene kommer senere!
