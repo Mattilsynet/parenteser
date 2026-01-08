@@ -72,27 +72,6 @@ Gode menneskelige relasjoner er IKKE glatte, de er ruggete.
 Fulle av tekstur.
 Fulle av menneskelighet.
 
-## Retningskorreksjon
-En intensjonsladning skyter deg i en retning.
-Men det kan ikke være riktig at vi går i den retningen, vel, da må vi jo være enige?
-Ja og nei!
-Hvis vi på ingen måte er enige om hvor vi skal, lager vi oss  et fragmentert kaos som er kjipt å leve i!
-Men "vi må enten løpe i alle retningene eller holde kjeft og følge" er en falsk kontrast.
-Fordi intensjon er ikke plan.
-Vi bør la oss selv ha en intensjon om hvor vi skal!
-Men at vi har en intensjon betyr ikke at vi har en plan som funker.
-Tidspunktet etter intensjonen og før planen er et godt tidspunkt å snakke sammen.
-La den ladde intensjonen komme til overflaten, *deretter* prioriter hva som er viktigst.
-Denne holdningen er omtalt som [strong opinions, held weakly] på engelsk, etter en Internett-tekst fra 2006.
-På norsk foreslår jeg:
-
-> *sterk intensjon og en smal, klar plan*
-
-... fordi det gjenstår arbeid før intensjon blir virkelighet!
-Det arbeidet kalles planlegging og gjennomføring.
-
-[strong opinions, held weakly]: https://web.archive.org/web/20220415061801/https://bobsutton.typepad.com/my_weblog/2006/07/strong_opinions.html
-
 ## Skriv!
 I 2023 savnet jeg faglige diskusjoner på jobb, og startet det som senere skulle bli [Mikrobloggeriet].
 Siden da har motivasjonen for å jobbe med Mikrobloggeriet sakte justert seg.
