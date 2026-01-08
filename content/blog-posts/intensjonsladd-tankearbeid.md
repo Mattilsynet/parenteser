@@ -89,11 +89,11 @@ Men verdien av tekst skinner klarest i *forklaring*.
 Hvis du klarer å koke ned hva du mente til en tekst, har du intensjonen svart på hvitt.
 Du har forklart intensjonen din godt.
 
-Jeg ble skikkelig glad da min Mattilsynet-kollega Niklas delte en [tekst om behovet for ro når lager noe] denne uka.
+Jeg ble skikkelig glad da min Mattilsynet-kollega Niklas delte en tekst om at [vi trenger ro og fokus i kreaktivt arbeid].
 Det fylte meg med glede!
 Jeg vil finne den roen når jeg leser og skriver.
 
-[tekst om behovet for ro når lager noe]: https://www.niklashakonsen.no/post/kreativ-i-tomrommet
+[vi trenger ro og fokus i kreaktivt arbeid]: https://www.niklashakonsen.no/post/kreativ-i-tomrommet
 
 "Men må man være like artikulert som Niklas for å skrive?"
 
