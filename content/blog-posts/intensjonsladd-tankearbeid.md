@@ -18,7 +18,7 @@ Det er ikke på kanten av noen som helst folk sine ferdigheter.
 Det strekker seg ikke mot noe.
 Det er bare en gråbrun gjørme av gjennomsnittet av ting, satt sammen uten forståelse av hva som ligger under.
 Jeg er oppriktig bekymret for at 2020-tallet blir tallet der vi tapte tekstur.
-Når alt er gjennomsnitt, blir det *glatt*.
+Når alt er gjennomsnittlig, blir det *glatt*.
 Og oppå den glatte overflaten ligger det noe slimete.
 Det slimet går vi aktivt inn for å drikke!
 Eller?
