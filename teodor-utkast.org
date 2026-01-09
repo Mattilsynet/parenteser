@@ -1,0 +1,164 @@
+* Erfaringsoverføring og produksjon i parprogrammering
+To forskjellige moduser, to forskjellige mål.
+Erfaringsoverføring: la den som skal lære "få det i fingrene selv" og få stille alle de dumme spørsmålene.
+Produksjon: nå skal vi gjøre det.
+
+Hvorfor erfaringsoverføring?
+Hvis man ikke *gjør jobben* sammen, får man aldri *helt* forankret hva jobben egentlig er!
+Metafor: mester og lærling.
+
+Hvorfor produksjon?
+Fordi det er lettere å være to personer hvis man skal få en tung pulk opp en bratt bakke.
+Med to kan man bytte på, og holde praten.
+To er bedre enn én på ekspedisjon.
+To er bedre enn én på farlige oppdrag.
+* Forklar tregheten
+
+Testene våre var trege!
+
+Jeg prøvde først å "fikse det", og bommet.
+
+Deretter forenklet jeg spørsmålet.
+Hvilken test er tregest?
+Hvorfor er den treg?
+
+Den første kilden til treghet fikset jeg bare.
+Den andre kilden til treghet var vidstrakt!
+Den forklarte jeg.
+* Fra backlog til forklaringer
+Da Christian skrev om å kaste backloggen, ble jeg skeptisk!
+
+Vi får kontroll når vi skriver ting ned. Øvelsen i å skrive noe ned gir kontroll og tydelighet. Det er vel ønskelig?
+
+Nyansen jeg nå har er i *hva* man skriver ned.
+
+svaret på hva som bør skrives ned er rett fram:
+
+- skriv ned det du vet
+- ikke skriv ned spekulasjon.
+
+Ting du kan vite:
+- nåsituasjonen din
+- kjente problemer med nåsituasjonen din.
+
+----
+
+I dette sporet
+vhordan skal du skrive ned nåsituasjonen din?
+Gjennom *gode forklaringer*.
+
+Hva er en god forklaring?
+
+- En god forklaring forklarer *innmaten* til det du forklarer. Et begrep er ikke en forklaring.
+- Gode forklaringer er bred rekkevidde. Av to forklaringer, hvis én kun kan forklare dagens oppførsel, mens en annen kan forklare dagens og morgendagens oppførsel, har forklaringen som også forklarer morgendagen bedre rekkevidde.
+- Gode forklaringer er vanskelige å variere. Ta en forklaring. Bytt ut et begrep med et annet, tilfeldig begrep. Er forklaringen fremdeles sann? Hvis svaret er "ja", har du en forklaring som er lett å variere. Du kan få en bedre forklaring ved å fjerne "vinglingen" som forklaringen tillater. Kok den ned så hver bit av forklaringen er essensiell.
+
+Så — ikke spekuler om framtiden. Men når du har behov for å skrive noe ned, skriv heller en *forklaring*.
+
+---
+
+På slutten av forrige uke, satt jeg og så på testene våre. Hvordan kan jeg forklare tregheten? Jeg startet så enkelt som mulig:
+
+1. Mål hvor lang tid hver test-navnerom bruker
+2. Start på toppen.
+
+Den tregeste testen hadde jeg skrevet selv! Den tok 12 sekunder, forsvarte ikke å legge på 12 sekunder på hver testkjøring, så gjorde om testen til en assert i en [Rich-Comment-Form](https://betweentwoparens.com/blog/rich-comment-blocks/#rich-comment).
+
+De tre neste navnerommene brukte
+* Gode forklaringer
+Gode forklaringer i koden.
+Navnerom som forklarer.
+Kode som forklarer.
+
+Gode forklaringer i Git-loggen.
+
+Gode forklaringer i Slack.
+
+Gode forklaringer i felles møtepunkter.
+* WIP er avstanden mellom teori og praksis
+Alternativ tittel:
+WIP: gugge som verken er kunnskap, informasjon eller verktøy
+
+## Slett backlogen!
+
+“Slett backloggen!” klinger igjen og igjen etter bloggposten fra Christian for to uker siden.
+Hvor blir det da av framtidsbildet vårt?
+Christian svarer følgende:
+
+> Vi har naturligvis en langsiktig strategi også - og vi kobler de ukentlige
+> målene våre på den. Å fjerne backlogen hjelper oss også her, fordi en backlog
+> ikke er en strategi. Den er på feil nivå. Det er bare en gjøremålsliste som
+> kanskje, og kanskje ikke, leder oss mot de faktiske målene våre. Så kast
+> backlogen!
+
+Dette trigget urimelig mange spor bakom pannebrasken min!
+
+## Observasjoner og vurderinger med tidsstempel
+
+Det finnes mer mellom himmel og jord enn backlog og strategi!
+Vi kan skille mellom kalde fakta og menneskelig varme:
+
+- _observasjoner_ er objektive beskrivelser av virkeligheten, på et tidspunkt.
+- _vurderinger_ er ladet av subjektivitet og relativv verdi, men sier noe om hva som er *viktig*.
+
+Vi trenger begge to!
+Og ikke bland dem, versåsnill.
+Hvis du gir meg observasjonene dine og vurderingene à la carte, kan kunnskapen i hver bit stå!
+Observasjoner og vurderinger komprimert i én lar meg ikke ta stilling til enkeltbitene.
+(Noen bemerker her at at Rich sin [Simple Made Easy] ikke bare gjelder kode, men også på annen kunnskap).
+
+[Simple Made Easy]: https://www.youtube.com/watch?v=SxdOUGdseq4
+
+## Teorileveranser
+
+Det finnes en annen gedigen hack: teori kan *leveres*.
+Du kan velge blant mange formater!
+
+- Muntlig forklaring
+- Skriftlig sammendrag av et møte med en annen aktør i økosystemet
+- Forskningsartikkel
+- Opptak av presentasjon på konferanse
+- Bloggpost
+
+Teorileveranser er også superlette å måle for suksess!
+
+- Skjønte mottakeren greia etter første konsum?
+- Husker mottakeren greia senere?
+- Tar mottakeren i bruk teorien du har levert selv, for å forklare virkeligheten?
+
+## Sprik mellom teori og praksis
+
+Når det er sprik mellom teori og praksis, har ofte følgende skjedd:
+
+1. Ditt virkelighetsbilde (din teori) og din virkelighet (din prasis) er i synk
+2. Du endrer ditt virkelighetsbilde (teori)
+3. Virkeligheten (praksis) henger etter.
+
+Dette kan du anse som gjeld i koden, eller (formalisert) som en backlog.
+Prinsippet her er enkelt:
+
+> _minimer avstanden mellom teori og praksis_.
+
+Supert!
+Superdupert!
+
+I andre ord: minimer uferdig arbeid.
+Det samme som Lean-bevegelsen har sagt i et halvt århundre.
+Snakk om å gjenoppdage godsakene.
+
+## Kunnskap, verktøy eller informasjon?
+
+Begrepene teori og praksis er såpass brede at de kan være vanskelige å snakke om.
+Kanskje "kunnskap, verktøy og informasjon" er en bedre inndeling.
+
+## Kommentarer og status
+
+*WIP er avstanden mellom teori og praksis* stemmer ikke helt.
+WIP *er* ikke en avstand.
+
+Så hva er greia?
+
+- WIP ligger mellom teori og praksis.
+- Teori kan kommuniseres.
+- Praksis funker.
+- Ikke lag unødvendig stor avstand mellom teori og praksis.
