@@ -4,7 +4,7 @@
 :blog-post/tags []
 :blog-post/description
 
-Brukerfeil? Eller svikt i systemet? Kanskje også en mulighet til å lære?
+Brukerfeil? Eller svikt i systemet? Kanskje til og med en mulighet til å lære?
 
 :blog-post/body
 
@@ -26,17 +26,17 @@ som rapporteres, jo større er sannsynligheten for at systemet har for dårlig
 [brukeropplevelse/UX](https://no.wikipedia.org/wiki/Brukeropplevelse), eller at
 vi ikke gir god nok opplæring og informasjon.
 
-Når noen bruker systemet "feil", har vi en gyllen mulighet til å få innsikt og
-lære. Hvor gikk det galt, og hvorfor?
+Når noen bruker systemet "feil", har vi en gyllen mulighet til å få innsikt.
+Hvor gikk det galt, og hvorfor?
 
 - Snakker systemet brukernes språk, eller bruker det tekniske begreper som er
   vanskelige å forstå?
 - Passer systemet inn i folks faktiske arbeidsflyt?
 - Hjelper systemet folk å gjøre rett?
 
-Ved å forstå hvor det gikk galt kan vi ofte få verdifull innsikt og læring som
-vi kan bruke til å forbedre systemene. Det gir en bedre hverdag for alle som
-bruker systemet - og oss som lager dem.
+Ved å forstå hvor det gikk galt kan vi ofte få verdifull læring som vi kan bruke
+til å forbedre systemene. Det gir en bedre hverdag for alle som bruker
+systemet - og oss som lager dem.
 
 Har du en bred nok brukergruppe så vil du aldri helt bli kvitt alle
 misforståelser og "feil" bruk. Men ambisjonen bør alltid være å ha så få som
