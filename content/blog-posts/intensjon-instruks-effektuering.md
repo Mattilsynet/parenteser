@@ -104,7 +104,7 @@ I paneldebatten sa [Bjørn Einar][bjartwolf] noe sånt:
 
 [bjartwolf]: https://github.com/bjartwolf
 
-<a name="ref1"></a>
+<a id="ref1"></a>
 
 > Effekter bør ikke ha if-setninger.[¹](#fot1)
 
@@ -124,7 +124,7 @@ Måtte du lage en stor, fin kjerne og et godt effektsystem!
 
 <hr style="margin-top: 6rem; margin-bottom: 3rem"></hr>
 
-<a name="fot1" href="#ref1">¹</a>:
+<a id="fot1" href="#ref1">¹</a>:
 Bjørn Einar informerer om han i sin tur stal prinsippet fra Jonas,
 “Bjørn Einar sier for ordens skyld at dette er tankegods han har rappet fra en discord-diskusjon med Jonas Winje”
 (der Bjørn Einar omtaler seg selv i tredjeperson! Dette var ikke lett, gitt.)
