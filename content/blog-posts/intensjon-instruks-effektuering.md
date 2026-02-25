@@ -4,21 +4,44 @@
 :blog-post/tags [:fk-is :arkitektur]
 :blog-post/description
 
-Hvordan håndterer du effekter i det imperative skallet ditt?
+Hvordan håndterer du effekter i det imperative skallet?
 Intensjon, instruks og effektuering er et sted å starte.
 
 :blog-post/body
 
-Tirsdag denne uka LINK hadde vi en svært trivelig meetup. Det var ikke bare de faste folka fra Clojure. Det var Oslo Socially Functional: Reboot.
+Tirsdag denne uka hadde vi en svært trivelig meetup. Det var ikke bare de
+faste folka fra Clojure. Det var Oslo Socially Functional: Reboot.
 
-Oslo Socially Functional var *ett* samlingspunkt for hele FP-miljøet i Oslo. Ikke avgrenset med murer mellom programmeringsspråk og kjøretidsmiljø, én arena for å dele ideer, erfaringer og andre ting man har lært.
+<div style="display:flex; gap:1em; font-size: 16px">
+  <figure>
+    <img src="/images/2026-02-24-magnar-sveen.webp" alt="Magnar Sveen: Funksjonell kjerne, imperativt skall: en arkitektur på vranga">
+    <figcaption>Magnar Sveen: <em>Funksjonell kjerne, imperativt skall: en arkitektur på vranga</em></figcaption>
+  </figure>
+  <figure>
+    <img src="/images/2026-02-24-teodor-elstad.webp" alt="Teodor Elstad: Can Conflict-free Replicated Data-Types teach us anything about API-design?">
+    <figcaption>Teodor Elstad: <em>Can Conflict-free Replicated Data-Types teach us anything about API-design?</em></figcaption>
+  </figure>
+</div>
 
-Sentralt i miljøet var [Bodil Stokke](https://bodil.lol).
-Suveren programmerer, legendarisk meme-trollkvinne.
+Oslo Socially Functional var *ett* samlingspunkt for hele FP-miljøet i Oslo.
+Ikke avgrenset med murer mellom programmeringsspråk og kjøretidsmiljø, én arena
+for å dele ideer, erfaringer og andre ting man har lært.
 
-![](/images/bodil-we-could-be-gods.png)
+<figure style="font-size: 16px">
+  <img src="/images/bodil-we-could-be-gods.png">
+  <figcaption>
+    En gang for cirka ti år siden, presenterte 
+    <a href="https://bodil.lol">Bodil Stokke</a>
+    et utrolig inspirerende foredrag.
+    Ingen husker lenger plassering i tid, rom og tema, så sliden er
+    gjenskapt etter hukommelsen til Bjørn Einar Bjartnes.
+  </figcaption>
+</figure>
 
-Temaet vårt var funksjonell arkitektur. Ikke hvordan en enklelt ren funksjon er hyggelig å jobbe med å teste, men hvordan hele systemer som tar med seg funksjonelle systemer er lettere å forstå, få innsyn i og å endre. Etter to spennende talere åpnet paneldebatten, og det ble snakk om effektsystemer.
+Temaet vårt var funksjonell arkitektur. Ikke hvordan én ren funksjon er
+hyggelig å jobbe med å teste, men hvordan hele systemer som tar med seg
+funksjonelle systemer er lettere å forstå, få innsyn i og å endre. Etter to
+spennende talere åpnet paneldebatten, og det ble snakk om effektsystemer.
 
 Et godt effektsystem bør:
 
@@ -81,7 +104,9 @@ I paneldebatten sa [Bjørn Einar][bjartwolf] noe sånt:
 
 [bjartwolf]: https://github.com/bjartwolf
 
-> Effekter bør ikke ha if-setninger.
+<a name="ref1"></a>
+
+> Effekter bør ikke ha if-setninger.[¹](#fot1)
 
 For meg treffer det spikeren på hodet, fordi:
 **Effekter *gjør én ting*, uten mikkmakk. Direkte, imperativ kode.**
@@ -96,3 +121,12 @@ Der effekter med if-er lager trøbbel, er vi godt rigget for å håndtere valg i
 Lag en funksjon som tar beslutningen, og *send heller inn* beslutningen til effekten.
 
 Måtte du lage en stor, fin kjerne og et godt effektsystem!
+
+<hr style="margin-top: 6rem; margin-bottom: 3rem"></hr>
+
+<a name="fot1" href="#ref1">¹</a>:
+Bjørn Einar informerer om han i sin tur stal prinsippet fra Jonas,
+“Bjørn Einar sier for ordens skyld at dette er tankegods han har rappet fra en discord-diskusjon med Jonas Winje”
+(der Bjørn Einar omtaler seg selv i tredjeperson! Dette var ikke lett, gitt.)
+
+
