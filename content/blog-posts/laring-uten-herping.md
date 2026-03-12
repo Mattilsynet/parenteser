@@ -1,4 +1,5 @@
 :page/title Læring uten herping
+:page/alt-uris ["/laring-uten-harping/"]
 :blog-post/author {:person/id :person/teodor}
 :blog-post/published #time/ldt "2026-03-12T14:23:38.991656"
 :blog-post/tags []
