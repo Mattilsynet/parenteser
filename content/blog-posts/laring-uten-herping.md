@@ -77,14 +77,28 @@ Sidedefinisjonene gir oss også ett sted å løse siderelaterte problemer.
 Vi bruker sidedefinisjonene til å *lage* routeren.
 Men vi bruker også sidedefinisjonene til å lage sidekartet ("sitemap").
 
-## etterord: Sussman
+## etterord: Sussman om formbarhet
 
-Software Design for Flexibility er kanskje den beste boka om design av
-programvare ingen av lest. Java-standarden ble skrevet av Guy Steele, Sussman
-var veilederen til Steele. At hele boka er skrevet med eksempler i Scheme gir en inngangsterskel for lesing.
-Men Scheme er et minimalistisk språk.
-Og det var Sussman som lagde Scheme.
-Så ideene henger sammen, selv om det krever litt innsats å "dykke ned".
+_Software Design for Flexibility_ ("Programvaredesign for formbarhet") er kanskje den beste boka om design av programvare som ingen av lest.
+Java-standarden ble skrevet av Guy Steele, Sussman var veilederen til Steele.
+Alle eksemplene i boka er fra Lisp-dialekten Scheme, som Sussman designet.
+Det gir inngansterskel!
+Men han valgte ikke Scheme for å være vrang.
+Han ville formidle rene konsepter og trengte et enkelt språk.
+Scheme er et av de enkleste språket som finnes.
+
+Personlig ser jeg på _Software Design for Flexibility_ som et mesterverk.
+Ja, den krever litt innsats for å komme inn i.
+I liket med de fleste tingene i livet som er verd å gjøre, det krever litt innsats.
+Og det er greit.
+
+Les heller én tekst som er verdt å lese enn å skumme over ti tekster du egentlig ikke bryr deg om.
+Hvis du *må* ha det som kulturelt Clojure-sitat, [simplicity ain't easy].
+Å lage enkle systemer krever innsats.
+Å holde systemer enkle krever innsats.
+Du må *velge* å legge ned den innsatsen.
+
+[simplicity ain't easy]: https://www.youtube.com/watch?v=cidchWg74Y4
 
 ## etterord: formbarhet og pålitelighet når LLM-er tukler med koden
 
