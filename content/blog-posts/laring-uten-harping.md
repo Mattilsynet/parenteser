@@ -8,6 +8,8 @@ Et prinsipp utvikling av programmer, systemer og produkter
 
 :blog-post/body
 
+*et prinsipp utvikling av programmer, systemer og produkter*
+
 Hvordan gjør vi en ting bedre?
 Det er et overraskende vanskelig spørsmål med et enkelt svar: vi forbedrer uten å forverre.
 
