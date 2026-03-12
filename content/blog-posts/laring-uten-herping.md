@@ -81,7 +81,7 @@ Men vi bruker også sidedefinisjonene til å lage sidekartet ("sitemap").
 
 _Software Design for Flexibility_ ("Programvaredesign for formbarhet") er kanskje den beste boka om design av programvare som ingen har lest.
 Java-standarden ble skrevet av Guy Steele, Sussman var veilederen til Steele.
-Alle eksemplene i boka er fra Lisp-dialekten Scheme, som Sussman designet.
+Eksemplene i boka er skrevet i Lisp-dialekten Scheme, som Sussman designet.
 Det gir inngansterskel!
 Men han valgte ikke Scheme for å være vrang.
 Han ville formidle rene konsepter og trengte et enkelt språk.
@@ -89,14 +89,14 @@ Scheme er et av de enkleste språket som finnes.
 
 Personlig ser jeg på _Software Design for Flexibility_ som et mesterverk.
 Ja, den krever litt innsats for å komme inn i.
-I liket med de fleste tingene i livet som er verd å gjøre, det krever litt innsats.
+I liket med de fleste tingene i livet som er verd å gjøre.
 Og det er greit.
 
 Les heller én tekst som er verdt å lese enn å skumme over ti tekster du egentlig ikke bryr deg om.
 Hvis du *må* ha det som kulturelt Clojure-sitat, [simplicity ain't easy].
 Å lage enkle systemer krever innsats.
 Å holde systemer enkle krever innsats.
-Du må *velge* å legge ned den innsatsen.
+Den innsatsen må du *velge* å legge ned.
 
 [simplicity ain't easy]: https://www.youtube.com/watch?v=cidchWg74Y4
 
