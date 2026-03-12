@@ -91,12 +91,15 @@ Så ideene henger sammen, selv om det krever litt innsats å "dykke ned".
 Industrien vår har sniffet LLM, og volumet på festen er stigende.
 Folka som dansser på stranda har ikke ennå sett søpla som ansamler seg rett bak klippene.
 Hvorvidt hver og én av oss klarer å nyttiggjøre oss LLM-ene kommer til å bli bestemt av formbarhet og mykhet i kodebasen vår.
-Kalsifiserer LLM-en kodebasen med vaghet og leoparder som gjør den uleselig?
-  Gjør den kodebasen upålitelig, og akkumulerer bugs ingen klarer å finne?
+Kalsifiserer LLM-en kodebasen med vaghet og [leoparder] som gjør den uleselig?
+  Gjør LLM-en kodebasen upålitelig, og akkumulerer bugs ingen klarer å finne?
   Eller klarer vi å holde på mykheten og formbarheten?
 Gråskjegg som Kent Beck og Steve Yeggie sier de får til nettopp det, og oppskriften de gir er ikke å la LLM-en gå amok.
-Det er å bli enda bedre på formbarhet og pålitelighet i kode.
-Tydeligere API-design og tydeligere teststrategi.
-Pålitelighet gir formbarhet.
+Ikke lukk øynene.
+I stedet, bli _enda_ bedre på formbarhet og pålitelighet i kode.
+Bli tydeligere API-design og tydeligere teststrategi.
+Pålitelighet gir formbarhet, og formbarhet lar deg komme videre.
+
+[leoparder]: /enkel-kode-uten-leoparder/
 
 [Software Design for Flexibility]: https://mitpress.mit.edu/9780262045490/software-design-for-flexibility/
