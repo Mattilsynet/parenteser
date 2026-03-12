@@ -5,11 +5,11 @@
 :blog-post/tags []
 :blog-post/description
 
-Et prinsipp utvikling av programmer, systemer og produkter
+Et prinsipp for utvikling av programmer, systemer og produkter
 
 :blog-post/body
 
-*et prinsipp utvikling av programmer, systemer og produkter*
+*et prinsipp for utvikling av programmer, systemer og produkter*
 
 Hvordan gjør vi en ting bedre?
 Det er et overraskende vanskelig spørsmål med et enkelt svar: vi forbedrer uten å forverre.
@@ -21,7 +21,7 @@ Målet er altså:
 
 Kontinuerlig læring og verdiskaping forutsetter at vi kan forme
 om virkeligheten. At vi ikke skal herpe det til for folk forutsetter
-at det vi lager er pålitelig, og at fundamentet det vi lager står på
+at det vi lager er pålitelig, og at fundamentet det til vi lager står på
 også er pålitelig.
 
 Å forme om i isolasjon er lett: kast terning og rull ut!
@@ -30,9 +30,8 @@ Utfordringen er hvordan vi får til *begge to* samtidig.
 
 ## formbarhet og pålitelighet
 
-Målet er formbar og pålitelig programvare. Vi kan forme om
-programvaren etter behov, uten at omformingen går ut over
-pålitelighet.
+Målet er formbar og pålitelig programvare.
+Vi kan forme om programvaren etter behov, uten at omformingen senker påliteligheten.
 
 Hvordan gjør vi det i praksis med koden vår?
 Vi har to alternativer:
@@ -48,9 +47,9 @@ Pålitelighet er løst som default i systemet vårt.
 Når vi legger til ny funksjonalitet, slipper vi utilsiktet tukling med eksisterende funksjonalitet.
 Da er det mindre som kan gå galt, og lettere for meg å gjøre jobben min.
 
-## additativ programmering
+## additiv programmering
 
-Denne programmeringsdisiplinen kalles *additativ programmering* av Chris Hanson og Gerald Sussman i *[Software Design for Flexibility]*.
+Denne programmeringsdisiplinen kalles *additiv programmering* av Chris Hanson og Gerald Sussman i *[Software Design for Flexibility]*.
 Det gjør vi ved at vi løser for forgrening rett i systemdesignet, og unngår flere og flere nøstede if-setninger.
 Hanson og Sussman viser noen eksempler i boka, deriblant generisk dispatch og layering.
 Generisk dispatch og layering er sinnsykt spennende teknikker, men dekkes ikke i denne teksten.
@@ -69,7 +68,7 @@ Sidedefinisjonene ser slik ut:
  :page/render #'render}
 ```
 
-Systemet blir additativt fordi nye sider legges til additativt.
+Systemet blir additivt fordi nye sider legges til additivt.
 Ny render-funksjon.
 Nytt hash-map.
 Ingen nye if-er.
@@ -80,7 +79,7 @@ Men vi bruker også sidedefinisjonene til å lage sidekartet ("sitemap").
 
 ## etterord: Sussman om formbarhet
 
-_Software Design for Flexibility_ ("Programvaredesign for formbarhet") er kanskje den beste boka om design av programvare som ingen av lest.
+_Software Design for Flexibility_ ("Programvaredesign for formbarhet") er kanskje den beste boka om design av programvare som ingen har lest.
 Java-standarden ble skrevet av Guy Steele, Sussman var veilederen til Steele.
 Alle eksemplene i boka er fra Lisp-dialekten Scheme, som Sussman designet.
 Det gir inngansterskel!
@@ -104,7 +103,7 @@ Du må *velge* å legge ned den innsatsen.
 ## etterord: formbarhet og pålitelighet når LLM-er tukler med koden
 
 Industrien vår har sniffet LLM, og volumet på festen er stigende.
-Folka som dansser på stranda har ikke ennå sett søpla som ansamler seg rett bak klippene.
+Folka som danser på stranda har ikke ennå sett søpla som ansamler seg rett bak klippene.
 Hvorvidt hver og én av oss klarer å nyttiggjøre oss LLM-ene kommer til å bli bestemt av formbarhet og mykhet i kodebasen vår.
 Kalsifiserer LLM-en kodebasen med vaghet og [leoparder] som gjør den uleselig?
   Gjør LLM-en kodebasen upålitelig, og akkumulerer bugs ingen klarer å finne?
