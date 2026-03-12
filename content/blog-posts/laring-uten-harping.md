@@ -57,7 +57,7 @@ Generisk dispatch og layering er sinnsykt spennende teknikker, men dekkes ikke i
 ## dataorientert dispatch
 
 Christian og Magnar har etablert en annen dispatch-teknikk i Mattilsynet-kodebasen vår.
-Benny Andersson omtalte denne som "ekstrem dataorientering".
+Benny Andresen omtalte denne som "ekstrem dataorientering".
 Alternativt kunne vi snakket om "dataorientert dispatch".
 Sidesystemet vårt er et eksempel.
 Sidedefinisjonene ser slik ut:
