@@ -8,6 +8,8 @@ Et prinsipp utvikling av programmer, systemer og produkter
 
 :blog-post/body
 
+*et prinsipp utvikling av programmer, systemer og produkter*
+
 Hvordan gjør vi en ting bedre?
 Det er et overraskende vanskelig spørsmål med et enkelt svar: vi forbedrer uten å forverre.
 
@@ -55,7 +57,7 @@ Generisk dispatch og layering er sinnsykt spennende teknikker, men dekkes ikke i
 ## dataorientert dispatch
 
 Christian og Magnar har etablert en annen dispatch-teknikk i Mattilsynet-kodebasen vår.
-Benny Andersson omtalte denne som "ekstrem dataorientering".
+Benny Andresen omtalte denne som "ekstrem dataorientering".
 Alternativt kunne vi snakket om "dataorientert dispatch".
 Sidesystemet vårt er et eksempel.
 Sidedefinisjonene ser slik ut:
@@ -75,7 +77,7 @@ Sidedefinisjonene gir oss også ett sted å løse siderelaterte problemer.
 Vi bruker sidedefinisjonene til å *lage* routeren.
 Men vi bruker også sidedefinisjonene til å lage sidekartet ("sitemap").
 
-## Etterord: Sussman
+## etterord: Sussman
 
 Software Design for Flexibility er kanskje den beste boka om design av
 programvare ingen av lest. Java-standarden ble skrevet av Guy Steele, Sussman
@@ -84,7 +86,7 @@ Men Scheme er et minimalistisk språk.
 Og det var Sussman som lagde Scheme.
 Så ideene henger sammen, selv om det krever litt innsats å "dykke ned".
 
-## Etterord: formbarhet og pålitelighet når LLM-er tukler med koden
+## etterord: formbarhet og pålitelighet når LLM-er tukler med koden
 
 Industrien vår har sniffet LLM, og volumet på festen er stigende.
 Folka som dansser på stranda har ikke ennå sett søpla som ansamler seg rett bak klippene.
