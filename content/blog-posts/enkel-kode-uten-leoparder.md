@@ -10,10 +10,18 @@ For å fjerne leopardene må du forstå fundamentet.
 
 :blog-post/body
 
-![Leopard nr 1](/images/leopard1.jpg)
-
-_Husk å kjøre setup-scriptet før du starter dev-miljøet (krever Ruby 3).
-Bilde: [Wikimedia](https://en.wikipedia.org/wiki/File:African_leopard_male_(cropped).jpg), CC S-A 4.0_
+<figure>
+  <img src="/images/leopard1.jpg" alt="Leopard nr 1">
+  <figcaption>
+  <small>
+    <em>
+      Husk å kjøre setup-scriptet før du starter dev-miljøet (krever Ruby 3).
+      Bilde: <a href="https://en.wikipedia.org/wiki/File:African_leopard_male_(cropped).jpg">Wikimedia</a>,
+      CC S-A 4.0
+    </em>
+  </small>
+  </figcaption>
+</figure>
 
 Denne uka har jeg fått kode litt sammen med Isam, som startet som utvikler i Mattilsynet på mandag.
 Parprogrammeringen har fått meg til å tenke på hva vi har gjort, og hvorfor vi har gjort det.
@@ -33,10 +41,15 @@ Hvordan kan vi finne programmer med `which`?
 Hva skjer når vi har flere `vim`-programmer på PATH?
 Hva er forskjellen på terminalen (for eksempel Terminal eller Ghostty) og skallet (for eksempel Zsh, Bash eller Fish).
 
-![Leopard nr 2](/images/leopard2.jpg)
-
-_Etter du har prodsatt ny versjon, må du SSH-e inn på ingressen og tømme Varnish-cache, hvis ikke må du vente på automatisk cache-tømming (cirka 30 minutter).
-Bilde: [Wikimedia](https://en.wikipedia.org/wiki/File:Indochinese_leopard.jpg), CC S-A 4.0_
+<figure>
+    <img src="/images/leopard2.jpg" alt="Leopard nr 2">
+<figcaption>
+<small>
+<em>Etter du har prodsatt ny versjon, må du SSH-e inn på ingressen og tømme Varnish-cache, hvis ikke må du vente på automatisk cache-tømming (cirka 30 minutter).
+Bilde: <a href="https://en.wikipedia.org/wiki/File:Indochinese_leopard.jpg">Wikimedia</a>, CC S-A 4.0</em>
+</small>
+</figcaption>
+</figure>
 
 Vi tok oss god tid til å forklare hver ting: terminal, skall, programmer, variabler i skallet, og hvordan `PATH` er spesiell.
 
@@ -55,10 +68,15 @@ Vi fjernet skriving av en urelatert fil.
 [Når jeg setter meg ned for å kode, vil jeg føle meg avslappet.](https://px16.matt.is/)
 Hvis leoparder spretter opp av hull i bakken, ramler ned fra trær og hopper ut fra klesskapet mitt og biter meg i tåa, blir jeg stressa!
 
-![Leopard nr 3](/images/leopard3.jpg)
-
-_Ikke kall sendRequest() før du har kjørt prepareRequest med de samme argumentene!
-Bilde: [Wikimedia](https://en.wikipedia.org/wiki/File:Day_47_Leopard_(Panthera_pardus)_male_marking_a_bush_with_urine_..._(53310719953).jpg), CC S-A 4.0_
+<figure>
+<img src="/images/leopard3.jpg" alt="Leopard nr 3">
+<figcaption>
+<small>
+<em>Ikke kall sendRequest() før du har kjørt prepareRequest med de samme argumentene!
+Bilde: <a href="https://en.wikipedia.org/wiki/File:Day_47_Leopard_(Panthera_pardus)_male_marking_a_bush_with_urine_..._(53310719953).jpg">Wikimedia</a>, CC S-A 4.0</em>
+</small>
+</figcaption>
+</figure>
 
 Oppsummert:
 
