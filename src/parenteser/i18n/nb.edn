@@ -24,7 +24,7 @@
  #:parenteser.layout
  {:atom-feed-title "Parenteser – Team Servering sin blogg"
   :footer-hiccup [:div
-                  [:p "Har du innspill eller tanker? Kontakt gjerne en av utviklerne på team Servering: "
+                  [:p "Har du innspill eller tanker? Kontakt gjerne en av utviklerne på Team Servering: "
                    [:a {:href "mailto:magnar.sveen@mattilsynet.no"} "Magnar"]
                    ", " [:a {:href "mailto:christian.johansen@mattilsynet.no"} "Christian"]
                    ", " [:a {:href "mailto:Sigmund.Hansen@mattilsynet.no"} "Sigmund"]
