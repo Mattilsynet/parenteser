@@ -31,7 +31,7 @@
                    ", " [:a {:href "mailto:mathias.iversen@mattilsynet.no"} "Mathias"]
                    ", " [:a {:href "mailto:Ole.Marius.Smestad@mattilsynet.no"} "Ole Marius"]
                    " eller " [:a {:href "mailto:Teodor.Lunaas.Heggelund@mattilsynet.no"} "Teodor"]
-                   " på e-post."]
+                   "."]
                   [:p "Innleggene speiler våre personlige meninger. Vi snakker ikke for hele Mattilsynet, akkurat."]]
   :header-title "Parenteser"
   :header-slogan "Betraktninger fra Team Servering"
