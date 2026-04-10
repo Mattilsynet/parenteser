@@ -95,7 +95,8 @@ ting man kan skrive i selve meldingen.
 
 **5. Beskjeder til datamaskinen legges nederst i meldingen**
 
-Tekniske instrukser ala `[skip ci]` legges helt nederst i meldingen.
+Tekniske instrukser ala `[skip ci]` og `Co-Authored-By` legges helt nederst i
+meldingen. Rekkefølgen på disse er ikke viktig.
 
 #### Konsekvenser
 
