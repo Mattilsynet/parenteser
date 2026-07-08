@@ -19,33 +19,27 @@ inn og forvalte informasjonen om serveringsstedene de driver. Denne sida har
 flere vertikale seksjoner som viser forskjellig informasjon, som i dette
 eksempelet (som viser syntetiske data):
 
-<a href="/images/mitt-serveringssted-1.png" target="_blank">
 <img src="/images/mitt-serveringssted-1.png"
      width="300"
      style="display: block; margin: 0 auto"
      alt="Mitt serveringssted med syntetiske data">
-</a>
 
 Noen av serveringsstedene mangler data til enkelte seksjoner, og når det er
 tilfelle så har vi en alternativ visning som ber pent om at de gir oss mer
 informasjon:
 
-<a href="/images/mitt-serveringssted-2.png" target="_blank">
 <img src="/images/mitt-serveringssted-2.png"
      width="400"
      style="display: block; margin: 0 auto"
      alt="Mitt serveringssted hvor det mangler kontaktpersoner">
-</a>
 
 Problemet oppstår når vi har flere slike tomme seksjoner etter hverandre, for da
 er ikke lenger den skillelinja mellom så stilig:
 
-<a href="/images/mitt-serveringssted-3.png" target="_blank">
 <img src="/images/mitt-serveringssted-3.png"
      width="400"
      style="display: block; margin: 0 auto"
      alt="Mitt serveringssted hvor det mangler kontaktpersoner">
-</a>
 
 For å tegne denne sida så ønsker vi altså for hver seksjon å enten vise
 seksjonen med data, eller vise en blå boks som ber om data som mangler. Det skal
