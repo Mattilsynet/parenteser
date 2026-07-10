@@ -138,7 +138,7 @@ Kodeeksempel.
 
 Dette er mat for map og reduce!
 
-```
+```clojure
 (defn dotprod-1 [xs ys]
   (reduce + (map * xs ys)))
 ```
@@ -220,7 +220,7 @@ Kostnaden for strukturell deling er at vi ikke får tettpakket minne.
 
 Tettpakket minne får vi derimot med gode, gamle Java-arrays!
 
-```
+```clojure
 (set! *warn-on-reflection* true)
 
 (defn dotprod-3 [^longs xs ^longs ys]
