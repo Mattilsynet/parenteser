@@ -1,0 +1,4 @@
+{:person/id :person/aurora
+ :person/given-name "Aurora Liang"
+ :person/family-name "Klæboe"
+ :person/photo "/images/aurorlk.jpg"}
