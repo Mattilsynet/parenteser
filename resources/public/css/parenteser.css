@@ -54,6 +54,16 @@ dd {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+th, td {
+  padding: 0.2em;
 }
 
 a:link, a:visited, .clickable {

@@ -9,25 +9,6 @@ Men må vi egentlig ned i et lavnivå-språk når ting ikke går raskt nok?
 
 :blog-post/body
 
-<style type=text/css>
-/* Savner borders på tabeller! */
-table {
-    margin-left: auto;
-    margin-right: auto;
-}
-table, th, td {
-    border: 1px solid black;
-}
-th, td {
-    padding: 0.2em;
-}
-h3 {
-    /* Jeg synes det er vanskelig å skille h3-er fra h2-er */
-    /* font-size: 32px !important; */
-    /* Den diskusjonen kan vi heller ta felles og få inn i global CSS enn at jeg fikler her. */
-}
-</style>
-
 Ytelse er unødvendig å bry oss om, ikke sant?
 Vi parafraserer ofte Donald Knuth når vi sier "premature optimization is the root of all evil".
 Det fulle sitatet er mer nyansert:
