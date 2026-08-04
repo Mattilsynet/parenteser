@@ -72,3 +72,19 @@ Det er nok at en håndfull personer er interessert.
 Jeg vet allerede at jeg kommer til å dele denne teksten med Julian (som liker rare ting om kreativitet), Leif Eric (som liker grafikk), Anders (som faktisk lager demoer som demonstrerer i stedet for begrense seg til blogg-poster med tekst) og Jonas (som lager lage Lua-demoer i nettleseren).
 Det er lov å gjøre demoen liten med vilje.
 Og det føles ganske bra når demoen gir kreativt fokus og kreativt samspill.
+
+<parenteser-snurr></parenteser-snurr>
+
+**Referanser**.
+[Visakan Veerasamy] er flink til å finne og samle folk som lager ting.
+[Jessica Kerr] ser på teknologibygging som samspill mellom folk (“[symmathesy]”), og sammenlikner gjerne teknologiteam med musikerne og kunstnerne og poetene som fant opp Opera som kunstform rundt 1580 i Firenze.
+
+<figure>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pEQj7fy-Htg?si=yD5YlaYYAo6r3RNN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+</iframe>
+<figcaption><em>The Origins of Opera & The Future of Programming</em> av Jessica Kerr</figcaption>
+</figure>
+
+[Visakan Veerasamy]: https://visakanv.com/
+[Jessica Kerr]: https://jessitron.com/
+[symmathesy]: https://jessitron.com/2018/10/25/symmathecist-n/
