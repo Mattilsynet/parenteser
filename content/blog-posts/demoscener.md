@@ -71,7 +71,7 @@ Avgrens hvor mye innsats som går inn.
 Avgrens hvor mye du vil si.
 Avgrens hvem du skriver til.
 Det er nok at en håndfull personer er interessert.
-Jeg vet allerede at jeg kommer til å dele denne teksten med Julian (som liker rare ting om kreativitet), Leif Eric (som liker grafikk), Anders (som faktisk lager demoer som demonstrerer i stedet for begrense seg til blogg-poster med tekst) og Jonas (som lager lage Lua-demoer i nettleseren).
+Jeg vet allerede at jeg kommer til å dele denne teksten med Julian (som liker rare ting om kreativitet), Leif Eric (som liker grafikk), Anders (som faktisk lager demoer som demonstrerer i stedet for begrense seg til blogg-poster med tekst) og Jonas (som lager rare Lua-demoer rett i nettleseren).
 Det er lov å gjøre demoen liten med vilje.
 Og det føles ganske bra når demoen gir kreativt fokus og kreativt samspill.
 
