@@ -37,12 +37,14 @@ får med en person du liker å jobbe med.
 <parenteser-snurr></parenteser-snurr>
 
 Ordet “demo” kan brukes kjempebredt og supersmalt.
-Bredt er en demo *mindre* enn en full greie.
+I den brede betydningen er en demo *mindre* enn en full greie.
 En demo har også et tema den kommuniserer; den *demonstrerer*.
 Demoen bærer en mening.
 
-Den smalere bruken er små programmer som folk har delt med hverandre og vist hverandre fra 90-tallet og utover.
-De demonstrerer grafikk og lyd, innenfor svært begrensede ressurser.
+I den smalere bruken er en demo et lite program som folk har delt med hverandre på *[Demoscenen]*.
+Her demonstrerer demoen hva man kan få til av grafikk, lyd og kunst innenfor begrensede ressurser.
+
+[Demoscenen]: https://en.wikipedia.org/wiki/Demoscene
 
 <figure>
 <iframe width="960" height="720" frameborder="0" loading="lazy" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; web-share" allowfullscreen src="https://commons.wikimedia.org/wiki/File:Future_Crew_-_Second_Reality_(1993)_(60fps)_(iw17c70uJes).webm?embedplayer=true"></iframe>
