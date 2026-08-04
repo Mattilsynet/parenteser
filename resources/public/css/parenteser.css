@@ -820,3 +820,7 @@ parenteser-snurr:hover {
         margin-left: -30px;
     }
 }
+
+figure > iframe {
+    max-width: 100%;
+}
