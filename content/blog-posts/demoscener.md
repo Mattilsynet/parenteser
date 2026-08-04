@@ -38,7 +38,7 @@ får med en person du liker å jobbe med.
 
 Ordet “demo” kan brukes kjempebredt og supersmalt.
 Bredt er en demo *mindre* enn en full greie.
-En demo har også et tema den kommunistrerer; den *demonstrerer*.
+En demo har også et tema den kommuniserer; den *demonstrerer*.
 Demoen bærer en mening.
 
 Den smalere bruken er små programmer som folk har delt med hverandre og vist hverandre fra 90-tallet og utover.
