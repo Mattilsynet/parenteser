@@ -27,7 +27,7 @@ korset og legge vår hjemmesnekrede trehytte av en arbeidskø på hylla. Det var
 egentlig ikke noe krav at vi skulle ha så fingranulerte oppgaver, bare vi hadde
 fått det vi trengte fra klienten og gjorde API-kallene sekvensielt.
 
-<img class="img" style="max-width: 500px; margin: 0 auto; display: block"
+<img class="img" style="width: min(100%, 500px); margin: 0 auto; display: block"
 src="/images/funkis-hus.jpg"> _Vi ville at arkiveringen skulle få bo med oss i
 et fint funkis-hus, ikke en falleferdig trehytte. Bilde: Frode Inge Helland, [CC
 BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/) via [Wikimedia
