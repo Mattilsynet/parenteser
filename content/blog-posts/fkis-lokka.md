@@ -1,6 +1,6 @@
 :page/title Prosedyrale greier i et funkis-bygg
 :blog-post/author {:person/id :person/sigmund}
-:blog-post/published #time/ldt "2026-08-26T09:00:00"
+:blog-post/published #time/ldt "2026-08-27T09:00:00"
 :blog-post/tags [:fk-is :tdd]
 :open-graph/image "/images/funkis-hus.jpg"
 :blog-post/description
