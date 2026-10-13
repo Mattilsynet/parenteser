@@ -73,7 +73,7 @@ Attributtet i form-taggen ...
 ... brukes til å finne skjemaet `:skjema/sjekk-adresse` over. 👆
 
 Deretter finner maskineriet verdiene i input-felter i skjemaet ved å løpe over
-`new FormData(form)` og bygge opp et map:
+`new FormData(form)` og bygger opp et map:
 
 ```clj
 {:gate/navn "Bingeveien"
